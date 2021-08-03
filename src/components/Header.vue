@@ -12,7 +12,7 @@
                             <div><router-link to="/">首頁</router-link></div>
                             <div><router-link to="/Translation-assistance">協助翻譯</router-link></div>
                             <div><router-link to="/">維基百科</router-link></div>
-                            <div><router-link to="/">實用工具</router-link></div>
+                            <div><router-link to="/ProgressQuery">實用工具</router-link></div>
                             <div><router-link to="/Contributor">翻譯貢獻者排名</router-link></div>
                             <div><router-link to="/About">關於我們</router-link></div>
                             <div class="links">

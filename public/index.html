@@ -7,52 +7,27 @@
   <meta http-equiv="Content-Language" content="zh-TW">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Pragma" content="no-cache">
-  <!-- apple-mobile-web-app -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="rpmTW 網頁">
-
   <meta name="description" content="rpmTW">
   <meta name="keywords" content="rpmTW">
   <meta name="author" content="rpmTW team">
-
   <link rel="apple-touch-startup-image"
     href="https://cdn.discordapp.com/icons/815819580840607807/f748906672aaed61311f6aa2707fd52b.webp?size=128">
   <link rel="apple-touch-icon"
     href="https://cdn.discordapp.com/icons/815819580840607807/f748906672aaed61311f6aa2707fd52b.webp?size=128">
   <link rel="icon"
     href="https://cdn.discordapp.com/icons/815819580840607807/f748906672aaed61311f6aa2707fd52b.webp?size=128">
-  <link rel="stylesheet" href="<%= BASE_URL %>main.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>main.css">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
-  <title>
-    <%= htmlWebpackPlugin.options.title %>
-  </title>
+  <title>RPMTW </title>
 </head>
 
-<body>
-  <noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-        Please enable it to continue.</strong>
-  </noscript>
+<body><noscript><strong>We're sorry but <%=htmlWebpackPlugin.options.title %>doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong></noscript>
   <div id="app"></div>
-  <!-- built files will be auto injected -->
-  <script>
-    $(function () {
-      let title = document.title
-      $(document).on("visibilitychange", () => {
-        switch (document.visibilityState) {
-          case "hidden":
-            (document.title = "你看不到我" || ""), setTimeout(() =>
-              "hidden" === document.visibilityState && (document.title = title), 1e3);
-            break;
-          case "visible":
-            (document.title = "歡迎回來" || ""), setTimeout(() =>
-              "visible" === document.visibilityState && (document.title = title), 1e3);
-            break;
-        }
-      })
-    })
-  </script>
+  <script>$(function () { let title = document.title; $(document).on("visibilitychange", () => { switch (document.visibilityState) { case "hidden": (document.title = "你看不到我" || ""), setTimeout(() => "hidden" === document.visibilityState && (document.title = title), 1e3); break; case "visible": (document.title = "歡迎回來" || ""), setTimeout(() => "visible" === document.visibilityState && (document.title = title), 1e3); break; } }) })</script>
 </body>
 
 </html>
