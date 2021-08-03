@@ -6,9 +6,11 @@
                 <img class="user-icon" :src="data.user.avatarUrl">
                 <div class="card-body">
                     <div class="hover">
-                        <a href="https://crowdin.com/profile/{{data.user.username}}"><h4 class="user-name">
-                        <span class="txt-rank">{{ index + 1 }}
-                        </span> {{data.user.fullName}}</h4></a>
+                        <a href="https://crowdin.com/profile/{{data.user.username}}">
+                            <h4 class="user-name">
+                                <span class="txt-rank">{{ index + 1 }}</span> {{data.user.fullName}}
+                            </h4>
+                        </a>
                     </div>
                     <p class="card-text">翻譯字數: {{data.translated}}</p>
                     <p class="card-text">核准翻譯次數: {{data.approved}}</p>
@@ -16,7 +18,7 @@
                     <p class="card-text">加入專案時間: {{data.user.joined}}</p>
                     <p class="card-text">翻譯獲得稱讚數: {{data.winning}}</p>
                 </div>
-            </div >
+            </div>
         </div>
     </div>
 </template>
