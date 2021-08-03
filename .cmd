@@ -7,3 +7,4 @@ git commit -m "Better update"
 git branch -M main
 git remote add origin https://github.com/a3510377/RPMTW-Website-vue-cli.git
 git push -u origin main
+pause
