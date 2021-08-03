@@ -36,7 +36,6 @@ export default {
         $.getJSON("https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/opt.json", (data) => {
             $(".loadIng").hide();
             this.users = data.data
-            console.log(data.data)
         }).fail(error => {
             console.warn(error);
             $(".loadIng").html("<h1>錯誤，請稍後在試</h1>");
