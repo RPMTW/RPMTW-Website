@@ -1,0 +1,28 @@
+{
+    "plug.header.menu.home": "首頁",
+    "plug.header.menu.assistance": "協助翻譯",
+    "plug.header.menu.Wikipedia": "維基百科",
+    "plug.header.menu.tool": "實用工具",
+    "plug.header.menu.rank": "翻譯者排名",
+    "plug.header.menu.about": "關於我們",
+    "Home.include.public.DL-STAT": "立即下載",
+    "Home.include.public.read-more": "閱讀更多",
+    "Home.include.mod.name": "自動中文化更新模組",
+    "Home.include.mod.description": "體驗前所未見的模組翻譯，讓你的模組通通變中文吧！",
+    "Home.include.atr.name.0": "ATR 1 - All The RPMTW",
+    "Home.include.atr.name.1": "模組包",
+    "Home.include.atr.description": "1.17 全新模組包，結合各種元素，盡情在織物上探險吧！",
+    "Home.top12.title": "翻譯貢獻者前12名 - 感謝你們的貢獻",
+    "Home.top12.show-more": "查看更多翻譯貢獻者",
+    "Home.scroll.texts": [
+        "前所未見的模組繁中化", 
+        "社群協力合作",
+        "翻譯全自動更新",
+        "跳脫傳統框架",
+        "遊戲內翻譯模組",
+        "專屬為您設計",
+        "與我們一起當個創世神！"
+    ],
+    "Assistance.norms.Title": "《RPMTW 翻譯準則》",
+    "": ""
+}
