@@ -1,5 +1,5 @@
 <template>
-    <header class="Header">
+    <header id="header" class="Header">
         <div class="inside-header">
             <div class="header-nav">
                 <div class="header-nav-left">
@@ -72,6 +72,39 @@ export default {
         menuButtonHtmlToggle() {
             $("html").toggleClass("is-menu");
         }
+    },
+    mounted() {
+        $(function (){
+            $(window).on("scroll", () => headerScroll());
+            function headerScroll() {
+                /* set header top show */
+                let scrollTop = Math.floor($(window).scrollTop());
+                let header = $("#header");
+                let topClass = "slider--up";
+                let downClass = "slider--down";
+
+                if (scrollTop === 0) {
+                    setTimeout(() => {
+                        header.addClass(topClass);
+                    }, 250);
+                    header.removeClass(downClass);
+                } else {
+                    if (_ScrollTop > scrollTop) {
+                        header.addClass(topClass);
+                        header.removeClass(downClass);
+                    } else if (!($("html").hasClass("is-menu"))) {
+                        header.addClass(downClass);
+                        header.removeClass(topClass);
+                    }
+                }
+                _ScrollTop = scrollTop
+            }
+            headerScroll()
+        })
+        /* init check cookie mode */
+        let parts = `; ${document.cookie}`.split("; mode=");
+        2 === parts.length && "bright" === parts.pop().split(";").shift() ? $("html").addClass("bright") : document.cookie = "mode=dark";
+        if (document.cookie.length <= 0) alert("建議開啟 cookie 已獲得更好的體驗")
     }
 }
 </script>

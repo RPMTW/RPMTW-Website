@@ -1,8 +1,8 @@
 <template>
     <div class="Home">
         <section class="home-main-backImg">
-            <img class="home-main-img"
-                src="https://images-ext-2.discordapp.net/external/HOlgQY8DosN62EuGMbQ6W2Zo1UoJRAgs8BAPcKb_dMo/https/media.discordapp.net/attachments/793138981750571008/816269692095561748/pack.png"
+            <img class="home-main-img user-select"
+                src="https://cdn.discordapp.com/avatars/645588343228334080/f56a0b0223d5f32b902edcb362d08a5d.webp?size=128"
                 alt="">
             <h1 class="user-select v-rpm-text"></h1>
         </section>
@@ -55,6 +55,18 @@ export default {
     components: {},
     mounted() {
         $(function(){
+            var t = ["前所未見的模組繁中化", "社群協力合作", "翻譯全自動更新", "跳脫傳統框架", "遊戲內翻譯模組", "專屬為您設計", "與我們一起當個創世神！"];
+            let n = 1;
+            let e = (u = 0) => {
+                setTimeout((function () {
+                    n >= t.length && (n = 0), function (u) {let s = 0;let i = () => {
+                        setTimeout(function () {
+                            ++s <= t[u].length ? ($(".v-rpm-text").html(`${t[u].substring(0, s)}<span class="mouse" aria-hidden="true"></span>`), i()) : e(n++);
+                        }, 150);};i();
+                    }(u)
+                }), 2e3)
+            };
+            e();
             for (let i of $(".item-none")) new IntersectionObserver((e =>
                 e.map((e => e.isIntersecting ? e.target.classList.add("active") : e.target.classList.remove("active")))
             )).observe(i);
@@ -62,23 +74,21 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @charset "UTF-8";
 
 /*  */
 .home-main-backImg {
     background-size: cover;
     background-position: center center;
-    background-image: url(https://media.discordapp.net/attachments/793138981750571008/856531170895724544/-1.png);
+    background-image: url(../assets/back-img.png);
     height: 35em;
     width: 100%;
+    text-align: center;
 }
 .home-main-img {
     margin-top: 4em;
     border-radius: 50%;
-}
-.home-main-backImg {
-    text-align: center;
 }
 .home-main-backImg h1 {
     font-size: 5em;
@@ -87,14 +97,19 @@ export default {
 }
 
 /*  */
-.home-main-backImg span.mouse {
-    border-right: 0.05em solid;
-    color: rgb(56, 44, 218);
-    animation: caret 1s steps(1) infinite;
-}
 @keyframes caret {
     50% {
         border-color: transparent;
+    }
+}
+.v-rpm-text {
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    span.mouse {
+        border-right: 0.05em solid;
+        color: rgb(56, 44, 218);
+        animation: caret 1s steps(1) infinite;
     }
 }
 
@@ -157,6 +172,7 @@ export default {
 .translation-C-rank .button-div {
     width: 80%;
     margin-top: 30px;
+    padding: 4px 0;
     letter-spacing: 5px;
 }
 </style>
