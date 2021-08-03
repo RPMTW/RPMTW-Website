@@ -49,8 +49,9 @@
             歡迎到我們的 <a href=""></a>Discord 翻譯討論頻道討論。
         </h3>
         <div class="title-center">
-            <a class="button-div finish aria" aria-label="翻譯去~~"
-                href="https://www.rpmtw.ga/Translation-assistance/Translation-Tutorials">我已經查看完畢，可以進行翻譯了!!</a>
+            <router-link class="button-div finish aria" to="/Translation-Assistance/Translation-Tutorials">
+                我已經查看完畢，可以進行翻譯了!!
+            </router-link>
         </div>
     </div>
 </template>

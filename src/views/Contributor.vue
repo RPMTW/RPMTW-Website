@@ -46,8 +46,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
-body {
+<style lang="scss" scoped>
+#Contributor {
     background-color: rgb(62, 66, 71);
     color: #f0f6fc;
 }
