@@ -4,17 +4,17 @@
                 <div class="header-nav">
                     <div class="header-nav-left">
                         <div class="header-nav-menu"></div>
-                        <div class="menuButton">
+                        <div class="menuButton" @click="menuButtonHtmlToggle">
                             <a href="#">
                                 <div class="menuStyle"></div>
                             </a>
-                            <div class="menu">
-                                <div><a href="/">首頁</a></div>
-                                <div><a href="/public/TRANSL-assistance/main.html">協助翻譯</a></div>
-                                <div><a href="/">維基百科</a></div>
-                                <div><a href="/">實用工具</a></div>
-                                <div><a href="/public/TC-rank/all.html">翻譯貢獻者排名</a></div>
-                                <div><a href="/">關於我們</a></div>
+                            <div class="menu" @mouseleave="menuButtonHtmlToggle">
+                                <div><router-link to="/">首頁</router-link></div>
+                                <div><router-link to="/">首協助翻譯頁</router-link></div>
+                                <div><router-link to="/">維基百科</router-link></div>
+                                <div><router-link to="/">實用工具</router-link></div>
+                                <div><router-link to="/">翻譯貢獻者排名</router-link></div>
+                                <div><router-link to="/About">關於我們</router-link></div>
                                 <div class="links">
                                     <div class="list-links">
                                         <a href="https://discord.com/invite/5xApZtgV2u">
@@ -42,7 +42,7 @@
                                 style="color: #00ffff;" class="notranslate">TW</span></strong>
                     </div>
                     <div class="header-nav-right">
-                        <div class="header-nav-setMode" rod>
+                        <div class="header-nav-setMode" @click="headerSetMode_click" rod>
                             <span class="mode-dark">
                                 <i class="fas fa-sun"></i>
                             </span>
@@ -58,9 +58,21 @@
 </template>
 
 <script>
+/* eslint-disable */
+// let _ScrollTop = 0;
 export default {
     name: 'Header',
-    props: {}
+    props: {},
+    methods: {
+        headerSetMode_click() {
+            let nowMode = $("html").toggleClass("bright").attr("class").split(" ");
+            /* set coolie check modeType */
+            nowMode.includes("bright") ? document.cookie = "mode=bright" : document.cookie = "mode=dark";
+        },
+        menuButtonHtmlToggle() {
+            $("html").toggleClass("is-menu");
+        }
+    }
 }
 </script>
 
