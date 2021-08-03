@@ -1,65 +1,65 @@
 <template>
     <header class="Header">
-            <div class="inside-header">
-                <div class="header-nav">
-                    <div class="header-nav-left">
-                        <div class="header-nav-menu"></div>
-                        <div class="menuButton" @click="menuButtonHtmlToggle">
-                            <a href="#">
-                                <div class="menuStyle"></div>
-                            </a>
-                            <div class="menu" @mouseleave="menuButtonHtmlToggle">
-                                <div><router-link to="/">首頁</router-link></div>
-                                <div><router-link to="/">首協助翻譯頁</router-link></div>
-                                <div><router-link to="/">維基百科</router-link></div>
-                                <div><router-link to="/">實用工具</router-link></div>
-                                <div><router-link to="/">翻譯貢獻者排名</router-link></div>
-                                <div><router-link to="/About">關於我們</router-link></div>
-                                <div class="links">
-                                    <div class="list-links">
-                                        <a href="https://discord.com/invite/5xApZtgV2u">
-                                            <img src="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico"
-                                                alt="">
-                                        </a>
-                                        <a href="https://github.com/RPMTW">
-                                            <img src="https://github.com/fluidicon.png" alt="">
-                                        </a>
-                                        <a href="https://modrinth.com/mod/rpmtw-update-mod">
-                                            <img src="https://modrinth.com/favicon.ico" alt="">
-                                        </a>
-                                        <a href="https://www.curseforge.com/minecraft/modpacks/atr1">
-                                            <img src="https://media.forgecdn.net/avatars/thumbnails/396/29/64/64/637595082272657724.png"
-                                                alt="">
-                                        </a>
-                                    </div>
+        <div class="inside-header">
+            <div class="header-nav">
+                <div class="header-nav-left">
+                    <div class="header-nav-menu"></div>
+                    <div class="menuButton" @click="menuButtonHtmlToggle">
+                        <a href="#">
+                            <div class="menuStyle"></div>
+                        </a>
+                        <div class="menu" @mouseleave="menuButtonHtmlToggle">
+                            <div><router-link to="/">首頁</router-link></div>
+                            <div><router-link to="/Translation-assistance">協助翻譯</router-link></div>
+                            <div><router-link to="/">維基百科</router-link></div>
+                            <div><router-link to="/">實用工具</router-link></div>
+                            <div><router-link to="/Contributor">翻譯貢獻者排名</router-link></div>
+                            <div><router-link to="/About">關於我們</router-link></div>
+                            <div class="links">
+                                <div class="list-links">
+                                    <a href="https://discord.com/invite/5xApZtgV2u">
+                                        <img src="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico"
+                                            alt="">
+                                    </a>
+                                    <a href="https://github.com/RPMTW">
+                                        <img src="https://github.com/fluidicon.png" alt="">
+                                    </a>
+                                    <a href="https://modrinth.com/mod/rpmtw-update-mod">
+                                        <img src="https://modrinth.com/favicon.ico" alt="">
+                                    </a>
+                                    <a href="https://www.curseforge.com/minecraft/modpacks/atr1">
+                                        <img src="https://media.forgecdn.net/avatars/thumbnails/396/29/64/64/637595082272657724.png"
+                                            alt="">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="blurry"></div>
                         </div>
+                        <div class="blurry"></div>
                     </div>
-                    <div class="header-nav-title user-select">
-                        <strong class="main-title"><span class="notranslate" style="color: #ff9900;">RPM</span><span
-                                style="color: #00ffff;" class="notranslate">TW</span></strong>
-                    </div>
-                    <div class="header-nav-right">
-                        <div class="header-nav-setMode" @click="headerSetMode_click" rod>
-                            <span class="mode-dark">
-                                <i class="fas fa-sun"></i>
-                            </span>
-                            <span class="mode-bright">
-                                <i class="fas fa-sun"></i>
-                            </span>
-                            <div class="mode-rod"></div>
-                        </div>
+                </div>
+                <div class="header-nav-title user-select">
+                    <strong class="main-title"><span class="notranslate" style="color: #ff9900;">RPM</span><span
+                            style="color: #00ffff;" class="notranslate">TW</span></strong>
+                </div>
+                <div class="header-nav-right">
+                    <div class="header-nav-setMode" @click="headerSetMode_click" rod>
+                        <span class="mode-dark">
+                            <i class="fas fa-sun"></i>
+                        </span>
+                        <span class="mode-bright">
+                            <i class="fas fa-sun"></i>
+                        </span>
+                        <div class="mode-rod"></div>
                     </div>
                 </div>
             </div>
+        </div>
     </header>
 </template>
 
 <script>
 /* eslint-disable */
-// let _ScrollTop = 0;
+let _ScrollTop = 0;
 export default {
     name: 'Header',
     props: {},
@@ -77,7 +77,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 body {
     margin-top: 52px;
 }
@@ -209,9 +208,11 @@ header {
 .list-links {
     display: flex;
     justify-content: center;
-}
-.list-links > * {
-    margin: 5px 10px 5px 0;
+    flex-wrap: wrap;
+    > * {
+        width: 50px;
+        margin: 5px 10px 5px 0;
+    }
 }
 .is-menu .blurry {
     position: fixed;
@@ -252,17 +253,4 @@ header {
     color: rgb(226, 224, 220) !important;
 }
 
-/* footer */
-footer {
-    margin-top: 5em;
-    background-color: black;
-    width: 100%;
-    min-height: 40px;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-family: "Comic Neue", cursive;
-    justify-content: center;
-}
 </style>

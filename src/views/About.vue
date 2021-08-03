@@ -39,10 +39,11 @@ export default {
         font-size: 60pt;
     }
     > p {
-        color: orange;
+        color: var(--strong-color);
         font-size: 14pt;
     }
     .icons {
+        margin-bottom: 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
