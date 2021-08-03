@@ -1,5 +1,5 @@
 @echo off
-copy %cd%\docs\index.html %cd%\docs\404.html
+copy %~dp0docs\index.html %~dp0docs\404.html
 git init
 git add .
 git commit -m "first commit"
