@@ -3,8 +3,9 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contributor from '../views/Contributor.vue'
 import Assistance from '../views/Assistance/Assistance.vue'
-import Tutorials from '../views/Assistance/Tutorials.vue';
-import ProgressQuery from '../views/ProgressQuery.vue';
+import Tutorials from '../views/Assistance/Tutorials.vue'
+import ProgressQuery from '../views/ProgressQuery.vue'
+import NotFound from '../views/errors/404.vue'
 
 const routes = [
   {
@@ -31,7 +32,11 @@ const routes = [
     path: "/ProgressQuery",
     name: "ProgressQuery",
     component: ProgressQuery
-  }
+  }, {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: NotFound
+  },
 ]
 
 const router = createRouter({
