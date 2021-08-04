@@ -33,6 +33,16 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="div-select">
+                                <h1 class="nowLang langMenu" @click="showLangOptions">{{ lang }}</h1>
+                                <div class="div-option langMenu"
+                                    v-for="(value, key) in langs"
+                                    :value="key"
+                                    :key="(value, key)"
+                                    @click="setChoose">
+                                    {{ value }}
+                                </div>
+                            </div>
                         </div>
                         <div class="blurry"></div>
                     </div>
@@ -59,11 +69,29 @@
 
 <script>
 /* eslint-disable */
+import _i18n from "@/i18n"
+function i18n(val, value="") {
+    return _i18n.i18nData[_i18n.getLang()][val] || _i18n.i18nData[_i18n.set.main][val] || value
+}
 let _ScrollTop = 0;
 export default {
     name: 'Header',
-    props: {},
+    data() {
+        return {
+            langs: _i18n.set.langs,
+            lang: `${_i18n.set.langs[_i18n.getLang()]} (${_i18n.getLang()})`
+        }
+    },
     methods: {
+        i18n: i18n,
+        showLangOptions() {
+            $("div.div-option.langMenu").toggleClass("block");
+        },
+        setChoose(e) {
+            let select = $(e.target).attr("value");
+            this.lang = `${_i18n.set.langs[select]} (${select})`;
+            _i18n.setLang(select)
+        },
         headerSetMode_click() {
             let nowMode = $("html").toggleClass("bright").attr("class").split(" ");
             /* set coolie check modeType */
@@ -109,11 +137,24 @@ export default {
 }
 </script>
 
+<style lang="scss" scoped>
+.div-select {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    .div-option {
+        display: none;
+    }
+    .block {
+        display: block;
+    }
+}
+</style>
+
 <style lang="scss">
 body {
     margin-top: 52px;
 }
-
 /* header */
 header {
     position: fixed;

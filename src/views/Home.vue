@@ -15,10 +15,14 @@
                             alt="">
                     </div>
                     <div class="publicity-info">
-                        <h1 class="publicity-title">自動中文化更新模組</h1>
-                        <strong class="content">體驗前所未見的模組翻譯，讓你的模組通通變中文吧！</strong>
-                        <a class="button-div" aria-label="立即下載" href="https://www.rpmtw.ga/version">立即下載</a>
-                        <a class="button-div more" aria-label="閱讀更多" href="https://www.rpmtw.ga/RPMTWUpdateMod">閱讀更多</a>
+                        <h1 class="publicity-title">{{ i18n("Home.include.mod.name") }}</h1>
+                        <strong class="content">{{ i18n("Home.include.mod.description") }}</strong>
+                        <a class="button-div" aria-label="立即下載" href="https://www.rpmtw.ga/version">
+                            {{ i18n("Home.include.public.DL-STAT") }}
+                        </a>
+                        <a class="button-div more" aria-label="閱讀更多" href="https://www.rpmtw.ga/RPMTWUpdateMod">
+                            {{ i18n("Home.include.public.read-more") }}
+                        </a>
                     </div>
                 </div>
             </div>
@@ -30,32 +34,44 @@
                             alt="">
                     </div>
                     <div class="publicity-info">
-                        <h1 class="publicity-title">ATR 1 - All The RPMTW<br>模組包</h1>
-                        <strong class="content">1.17 全新模組包，結合各種元素，盡情在織物上探險吧！</strong>
-                        <a class="button-div" data-popover="立即下載" href="https://www.rpmtw.ga/version">立即下載</a>
+                        <h1 class="publicity-title">{{ i18n("Home.include.atr.name.0") }}<br>{{ i18n("Home.include.atr.name.1") }}</h1>
+                        <strong class="content">{{ i18n("Home.include.atr.description") }}</strong>
+                        <a class="button-div" data-popover="立即下載" href="https://www.rpmtw.ga/version">
+                            {{ i18n("Home.include.public.DL-STAT") }}
+                        </a>
                         <a class="button-div more" data-popover="閱讀更多"
-                            href="https://www.rpmtw.ga/RPMTWUpdateMod">閱讀更多</a>
+                            href="https://www.rpmtw.ga/RPMTWUpdateMod">
+                            {{ i18n("Home.include.public.read-more") }}
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
         <p></p>
         <section class="translation-C-rank">
-            <h1>翻譯貢獻者前12名 - 感謝你們的貢獻</h1>
+            <h1>{{ i18n("Home.top12.title") }}</h1>
             <iframe src="https://rpmtw.github.io/Contributor-Website/Top/12" ref="iframe" frameborder="0"></iframe>
-            <router-link class="button-div" to="/Contributor">查看更多翻譯貢獻者</router-link>
+            <router-link class="button-div" to="/Contributor">{{ i18n("Home.top12.show-more") }}</router-link>
         </section>
     </div>
 </template>
 
 <script>
 /* eslint-disable no-undef */
+/* eslint-disable-next-line no-unused-vars */
+import main from "../i18n"
+function i18n(val, value="") {
+    return main.i18nData[main.getLang()][val] || main.i18nData[main.set.main][val] || value
+}
 export default {
     name: 'Home',
     components: {},
+    methods: {
+        i18n: i18n
+    },
     mounted() {
         $(function(){
-            var t = ["前所未見的模組繁中化", "社群協力合作", "翻譯全自動更新", "跳脫傳統框架", "遊戲內翻譯模組", "專屬為您設計", "與我們一起當個創世神！"];
+            var t = i18n("Home.scroll.texts");
             let n = 1;
             let e = (u = 0) => {
                 setTimeout((function () {

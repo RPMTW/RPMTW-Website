@@ -4,6 +4,8 @@
     <Footer />
 </template>
 <script>
+/* eslint-disable no-undef */
+
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
