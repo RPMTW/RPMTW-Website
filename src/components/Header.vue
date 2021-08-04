@@ -144,6 +144,12 @@ export default {
     flex-direction: column;
     .div-option {
         display: none;
+        width: 50%;
+        border-top: 2px solid rgb(119, 119, 119);
+        border-bottom: 2px solid rgb(119, 119, 119);
+        margin: 5px 0;
+        padding: 0 10px;
+        background-color: rgba(255, 255, 255, 0.2);
     }
     .block {
         display: block;
