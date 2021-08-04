@@ -27,7 +27,7 @@
 <body><noscript><strong>We're sorry but <%=htmlWebpackPlugin.options.title %>doesn't work properly without JavaScript
         enabled. Please enable it to continue.</strong></noscript>
   <div id="app"></div>
-  <script>$(function () { let title = document.title; $(document).on("visibilitychange", () => { switch (document.visibilityState) { case "hidden": (document.title = "你看不到我" || ""), setTimeout(() => "hidden" === document.visibilityState && (document.title = title), 1e3); break; case "visible": (document.title = "歡迎回來" || ""), setTimeout(() => "visible" === document.visibilityState && (document.title = title), 1e3); break; } }) })</script>
+  <script src="<%=BASE_URL %>main.js"></script>
 </body>
 
 </html>
