@@ -1,6 +1,5 @@
 @echo off
-echo %~dp0docs\index.html
-copy %~dp0\docs\index.html %~dp0\docs\404.html
+copy "%~dp0\docs\index.html" "%~dp0\docs\404.html"
 
 git init
 git add .
