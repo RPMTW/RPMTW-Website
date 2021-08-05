@@ -1,5 +1,4 @@
 @echo off
-start build.cmd
 copy %~dp0docs\index.html %~dp0docs\404.html
 
 git init
