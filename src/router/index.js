@@ -7,7 +7,7 @@ import Tutorials from '@/views/Assistance/Tutorials.vue'
 import ProgressQuery from '@/views/ProgressQuery.vue'
 
 /* Wiki */
-import ApiMenuList from '@/components/ApiMenuList.vue'
+import WikiMenuList from '@/components/WikiMenuList.vue'
 
 /* error */
 import NotFound from '@/views/errors/404.vue'
@@ -38,9 +38,9 @@ const routes = [
         name: "ProgressQuery",
         component: ProgressQuery
     }, {
-        path: '/ApiMenuList',
-        name: "ApiMenuList",
-        component: ApiMenuList
+        path: '/Wiki',
+        name: "WikiMenuList",
+        component: WikiMenuList
     }, {
         path: '/:pathMatch(.*)*',
         name: 'not-found',
