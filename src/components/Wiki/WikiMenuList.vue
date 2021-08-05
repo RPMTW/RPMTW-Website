@@ -7,7 +7,7 @@
             </li>
         </ul>
     </div>
-    <div class="wiki"></div>
+    <div class="wikiContent"></div>
 </template>
 
 <script>
@@ -18,25 +18,19 @@ export default {
     name: "apiMenuList",
     data() {
         return {
-            menuList: menuList
+            menuList: menuList,
         };
     },
     methods: {},
     mounted() {
         /* eslint-disable-next-line no-unused-vars */
-        for (let i of $("a[href].menuList_")) new IntersectionObserver((e =>
-            console.log($(e[0].target).attr("href"))
-        ), {
-            rootMargin: "-20% 0px"
-        }).observe(i);
-        // document.querySelectorAll("a").forEach(type => { observer.observe(type) });
-        // console.log(document.querySelectorAll("a"))
-        // for (let i in menuList) {
-        //     for (b in i.names) {
-        //         console.log(b)
-        //         $("").append("")
-        //     }
-        // }
+        $(function () {
+            for (let i of $("a[href].menuList_")) new IntersectionObserver((e =>
+                console.log($(e[0].target).attr("href"))
+            ), {
+                rootMargin: "-20% 0px"
+            }).observe(i);
+        })
     }
 };
 </script>

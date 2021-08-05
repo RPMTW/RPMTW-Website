@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ApiMenuList from '@/components/ApiMenuList.vue';
+import ApiMenuList from '@/components/Wiki/WikiMenuList.vue';
 export default {
     name: "Wiki",
     data() {

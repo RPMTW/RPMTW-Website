@@ -7,7 +7,7 @@ import Tutorials from '@/views/Assistance/Tutorials.vue'
 import ProgressQuery from '@/views/ProgressQuery.vue'
 
 /* Wiki */
-import WikiMenuList from '@/components/WikiMenuList.vue'
+import WikiMenuList from '@/views/Wiki/index.vue'
 
 /* error */
 import NotFound from '@/views/errors/404.vue'
@@ -40,7 +40,10 @@ const routes = [
     }, {
         path: '/Wiki',
         name: "WikiMenuList",
-        component: WikiMenuList
+        component: WikiMenuList,
+        meta: {
+            title: "目前還在測試中"
+        }
     }, {
         path: '/:pathMatch(.*)*',
         name: 'not-found',
@@ -52,5 +55,8 @@ const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes
 })
-
+router.beforeEach((data, from, next) => {
+    document.title = data.meta.title || document.title
+    next()
+})
 export default router
