@@ -56,7 +56,8 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes
-}).beforeEach((data, from, next) => {
+})
+router.beforeEach((data, from, next) => {
     document.title = data.meta.title || document.title
     next()
 })
