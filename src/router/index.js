@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
+/* mainRouter */
 import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Contributor from '@/views/Contributor.vue'
@@ -6,7 +8,7 @@ import Assistance from '@/views/Assistance/Assistance.vue'
 import Tutorials from '@/views/Assistance/Tutorials.vue'
 import ProgressQuery from '@/views/ProgressQuery.vue'
 
-/* Wiki */
+/* wiki */
 import WikiMenuList from '@/views/Wiki/index.vue'
 
 /* error */
@@ -54,8 +56,7 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes
-})
-router.beforeEach((data, from, next) => {
+}).beforeEach((data, from, next) => {
     document.title = data.meta.title || document.title
     next()
 })
