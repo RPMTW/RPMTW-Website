@@ -18,6 +18,9 @@
 
 <script>
 /* RPM翻譯更新模組 */
+/* eslint-disable no-unused-vars */
+import sassStyles from '@/scss/Wiki.scss'
+
 export default {
     name: "AssistTranslation",
     data() {

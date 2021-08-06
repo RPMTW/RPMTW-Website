@@ -1,0 +1,25 @@
+.content {
+    margin-bottom: 100px;
+    a[href] {
+        color: rgb(36, 146, 236);
+    }
+    .bright a[href] {
+        color: rgb(179, 85, 223) !important;
+    }
+    .section {
+        padding-bottom: 20px;
+        h1 {
+            font-weight: 900;
+            font-size: 25pt;
+            padding-bottom: 10px;
+            border-bottom: solid rgb(53, 58, 60) 3px;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        img {
+            text-align: center;
+            max-width: 80%;
+        }
+    }
+}

@@ -34,11 +34,11 @@ const routes = [
         component: Contributor
     }, {
         path: "/Translation-assistance",
-        name: "/Assistance",
+        name: "Assistance",
         component: Assistance
     }, {
         path: "/Translation-assistance/Translation-Tutorials",
-        name: "/Tutorials",
+        name: "Tutorials",
         component: Tutorials
     }, {
         path: "/ProgressQuery",
@@ -64,17 +64,17 @@ const routes = [
                 }
             }, {
                 path: "ModInfo",
-                component: {
+                components: {
                     data: ModInfo
                 }
             }, {
                 path: "OtherInfo",
-                component: {
+                components: {
                     data: OtherInfo
                 }
             }, {
                 path: "QandA",
-                component: {
+                components: {
                     data: QandA
                 }
             }

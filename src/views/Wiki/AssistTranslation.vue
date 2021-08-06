@@ -16,7 +16,7 @@
             <section class="section" id="upload-translated">
                 <h1>如何直接上傳翻譯過的檔案到RPMTW?</h1>
                 <p>
-                    首先請先確保你有註冊Crowdin帳號以及加入 <a href="https://crowdin.com/project/resourcepack-mod-zhtw">RPMTW的翻譯專案</a> ，詳情請見 <router-link to="">&lt;&lt;這裡&gt;&gt;</router-link> ，到專案首頁後選擇要翻譯的語言
+                    首先請先確保你有註冊Crowdin帳號以及加入 <a href="https://crowdin.com/project/resourcepack-mod-zhtw">RPMTW的翻譯專案</a> ，詳情請見 <router-link to="/Translation-assistance">&lt;&lt;這裡&gt;&gt;</router-link> ，到專案首頁後選擇要翻譯的語言
                 </p>
                 <img src="@/assets/Wiki/AssistTranslation/translations.png" alt="選擇要翻譯的語言">
                 <p>
@@ -38,6 +38,8 @@
 
 <script>
 /* 協助翻譯 */
+/* eslint-disable no-unused-vars */
+import sassStyles from '@/scss/Wiki.scss'
 export default {
     name: "AssistTranslation",
     data() {
@@ -45,33 +47,3 @@ export default {
     }
 };
 </script>
-
-<style lang="scss" scoped>
-.content {
-    margin-bottom: 100px;
-    a[href] {
-        color: rgb(36, 146, 236);
-    }
-    .bright a[href] {
-        color: rgb(179, 85, 223)!important;
-    }
-    .section {
-        border-bottom: 1px var(--styleMode-color) solid;
-        padding-bottom: 20px;
-        * {
-            font-weight: 900;
-        }
-        h1 {
-            font-size: 25pt;
-        }
-        p {
-            font-size: 1.1em;
-        }
-        img {
-            text-align: center;
-            max-width: 80%;
-        }
-    }
-}
-
-</style>
