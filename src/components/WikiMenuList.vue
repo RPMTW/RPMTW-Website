@@ -10,7 +10,7 @@
                     <h4 @click="showLi">{{ data.title }}</h4>
                 </router-link>
                 <li v-for="_data in data.names" :key="_data" class="liHref">
-                    <router-link class="menuList_" :to="`/Wiki${data.url}/#${_data.url}`">{{ _data.title }}</router-link>
+                    <a class="menuList_" :href="`${baseUrl || '/'}Wiki${data.url}#${_data.url}`">{{ _data.title }}</a>
                 </li>
             </ul>
         </div>
@@ -21,12 +21,14 @@
 <script>
 /* eslint-disable no-undef */
 let menuList = require("@/data/WikiMenu")
+require('dotenv').config();
 
 export default {
     name: "apiMenuList",
     data() {
         return {
             menuList: menuList,
+            baseUrl: process.env.BASE_URL
         };
     },
     methods: {
