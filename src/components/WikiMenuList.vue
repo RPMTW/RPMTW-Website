@@ -3,7 +3,7 @@
         <div class="scroll">
             <div class="title user-select">
                 <strong class="main-title"><span class="notranslate" style="color: #ff9900;">RPM</span><span
-                    style="color: #00ffff;" class="notranslate">TW</span><span style="color: #ff9900;">Wiki</span></strong>
+                    style="color: #00ffff;" class="notranslate">TW</span><span style="color: #ff9900;"> Wiki</span></strong>
             </div>
             <ul v-for="data in menuList" :key="data">
                 <router-link class="link" :to="'/Wiki' + data.url">
