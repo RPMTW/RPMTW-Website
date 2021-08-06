@@ -42,15 +42,10 @@ export default {
     name: "AssistTranslation",
     data() {
         return {};
-    }, 
-    components: {}
+    }
 };
 </script>
-<style lang="scss">
-#Footer {
-    display: none;
-}
-</style>
+
 <style lang="scss" scoped>
 .content {
     margin-bottom: 100px;
@@ -61,6 +56,8 @@ export default {
         color: rgb(179, 85, 223)!important;
     }
     .section {
+        border-bottom: 1px var(--styleMode-color) solid;
+        padding-bottom: 20px;
         * {
             font-weight: 900;
         }

@@ -10,14 +10,14 @@
 
 <script>
 export default {
-    name: "Footer",
+    name: "Footer"
 };
 </script>
 
 <style lang="scss" scoped>
-
 /* footer */
-footer {
+#Footer {
+    display: block;
     margin-top: 5em;
     background-color: black;
     width: 100%;

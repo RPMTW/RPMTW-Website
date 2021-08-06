@@ -47,35 +47,35 @@ const routes = [
     }, {
         path: "/Wiki",
         name: "WikiMenuList",
-        component: WikiMenuList,
         meta: {
             title: "目前還在測試中"
         },
+        component: WikiMenuList,
         children: [
             {
                 path: "AssistTranslation",
                 components: {
-                    default: AssistTranslation
+                    data: AssistTranslation
                 }
             }, {
                 path: "InstallAndUse",
                 components: {
-                    default: InstallAndUse
+                    data: InstallAndUse
                 }
             }, {
                 path: "ModInfo",
                 component: {
-                    default: ModInfo
+                    data: ModInfo
                 }
             }, {
                 path: "OtherInfo",
                 component: {
-                    default: OtherInfo
+                    data: OtherInfo
                 }
             }, {
                 path: "QandA",
                 component: {
-                    default: QandA
+                    data: QandA
                 }
             }
         ]

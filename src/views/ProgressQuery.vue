@@ -126,7 +126,7 @@ export default {
     color: var(--strong-color);
     font-size: 15pt;
     h1 {
-        color: white;
+        color: var(--styleMode-color);
         font-size: 35pt;
     }
 }
@@ -187,6 +187,7 @@ export default {
 }
 
 .dropHover {
+    color: white;
     padding: 8px;
     background-color: #6345e9;
     text-align: center;
@@ -216,6 +217,7 @@ export default {
     margin-bottom: 0;
     display: block;
     padding: 5px;
+    color: white;
     background-color: rgb(58, 58, 58);
 }
 
