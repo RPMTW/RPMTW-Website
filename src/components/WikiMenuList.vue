@@ -1,12 +1,16 @@
 <template>
     <div id="wikiMenuList">
-        <ul v-for="data in menuList" :key="data">
-            <h4>{{ data.title }}</h4>
-            <li v-for="_data in data.names" :key="_data" group>
-                <a class="menuList_" :href="`#${_data.url}`">{{ _data.title }}</a>
-            </li>
-        </ul>
-        <router-view />
+        <div class="scroll">
+            <ul v-for="data in menuList" :key="data">
+                <router-link class="link" :to="'/wiki' + data.url">
+                    <h4>{{ data.title }}</h4>
+                </router-link>
+                <li v-for="_data in data.names" :key="_data" group>
+                    <a class="menuList_" :href="`#${_data.url}`">{{ _data.title }}</a>
+                </li>
+            </ul>
+        </div>
+        <router-view class="view"></router-view>
     </div>
 </template>
 
@@ -20,20 +24,33 @@ export default {
         return {
             menuList: menuList,
         };
-    },
-    methods: {},
-    mounted() {
-        /* eslint-disable-next-line no-unused-vars */
-        // $(function () {
-        //     for (let i of $("a[href].menuList_")) new IntersectionObserver((e =>
-        //         console.log($(e[0].target).attr("href"))
-        //     ), {
-        //         rootMargin: "-20% 0px"
-        //     }).observe(i);
-        // })
     }
 };
 </script>
 
 <style lang="scss" scoped>
+#wikiMenuList {
+    height: 100%;
+    display: flex;
+    .scroll {
+        position: fixed;
+        top: 52px;
+        resize: horizontal;
+        padding-right: 10px;
+        display: block;
+        height: 100%;
+        width: 25%;
+        overflow: auto;
+    }
+    .view {
+        width: 70%;
+        margin-left: calc(25% + 40px);
+    }
+    ul {
+        li {
+            list-style-type: none;
+            margin: 15px 0 15px 8%;
+        }
+    }
+}
 </style>

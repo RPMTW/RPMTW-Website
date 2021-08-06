@@ -1,7 +1,7 @@
 [
     {
         "title": "常見問題 Q&A",
-        "img": "",
+        "url": "/QandA",
         "tag": "common-problem",
         "names": [{
             "title": "什麼是 RPMTW 自動中文化更新模組?",
@@ -27,7 +27,7 @@
         }]
     }, {
         "title": "關於此MOD",
-        "img": "",
+        "url": "/ModInfo",
         "tag": "RPMTW-mod",
         "names": [{
             "title": "如何安裝這個模組?",
@@ -50,7 +50,7 @@
         }]
     }, {
         "title": "協助翻譯",
-        "img": "",
+        "url": "/AssistTranslation",
         "tag": "assist-translation",
         "names": [{
             "title": "如何註冊Crowdin的帳號?",
@@ -61,7 +61,7 @@
         }]
     }, {
         "title": "安裝及使用",
-        "img": "",
+        "url": "/InstallAndUse",
         "tag": "install-use",
         "names": [{
             "title": "如何安裝RPMTW繁體中文自動更新模組?",
@@ -71,8 +71,8 @@
             "url": "if-game-crashes"
         }]
     }, {
-        "title": "其他資訊",
-        "img": "",
+        "title": "其他問題",
+        "url": "/OtherInfo",
         "tag": "other-info",
         "names": [{
             "title": "未來的發展目標?",

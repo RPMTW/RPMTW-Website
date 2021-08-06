@@ -1,10 +1,10 @@
 <template>
     <div id="AssistTranslation">
-        <ApiMenuList />
     </div>
 </template>
 
 <script>
+/* 其他問題 */
 export default {
     name: "AssistTranslation",
     data() {

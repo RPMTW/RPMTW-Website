@@ -1,10 +1,10 @@
 <template>
     <div id="AssistTranslation">
-        <ApiMenuList />
     </div>
 </template>
 
 <script>
+/* RPM翻譯更新模組 */
 export default {
     name: "AssistTranslation",
     data() {

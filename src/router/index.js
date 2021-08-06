@@ -9,12 +9,12 @@ import Tutorials from '@/views/Assistance/Tutorials.vue'
 import ProgressQuery from '@/views/ProgressQuery.vue'
 
 /* wiki */
-import WikiMenuList from '@/components/WikiMenuList.vue'
-import AssistTranslation from '@/views/Wiki/AssistTranslation.vue'
-import InstallAndUse from '@/views/Wiki/InstallAndUse.vue'
-import ModInfo from '@/views/Wiki/ModInfo.vue'
-import OtherInfo from '@/views/Wiki/OtherInfo.vue'
-import QandA from '@/views/Wiki/QandA.vue'
+import WikiMenuList from '@/components/WikiMenuList.vue' // Wiki Menu
+import AssistTranslation from '@/views/Wiki/AssistTranslation.vue' // 協助翻譯
+import InstallAndUse from '@/views/Wiki/InstallAndUse.vue' // 安裝及使用
+import ModInfo from '@/views/Wiki/ModInfo.vue' // RPM翻譯更新模組
+import OtherInfo from '@/views/Wiki/OtherInfo.vue' // 其他問題
+import QandA from '@/views/Wiki/QandA.vue' // 常見問題
 
 /* error */
 import NotFound from '@/views/errors/404.vue'
