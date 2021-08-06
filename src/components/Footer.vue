@@ -1,5 +1,5 @@
 <template>
-    <div id="Footer">
+    <div class="Footer">
         <footer>
             <p>
                 Copyright © RPMTW  2021-2021  Powered by The RPMTW Team
@@ -16,12 +16,12 @@ export default {
 
 <style lang="scss" scoped>
 /* footer */
-#Footer {
+.Footer {
     display: block;
     margin-top: 5em;
     background-color: black;
     width: 100%;
-    min-height: 40px;
+    height: 40px;
     color: white;
     display: flex;
     align-items: center;
