@@ -9,7 +9,12 @@ import Tutorials from '@/views/Assistance/Tutorials.vue'
 import ProgressQuery from '@/views/ProgressQuery.vue'
 
 /* wiki */
-import WikiMenuList from '@/views/Wiki/index.vue'
+import WikiMenuList from '@/components/WikiMenuList.vue'
+import AssistTranslation from '@/views/Wiki/AssistTranslation.vue'
+import InstallAndUse from '@/views/Wiki/InstallAndUse.vue'
+import ModInfo from '@/views/Wiki/ModInfo.vue'
+import OtherInfo from '@/views/Wiki/OtherInfo.vue'
+import QandA from '@/views/Wiki/QandA.vue'
 
 /* error */
 import NotFound from '@/views/errors/404.vue'
@@ -40,15 +45,43 @@ const routes = [
         name: "ProgressQuery",
         component: ProgressQuery
     }, {
-        path: '/Wiki',
+        path: "/Wiki",
         name: "WikiMenuList",
         component: WikiMenuList,
         meta: {
             title: "目前還在測試中"
-        }
+        },
+        children: [
+            {
+                path: "AssistTranslation",
+                components: {
+                    default: AssistTranslation
+                }
+            }, {
+                path: "InstallAndUse",
+                components: {
+                    default: InstallAndUse
+                }
+            }, {
+                path: "ModInfo",
+                component: {
+                    default: ModInfo
+                }
+            }, {
+                path: "OtherInfo",
+                component: {
+                    default: OtherInfo
+                }
+            }, {
+                path: "QandA",
+                component: {
+                    default: QandA
+                }
+            }
+        ]
     }, {
-        path: '/:pathMatch(.*)*',
-        name: 'not-found',
+        path: "/:pathMatch(.*)*",
+        name: "not-found",
         component: NotFound
     }
 ]

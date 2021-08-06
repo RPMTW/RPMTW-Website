@@ -6,8 +6,8 @@
                 <a class="menuList_" :href="`#${_data.url}`">{{ _data.title }}</a>
             </li>
         </ul>
+        <router-view />
     </div>
-    <div class="wikiContent"></div>
 </template>
 
 <script>
@@ -24,13 +24,13 @@ export default {
     methods: {},
     mounted() {
         /* eslint-disable-next-line no-unused-vars */
-        $(function () {
-            for (let i of $("a[href].menuList_")) new IntersectionObserver((e =>
-                console.log($(e[0].target).attr("href"))
-            ), {
-                rootMargin: "-20% 0px"
-            }).observe(i);
-        })
+        // $(function () {
+        //     for (let i of $("a[href].menuList_")) new IntersectionObserver((e =>
+        //         console.log($(e[0].target).attr("href"))
+        //     ), {
+        //         rootMargin: "-20% 0px"
+        //     }).observe(i);
+        // })
     }
 };
 </script>
