@@ -8,14 +8,16 @@
     }
     .section {
         padding-bottom: 20px;
+        font-weight: 500;
         h1 {
             font-weight: 900;
             font-size: 25pt;
             padding-bottom: 10px;
             border-bottom: solid rgb(53, 58, 60) 3px;
         }
-        p {
-            font-size: 1.1em;
+        p,
+        a {
+            font-size: 1.3em;
         }
         img {
             text-align: center;

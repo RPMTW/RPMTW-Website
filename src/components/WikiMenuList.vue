@@ -6,11 +6,11 @@
                     style="color: #00ffff;" class="notranslate">TW</span><span style="color: #ff9900;"> Wiki</span></strong>
             </div>
             <ul v-for="data in menuList" :key="data">
-                <router-link class="link" :to="'/Wiki' + data.url">
-                    <h4 @click="showLi">{{ data.title }}</h4>
+                <router-link class="menuList_" :to="'/Wiki' + data.url">
+                    <h4>{{ data.title }}</h4>
                 </router-link>
                 <li v-for="_data in data.names" :key="_data" class="liHref">
-                    <a class="menuList_" :href="`${baseUrl || '/'}Wiki${data.url}#${_data.url}`">{{ _data.title }}</a>
+                    <a class="menuList_" :href="`${BASE_URL || '/'}Wiki${data.url}#${_data.url}`">{{ _data.title }}</a>
                 </li>
             </ul>
         </div>
@@ -28,13 +28,21 @@ export default {
     data() {
         return {
             menuList: menuList,
-            baseUrl: process.env.BASE_URL
+            BASE_URL: process.env.BASE_URL
         };
     },
     methods: {
         showLi(event) {
             console.log($(event.target).parent().parent("ul").find(".liHref"))
         }
+    },
+    mounted() {
+        $(function () {
+            $("#app").on("click", ".menuList_", function() {
+                $("header").removeClass("slider--up")
+                $("header").addClass("slider--down")
+            })
+        })
     }
 };
 </script>

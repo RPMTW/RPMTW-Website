@@ -53,6 +53,12 @@ const routes = [
         component: WikiMenuList,
         children: [
             {
+                path: "",
+                components: {
+                    data: QandA
+                }
+            },
+            {
                 path: "AssistTranslation",
                 components: {
                     data: AssistTranslation
