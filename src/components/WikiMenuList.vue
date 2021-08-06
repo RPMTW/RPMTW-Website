@@ -10,7 +10,7 @@
                     <h4 @click="showLi">{{ data.title }}</h4>
                 </router-link>
                 <li v-for="_data in data.names" :key="_data" class="liHref">
-                    <router-link class="menuList_" :href="`/Wiki${data.url}/#${_data.url}`">{{ _data.title }}</router-link>
+                    <router-link class="menuList_" :to="`/Wiki${data.url}/#${_data.url}`">{{ _data.title }}</router-link>
                 </li>
             </ul>
         </div>
