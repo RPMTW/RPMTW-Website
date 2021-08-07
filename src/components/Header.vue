@@ -3,7 +3,6 @@
         <div class="inside-header">
             <div class="header-nav">
                 <div class="header-nav-left">
-                    <div class="header-nav-menu"></div>
                     <div class="menuButton" @click="menuButtonHtmlToggle">
                         <a href="#">
                             <div class="menuStyle"></div>
@@ -34,8 +33,8 @@
                                 </div>
                             </div>
                             <div class="div-select">
-                                <h1 class="nowLang langMenu" @click="showLangOptions">{{ lang }}</h1>
-                                <div class="div-option langMenu"
+                                <h1 class="nowLang notranslate langMenu" @click="showLangOptions">{{ lang }}</h1>
+                                <div class="div-option langMenu notranslate"
                                     v-for="(value, key) in langs"
                                     :value="key"
                                     :key="(value, key)"
@@ -107,7 +106,6 @@ export default {
             $(window).on("scroll", () => headerScroll());
             function headerScroll() {
                 /* set header top show */
-                if (!_this.$route.path.includes("Wiki")) return
                 let scrollTop = Math.floor($(window).scrollTop());
                 let header = $("#header");
                 let topClass = "slider--up";

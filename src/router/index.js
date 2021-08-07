@@ -7,6 +7,7 @@ import Contributor from '@/views/Contributor.vue'
 import Assistance from '@/views/Assistance/Assistance.vue'
 import Tutorials from '@/views/Assistance/Tutorials.vue'
 import ProgressQuery from '@/views/ProgressQuery.vue'
+import Progress from '@/views/Progress.vue'
 
 /* wiki */
 import WikiMenuList from '@/components/WikiMenuList.vue' // Wiki Menu
@@ -85,6 +86,10 @@ const routes = [
                 }
             }
         ]
+    }, {
+        path: "/Progress",
+        name: "Progress",
+        component: Progress
     }, {
         path: "/:pathMatch(.*)*",
         name: "not-found",

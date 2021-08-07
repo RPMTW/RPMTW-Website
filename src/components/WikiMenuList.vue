@@ -62,7 +62,7 @@ export default {
         display: block;
         height: 100%;
         width: 25%;
-        overflow: auto;
+        overflow:scroll;
     }
     .view {
         width: 70%;
