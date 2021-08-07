@@ -1,14 +1,24 @@
 <template>
     <div id="ModVersion">
-        <h1>請選擇版本</h1>
+        <select id="">
+            <option :value="version.keys()"
+                v-for="version in versions"
+                :key="version"
+            >{{ version }}
+            </option>
+        </select>
     </div>
 </template>
 
 <script>
+import version from "@/data/Versions.json"
+
 export default {
     name: "ModVersion",
     data() {
-        return {};
+        return {
+            versions: version
+        };
     },
     methods: {}
 };

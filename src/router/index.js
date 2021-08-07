@@ -8,6 +8,7 @@ import Assistance from '@/views/Assistance/Assistance.vue'
 import Tutorials from '@/views/Assistance/Tutorials.vue'
 import ProgressQuery from '@/views/ProgressQuery.vue'
 import Progress from '@/views/Progress.vue'
+import Version from '@/views/Wiki/mod-install/Version.vue'
 
 /* wiki */
 import WikiMenuList from '@/components/WikiMenuList.vue' // Wiki Menu
@@ -90,6 +91,10 @@ const routes = [
         path: "/Progress",
         name: "Progress",
         component: Progress
+    }, {
+        path: "/Version",
+        name: "Version",
+        component: Version
     }, {
         path: "/:pathMatch(.*)*",
         name: "not-found",

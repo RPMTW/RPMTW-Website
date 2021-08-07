@@ -1,0 +1,28 @@
+{
+    "1.12": {
+        "forge": "https://cdn.modrinth.com/data/ZukQzaRP/versions/FG1.2.1-1.12.2/RPMTW-Update-Mod-1.12-1.2.1.jar",
+        "x": [
+            "2"
+        ]
+    },
+    "1.16": {
+        "fabric": "https://cdn.modrinth.com/data/ZukQzaRP/versions/FC1.2.0-1.16/RPMTW-Update-Mod-Fabric-1.16-1.2.0.jar",
+        "forge": "https://cdn.modrinth.com/data/ZukQzaRP/versions/FG1.2.0/RPMTW-Update-Mod-Forge-1.16-1.2.0.jar",
+        "x": [
+            "null",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "1.17": {
+        "fabric": "https://cdn.modrinth.com/data/ZukQzaRP/versions/FC1.2.2+1.17.x/RPMTW-Update-Mod-Fabric-1.17-1.2.2.jar",
+        "forge": "https://cdn.modrinth.com/data/ZukQzaRP/versions/FG1.2.2+1.17.x/RPMTW-Update-Mod-Forge-1.17-1.2.2.jar",
+        "x": [
+            "null",
+            "1"
+        ]
+    }
+}
