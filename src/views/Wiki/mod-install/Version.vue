@@ -1,10 +1,10 @@
 <template>
     <div id="ModVersion">
         <select id="">
-            <option :value="version.keys()"
-                v-for="version in versions"
-                :key="version"
-            >{{ version }}
+            <option :value="version"
+                v-for="(version, key) in versions"
+                :key="(version, key)"
+            >{{ key }}
             </option>
         </select>
     </div>
@@ -12,7 +12,7 @@
 
 <script>
 import version from "@/data/Versions.json"
-
+console.log(version);
 export default {
     name: "ModVersion",
     data() {
