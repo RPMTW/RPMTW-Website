@@ -54,14 +54,12 @@
             <router-link class="button-div" to="/Contributor">{{ i18n("Home.top12.show-more") }}</router-link>
         </section>
     </div>
-    <Test version="1.12.2"/>
 </template>
 
 <script>
 /* eslint-disable no-undef */
 /* eslint-disable-next-line no-unused-vars */
 import main from "../i18n.js"
-import Test from "./Progress.vue"
 
 function i18n(val, value="") {
     return main.i18nData[main.getLang()][val] || main.i18nData[main.set.main][val] || value
@@ -70,9 +68,6 @@ export default {
     name: 'Home',
     methods: {
         i18n: i18n
-    },
-    components: {
-        Test
     },
     mounted() {
         $(function(){
