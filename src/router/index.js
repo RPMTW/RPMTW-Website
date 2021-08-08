@@ -25,32 +25,48 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home
+        component: Home,
+        meta: {
+            breadcrumb: "Home",
+        },
     }, {
         path: '/about',
         name: 'About',
-        component: About
+        component: About,
+        meta: {
+            breadcrumb: "About",
+        },
     }, {
         path: "/Contributor",
         name: "Contributor",
-        component: Contributor
+        component: Contributor,
+        meta: {
+            breadcrumb: "Contributor",
+        },
     }, {
         path: "/Translation-assistance",
         name: "Assistance",
-        component: Assistance
+        component: Assistance,
+        meta: {
+            breadcrumb: "Assistance",
+        },
     }, {
         path: "/Translation-assistance/Translation-Tutorials",
         name: "Tutorials",
-        component: Tutorials
+        component: Tutorials,
     }, {
         path: "/ProgressQuery",
         name: "ProgressQuery",
-        component: ProgressQuery
+        component: ProgressQuery,
+        meta: {
+            breadcrumb: "ProgressQuery",
+        },
     }, {
         path: "/Wiki",
         name: "WikiMenuList",
         meta: {
-            title: "目前還在測試中"
+            title: "目前還在測試中",
+            breadcrumb: "Wiki",
         },
         component: WikiMenuList,
         children: [
@@ -94,11 +110,17 @@ const routes = [
     }, {
         path: "/install/version",
         name: "Version",
-        component: Version
+        component: Version,
+        meta: {
+            breadcrumb: "Version",
+        },
     }, {
         path: "/:pathMatch(.*)*",
         name: "not-found",
-        component: NotFound
+        component: NotFound,
+        meta: {
+            breadcrumb: "ProgressQuery",
+        },
     }
 ]
 

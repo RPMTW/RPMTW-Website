@@ -8,18 +8,17 @@
               <div class="menuStyle"></div>
             </a>
             <div class="menu" @mouseleave="menuButtonHtmlToggle">
-              <div><router-link to="/">首頁</router-link></div>
-              <div>
-                <router-link to="/Translation-assistance">協助翻譯</router-link>
-              </div>
-              <div><router-link to="/Wiki">維基百科</router-link></div>
-              <div><router-link to="/ProgressQuery">實用工具</router-link></div>
-              <div>
-                <router-link to="/Contributor">翻譯貢獻者排名</router-link>
-              </div>
-              <div><router-link to="/About">關於我們</router-link></div>
-              <div>
-                <router-link to="/install/version">下載本模組</router-link>
+              <div
+                v-for="data in menuList"
+                :key="data"
+                :class="{
+                  active: breadcrumb === data.breadcrumb,
+                }"
+                class="activeBreadcrumb"
+              >
+                <router-link :to="data.to">
+                  {{ data.name }}
+                </router-link>
               </div>
               <div class="links">
                 <div class="list-links">
@@ -89,6 +88,8 @@
 <script>
 /* eslint-disable */
 import _i18n from "@/i18n.js";
+import menuList from "@/data/MenuDatas.json";
+
 function i18n(val, value = "") {
   return (
     _i18n.i18nData[_i18n.getLang()][val] ||
@@ -103,6 +104,8 @@ export default {
     return {
       langs: _i18n.set.langs,
       lang: `${_i18n.set.langs[_i18n.getLang()]} (${_i18n.getLang()})`,
+      menuList: menuList,
+      breadcrumb: null,
     };
   },
   methods: {
@@ -124,6 +127,9 @@ export default {
     },
     menuButtonHtmlToggle() {
       $("html").toggleClass("is-menu");
+    },
+    setBreadcrumb() {
+      this.breadcrumb = this.$route.meta.breadcrumb;
     },
   },
   mounted() {
@@ -155,12 +161,19 @@ export default {
       }
       headerScroll();
     });
+    /* init breadcrumb */
+    this.setBreadcrumb();
     /* init check cookie mode */
     let parts = `; ${document.cookie}`.split("; mode=");
     2 === parts.length && "bright" === parts.pop().split(";").shift()
       ? $("html").addClass("bright")
       : (document.cookie = "mode=dark");
     if (document.cookie.length <= 0) alert("建議開啟 cookie 已獲得更好的體驗");
+  },
+  watch: {
+    $route() {
+      this.setBreadcrumb();
+    },
   },
 };
 </script>
@@ -181,6 +194,13 @@ export default {
   }
   .block {
     display: block;
+  }
+}
+.menu .activeBreadcrumb {
+  &.active {
+    $white: 5px;
+    border-left: solid $white white;
+    border-right: solid $white white;
   }
 }
 </style>

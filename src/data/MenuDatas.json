@@ -1,0 +1,31 @@
+[
+    {
+        "to": "/",
+        "name": "首頁",
+        "breadcrumb": "Home"
+    }, {
+        "to": "/Translation-assistance",
+        "name": "協助翻譯",
+        "breadcrumb": "Assistance"
+    }, {
+        "to": "/Wiki",
+        "name": "維基百科",
+        "breadcrumb": "Wiki"
+    }, {
+        "to": "/ProgressQuery",
+        "name": "實用工具",
+        "breadcrumb": "ProgressQuery"
+    }, {
+        "to": "/Contributor",
+        "name": "翻譯貢獻者排名",
+        "breadcrumb": "Contributor"
+    }, {
+        "to": "/About",
+        "name": "關於我們",
+        "breadcrumb": "About"
+    }, {
+        "to": "/install/version",
+        "name": "下載本模組",
+        "breadcrumb": "Version"
+    }
+]
