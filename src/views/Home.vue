@@ -160,7 +160,7 @@ export default {
   text-align: center;
 }
 .home-main-img {
-  box-shadow: -11px 10px 25px 0 rgb(0, 0, 0);
+  box-shadow: 11px 10px 25px 0 rgb(0, 0, 0);
   border-radius: 50%;
   width: 128px;
   height: 128px;
