@@ -3,7 +3,7 @@
     <section class="home-main-backImg">
       <img
         class="home-main-img user-select"
-        src="https://cdn.discordapp.com/avatars/645588343228334080/f56a0b0223d5f32b902edcb362d08a5d.webp?size=128"
+        src="https://cdn.modrinth.com/data/ZukQzaRP/icon.png"
         alt=""
       />
       <h1 class="user-select v-rpm-text"></h1>
@@ -160,8 +160,10 @@ export default {
   text-align: center;
 }
 .home-main-img {
+  width: 128px;
+  height: 128px;
   margin-top: 4em;
-  border-radius: 50%;
+  border-radius: 0.5rem;
 }
 .home-main-backImg h1 {
   font-size: 5em;
