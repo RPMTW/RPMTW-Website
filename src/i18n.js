@@ -7,8 +7,8 @@ export default {
         main: "zh_tw",
         langs: {
             "zh_tw": "繁體中文",
-            "zh_cn": "簡體中文",
-            "en_us": "美國",
+            "zh_cn": "简体中文",
+            "en_us": "English",
         }
     },
     getLang() {

@@ -88,7 +88,7 @@
 
 <script>
 /* eslint-disable */
-import _i18n from "@/i18n";
+import _i18n from "@/i18n.js";
 function i18n(val, value = "") {
   return (
     _i18n.i18nData[_i18n.getLang()][val] ||
