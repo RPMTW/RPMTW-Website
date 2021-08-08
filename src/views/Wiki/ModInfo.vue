@@ -39,7 +39,9 @@
       <section class="section" id="cosmic-system-agreement">
         <h1>《RPMTW 宇宙通訊系統終端使用者授權合約》</h1>
         <p>
-          - 由於此功能與Discord串聯，請遵守《Discord使用者服務條款<br />
+          - 由於此功能與Discord串聯，請遵守<a href="https://discord.com/terms"
+            >《Discord使用者服務條款》</a
+          ><br />
           - 訊息內容請不得以任何形式騷擾別人，否則我們有權封禁該帳號<br />
           - 我們將會蒐集您的IP、Minecraft UUID/ID，IP僅用於封禁帳號<br />
           - 我們將有權隨時更改本條款
