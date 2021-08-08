@@ -15,10 +15,11 @@
     </div>
     <div nowLen="2" class="nowLenData">
       <div
-        v-for="(value, key) in modDatas[finish.version]"
-        :key="(value, key)"
+        v-for="key in datas.versions[finish.version] &&
+        datas.versions[finish.version].platform"
+        :key="key"
         :class="{
-          select: value.platformSelect,
+          select: datas.versions[finish.version].platformSelect,
         }"
       >
         {{ key }}
@@ -45,7 +46,6 @@ export default {
   name: "Test",
   data() {
     return {
-      modDatas: require("@/data/Versions.json"),
       nowLen: 0,
       datas: {
         versions: modDatas,
@@ -77,7 +77,6 @@ export default {
       versions[_this].select = true;
       this.finish.version = _this;
 
-      console.log(this.modDatas);
       this.addLen(_this);
     },
   },
