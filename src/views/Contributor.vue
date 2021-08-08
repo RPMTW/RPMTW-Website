@@ -6,7 +6,7 @@
         <img class="user-icon" :src="data.user.avatarUrl" />
         <div class="card-body">
           <div class="hover">
-            <a href="https://crowdin.com/profile/{{data.user.username}}">
+            <a :href="`https://crowdin.com/profile/${data.user.username}`">
               <h4 class="user-name">
                 <span class="txt-rank">{{ index + 1 }}</span>
                 {{ data.user.fullName }}
@@ -51,7 +51,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 #Contributor {
-  background-color: rgb(62, 66, 71);
   color: #f0f6fc;
   img {
     vertical-align: bottom;
