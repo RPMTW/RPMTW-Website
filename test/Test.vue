@@ -1,6 +1,6 @@
 <template>
   <div id="Test">
-    <div nowLen="1" class="nowLenData">
+    <Gate :nowLen="nowLen" okLen="1" class="nowLenData">
       <div
         v-for="(value, key, index) in datas.versions"
         :key="(value, key, index)"
@@ -12,8 +12,8 @@
       >
         {{ key }}
       </div>
-    </div>
-    <div nowLen="2" class="nowLenData">
+    </Gate>
+    <Gate :nowLen="nowLen" okLen="2" class="nowLenData">
       <div
         v-for="key in datas.versions[finish.version] &&
         datas.versions[finish.version].platform"
@@ -26,8 +26,8 @@
       >
         {{ key }}
       </div>
-    </div>
-    <button @click="addNowLen"></button>
+    </Gate>
+    <Gate :nowLen="nowLen" okLen="3" class="nowLenData output"> test </Gate>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
   name: "Test",
   data() {
     return {
-      nowLen: 0,
+      nowLen: 1,
       datas: {
         versions: modDatas,
       },
@@ -63,9 +63,12 @@ export default {
   },
   methods: {
     addLen(_this) {
-      return this.nowLen <
-        parseInt($(_this.target).parent(".nowLenData").attr("nowLen"))
-        ? this.nowLen++
+      console.log(
+        this.nowLen,
+        parseInt(_this.parent(".nowLenData").attr("okLen"))
+      );
+      this.nowLen <= parseInt(_this.parent(".nowLenData").attr("okLen"))
+        ? (this.nowLen += 1)
         : null;
     },
 

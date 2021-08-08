@@ -2,10 +2,11 @@
   <div
     class="gate"
     :class="{
-      complete: okLen > nowLen,
-      nowadays: okLen == nowLen,
-      disable: okLen < nowLen,
+      complete: parseInt(okLen) < nowLen,
+      nowadays: parseInt(okLen) === nowLen,
+      disable: parseInt(okLen) > nowLen,
     }"
+    :okLen="okLen"
   >
     <slot></slot>
   </div>
@@ -22,13 +23,17 @@ export default {
     okLen: String,
     nowLen: Number,
   },
+  mounted() {
+    console.log(this.okLen, this.nowLen);
+  },
 };
 </script>
 
 <style lang="scss">
 .gate {
   &.complete {
-    color: red;
+    background-color: aqua;
+    color: black;
   }
   &.nowadays {
     color: aqua;
