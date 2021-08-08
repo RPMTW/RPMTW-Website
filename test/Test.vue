@@ -54,16 +54,26 @@
         點我下載: {{ `${finish.version} (${finish.platform})` }}
       </a>
       <div class="txt-description" v-if="finish.platform === 'fabric'">
-        <span style="color: red"
-          >如果您沒有安裝RPMTW的前置模組 Fabric API ，請務必記得安裝歐!!</span
-        >
-        <a
-          href="https://cdn.modrinth.com/data/P7dR8mSH/versions/0.37.0+1.17/fabric-api-0.37.0+1.17.jar"
-        ></a>
+        <p style="color: red">
+          如果您沒有安裝RPMTW的前置模組 Fabric API，請務必記得安裝歐!!<br />
+          <a
+            style="color: var(--strong-color)"
+            :href="
+              {
+                '1.16.x':
+                  'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.36.0+1.16/fabric-api-0.36.0+1.16.jar',
+                '1.17.x':
+                  'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.37.0+1.17/fabric-api-0.37.0+1.17.jar',
+              }[finish.version]
+            "
+          >
+            點我安裝 Fabric API
+          </a>
+        </p>
       </div>
       <div class="txt-des" v-if="finish.platform">
-        <p>
-          模組下載完成後，請確定你已經安裝了 Fabric
+        <p style="foot-size: 18pt">
+          模組下載完成後，請確定你已經安裝了 {{ finish.platform }}
           ，並且沒有修改預設模組儲存位置，那麼請將此檔案放入該資料夾下的 mods
           資料夾裡面即可！
         </p>
@@ -145,6 +155,7 @@ export default {
   color: black;
 }
 .div-button {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   text-align: center;
