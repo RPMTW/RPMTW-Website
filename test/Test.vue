@@ -1,6 +1,7 @@
 <template>
-  <div id="Test">
-    <Gate :nowLen="nowLen" okLen="1" class="nowLenData">
+  <div id="Test" class="setList">
+    <Gate :nowLen="nowLen" okLen="1" class="nowLenData setVersion">
+      <p class="txt-title">請選擇版本:</p>
       <div
         v-for="(value, key, index) in datas.versions"
         :key="(value, key, index)"
@@ -15,6 +16,7 @@
       </div>
     </Gate>
     <Gate :nowLen="nowLen" okLen="2" class="nowLenData">
+      <p class="txt-title">請選擇模組平台:</p>
       <div
         v-for="key in datas.versions[finish.version] &&
         datas.versions[finish.version].platform"
@@ -28,12 +30,44 @@
       >
         {{ key }}
       </div>
+      <strong style="text-align: center">
+        <a v-if="!finish.platform && finish.version">
+          Q:&ensp;<span style="color: red"
+            >什麼是模組平台(Mod Loader)<br
+          /></span>
+          A:&ensp;模組平台就類似蘋果手機與安卓手機的概念，不同的架構製作而成，可以依據你需要的平台來下載。
+        </a>
+      </strong>
     </Gate>
     <Gate :nowLen="nowLen" okLen="3" class="nowLenData output">
-      {{
-        datas.versions[finish.version] &&
-        datas.versions[finish.version][finish.platform]
-      }}
+      <a
+        v-show="
+          datas.versions[finish.version] &&
+          datas.versions[finish.version][finish.platform]
+        "
+        :href="
+          datas.versions[finish.version] &&
+          datas.versions[finish.version][finish.platform]
+        "
+        class="div-button"
+      >
+        點我下載: {{ `${finish.version} (${finish.platform})` }}
+      </a>
+      <div class="txt-description" v-if="finish.platform === 'fabric'">
+        <span style="color: red"
+          >如果您沒有安裝RPMTW的前置模組 Fabric API ，請務必記得安裝歐!!</span
+        >
+        <a
+          href="https://cdn.modrinth.com/data/P7dR8mSH/versions/0.37.0+1.17/fabric-api-0.37.0+1.17.jar"
+        ></a>
+      </div>
+      <div class="txt-des" v-if="finish.platform">
+        <p>
+          模組下載完成後，請確定你已經安裝了 Fabric
+          ，並且沒有修改預設模組儲存位置，那麼請將此檔案放入該資料夾下的 mods
+          資料夾裡面即可！
+        </p>
+      </div>
     </Gate>
   </div>
 </template>
@@ -83,8 +117,8 @@ export default {
         versions[value].select = false;
       });
       versions[_this.attr("version")].select = true;
-      this.finish.version = _this.attr("version");
       this.finish.platform = null;
+      this.finish.version = _this.attr("version");
 
       this.addLen(_this);
     },
@@ -102,17 +136,42 @@ export default {
       this.addLen(_this);
     },
   },
-  mounted() {},
 };
 </script>
 
 <style lang="scss" scoped>
 .select {
-  color: aqua;
+  background-color: rgb(45, 212, 191) !important;
+  color: black;
 }
 .div-button {
   display: flex;
-  width: 8em;
-  background-color: red;
+  justify-content: center;
+  text-align: center;
+  width: 9em;
+  background-color: var(--styleMode-background-color);
+  border: 1px solid var(--styleMode-webkit-scrollbar);
+  padding: 5px;
+  margin: 10px;
+}
+.setList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .txt-title {
+    padding: 20px;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .txt-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>

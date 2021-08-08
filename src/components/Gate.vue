@@ -30,14 +30,13 @@ export default {
 <style lang="scss">
 .gate {
   &.complete {
-    background-color: aqua;
-    color: black;
+    opacity: 0.5;
   }
   &.nowadays {
-    color: aqua;
+    opacity: 1;
   }
   &.disable {
-    color: brown;
+    opacity: 0.2;
   }
 }
 </style>

@@ -141,166 +141,168 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.pageInfo {
-  text-align: center;
-  color: var(--strong-color);
-  font-size: 15pt;
-  h1 {
-    color: var(--styleMode-color);
-    font-size: 35pt;
+<style lang="scss" >
+#ProgressQuery {
+  .pageInfo {
+    text-align: center;
+    color: var(--strong-color);
+    font-size: 15pt;
+    h1 {
+      color: var(--styleMode-color);
+      font-size: 35pt;
+    }
   }
-}
 
-.circle-bar {
-  font-size: 50px;
-  width: 40px;
-  height: 40px;
-  position: relative;
-  background-color: #333;
-}
+  .circle-bar {
+    font-size: 50px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-color: #333;
+  }
 
-.circle-bar-left,
-.circle-bar-right {
-  width: 40px;
-  height: 40px;
-  background-color: #eee;
-}
+  .circle-bar-left,
+  .circle-bar-right {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+  }
 
-.circle-bar-right {
-  margin: 0;
-  clip: rect(0, auto, auto, 20px);
-}
+  .circle-bar-right {
+    margin: 0;
+    clip: rect(0, auto, auto, 20px);
+  }
 
-.circle-bar-left {
-  margin: 0;
-  clip: rect(0, 20px, auto, 0);
-}
+  .circle-bar-left {
+    margin: 0;
+    clip: rect(0, 20px, auto, 0);
+  }
 
-.mask {
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  text-align: center;
-  line-height: 0.2em;
-  color: rgb(253, 15, 15);
-}
+  .mask {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 0.2em;
+    color: rgb(253, 15, 15);
+  }
 
-.mask :first-child {
-  font-size: 15px;
-  height: 30px;
-  line-height: 30px;
-  display: block;
-}
+  .mask :first-child {
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+  }
 
-.circle-bar * {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
+  .circle-bar * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
 
-.circle-bar,
-.circle-bar > * {
-  border-radius: 50%;
-}
+  .circle-bar,
+  .circle-bar > * {
+    border-radius: 50%;
+  }
 
-.dropHover {
-  color: white;
-  padding: 8px;
-  background-color: #6345e9;
-  text-align: center;
-  margin: 0;
-}
+  .dropHover {
+    color: white;
+    padding: 8px;
+    background-color: #6345e9;
+    text-align: center;
+    margin: 0;
+  }
 
-.dropdown {
-  width: 100px;
-  position: relative;
-  display: inline-block;
-  margin-left: 8px;
-}
+  .dropdown {
+    width: 100px;
+    position: relative;
+    display: inline-block;
+    margin-left: 8px;
+  }
 
-.dropdownContent {
-  text-align: center;
-  z-index: 1;
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  padding: 15px;
-  margin-left: -15px;
-  width: 100px;
-}
+  .dropdownContent {
+    text-align: center;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-left: -15px;
+    width: 100px;
+  }
 
-.dropdownContent p {
-  margin-top: 5px;
-  margin-bottom: 0;
-  display: block;
-  padding: 5px;
-  color: white;
-  background-color: rgb(58, 58, 58);
-}
+  .dropdownContent p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    display: block;
+    padding: 5px;
+    color: white;
+    background-color: rgb(58, 58, 58);
+  }
 
-.dropdownContent p:hover {
-  background-color: rgb(102, 101, 101);
-}
+  .dropdownContent p:hover {
+    background-color: rgb(102, 101, 101);
+  }
 
-.dropdown:hover .dropdownContent {
-  display: block;
-  cursor: pointer;
-}
+  .dropdown:hover .dropdownContent {
+    display: block;
+    cursor: pointer;
+  }
 
-.dropdown:hover .dropHover {
-  background-color: #5f3ef3;
-}
+  .dropdown:hover .dropHover {
+    background-color: #5f3ef3;
+  }
 
-.dropdownContent :not(.chosen) {
-  background-color: rgb(189, 188, 188);
-}
+  .dropdownContent :not(.chosen) {
+    background-color: rgb(189, 188, 188);
+  }
 
-/*  */
-.flex {
-  display: flex;
-}
+  /*  */
+  .flex {
+    display: flex;
+  }
 
-/*  */
-.sets .filter {
-  flex-direction: column;
-  align-items: center;
-}
+  /*  */
+  .sets .filter {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.sets {
-  align-items: center;
-  margin-bottom: 0px;
-  width: 100%;
-  justify-content: center;
-}
+  .sets {
+    align-items: center;
+    margin-bottom: 0px;
+    width: 100%;
+    justify-content: center;
+  }
 
-.sets > * {
-  margin-left: 10px;
-}
+  .sets > * {
+    margin-left: 10px;
+  }
 
-.output {
-  flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-}
+  .output {
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+  }
 
-.output > div {
-  padding: 2px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 350px;
-  margin-left: 5px;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  border-bottom-style: solid;
-}
+  .output > div {
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    margin-left: 5px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom-style: solid;
+  }
 
-#search {
-  height: 30px;
-  text-align: center;
+  #search {
+    height: 30px;
+    text-align: center;
+  }
 }
 </style> 
