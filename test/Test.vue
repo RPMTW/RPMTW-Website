@@ -19,8 +19,10 @@
         datas.versions[finish.version].platform"
         :key="key"
         :class="{
-          select: datas.versions[finish.version].platformSelect,
+          select: datas.versions[finish.version].platformSelect === key,
         }"
+        :platform="key"
+        @click="platformSetSelect"
       >
         {{ key }}
       </div>
@@ -69,13 +71,25 @@ export default {
 
     versionSetSelect(_this) {
       let versions = this.datas.versions;
-      _this = $(_this.target).attr("version");
+      _this = $(_this.target);
 
       Object.keys(versions).forEach((value) => {
         versions[value].select = false;
       });
-      versions[_this].select = true;
-      this.finish.version = _this;
+      versions[_this.attr("version")].select = true;
+      this.finish.version = _this.attr("version");
+
+      this.addLen(_this);
+    },
+    platformSetSelect(_this) {
+      let versions = this.datas.versions;
+      _this = $(_this.target);
+
+      Object.keys(versions).forEach((value) => {
+        versions[value].platformSelect = null;
+      });
+      versions[this.finish.version].platformSelect = _this.attr("platform");
+      this.finish.platform = _this.attr("platform");
 
       this.addLen(_this);
     },
