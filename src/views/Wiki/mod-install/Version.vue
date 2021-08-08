@@ -1,26 +1,24 @@
 <template>
-    <div id="ModVersion">
-        <select id="">
-            <option :value="version"
-                v-for="(version, key) in versions"
-                :key="(version, key)"
-            >{{ key }}
-            </option>
-        </select>
-    </div>
+  <div id="ModVersion"></div>
 </template>
 
 <script>
-import version from "@/data/Versions.json"
-console.log(version);
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+import Versions from "@/data/Versions.json";
 export default {
-    name: "ModVersion",
-    data() {
-        return {
-            versions: version
-        };
-    },
-    methods: {}
+  name: "ModVersion",
+  data() {
+    return {
+      versions: Versions,
+    };
+  },
+  mounted() {
+    let version = this.version;
+    $(function () {
+      console.log("");
+    });
+  },
 };
 </script>
 

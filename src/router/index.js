@@ -18,6 +18,9 @@ import ModInfo from '@/views/Wiki/ModInfo.vue' // RPM翻譯更新模組
 import OtherInfo from '@/views/Wiki/OtherInfo.vue' // 其他問題
 import QandA from '@/views/Wiki/QandA.vue' // 常見問題
 
+/* Test */
+import Test from '/test/Test.vue';
+
 /* error */
 import NotFound from '@/views/errors/404.vue'
 
@@ -95,6 +98,10 @@ const routes = [
         path: "/Version",
         name: "Version",
         component: Version
+    }, {
+        path: "/Test",
+        name: "Test",
+        component: Test
     }, {
         path: "/:pathMatch(.*)*",
         name: "not-found",
