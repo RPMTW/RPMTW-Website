@@ -3,7 +3,7 @@
     <section class="home-main-backImg">
       <img
         class="home-main-img user-select"
-        src="https://cdn.modrinth.com/data/ZukQzaRP/icon.png"
+        src="https://cdn.discordapp.com/emojis/853163865696763926.png?v=1"
         alt=""
       />
       <h1 class="user-select v-rpm-text"></h1>
