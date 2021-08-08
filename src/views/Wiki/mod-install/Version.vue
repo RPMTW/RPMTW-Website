@@ -3,8 +3,8 @@
     <Gate :nowLen="nowLen" okLen="1" class="nowLenData setVersion">
       <p class="txt-title">請選擇版本:</p>
       <div
-        v-for="(value, key, index) in datas.versions"
-        :key="(value, key, index)"
+        v-for="(value, key) in datas.versions"
+        :key="(value, key)"
         :version="key"
         :class="{
           select: value.select,
