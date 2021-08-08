@@ -160,10 +160,11 @@ export default {
   text-align: center;
 }
 .home-main-img {
+  box-shadow: -11px 10px 25px 0 rgb(0, 0, 0);
+  border-radius: 50%;
   width: 128px;
   height: 128px;
   margin-top: 4em;
-  border-radius: 0.5rem;
 }
 .home-main-backImg h1 {
   font-size: 5em;
