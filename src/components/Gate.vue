@@ -23,9 +23,7 @@ export default {
     okLen: String,
     nowLen: Number,
   },
-  mounted() {
-    console.log(this.okLen, this.nowLen);
-  },
+  mounted() {},
 };
 </script>
 

@@ -8,6 +8,7 @@
         :class="{
           select: value.select,
         }"
+        class="div-button"
         @click="versionSetSelect"
       >
         {{ key }}
@@ -18,16 +19,22 @@
         v-for="key in datas.versions[finish.version] &&
         datas.versions[finish.version].platform"
         :key="key"
+        :platform="key"
         :class="{
           select: datas.versions[finish.version].platformSelect === key,
         }"
-        :platform="key"
+        class="div-button"
         @click="platformSetSelect"
       >
         {{ key }}
       </div>
     </Gate>
-    <Gate :nowLen="nowLen" okLen="3" class="nowLenData output"> test </Gate>
+    <Gate :nowLen="nowLen" okLen="3" class="nowLenData output">
+      {{
+        datas.versions[finish.version] &&
+        datas.versions[finish.version][finish.platform]
+      }}
+    </Gate>
   </div>
 </template>
 
@@ -63,10 +70,6 @@ export default {
   },
   methods: {
     addLen(_this) {
-      console.log(
-        this.nowLen,
-        parseInt(_this.parent(".nowLenData").attr("okLen"))
-      );
       this.nowLen <= parseInt(_this.parent(".nowLenData").attr("okLen"))
         ? (this.nowLen += 1)
         : null;
@@ -81,6 +84,7 @@ export default {
       });
       versions[_this.attr("version")].select = true;
       this.finish.version = _this.attr("version");
+      this.finish.platform = null;
 
       this.addLen(_this);
     },
@@ -92,6 +96,7 @@ export default {
         versions[value].platformSelect = null;
       });
       versions[this.finish.version].platformSelect = _this.attr("platform");
+      this.finish.platform = null;
       this.finish.platform = _this.attr("platform");
 
       this.addLen(_this);
@@ -104,5 +109,10 @@ export default {
 <style lang="scss" scoped>
 .select {
   color: aqua;
+}
+.div-button {
+  display: flex;
+  width: 8em;
+  background-color: red;
 }
 </style>
