@@ -20,7 +20,7 @@
         </p>
       </section>
       <section class="section" id="RPMTW-version">
-        <h1>RPMTW 支援1.7.10以下的版本嗎? RPMTW支援那些Minecraft版本?</h1>
+        <h1>RPMTW 支援1.12.2以下的版本嗎? RPMTW支援那些Minecraft版本?</h1>
         <p>
           RPMTW 「不打算」支援1.7.0以下的Minecraft版本。<br />
           目前RPMTW支援的版本有 1.12、1.16、1.17，未來有新版本釋出也會盡快更新。
