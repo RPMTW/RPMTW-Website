@@ -18,6 +18,9 @@
                 <router-link to="/Contributor">翻譯貢獻者排名</router-link>
               </div>
               <div><router-link to="/About">關於我們</router-link></div>
+              <div>
+                <router-link to="/install/version">下載本模組</router-link>
+              </div>
               <div class="links">
                 <div class="list-links">
                   <a href="https://discord.com/invite/5xApZtgV2u">
