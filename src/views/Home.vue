@@ -23,13 +23,13 @@
             <strong class="content">{{
               i18n("Home.include.mod.description")
             }}</strong>
-            <a
+            <router-link
               class="button-div"
               aria-label="立即下載"
-              href="https://www.rpmtw.ga/version"
+              to="/install/version"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
-            </a>
+            </router-link>
             <a
               class="button-div more"
               aria-label="閱讀更多"
@@ -58,13 +58,13 @@
             <strong class="content">{{
               i18n("Home.include.atr.description")
             }}</strong>
-            <a
+            <router-link
               class="button-div"
               aria-label="立即下載"
-              href="https://www.rpmtw.ga/version"
+              to="https://www.curseforge.com/minecraft/modpacks/atr1"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
-            </a>
+            </router-link>
             <a
               class="button-div more"
               aria-label="閱讀更多"
