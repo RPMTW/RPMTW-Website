@@ -30,13 +30,13 @@
             >
               {{ i18n("Home.include.public.DL-STAT") }}
             </router-link>
-            <a
+            <router-link
               class="button-div more"
               aria-label="閱讀更多"
-              href="https://www.rpmtw.ga/RPMTWUpdateMod"
+              to="/RPMTWUpdateMod"
             >
               {{ i18n("Home.include.public.read-more") }}
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -58,20 +58,16 @@
             <strong class="content">{{
               i18n("Home.include.atr.description")
             }}</strong>
-            <router-link
+            <a
               class="button-div"
               aria-label="立即下載"
-              to="https://www.curseforge.com/minecraft/modpacks/atr1"
+              href="https://www.curseforge.com/minecraft/modpacks/atr1"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
-            </router-link>
-            <a
-              class="button-div more"
-              aria-label="閱讀更多"
-              href="https://www.rpmtw.ga/RPMTWUpdateMod"
-            >
-              {{ i18n("Home.include.public.read-more") }}
             </a>
+            <router-link class="button-div more" aria-label="閱讀更多" to="/">
+              {{ i18n("Home.include.public.read-more") }}
+            </router-link>
           </div>
         </div>
       </div>

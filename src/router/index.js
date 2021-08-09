@@ -86,9 +86,9 @@ const routes = [
             }
         ]
     }, {
-        path: "/ModInfo",
-        name: "ModInfo",
-        component: () => import("@/views/ModInfo"),
+        path: "/RPMTWUpdateMod",
+        name: "RPMTWUpdateMod",
+        component: () => import("@/views/RPMTWUpdateMod"),
     }, {
         path: "/install/version",
         name: "Version",
