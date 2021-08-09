@@ -102,11 +102,10 @@ body {
     transform: translateX(50%);
     z-index: 10000;
 }
-[aria-label]:hover,
 [aria-label]:hover:after,
 [aria-label]:hover:before {
-    display: block;
-    z-index: 999999;
+    display: block !important;
+    z-index: 999999 !important;
 }
 
 /* var */

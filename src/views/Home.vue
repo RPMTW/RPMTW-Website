@@ -24,14 +24,14 @@
               i18n("Home.include.mod.description")
             }}</strong>
             <a
-              class="button-div aria"
+              class="button-div"
               aria-label="立即下載"
               href="https://www.rpmtw.ga/version"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
             </a>
             <a
-              class="button-div more aria"
+              class="button-div more"
               aria-label="閱讀更多"
               href="https://www.rpmtw.ga/RPMTWUpdateMod"
             >
@@ -59,14 +59,14 @@
               i18n("Home.include.atr.description")
             }}</strong>
             <a
-              class="button-div aria"
+              class="button-div"
               aria-label="立即下載"
               href="https://www.rpmtw.ga/version"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
             </a>
             <a
-              class="button-div more aria"
+              class="button-div more"
               aria-label="閱讀更多"
               href="https://www.rpmtw.ga/RPMTWUpdateMod"
             >
