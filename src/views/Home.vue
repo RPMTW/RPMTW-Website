@@ -24,14 +24,14 @@
               i18n("Home.include.mod.description")
             }}</strong>
             <a
-              class="button-div"
+              class="button-div aria"
               aria-label="立即下載"
               href="https://www.rpmtw.ga/version"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
             </a>
             <a
-              class="button-div more"
+              class="button-div more aria"
               aria-label="閱讀更多"
               href="https://www.rpmtw.ga/RPMTWUpdateMod"
             >
@@ -59,15 +59,15 @@
               i18n("Home.include.atr.description")
             }}</strong>
             <a
-              class="button-div"
-              data-popover="立即下載"
+              class="button-div aria"
+              aria-label="立即下載"
               href="https://www.rpmtw.ga/version"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
             </a>
             <a
-              class="button-div more"
-              data-popover="閱讀更多"
+              class="button-div more aria"
+              aria-label="閱讀更多"
               href="https://www.rpmtw.ga/RPMTWUpdateMod"
             >
               {{ i18n("Home.include.public.read-more") }}
@@ -160,7 +160,7 @@ export default {
   text-align: center;
 }
 .home-main-img {
-  box-shadow: 8px 4px 0px 0 black;
+  box-shadow: 10px 10px 20px black;
   border-radius: 50%;
   width: 128px;
   height: 128px;

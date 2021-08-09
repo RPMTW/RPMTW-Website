@@ -66,10 +66,10 @@ body {
 }
 
 /* aria-label */
-.aria {
+[aria-label] {
     position: relative;
 }
-.aria:before {
+[aria-label]:before {
     display: none;
     position: absolute;
     top: auto;
@@ -84,7 +84,7 @@ body {
     pointer-events: none;
     z-index: 10000;
 }
-.aria:after {
+[aria-label]:after {
     display: none;
     top: 100%;
     right: 50%;
@@ -102,9 +102,11 @@ body {
     transform: translateX(50%);
     z-index: 10000;
 }
-.aria-show:after,
-.aria-show:before {
+[aria-label]:hover,
+[aria-label]:hover:after,
+[aria-label]:hover:before {
     display: block;
+    z-index: 999999;
 }
 
 /* var */
