@@ -1,7 +1,7 @@
 <template>
   <div class="Footer" v-if="notFooter">
     <footer>
-      <p>Copyright © RPMTW 2021-2021 Powered by The RPMTW Team</p>
+      <p>Copyright © RPMTW 2021-2021 Powered by The RPMTW Team and 猴子#3807</p>
     </footer>
   </div>
 </template>
