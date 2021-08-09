@@ -23,8 +23,8 @@
     <section>
       <h1>關於 ATR 1</h1>
       <p>
-        ATR1<br />
-        模組包是由RPMTW團隊製作的第一款Fabric模組包，主題從世界、科技(輕工業)、魔法、冒險為主，希望能提供最好的Fabric模組與RPMTW。<br />
+        ATR1模組包是由RPMTW團隊製作的第一款Fabric模組包<br />
+        主題從世界、科技(輕工業)、魔法、冒險為主，希望能提供最好的Fabric模組與RPMTW。<br />
         此模組包會從平衡性、穩定性和可玩性著手，進行優化，希望能給大家帶來最好的體驗，享受它吧！<br />
       </p>
     </section>
@@ -59,7 +59,7 @@
           href="https://discord.com/invite/5xApZtgV2u"
         >
           Discord </a
-        >跟我講，讓我把你加進這裡w
+        >跟我們講，讓我把你加進這裡w
       </p>
     </section>
   </div>

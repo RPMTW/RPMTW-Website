@@ -2,54 +2,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>進度條動畫</title>
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0
-        }
-
-        .child {
-            position: relative;
-            height: 50%;
-            border: black 1px solid;
-        }
-
-        .process-animate {
-            background: #6be499;
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            right: 100%;
-        }
-    </style>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
 </head>
 
 <body>
-    <div class="child">
-        <div class="process-animate">
-            <h1 id="react-root"> 正在載入資料中，請稍後... </h1>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <p class="animationMain test">test</p>
+    <style>
+
+    </style>
     <script>
         $(function () {
-            let loop = () => {
-                $.getJSON("https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/progress.json", (data) => {
-                    $("#react-root").html(data["1.12"])
-                    $(".process-animate").animate(
-                        { right: `${100 - parseInt(data["1.12"])}%` },
-                        { speed: 10e3, step: (now) => $(".block").css("right", now) }
-                    )
-                }).fail(error => {
-                    $("#react-root").html("<h1>錯誤，請稍後在試</h1>")
-                })
-            }
-            loop()
-            setInterval(loop, 60e3 * 60 * 5) /* 5hr */
-        });
+            $(".test").on("click", function () {
+                $(this).toggleClass("animationMain")
+            })
+        })
     </script>
 </body>

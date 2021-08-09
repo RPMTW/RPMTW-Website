@@ -89,12 +89,23 @@
       }}</router-link>
     </section>
   </div>
+  <div class="flex-center">
+    <h1>公告</h1>
+    <div class="marquee">
+      <ul>
+        <li v-for="text in announcementText" :key="text">
+          {{ text }}
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
 /* eslint-disable no-undef */
 /* eslint-disable-next-line no-unused-vars */
 import main from "../i18n.js";
+import announcementText from "@/data/announcement";
 
 function i18n(val, value = "") {
   return (
@@ -108,6 +119,12 @@ export default {
   methods: {
     i18n: i18n,
   },
+  data() {
+    return {
+      announcementText,
+    };
+  },
+  components: {},
   mounted() {
     $(function () {
       var t = i18n("Home.scroll.texts");
@@ -250,5 +267,46 @@ export default {
   margin-top: 30px;
   padding: 4px 0;
   letter-spacing: 5px;
+}
+</style>
+<style lang="scss" scoped>
+.marquee {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--styleMode-color);
+  width: 80%;
+  > ul {
+    display: flex;
+    padding: 0;
+    position: absolute;
+    list-style-type: none;
+    margin: 3px 0;
+    animation: marquee 15s linear infinite;
+    > li {
+      margin-right: 10em;
+      white-space: nowrap;
+      font-weight: 900;
+      font-size: 20pt;
+      color: var(--styleMode-background-color);
+      user-select: none;
+      a {
+        margin: 0;
+      }
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      left: 100%;
+      transform: translateX(0%);
+    }
+    100% {
+      left: 0;
+      transform: translateX(-100%);
+    }
+  }
 }
 </style>
