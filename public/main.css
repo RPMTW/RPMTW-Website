@@ -100,11 +100,13 @@ body {
     content: attr(aria-label);
     transform: translateX(50%);
 }
-[aria-label]:hover,
+[aria-label]:hover {
+    z-index: 99999 !important;
+}
 [aria-label]:hover:after,
 [aria-label]:hover:before {
     display: block !important;
-    z-index: 99999 !important;
+    opacity: 1;
 }
 
 /* var */
