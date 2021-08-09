@@ -100,6 +100,7 @@ body {
     content: attr(aria-label);
     transform: translateX(50%);
 }
+[aria-label]:hover,
 [aria-label]:hover:after,
 [aria-label]:hover:before {
     display: block !important;
