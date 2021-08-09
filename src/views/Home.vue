@@ -65,7 +65,11 @@
             >
               {{ i18n("Home.include.public.DL-STAT") }}
             </a>
-            <router-link class="button-div more" aria-label="閱讀更多" to="/">
+            <router-link
+              class="button-div more"
+              aria-label="閱讀更多"
+              to="/atr1"
+            >
               {{ i18n("Home.include.public.read-more") }}
             </router-link>
           </div>

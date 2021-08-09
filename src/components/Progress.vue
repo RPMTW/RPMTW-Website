@@ -59,6 +59,7 @@ export default {
     top: 0;
     margin: 0 10%;
     .version-txt {
+      text-align: center;
       position: relative;
       top: -2em;
       margin-top: 5px;

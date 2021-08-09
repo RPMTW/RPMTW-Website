@@ -39,7 +39,7 @@
         ></div>
       </section>
       <section class="flex-center">
-        <h1 class="sectionTitle">功能介紹</h1>
+        <h1 class="sectionTitle mar-0">功能介紹</h1>
         <h1>自動更新並載入翻譯包</h1>
         <img src="@/assets/modInfo/modInfoAutoUpData.png" alt="" />
         <h1>遊戲內翻譯</h1>
@@ -93,7 +93,7 @@ $titleColor: orange;
   .buttons {
     text-align: center;
     width: 100%;
-    > .button-div {
+    .button-div {
       margin: 10px;
       padding: 10px 10%;
     }
@@ -116,6 +116,9 @@ $titleColor: orange;
     color: $titleColor;
     font-size: 40pt;
   }
+  .mar-0 {
+    margin: 0;
+  }
   .more {
     width: 100%;
     .ProgressEx {
@@ -136,10 +139,5 @@ $titleColor: orange;
       margin-top: 15pt;
     }
   }
-}
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 </style>

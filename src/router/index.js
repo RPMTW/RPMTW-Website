@@ -83,7 +83,7 @@ const routes = [
                 components: {
                     data: () => import("@/views/Wiki/OtherInfo.vue")
                 }
-            }
+            },
         ]
     }, {
         path: "/RPMTWUpdateMod",
@@ -103,6 +103,10 @@ const routes = [
         meta: {
             breadcrumb: "ProgressQuery",
         },
+    }, {
+        path: "/atr1",
+        name: "ATR1",
+        component: () => import("@/views/Surrounding/ATR1.vue")
     }
 ]
 

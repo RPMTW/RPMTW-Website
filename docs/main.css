@@ -109,6 +109,13 @@ body {
     opacity: 1;
 }
 
+/* flex-center */
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* var */
 :root {
     --styleMode-background-color: #222;
