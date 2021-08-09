@@ -67,6 +67,7 @@ const routes = [
         meta: {
             title: "目前還在測試中",
             breadcrumb: "Wiki",
+            notFooter: true
         },
         component: WikiMenuList,
         children: [

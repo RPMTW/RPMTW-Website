@@ -1,5 +1,5 @@
 <template>
-  <div class="Footer">
+  <div class="Footer" v-if="notFooter">
     <footer>
       <p>Copyright © RPMTW 2021-2021 Powered by The RPMTW Team</p>
     </footer>
@@ -9,6 +9,16 @@
 <script>
 export default {
   name: "Footer",
+  data() {
+    return {
+      notFooter: true,
+    };
+  },
+  watch: {
+    $route() {
+      this.notFooter = !this.$route.meta.notFooter;
+    },
+  },
 };
 </script>
 
