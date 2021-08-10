@@ -1,6 +1,6 @@
 <template>
   <div id="ATRModPackage" class="flex-center">
-    <img src="@/assets/Surrounding/ATR1/ATR1MainTitleIcon.png" alt="" />
+    <img src="@/assets/images/Surrounding/ATR1/ATR1MainTitleIcon.png" alt="" />
     <h2>
       1.17 全新模組包，結合了冒險、怪物、魔法、科技...，盡情在織物上探險吧！
     </h2>
@@ -44,7 +44,7 @@
     <hr />
     <section>
       <h1>遊戲首頁截圖</h1>
-      <img src="@/assets/Surrounding/ATR1/screenshot.png" alt="" />
+      <img src="@/assets/images/Surrounding/ATR1/screenshot.png" alt="" />
     </section>
     <hr />
     <section>

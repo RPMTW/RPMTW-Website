@@ -44,17 +44,17 @@
       <section class="flex-center">
         <h1 class="sectionTitle mar-0">功能介紹</h1>
         <h1>自動更新並載入翻譯包</h1>
-        <img src="@/assets/modInfo/modInfoAutoUpData.png" alt="" />
+        <img src="@/assets/images/modInfo/modInfoAutoUpData.png" alt="" />
         <h1>遊戲內翻譯</h1>
-        <img src="@/assets/modInfo/inGameIcon.png" alt="" />
+        <img src="@/assets/images/modInfo/inGameIcon.png" alt="" />
         <h1>光速載入翻譯包</h1>
-        <img src="@/assets/modInfo/SpeedLoading.png" alt="" />
+        <img src="@/assets/images/modInfo/SpeedLoading.png" alt="" />
         <h1>圖形化設定界面</h1>
-        <img src="@/assets/modInfo/gameUI.png" alt="" />
+        <img src="@/assets/images/modInfo/gameUI.png" alt="" />
         <h1>公告系統</h1>
-        <img src="@/assets/modInfo/Announcement.png" alt="" />
+        <img src="@/assets/images/modInfo/Announcement.png" alt="" />
         <h1>掛機偵測系統</h1>
-        <img src="@/assets/modInfo/getAFK.png" alt="" />
+        <img src="@/assets/images/modInfo/getAFK.png" alt="" />
         <h1>
           <strong style="color: orange"
             >之後會陸續支援更多功能喔，敬啟期待!</strong

@@ -6,7 +6,7 @@
         src="https://cdn.discordapp.com/emojis/853163865696763926.png?v=1"
         alt=""
       />
-      <h1 class="user-select v-rpm-text"></h1>
+      <h1 class="v-rpm-text user-select"></h1>
     </section>
     <section class="all-publicity">
       <div class="item-none">
@@ -88,16 +88,18 @@
         i18n("Home.top12.show-more")
       }}</router-link>
     </section>
-  </div>
-  <div class="flex-center">
-    <h1>{{ i18n("Home.announcement.title") }}</h1>
-    <div class="marquee">
-      <ul>
-        <li v-for="text in announcementText" :key="text">
-          {{ text }}
-        </li>
-      </ul>
-    </div>
+    <section>
+      <div class="flex-center">
+        <h1>{{ i18n("Home.announcement.title") }}</h1>
+        <div class="marquee">
+          <ul>
+            <li v-for="text in announcementText" :key="text">
+              {{ text }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -170,7 +172,7 @@ export default {
 .home-main-backImg {
   background-size: cover;
   background-position: center center;
-  background-image: url(../assets/back-img.png);
+  background-image: url(../assets/images/back-img.png);
   height: 35em;
   width: 100%;
   text-align: center;
@@ -239,7 +241,6 @@ export default {
   font-size: 30pt;
   font-weight: bold;
   text-align: center;
-  font-family: "Noto Sans TC", sans-serif;
 }
 .publicity strong.content {
   font-size: 15pt;
@@ -269,6 +270,12 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
+section:not(.home-main-backImg) {
+  margin-top: 20px;
+}
+h1:not(.v-rpm-text) {
+  font-size: 2.5em;
+}
 .marquee {
   position: relative;
   margin: 0 auto;

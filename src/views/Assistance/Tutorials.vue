@@ -73,7 +73,7 @@
       </div>
       <img
         class="flow-chart"
-        src="../../assets/Tutorials-flow-chart.png"
+        src="@/assets/images/Tutorials-flow-chart.png"
         alt=""
       />
       <h2 class="center">

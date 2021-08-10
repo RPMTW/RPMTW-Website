@@ -48,7 +48,10 @@
         <h1>這什麼原理，可以全自動化的翻譯流程?</h1>
         <p>下方有一張簡易的示意圖喔w</p>
         <br />
-        <img src="@/assets/Wiki/QandA/autoTranslation.png" alt="簡易的示意圖" />
+        <img
+          src="@/assets/images/Wiki/QandA/autoTranslation.png"
+          alt="簡易的示意圖"
+        />
       </section>
     </div>
   </div>

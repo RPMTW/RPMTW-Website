@@ -10,6 +10,7 @@
 /* components */
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import fonts from "@/assets/fonts/fonts.css";
 
 /* scss */
 import WikiScss from "@/scss/Wiki.scss";

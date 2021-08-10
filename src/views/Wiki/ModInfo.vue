@@ -59,33 +59,33 @@
             >&lt;&lt;點我查看如何註冊帳號&gt;&gt; </a
           >，登入帳號後右上角應該會有你的頭像點下去，接著點擊 「Settings」(設定)
         </p>
-        <img src="@/assets/Wiki/ModInfo/CrowdinSettings.png" />
+        <img src="@/assets/images/Wiki/ModInfo/CrowdinSettings.png" />
         <p>
           接下來找到列表中的
           <a href="https://crowdin.com/settings#api-key">「API」</a>，點下去。
         </p>
-        <img src="@/assets/Wiki/ModInfo/CrowdinSettingsApi.png" />
+        <img src="@/assets/images/Wiki/ModInfo/CrowdinSettingsApi.png" />
         <p>接著點擊「New Token」(新增登入權杖) 這個按鈕。</p>
-        <img src="@/assets/Wiki/ModInfo/NewToken.png" />
+        <img src="@/assets/images/Wiki/ModInfo/NewToken.png" />
         <p>在框框內輸入你想要將這個登入權杖取什麼名稱(辨識用)</p>
-        <img src="@/assets/Wiki/ModInfo/setName.png" />
+        <img src="@/assets/images/Wiki/ModInfo/setName.png" />
         <p>輸入完名稱後，點選 「Create」(建立)。</p>
-        <img src="@/assets/Wiki/ModInfo/Create.png" />
+        <img src="@/assets/images/Wiki/ModInfo/Create.png" />
         <p>
           接著會跳出這個視窗，要確認密碼，輸入密碼之後按下 「Confirm」(確認)
         </p>
-        <img src="@/assets/Wiki/ModInfo/Confirm.png" />
+        <img src="@/assets/images/Wiki/ModInfo/Confirm.png" />
         <p>
           最後就會出現你的登入權杖了，有一個複製按鈕可以把它複製下來，然後請務必保管好這個登入權杖，登入權杖等同於密碼，千萬不要洩漏給其他人，建議可以放在記事本裡保存。
         </p>
-        <img src="@/assets/Wiki/ModInfo/copyToken.png" />
+        <img src="@/assets/images/Wiki/ModInfo/copyToken.png" />
         <p>
           取得登入權杖之後我們要將它新增至RPMTW模組的設定中才能使用，先手持一個物品，按下預設快捷鍵（V），如果還沒新增登入權仗就會跳出以下畫面，在框框內輸入上方取得的Crowdin登入權仗之後點擊
           登入 即可。
         </p>
-        <img src="@/assets/Wiki/ModInfo/InModUI.png" />
+        <img src="@/assets/images/Wiki/ModInfo/InModUI.png" />
         <p>輸入如果出現下圖的文字就代表成功囉!!!</p>
-        <img src="@/assets/Wiki/ModInfo/checkTXT.png" />
+        <img src="@/assets/images/Wiki/ModInfo/checkTXT.png" />
       </section>
     </div>
   </div>

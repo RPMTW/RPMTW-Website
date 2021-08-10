@@ -23,7 +23,7 @@
       </div>
       <div class="icon">
         <a href="https://github.com/RPMTW">
-          <img src="../assets/github-icon.png" alt="" />
+          <img src="@/assets/images/github-icon.png" alt="" />
         </a>
         <strong>GitHub儲存庫</strong>
       </div>

@@ -9,7 +9,7 @@
           前往網站之後找到右上角的按鈕(如下圖)，選擇 「SING UP」(註冊)
         </p>
         <img
-          src="@/assets/Wiki/AssistTranslation/logIn-logOut.png"
+          src="@/assets/images/Wiki/AssistTranslation/logIn-logOut.png"
           alt="登入/註冊按鈕"
         />
         <p>
@@ -22,7 +22,7 @@
           通常註冊完帳號會叫你到電子郵件信箱裡收驗證信，完成步驟之後，就可以拿到Crowdin的帳號可以登入囉。
         </p>
         <img
-          src="@/assets/Wiki/AssistTranslation/create-account.png"
+          src="@/assets/images/Wiki/AssistTranslation/create-account.png"
           alt="註冊畫面"
         />
       </section>
@@ -40,12 +40,12 @@
           ，到專案首頁後選擇要翻譯的語言
         </p>
         <img
-          src="@/assets/Wiki/AssistTranslation/translations.png"
+          src="@/assets/images/Wiki/AssistTranslation/translations.png"
           alt="選擇要翻譯的語言"
         />
         <p>接下來你會看到左上角有一個搜尋框，在裡面搜尋你想上傳翻譯的模組ID</p>
         <img
-          src="@/assets/Wiki/AssistTranslation/search-you-mod.png"
+          src="@/assets/images/Wiki/AssistTranslation/search-you-mod.png"
           alt="搜尋你想上傳翻譯的模組ID"
         />
         <p>
@@ -54,19 +54,22 @@
           「有三個點的按鈕」。
         </p>
         <img
-          src="@/assets/Wiki/AssistTranslation/xaeroworldmap-3button.png"
+          src="@/assets/images/Wiki/AssistTranslation/xaeroworldmap-3button.png"
           alt="原始語系檔案裡的有三個點的按鈕"
         />
         <p>接下來會出現一個選單，點擊 「Upload Translations」(上傳譯文)</p>
         <img
-          src="@/assets/Wiki/AssistTranslation/menu-upload-translations.png"
+          src="@/assets/images/Wiki/AssistTranslation/menu-upload-translations.png"
           alt="上傳譯文"
         />
         <p>
           直接點擊 「Select
           File」(選擇檔案)，就會彈出一個視窗，選擇你要上傳的翻譯檔案，就等待它上傳一下就完成囉!!
         </p>
-        <img src="@/assets/Wiki/AssistTranslation/Finish.png" alt="完成~~" />
+        <img
+          src="@/assets/images/Wiki/AssistTranslation/Finish.png"
+          alt="完成~~"
+        />
       </section>
     </div>
   </div>
