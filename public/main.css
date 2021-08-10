@@ -106,7 +106,7 @@ body {
 [aria-label]:hover:after,
 [aria-label]:hover:before {
     display: block !important;
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 /* flex-center */
