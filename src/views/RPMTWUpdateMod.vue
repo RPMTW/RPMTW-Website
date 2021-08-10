@@ -12,17 +12,20 @@
       ></iframe>
     </div>
     <div class="buttons">
-      <router-link to="/Translation-assistance" class="button-div"
-        >參與模組翻譯</router-link
-      >
+      <router-link to="/Translation-assistance" class="button-div">{{
+        i18n("RPMTWUpdateMod.buttons.Participate")
+      }}</router-link>
       <a href="https://discord.com/invite/5xApZtgV2u" class="button-div">
-        加入官方社群 (Discord)
+        {{ i18n("public.goto.discord") }}
       </a>
     </div>
     <div>
       <section class="flex-center">
-        <h1 class="sectionTitle">體驗前所未見的模組繁中化</h1>
-        <Progress version="progress" Title="全版本模組" />
+        <h1 class="sectionTitle">{{ i18n("RPMTWUpdateMod.main.title") }}</h1>
+        <Progress
+          version="progress"
+          :Title="i18n('RPMTWUpdateMod.schedule.Full.version')"
+        />
         <div v-show="moreShow" class="more flex-center">
           <Progress version="1.12" />
           <Progress version="1.16" />
@@ -63,7 +66,15 @@
 </template>
 
 <script>
+import main from "@/i18n.js";
 import Progress from "@/components/Progress.vue";
+function i18n(val, value = "") {
+  return (
+    main.i18nData[main.getLang()][val] ||
+    main.i18nData[main.set.main][val] ||
+    value
+  );
+}
 export default {
   name: "ModInfo",
   data() {
@@ -71,7 +82,9 @@ export default {
       moreShow: false,
     };
   },
-  methods: {},
+  methods: {
+    i18n: i18n,
+  },
   components: {
     Progress,
   },

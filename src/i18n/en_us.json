@@ -14,8 +14,11 @@
     "Home.include.atr.description": "1.17 全新模組包，結合各種元素，盡情在織物上探險吧！",
     "Home.top12.title": "翻譯貢獻者前12名 - 感謝你們的貢獻",
     "Home.top12.show-more": "查看更多翻譯貢獻者",
+    "Home.announcement.datas": [
+        "Classical Chinese: The Illusionary World of Siong -> Vernacular Chinese: The Fantasy World of Cabbage!?!?"
+    ],
     "Home.scroll.texts": [
-        "前所未見的模組繁中化", 
+        "前所未見的模組繁中化",
         "社群協力合作",
         "翻譯全自動更新",
         "跳脫傳統框架",

@@ -25,14 +25,14 @@
             }}</strong>
             <router-link
               class="button-div"
-              aria-label="立即下載"
+              :aria-label="i18n('Home.include.public.DL-STAT')"
               to="/install/version"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
             </router-link>
             <router-link
               class="button-div more"
-              aria-label="閱讀更多"
+              :aria-label="i18n('Home.include.public.read-more')"
               to="/RPMTWUpdateMod"
             >
               {{ i18n("Home.include.public.read-more") }}
@@ -60,14 +60,14 @@
             }}</strong>
             <a
               class="button-div"
-              aria-label="立即下載"
+              :aria-label="i18n('Home.include.public.DL-STAT')"
               href="https://www.curseforge.com/minecraft/modpacks/atr1"
             >
               {{ i18n("Home.include.public.DL-STAT") }}
             </a>
             <router-link
               class="button-div more"
-              aria-label="閱讀更多"
+              :aria-label="i18n('Home.include.public.read-more')"
               to="/atr1"
             >
               {{ i18n("Home.include.public.read-more") }}
@@ -90,7 +90,7 @@
     </section>
   </div>
   <div class="flex-center">
-    <h1>公告</h1>
+    <h1>{{ i18n("Home.announcement.title") }}</h1>
     <div class="marquee">
       <ul>
         <li v-for="text in announcementText" :key="text">
@@ -105,7 +105,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable-next-line no-unused-vars */
 import main from "../i18n.js";
-import announcementText from "@/data/announcement";
 
 function i18n(val, value = "") {
   return (
@@ -121,7 +120,7 @@ export default {
   },
   data() {
     return {
-      announcementText,
+      announcementText: i18n("Home.announcement.datas"),
     };
   },
   components: {},

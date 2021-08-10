@@ -1,4 +1,6 @@
 {
+    "public.Game.version": "遊戲版本",
+    "public.goto.discord": "加入官方社群 (Discord)",
     "plug.header.menu.home": "首頁",
     "plug.header.menu.assistance": "協助翻譯",
     "plug.header.menu.Wikipedia": "維基百科",
@@ -14,13 +16,25 @@
     "Home.include.atr.description": "1.17 全新模組包，結合各種元素，盡情在織物上探險吧！",
     "Home.top12.title": "翻譯貢獻者前12名 - 感謝你們的貢獻",
     "Home.top12.show-more": "查看更多翻譯貢獻者",
+    "Home.announcement.title": "公告",
+    "Home.announcement.datas": [
+        "文言文：菘之幻界->白話文：白菜的幻想世界!?!?"
+    ],
     "Home.scroll.texts": [
-        "前所未見的模組繁中化", 
+        "前所未見的模組繁中化",
         "社群協力合作",
         "翻譯全自動更新",
         "跳脫傳統框架",
         "遊戲內翻譯模組",
         "專屬為您設計",
         "與我們一起當個創世神！"
-    ]
+    ],
+    "ProgressQuery.please.enter.CurseForgeID": "請輸入CurseForgeID",
+    "ProgressQuery.title": "RPMTW 模組個別翻譯進度查詢器",
+    "ProgressQuery.description.0": "不知道自己喜歡的模組有沒有被翻譯呢?或者想了解模組的翻譯進度，那用這個工具就對了",
+    "ProgressQuery.description.1": "(目前仍處測試版狀態，資料庫尚未齊全，因此部分模組查無資料屬正常現象)",
+    "ProgressQuery.Filter.condition": "過濾條件",
+    "RPMTWUpdateMod.buttons.Participate": "參與模組翻譯",
+    "RPMTWUpdateMod.main.title": "體驗前所未見的模組繁中化",
+    "RPMTWUpdateMod.schedule.Full.version": "全版本模組翻譯進度"
 }

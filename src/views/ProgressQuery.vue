@@ -1,17 +1,17 @@
 <template>
   <div id="ProgressQuery">
     <h3 class="pageInfo">
-      <h1>RPMTW 模組個別翻譯進度查詢器</h1>
-      不知道自己喜歡的模組有沒有被翻譯呢?或者想了解模組的翻譯進度，那用這個工具就對了<br />
-      (目前仍處測試版狀態，資料庫尚未齊全，因此部分模組查無資料屬正常現象)
+      <h1>{{ i18n("ProgressQuery.title") }}</h1>
+      {{ i18n("ProgressQuery.description.0") }}<br />
+      {{ i18n("ProgressQuery.description.1") }}
     </h3>
     <div class="sets flex">
       <div>
         <input
           id="search"
           type="text"
-          placeholder="請輸入CurseForgeID"
-          aria-label="請輸入CurseForgeID"
+          :placeholder="i18n('ProgressQuery.please.enter.CurseForgeID')"
+          :aria-label="i18n('ProgressQuery.please.enter.CurseForgeID')"
           @keyup.enter="generateList"
           @change="generateList"
           v-model="search"
@@ -19,9 +19,9 @@
       </div>
       <div class="flex filter">
         <label
-          >過濾條件:
+          >{{ i18n("ProgressQuery.Filter.condition") }}:
           <div class="dropdown">
-            <p class="dropHover">遊戲版本</p>
+            <p class="dropHover">{{ i18n("public.Game.version") }}</p>
             <div class="dropdownContent">
               <p @click="chosen" click-type="1.12" class="chosen">1.12</p>
               <p @click="chosen" click-type="1.16" class="chosen">1.16</p>
@@ -37,6 +37,14 @@
 
 <script>
 /* eslint-disable no-undef */
+import main from "@/i18n.js";
+function i18n(val, value = "") {
+  return (
+    main.i18nData[main.getLang()][val] ||
+    main.i18nData[main.set.main][val] ||
+    value
+  );
+}
 let setRoundProgress = () => {
   for (let i of $(".circle-bar")) {
     let txt = $(i).find(".mask .percent");
@@ -76,6 +84,7 @@ export default {
     };
   },
   methods: {
+    i18n: i18n,
     chosen(e) {
       $(e.target).toggleClass("chosen");
     },
