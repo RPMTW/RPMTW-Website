@@ -6,3 +6,5 @@
 
 - [x] 添加 i18n 檔案
 - [x] 建置 i18n 還境
+
+debug github pages
