@@ -10,7 +10,7 @@
             alt=""
           />
         </a>
-        <strong>Discord 社群</strong>
+        <strong>Discord<br />社群</strong>
       </div>
       <div class="icon">
         <a href="https://crowdin.com/project/resourcepack-mod-zhtw">
@@ -19,13 +19,13 @@
             alt=""
           />
         </a>
-        <strong>Crowdin專案</strong>
+        <strong>Crowdin<br />專案</strong>
       </div>
       <div class="icon">
         <a href="https://github.com/RPMTW">
           <img src="@/assets/images/github-icon.png" alt="" />
         </a>
-        <strong>GitHub儲存庫</strong>
+        <strong>GitHub<br />儲存庫</strong>
       </div>
     </div>
     <iframe
@@ -67,8 +67,18 @@ export default {
     }
   }
   .discord {
-    width: 35%;
+    width: 80%;
     height: 450px;
+  }
+  @media all and (max-width: 800px) {
+    h1 {
+      font-size: 10vw !important;
+    }
+    strong {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 </style>

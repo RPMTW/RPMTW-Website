@@ -1,7 +1,7 @@
 <template>
   <div id="ProgressQuery">
+    <h1>{{ i18n("ProgressQuery.title") }}</h1>
     <h3 class="pageInfo">
-      <h1>{{ i18n("ProgressQuery.title") }}</h1>
       {{ i18n("ProgressQuery.description.0") }}<br />
       {{ i18n("ProgressQuery.description.1") }}
     </h3>
@@ -156,12 +156,12 @@ export default {
     text-align: center;
     color: var(--strong-color);
     font-size: 15pt;
-    h1 {
-      color: var(--styleMode-color);
-      font-size: 35pt;
-    }
   }
-
+  h1 {
+    text-align: center;
+    color: var(--styleMode-color);
+    font-size: 35pt;
+  }
   .circle-bar {
     font-size: 50px;
     width: 40px;
@@ -312,6 +312,23 @@ export default {
   #search {
     height: 30px;
     text-align: center;
+  }
+  @media all and (max-width: 830px) {
+    h1 {
+      font-size: 5.65vw !important;
+    }
+    h3 {
+      font-size: 2.4vw !important;
+    }
+    .sets {
+      > div:nth-child(0n + 1) {
+        margin-bottom: 10px;
+      }
+      flex-direction: column;
+    }
+    label {
+      font-size: 2.4vw;
+    }
   }
 }
 </style> 
