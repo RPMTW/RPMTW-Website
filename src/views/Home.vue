@@ -18,7 +18,7 @@
           />
         </div>
         <div class="flex flex-center flex-down">
-          <h1>{{ i18n("Home.include.mod.name") }}</h1>
+          <h1 class="HanyiSentyChalk">{{ i18n("Home.include.mod.name") }}</h1>
           <strong>{{ i18n("Home.include.mod.description") }}</strong>
           <router-link
             class="btn"
@@ -45,7 +45,7 @@
           />
         </div>
         <div class="flex flex-center flex-down">
-          <h1>
+          <h1 class="HanyiSentyChalk">
             {{ i18n("Home.include.atr.name.0") }}<br />
             {{ i18n("Home.include.atr.name.1") }}
           </h1>
@@ -68,7 +68,7 @@
       </div>
     </section>
     <section class="translation-C-rank flex flex-down flex-center">
-      <h1>{{ i18n("Home.top12.title") }}</h1>
+      <h1 class="HanyiSentyChalk">{{ i18n("Home.top12.title") }}</h1>
       <iframe
         src="https://rpmtw.github.io/Contributor-Website/Top/12"
         ref="iframe"
@@ -79,7 +79,7 @@
       </router-link>
     </section>
     <section class="announcement flex flex-center flex-down">
-      <h1>{{ i18n("Home.announcement.title") }}</h1>
+      <h1 class="HanyiSentyChalk">{{ i18n("Home.announcement.title") }}</h1>
       <div class="marquee">
         <ul>
           <li v-for="text in announcementText" :key="text">
@@ -163,6 +163,7 @@ export default {
     }
   }
   .btn {
+    font-weight: 800;
     background-color: var(--styleMode-color);
     color: var(--styleMode-background-color);
   }
@@ -205,6 +206,10 @@ export default {
         h1 {
           text-align: center;
           margin-bottom: 30px;
+          font-size: 35pt;
+        }
+        strong {
+          font-size: 18pt;
         }
         .btn {
           margin-top: 5px;

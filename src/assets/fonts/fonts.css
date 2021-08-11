@@ -1,4 +1,8 @@
 @font-face {
     font-family: "HanyiSentyChalk";
-    src: url("./SentyGoldenBell.ttf");
+    src: url("./HanyiSentyChalk\ 2018.ttf");
+}
+
+.HanyiSentyChalk {
+    font-family: "HanyiSentyChalk", serif;
 }
