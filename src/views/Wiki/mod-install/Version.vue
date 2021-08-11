@@ -53,6 +53,14 @@
       >
         點我下載: {{ `${finish.version} (${finish.platform})` }}
       </a>
+      <div class="txt-des" v-if="finish.platform">
+        <p>
+          按下上方下載按鈕後 將會進入一個網頁 找到
+          <span style="color: red"> Download </span>
+          按鈕即可下載
+        </p>
+        <img src="@/assets/images/download.png" alt="" />
+      </div>
       <div class="txt-description" v-if="finish.platform === 'fabric'">
         <p style="color: red">
           如果您沒有安裝RPMTW的前置模組 Fabric API，請務必記得安裝歐!!<br />
@@ -73,9 +81,10 @@
       </div>
       <div class="txt-des" v-if="finish.platform">
         <p style="foot-size: 18pt">
-          模組下載完成後，請確定你已經安裝了 {{ finish.platform }}
-          ，並且沒有修改預設模組儲存位置，那麼請將此檔案放入該資料夾下的 mods
-          資料夾裡面即可！
+          模組下載完成後，請確定你已經安裝了
+          {{ finish.platform }}
+          ，並且沒有修改預設模組儲存位置，<br />
+          那麼請將此檔案放入該資料夾下的 mods 資料夾裡面即可！
         </p>
       </div>
     </Gate>
@@ -183,6 +192,17 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+  .txt-des {
+    text-align: center;
+  }
+  p {
+    font-size: 15pt;
+  }
+  @media all and (max-width: 660px) {
+    p {
+      font-size: 3vw !important;
+    }
   }
 }
 </style>
