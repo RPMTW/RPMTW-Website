@@ -125,18 +125,16 @@ export default {
       let text = i18n("Home.scroll.texts");
       let nowList = 0;
       let nowStr = 0;
-
-      let setText = (nowList) => {
+      let setText = (t) => {
         _this._setTimeout = setTimeout(() => {
-          $(".v-rpm-text").html(`${text[nowList].substring(0, ++nowStr)}`);
-          if (nowStr <= text[nowList].length) setText(nowList);
+          $(".v-rpm-text").html(`${text[t].substring(0, ++nowStr)}`);
+          nowStr <= text[t].length && setText(t);
         }, 199);
       };
       _this._setInterval = setInterval(() => {
         nowStr = 1;
-        if (nowList < text.length - 1) setText(++nowList);
-        else nowList = 0;
-      }, text[nowList].length * 199 + 1e3);
+        nowList < text.length - 1 ? setText(++nowList) : (nowList = 0);
+      }, 199 * text[nowList].length + 1e3);
       setText(nowList);
 
       for (let i of $(".item-none"))
