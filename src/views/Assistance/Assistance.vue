@@ -81,15 +81,17 @@
           <a href="https://forms.gle/rjtc23udsC8UE6PTA">
             <strong> 請點我填寫表單 </strong>
           </a>
-          或是前往 discord 提交
+          或是
           <a
             href="https://discord.com/channels/815819580840607807/815861320153956363"
           >
-            <strong>點我前往</strong> </a
+            <strong> 點我前往 discord 提交 </strong> </a
           >，查看請求狀態:
-          <a href="https://docs.google.com/spreadsheets/d/1dsHN4W1GC2mMat39kJ7JgChJ6X5FpxPSTFW5pcmzCQY/edit?usp=sharing">
-            <strong> RPMTW 請求新翻譯紀錄 </strong>
-          </a>。
+          <a
+            href="https://docs.google.com/spreadsheets/d/1dsHN4W1GC2mMat39kJ7JgChJ6X5FpxPSTFW5pcmzCQY/edit?usp=sharing"
+          >
+            <strong> RPMTW 請求新翻譯紀錄 </strong> </a
+          >。
         </li>
       </ul>
     </div>
