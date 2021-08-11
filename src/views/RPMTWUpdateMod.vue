@@ -47,23 +47,23 @@
       </section>
       <section class="flex flex-item-center flex-down">
         <h1 class="sectionTitle">功能介紹</h1>
-        <h1>自動更新並載入翻譯包</h1>
+        <h2>自動更新並載入翻譯包</h2>
         <img src="@/assets/images/modInfo/modInfoAutoUpData.png" alt="" />
-        <h1>遊戲內翻譯</h1>
+        <h2>遊戲內翻譯</h2>
         <img src="@/assets/images/modInfo/inGameIcon.png" alt="" />
-        <h1>光速載入翻譯包</h1>
+        <h2>光速載入翻譯包</h2>
         <img src="@/assets/images/modInfo/SpeedLoading.png" alt="" />
-        <h1>圖形化設定界面</h1>
+        <h2>圖形化設定界面</h2>
         <img src="@/assets/images/modInfo/gameUI.png" alt="" />
-        <h1>公告系統</h1>
+        <h2>公告系統</h2>
         <img src="@/assets/images/modInfo/Announcement.png" alt="" />
-        <h1>掛機偵測系統</h1>
+        <h2>掛機偵測系統</h2>
         <img src="@/assets/images/modInfo/getAFK.png" alt="" />
-        <h1>
+        <h2>
           <strong style="color: var(--title-color)"
             >之後會陸續支援更多功能喔，敬啟期待!</strong
           >
-        </h1>
+        </h2>
       </section>
     </div>
   </div>
@@ -101,6 +101,10 @@ export default {
   section {
     > h1 {
       font-size: 35pt;
+      text-align: center;
+    }
+    h2 {
+      font-size: 25pt;
       text-align: center;
     }
   }
@@ -164,6 +168,17 @@ export default {
   }
   img {
     max-width: 80%;
+  }
+  @media all and (max-width: 600px) {
+    h1 {
+      font-size: 8vw !important;
+    }
+    h2 {
+      font-size: 5.4vw !important;
+    }
+    .btn {
+      font-size: 2.5vw;
+    }
   }
 }
 </style>
