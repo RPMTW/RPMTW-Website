@@ -1,7 +1,9 @@
 <template>
   <div class="Footer" v-if="notFooter">
-    <footer>
-      <p>Copyright © RPMTW 2021-2021 Powered by The RPMTW Team and 猴子#3807</p>
+    <footer class="flex flex-down">
+      <div>
+        Copyright © RPMTW 2021-2021 Powered by The RPMTW Team and 猴子#3807
+      </div>
     </footer>
   </div>
 </template>
@@ -29,7 +31,8 @@ export default {
   margin-top: 5em;
   background-color: black;
   width: 100%;
-  height: 40px;
+  height: auto;
+  min-height: 50px;
   color: white;
   display: flex;
   align-items: center;

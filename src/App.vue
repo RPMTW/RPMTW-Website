@@ -12,9 +12,6 @@ import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import fonts from "@/assets/fonts/fonts.css";
 
-/* scss */
-import WikiScss from "@/scss/Wiki.scss";
-
 export default {
   name: "Main",
   components: {
@@ -24,10 +21,13 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "~bootstrap/scss/bootstrap";
+body {
+  margin-top: 55px;
+}
 #app {
   display: flex;
   flex-direction: column;
 }
-
 /* footer bottom */
 </style>
