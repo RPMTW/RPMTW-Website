@@ -76,6 +76,21 @@
         <li>
           如引用他人的翻譯需經過他人同意，並且要附上原始翻譯作者(放在Crowdin翻譯平台的討論區)，再進行提交。
         </li>
+        <li>
+          若資料庫中沒有你要翻譯的 MOD
+          <a href="https://forms.gle/rjtc23udsC8UE6PTA">
+            <strong> 請點我填寫表單 </strong>
+          </a>
+          或是前往 discord 提交
+          <a
+            href="https://discord.com/channels/815819580840607807/815861320153956363"
+          >
+            <strong>點我前往</strong> </a
+          >，查看請求狀態:
+          <a href="https://forms.gle/rjtc23udsC8UE6PTA">
+            <strong> RPMTW 請求新翻譯紀錄 </strong>
+          </a>。
+        </li>
       </ul>
     </div>
     <h3 class="title-center">
@@ -128,8 +143,8 @@ ul {
 }
 /* text */
 strong {
-  color: var(--strong-color);
-  font-weight: 900;
+  color: var(--strong-color) !important;
+  font-weight: 900 !important;
 }
 span[type="tab"] {
   margin-left: 35px;
