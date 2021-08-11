@@ -1,35 +1,39 @@
 <template>
-  <div id="ModInfo" class="flex-center">
-    <div class="youtubeIframe">
-      <iframe
-        width="1280"
-        height="720"
-        src="https://www.youtube.com/embed/OIE26f1P8dU"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+  <div id="ModInfo" class="flex flex-down flex-item-center">
+    <div class="videoBox">
+      <div class="youtubeIframe">
+        <iframe
+          sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads"
+          frameborder="0"
+          aria-label="YouTube Video, 居然有自動幫你翻譯中文的模組!?!?!?還可以修改你覺得不適合的翻譯!!!| Minecraft 模組介紹 27 中文翻譯模組"
+          src="https://www.youtube.com/embed/OIE26f1P8dU"
+          allowfullscreen=""
+        ></iframe>
+      </div>
     </div>
-    <div class="buttons">
-      <router-link to="/Translation-assistance" class="button-div">{{
+
+    <div class="buttons flex flex-center">
+      <router-link to="/Translation-assistance" class="btn">{{
         i18n("RPMTWUpdateMod.buttons.Participate")
       }}</router-link>
-      <a href="https://discord.com/invite/5xApZtgV2u" class="button-div">
+      <a href="https://discord.com/invite/5xApZtgV2u" class="btn">
         {{ i18n("public.goto.discord") }}
       </a>
     </div>
     <div>
-      <section class="flex-center">
-        <h1 class="sectionTitle">{{ i18n("RPMTWUpdateMod.main.title") }}</h1>
+      <section class="process flex flex-down flex-item-center">
+        <h1 class="sectionTitle text-title" style="margin-bottom: 80px">
+          {{ i18n("RPMTWUpdateMod.main.title") }}
+        </h1>
         <Progress
           version="progress"
+          class="progress"
           :Title="i18n('RPMTWUpdateMod.schedule.Full.version')"
         />
-        <div v-show="moreShow" class="more flex-center">
-          <Progress version="1.12" />
-          <Progress version="1.16" />
-          <Progress version="1.17" />
+        <div v-show="moreShow" class="more">
+          <Progress class="progress" version="1.12" />
+          <Progress class="progress" version="1.16" />
+          <Progress class="progress" version="1.17" />
         </div>
         <div
           @click="moreShow = !moreShow"
@@ -41,8 +45,8 @@
           aria-label="查看更多"
         ></div>
       </section>
-      <section class="flex-center">
-        <h1 class="sectionTitle mar-0">功能介紹</h1>
+      <section class="flex flex-item-center flex-down">
+        <h1 class="sectionTitle">功能介紹</h1>
         <h1>自動更新並載入翻譯包</h1>
         <img src="@/assets/images/modInfo/modInfoAutoUpData.png" alt="" />
         <h1>遊戲內翻譯</h1>
@@ -56,7 +60,7 @@
         <h1>掛機偵測系統</h1>
         <img src="@/assets/images/modInfo/getAFK.png" alt="" />
         <h1>
-          <strong style="color: orange"
+          <strong style="color: var(--title-color)"
             >之後會陸續支援更多功能喔，敬啟期待!</strong
           >
         </h1>
@@ -92,65 +96,74 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$titleColor: orange;
 #ModInfo {
-  width: 100%;
-  .youtubeIframe {
-    width: 80%;
-    height: 80%;
-    padding: 2.5em 0;
-    iframe {
+  margin-top: 20px;
+  section {
+    > h1 {
+      font-size: 35pt;
+      text-align: center;
+    }
+  }
+  .sectionTitle {
+    color: var(--title-color);
+    width: 75%;
+    font-size: 35pt;
+    border-bottom: solid 2px var(--styleMode-color);
+  }
+
+  .videoBox {
+    min-width: 1010px;
+    margin-bottom: 5em;
+    .youtubeIframe {
+      position: relative;
       width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    @media all and (max-width: 1290px) {
+      min-width: 80%;
+      margin-bottom: 4vw;
     }
   }
   .buttons {
-    text-align: center;
-    width: 100%;
-    .button-div {
-      margin: 10px;
-      padding: 10px 10%;
+    width: 80%;
+    .btn {
+      width: 80%;
+      margin: 20px;
+    }
+    @media all and (max-width: 480px) {
+      flex-direction: column;
     }
   }
-  .text-title {
-    font-size: 30pt;
-    color: $titleColor;
-  }
-  h1 {
-    font-size: 30pt;
-    text-align: center;
-  }
-  .ProgressEx {
-    width: 80%;
+  .process {
+    .progress {
+      width: 100%;
+    }
+    .more {
+      width: 100%;
+      .progress {
+        margin-top: 5em;
+      }
+    }
+    .moreButton {
+      margin-top: 25px;
+      color: var(--styleMode-color);
+      border-width: 32px;
+      cursor: pointer;
+      &.drop {
+        transform: rotate(180deg) !important;
+      }
+    }
   }
   img {
     max-width: 80%;
-  }
-  .sectionTitle {
-    color: $titleColor;
-    font-size: 40pt;
-  }
-  .mar-0 {
-    margin: 0;
-  }
-  .more {
-    width: 100%;
-    .ProgressEx {
-      margin-top: 60px !important;
-    }
-  }
-  .moreButton {
-    cursor: pointer;
-    font-size: 15pt;
-  }
-  .arrow {
-    opacity: 0.8;
-    border-width: 20px;
-    &.drop {
-      transform: rotate(180deg) !important;
-    }
-    &:not(.drop) {
-      margin-top: 15pt;
-    }
   }
 }
 </style>

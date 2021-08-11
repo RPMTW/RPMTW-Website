@@ -84,7 +84,7 @@
     </h3>
     <div class="title-center">
       <router-link
-        class="button-div finish aria"
+        class="btn finish aria"
         to="/Translation-Assistance/Translation-Tutorials"
       >
         我已經查看完畢，可以進行翻譯了!!
@@ -136,7 +136,7 @@ span[type="tab"] {
 }
 div.title-center {
   width: 100%;
-  .finish.button-div {
+  .finish.btn {
     padding: 0.5% 20%;
   }
 }

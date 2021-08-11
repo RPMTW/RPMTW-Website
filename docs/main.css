@@ -29,7 +29,8 @@ body {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
-    color: #000000;
+    color: var(--styleMode-background-color) !important;
+    background-color: var(--styleMode-color) !important;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -122,8 +123,11 @@ body {
 .flex {
     display: flex;
 }
-.flex-center {
+.flex-item-center {
     align-items: center;
+}
+.flex-center {
+    justify-content: center;
 }
 .flex-down {
     flex-direction: column;
@@ -136,6 +140,10 @@ body {
 .none {
     display: none !important;
 }
+/*  */
+.text-center {
+    text-align: center;
+}
 
 /* var */
 :root {
@@ -144,6 +152,7 @@ body {
     --styleMode-webkit-scrollbar-thumb: #454a4d;
     --styleMode-webkit-scrollbar: #aba499;
     --strong-color: orange;
+    --title-color: orange;
 }
 :root.bright {
     --styleMode-background-color: rgb(224, 224, 224);
@@ -151,6 +160,7 @@ body {
     --styleMode-webkit-scrollbar-thumb: #aba499;
     --styleMode-webkit-scrollbar: #454a4d;
     --strong-color: rgb(0, 46, 253);
+    --title-color: rgb(140, 0, 255);
 }
 
 /* scrollbar */

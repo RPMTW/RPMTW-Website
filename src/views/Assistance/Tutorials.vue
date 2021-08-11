@@ -6,10 +6,10 @@
         <h3 class="center">
           首先請先到本專案的翻譯平台，然後註冊一個帳號再進行翻譯
         </h3>
-        <div class="flex">
+        <div class="flex flex-center">
           <a
             href="https://crowdin.com/project/resourcepack-mod-zhtw?already_accepted=14797842"
-            class="button-div"
+            class="btn"
           >
             前往翻譯平台
           </a>
@@ -17,20 +17,20 @@
         <h3 class="center">
           註冊完帳號並且確認加入RPMTW的翻譯專案後，接下來要選擇你想要翻譯的遊戲版本
         </h3>
-        <div class="flex">
+        <div class="flex flex-center">
           <a
             href="https://crowdin.com/translate/resourcepack-mod-zhtw/37100/en-zhtw?filter=basic&value=0"
-            class="button-div"
+            class="btn"
             >1.12</a
           >
           <a
             href="https://crowdin.com/translate/resourcepack-mod-zhtw/14696/en-zhtw?filter=basic&value=0"
-            class="button-div"
+            class="btn"
             >1.16</a
           >
           <a
             href="https://crowdin.com/translate/resourcepack-mod-zhtw/33890/en-zhtw?filter=basic&value=0"
-            class="button-div"
+            class="btn"
             >1.17</a
           >
         </div>
@@ -80,9 +80,7 @@
         最後感謝您閱讀那麼長篇的文字，非常感謝，您現在可以開始進行翻譯了!<br />
         <h2>如果遇到任何問題或者想討論翻譯歡迎到我們的Discord群組</h2>
       </h2>
-      <a
-        href="https://discord.com/invite/5xApZtgV2u"
-        class="go-discord button-div"
+      <a href="https://discord.com/invite/5xApZtgV2u" class="go-discord btn"
         >前往 Discord 群組</a
       >
     </div>
@@ -110,7 +108,7 @@ export default {
     align-items: center;
   }
 }
-.button-div[href^="https://crowdin.com"]
+.btn[href^="https://crowdin.com"]
 {
   padding: 5px 10%;
   margin: 10px;

@@ -1,6 +1,6 @@
 <template>
   <div id="Home">
-    <section class="home-main flex flex-center flex-down">
+    <section class="home-main flex flex-item-center flex-down">
       <img
         class="user-select"
         src="https://cdn.discordapp.com/emojis/853163865696763926.png?v=1"
@@ -8,8 +8,8 @@
       />
       <h1 class="v-rpm-text user-select"></h1>
     </section>
-    <section class="img-description flex flex-center flex-down">
-      <div class="unit flex flex-center item-none">
+    <section class="img-description flex flex-item-center flex-down">
+      <div class="unit flex flex-item-center item-none">
         <div>
           <img
             style="width: 400px; height: 200px"
@@ -17,7 +17,7 @@
             alt=""
           />
         </div>
-        <div class="flex flex-center flex-down">
+        <div class="flex flex-item-center flex-down">
           <h1 class="HanyiSentyChalk">{{ i18n("Home.include.mod.name") }}</h1>
           <strong>{{ i18n("Home.include.mod.description") }}</strong>
           <router-link
@@ -36,7 +36,7 @@
           </router-link>
         </div>
       </div>
-      <div class="unit flex flex-center item-none">
+      <div class="unit flex flex-item-center item-none">
         <div>
           <img
             style="width: 400px; height: 200px"
@@ -44,7 +44,7 @@
             alt=""
           />
         </div>
-        <div class="flex flex-center flex-down">
+        <div class="flex flex-item-center flex-down">
           <h1 class="HanyiSentyChalk">
             {{ i18n("Home.include.atr.name.0") }}<br />
             {{ i18n("Home.include.atr.name.1") }}
@@ -67,7 +67,7 @@
         </div>
       </div>
     </section>
-    <section class="translation-C-rank flex flex-down flex-center">
+    <section class="translation-C-rank flex flex-down flex-item-center">
       <h1 class="HanyiSentyChalk">{{ i18n("Home.top12.title") }}</h1>
       <iframe
         src="https://rpmtw.github.io/Contributor-Website/Top/12"
@@ -78,7 +78,7 @@
         {{ i18n("Home.top12.show-more") }}
       </router-link>
     </section>
-    <section class="announcement flex flex-center flex-down">
+    <section class="announcement flex flex-item-center flex-down">
       <h1 class="HanyiSentyChalk">{{ i18n("Home.announcement.title") }}</h1>
       <div class="marquee">
         <ul>
@@ -153,7 +153,7 @@ export default {
 <style lang="scss" scoped>
 #Home {
   section:not(.home-main) {
-    margin-top: 4em;
+    margin: 1.5em 0;
     > h1 {
       text-align: center;
       font-size: 35pt;
