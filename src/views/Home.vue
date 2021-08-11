@@ -297,5 +297,18 @@ export default {
       }
     }
   }
+  @media all and (max-width: 600px) {
+    h1 {
+      text-align: center;
+      font-size: 7.8vw !important;
+    }
+    strong {
+      text-align: center;
+      font-size: 4vw !important;
+    }
+    .btn {
+      font-size: 2.7vw !important;
+    }
+  }
 }
 </style>
