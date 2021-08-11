@@ -93,6 +93,7 @@
 
 <script>
 /* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
 import main from "../i18n.js";
 
@@ -113,28 +114,31 @@ export default {
       announcementText: i18n("Home.announcement.datas"),
     };
   },
+  beforeUnmount() {
+    clearTimeout(this._setTimeout);
+    clearInterval(this._setInterval);
+  },
   components: {},
   mounted() {
+    let _this = this;
     $(function () {
-      var t = i18n("Home.scroll.texts");
-      let n = 1;
-      let e = (u = 0) => {
-        setTimeout(function () {
-          n >= t.length && (n = 0),
-            (function (u) {
-              let s = 0;
-              let i = () => {
-                setTimeout(function () {
-                  ++s <= t[u].length
-                    ? ($(".v-rpm-text").html(`${t[u].substring(0, s)}`), i())
-                    : e(n++);
-                }, 150);
-              };
-              i();
-            })(u);
-        }, 2e3);
+      let text = i18n("Home.scroll.texts");
+      let nowList = 0;
+      let nowStr = 0;
+
+      let setText = (nowList) => {
+        _this._setTimeout = setTimeout(() => {
+          $(".v-rpm-text").html(`${text[nowList].substring(0, ++nowStr)}`);
+          if (nowStr <= text[nowList].length) setText(nowList);
+        }, 199);
       };
-      e();
+      _this._setInterval = setInterval(() => {
+        nowStr = 1;
+        if (nowList < text.length - 1) setText(++nowList);
+        else nowList = 0;
+      }, text[nowList].length * 199 + 1e3);
+      setText(nowList);
+
       for (let i of $(".item-none"))
         new IntersectionObserver((e) =>
           e.map((e) =>

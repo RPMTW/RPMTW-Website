@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-undef */
-
 $(function () {
     let t = document.title;
     $(document).on("visibilitychange", () => {
