@@ -87,7 +87,7 @@
           >
             <strong>點我前往</strong> </a
           >，查看請求狀態:
-          <a href="https://forms.gle/rjtc23udsC8UE6PTA">
+          <a href="https://docs.google.com/spreadsheets/d/1dsHN4W1GC2mMat39kJ7JgChJ6X5FpxPSTFW5pcmzCQY/edit?usp=sharing">
             <strong> RPMTW 請求新翻譯紀錄 </strong>
           </a>。
         </li>
