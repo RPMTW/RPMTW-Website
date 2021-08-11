@@ -154,6 +154,7 @@ export default {
     margin-top: 4em;
     > h1 {
       text-align: center;
+      font-size: 35pt;
     }
   }
   .btn {
@@ -198,6 +199,7 @@ export default {
         text-align: center;
         margin-left: 30px;
         h1 {
+          margin-top: 0;
           text-align: center;
           margin-bottom: 30px;
           font-size: 35pt;
@@ -231,6 +233,7 @@ export default {
     }
     .btn {
       margin-top: 2em;
+      min-width: 20%;
     }
   }
   .announcement {
