@@ -27,6 +27,8 @@
 
 <script>
 /* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+import wikiScss from "@/assets/scss/Wiki.scss";
 let menuList = require("@/data/WikiMenu");
 require("dotenv").config();
 
@@ -60,8 +62,11 @@ export default {
   .scroll {
     .title {
       text-align: center;
+      margin-bottom: 20px;
+      font-family: "Architects Daughter", cursive;
+      font-size: 30px;
+      margin-top: 10px;
     }
-    padding-top: 20px;
     position: fixed;
     top: 0;
     resize: horizontal;

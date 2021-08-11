@@ -104,6 +104,7 @@ const routes = [
         component: () => import("@/views/errors/404.vue"),
         meta: {
             breadcrumb: "ProgressQuery",
+            notFooter: true,
         },
     }, {
         path: "/atr1",

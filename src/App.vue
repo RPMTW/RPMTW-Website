@@ -21,8 +21,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "~bootstrap/scss/bootstrap";
-body {
+html {
   margin-top: 55px;
 }
 #app {

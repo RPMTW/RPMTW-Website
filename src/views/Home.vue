@@ -126,13 +126,7 @@ export default {
               let i = () => {
                 setTimeout(function () {
                   ++s <= t[u].length
-                    ? ($(".v-rpm-text").html(
-                        `${t[u].substring(
-                          0,
-                          s
-                        )}<span class="mouse" aria-hidden="true"></span>`
-                      ),
-                      i())
+                    ? ($(".v-rpm-text").html(`${t[u].substring(0, s)}`), i())
                     : e(n++);
                 }, 150);
               };
@@ -276,6 +270,24 @@ export default {
         100% {
           left: 0;
           transform: translateX(-100%);
+        }
+      }
+    }
+  }
+  .v-rpm-text {
+    &::after {
+      content: "";
+      border-right: solid 6px rgb(56, 44, 218);
+      animation: block 1s infinite;
+      @keyframes block {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
         }
       }
     }
