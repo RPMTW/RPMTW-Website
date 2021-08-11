@@ -98,5 +98,7 @@ export default {
       margin: 15px 0 15px 8%;
     }
   }
+  @media all and (max-width: 600px) {
+  }
 }
 </style>

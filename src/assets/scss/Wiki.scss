@@ -24,4 +24,11 @@
             max-width: 80%;
         }
     }
+    @media all and (max-width: 600px) {
+        h1 {
+        }
+        p,
+        a {
+        }
+    }
 }

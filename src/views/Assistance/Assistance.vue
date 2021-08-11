@@ -140,4 +140,24 @@ div.title-center {
     padding: 0.5% 20%;
   }
 }
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-size: 4.6vw !important;
+  }
+  h2 {
+    font-size: 3.5vw !important;
+  }
+  h3 {
+    font-size: 2.7vw !important;
+  }
+  p,
+  li {
+    font-size: 2.3vw !important;
+  }
+  .btn {
+    font-size: 2vw !important;
+    padding: 0.5% 10% !important;
+  }
+}
 </style>
