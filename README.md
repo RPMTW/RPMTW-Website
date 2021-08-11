@@ -4,7 +4,8 @@
 
 ### 進度
 
-- [x] 添加 i18n 檔案
-- [x] 建置 i18n 還境
+- [x] i18n 框架
+- [x] 部分 i18n 檔案
+- [x] RWD ( 除 Wiki 頁面
 
-debug github pages
+##### 目前暫不支援手機板 Wiki

@@ -53,7 +53,7 @@
             </div>
           </div>
         </div>
-        <div class="blurry"></div>
+        <div class="blurry" @click="menuButtonHtmlToggle"></div>
       </div>
     </div>
     <div class="txt-logo user-select">
