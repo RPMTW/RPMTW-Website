@@ -48,7 +48,6 @@ const routes = [
         path: "/Wiki",
         name: "WikiMenuList",
         meta: {
-            title: "目前還在測試中",
             breadcrumb: "Wiki",
             notFooter: true
         },
