@@ -21,6 +21,6 @@ yarn
 
 ```cmd
 npm i
-npm run build & copy "%~dp0\docs\index.html" "%~dp0\docs\404.html" & echo www.rpmtw.ga >> "%~dp0\docs\CNAME"
-
+npm run build
+copy "docs\index.html" "docs\404.html"
 ```
