@@ -329,6 +329,18 @@ export default {
     label {
       font-size: 2.4vw;
     }
+    .output {
+      > div {
+        justify-content: center;
+        width: 40vw;
+        .circle-bar {
+          margin-left: 2vw;
+        }
+      }
+    }
+    h5 {
+      font-size: 2vw !important;
+    }
   }
 }
 </style> 
