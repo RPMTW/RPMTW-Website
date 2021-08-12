@@ -129,9 +129,9 @@ function setTime(dateTimeStamp) {
     return `${parseInt(yearC)} 年前`;
   } else if (monthC >= 1 && monthC <= 3) {
     return `${parseInt(monthC)} 月前`;
-  } else if (weekC >= 1 && weekC <= 3) {
+  } else if (weekC >= 3) {
     return `${parseInt(weekC)} 周前`;
-  } else if (dayC >= 1 && dayC <= 6) {
+  } else if (dayC >= 1) {
     return `${parseInt(dayC)} 天前`;
   } else if (hourC >= 1 && hourC <= 23) {
     return `${parseInt(hourC)} 小時前`;
@@ -318,7 +318,7 @@ export default {
       }
       .commit-author {
         align-items: center;
-        width: 25%;
+        width: 30%;
         justify-content: flex-end;
         line-height: 2;
         > div > * {
