@@ -253,8 +253,9 @@ export default {
         position: absolute;
         list-style-type: none;
         margin: 3px 0;
-        animation: marquee 15s linear infinite;
+        animation: marquee 20s linear infinite;
         > li {
+          list-style-type: upper-roman;
           margin-right: 10em;
           white-space: nowrap;
           font-weight: 900;
@@ -273,7 +274,7 @@ export default {
           transform: translateX(0%);
         }
         100% {
-          left: 0;
+          left: 0%;
           transform: translateX(-100%);
         }
       }
