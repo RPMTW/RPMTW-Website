@@ -24,3 +24,5 @@ npm i
 npm run build
 copy "docs\index.html" "docs\404.html"
 ```
+
+主架構開發開發時間: 9days
