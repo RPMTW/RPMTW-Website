@@ -9,3 +9,18 @@
 - [x] RWD ( 除 Wiki 頁面
 
 ##### 目前暫不支援手機板 Wiki
+
+### yarn
+
+```cmd
+yarn
+./.cmd
+```
+
+### npm
+
+```cmd
+npm i
+npm run build & copy "%~dp0\docs\index.html" "%~dp0\docs\404.html" & echo www.rpmtw.ga >> "%~dp0\docs\CNAME"
+
+```
