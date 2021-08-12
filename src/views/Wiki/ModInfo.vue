@@ -27,7 +27,7 @@
           按下預設快捷鍵 G
           (可自行修改)，將會打開一個介面在格子內輸入要發送的文字即可。
         </p>
-        <a style="color: red">遊戲內方式:</a><br />
+        <a style="color: red">遊戲外方式:</a><br />
         <p>
           前往RPMTW官方Discord群組，找到<a
             href="https://discord.com/channels/815819580840607807/831494456913428501"
