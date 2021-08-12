@@ -37,6 +37,13 @@
                 alt=""
               />
             </a>
+            <a
+              href="https://crowdin.com/project/resourcepack-mod-zhtw?already_accepted=14797842"
+            >
+              <img
+                src="https://support.crowdin.com/assets/logos/crowdin-dark-symbol.png"
+                alt=""
+            /></a>
           </div>
           <div class="div-select flex flex-down">
             <h1 class="nowLang notranslate langMenu" @click="showLangOptions">
@@ -261,6 +268,7 @@ export default {
         padding-left: 10px;
       }
       .links {
+        flex-wrap: wrap;
         justify-content: center;
         img {
           margin: 0 5px;
