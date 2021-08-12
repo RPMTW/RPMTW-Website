@@ -65,11 +65,42 @@
           >
         </h2>
       </section>
+      <section class="flex flex-item-center flex-down">
+        <h1 class="sectionTitle text-center">模組更新進度:</h1>
+        <ul class="commits flex flex-down flex-item-center">
+          <li
+            v-for="data in commits"
+            :key="data"
+            v-show="data.committer.login !== ''"
+            class="commit flex"
+          >
+            <div class="commit-message">
+              <h2>{{ data.commit.message }}</h2>
+            </div>
+            <div class="flex commit-author">
+              <div class="flex">
+                <img :src="data.committer.avatar_url" alt="" />
+                <a :href="data.committer.html_url" class="">
+                  {{ data.committer.login }}
+                </a>
+                <p
+                  :aria-label="timeString(data.commit.author.date)"
+                  class="days"
+                >
+                  {{ setTime(data.commit.author.date) }}
+                </p>
+              </div>
+              <!-- <a :href="data.html_url">awa</a> -->
+            </div>
+          </li>
+        </ul>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable no-undef */
 import main from "@/i18n.js";
 import Progress from "@/components/Progress.vue";
 function i18n(val, value = "") {
@@ -79,18 +110,83 @@ function i18n(val, value = "") {
     value
   );
 }
+
+function setTime(dateTimeStamp) {
+  let diffValue = new Date().getTime() - new Date(dateTimeStamp).getTime();
+  if (diffValue < 0) return;
+  let minute = 1000 * 60;
+  let hour = minute * 60;
+  let day = hour * 24;
+  let week = day * 7;
+  let month = day * 30;
+  let minC = diffValue / minute;
+  let hourC = diffValue / hour;
+  let dayC = diffValue / day;
+  let weekC = diffValue / week;
+  let monthC = diffValue / month;
+  let yearC = diffValue / month / 12;
+  if (yearC >= 1) {
+    return `${parseInt(yearC)} 年前`;
+  } else if (monthC >= 1 && monthC <= 3) {
+    return `${parseInt(monthC)} 月前`;
+  } else if (weekC >= 1 && weekC <= 3) {
+    return `${parseInt(weekC)} 周前`;
+  } else if (dayC >= 1 && dayC <= 6) {
+    return `${parseInt(dayC)} 天前`;
+  } else if (hourC >= 1 && hourC <= 23) {
+    return `${parseInt(hourC)} 小時前`;
+  } else if (minC >= 1 && minC <= 59) {
+    return `${parseInt(minC)} 分鐘前`;
+  } else if (diffValue >= 0 && diffValue <= minute) {
+    return "剛剛";
+  } else {
+    return timeString(dateTimeStamp);
+  }
+}
+function timeString(time) {
+  time = new Date(time).getTime();
+  let datetime = new Date();
+  datetime.setTime(time);
+  let year = datetime.getFullYear();
+  let month =
+    datetime.getMonth() + 1 < 10
+      ? "0" + (datetime.getMonth() + 1)
+      : datetime.getMonth() + 1;
+  let date =
+    datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+  return `${year} - ${month} - ${date}`;
+}
 export default {
   name: "ModInfo",
   data() {
     return {
       moreShow: false,
+      commits: null,
     };
   },
   methods: {
     i18n: i18n,
+    setTime: setTime,
+    timeString: timeString,
   },
   components: {
     Progress,
+  },
+  mounted() {
+    let _this = this;
+    $(function () {
+      $.getJSON(
+        "https://api.github.com/repos/RPMTW/RPMTW-Update-Mod/commits",
+        (datas) => {
+          let out = [];
+          for (let [index, data] of datas.entries()) {
+            if (data.commit.author.name !== "web-flow" && index < 10)
+              out.push(data);
+          }
+          _this.commits = out;
+        }
+      );
+    });
   },
 };
 </script>
@@ -178,6 +274,69 @@ export default {
     }
     .btn {
       font-size: 2.5vw;
+    }
+  }
+  .commits {
+    color: var(--styleMode-background-color) !important;
+    background-color: var(--styleMode-color);
+    width: 80%;
+    padding: 1em 0;
+    border-radius: 4px;
+    .commit {
+      width: 80%;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 2%;
+      &:not(:nth-child(0n + 1)) {
+        border-top: solid 2px var(--styleMode-background-color);
+      }
+      li {
+        list-style-type: upper-roman;
+      }
+      p,
+      h2 {
+        width: 100%;
+        margin: 0;
+      }
+      h2 {
+        font-size: 18pt;
+        text-align: left;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      p.days {
+        width: 25%;
+      }
+      &:hover {
+        background-color: var(--styleMode-webkit-scrollbar);
+      }
+      .commit-message {
+        width: 60%;
+      }
+      .commit-author {
+        align-items: center;
+        width: 25%;
+        justify-content: flex-end;
+        line-height: 2;
+        > div > * {
+          padding-left: 5px;
+        }
+        > div {
+          width: 100%;
+          justify-content: flex-end;
+        }
+        a {
+          color: var(--styleMode-background-color) !important;
+        }
+      }
+    }
+    @media all and (max-width: 1000px) {
+      .commit-author > div {
+        flex-direction: column;
+      }
     }
   }
 }
