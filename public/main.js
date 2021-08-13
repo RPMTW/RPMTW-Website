@@ -22,4 +22,8 @@ $(function () {
         }
     })
 });
+
+/* functions */
+let random = (max, min) => Math.random() * (max - min) + min;
+
 /* 此專案使用 vue cli 前端框架建置 */

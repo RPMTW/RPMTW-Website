@@ -281,6 +281,7 @@ export default {
     }
   }
   .v-rpm-text {
+    text-align: center;
     &::after {
       content: "";
       border-right: solid 6px rgb(56, 44, 218);
