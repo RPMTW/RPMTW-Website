@@ -65,6 +65,7 @@
           >
         </h2>
       </section>
+      <!-- TODO: RWD scss -->
       <section class="flex flex-item-center flex-down">
         <h1 class="sectionTitle text-center">模組更新進度:</h1>
         <ul class="commits flex flex-down flex-item-center">
@@ -77,20 +78,37 @@
             <div class="commit-message">
               <h2>{{ data.commit.message }}</h2>
             </div>
-            <div class="flex commit-author">
-              <div class="flex">
-                <img :src="data.committer.avatar_url" alt="" />
-                <a :href="data.committer.html_url" class="">
-                  {{ data.committer.login }}
-                </a>
-                <p
-                  :aria-label="timeString(data.commit.author.date)"
-                  class="days"
-                >
-                  {{ setTime(data.commit.author.date) }}
-                </p>
+            <div class="flex" style="width: 30%">
+              <div>
+                <a :href="data.html_url"
+                  ><svg
+                    aria-hidden="true"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    width="16"
+                    data-view-component="true"
+                    class="go-html-url"
+                  >
+                    <path
+                      d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"
+                    ></path></svg
+                ></a>
               </div>
-              <!-- <a :href="data.html_url">awa</a> -->
+              <div class="flex commit-author">
+                <div class="flex">
+                  <img :src="data.committer.avatar_url" alt="" />
+                  <a :href="data.committer.html_url" class="">
+                    {{ data.committer.login }}
+                  </a>
+                  <p
+                    :aria-label="timeString(data.commit.author.date)"
+                    class="days"
+                  >
+                    {{ setTime(data.commit.author.date) }}
+                  </p>
+                </div>
+              </div>
             </div>
           </li>
         </ul>
@@ -307,18 +325,23 @@ export default {
         height: 30px;
         border-radius: 50%;
       }
-      p.days {
-        width: 25%;
-      }
       &:hover {
         background-color: var(--styleMode-webkit-scrollbar);
+      }
+      .go-html-url {
+        padding: 5px;
+        border-radius: 4px;
+        fill: var(--styleMode-background-color);
+        &:hover {
+          background-color: var(--styleMode-webkit-scrollbar-thumb);
+          fill: var(--styleMode-color);
+        }
       }
       .commit-message {
         width: 60%;
       }
       .commit-author {
         align-items: center;
-        width: 30%;
         justify-content: flex-end;
         line-height: 2;
         > div > * {
@@ -333,9 +356,19 @@ export default {
         }
       }
     }
-    @media all and (max-width: 1000px) {
-      .commit-author > div {
+    @media all and (max-width: 1100px) {
+      .commit {
         flex-direction: column;
+        > div {
+          width: 100% !important;
+          &.commit-message {
+            padding-left: 10%;
+          }
+          a,
+          p {
+            font-size: 1.5vw;
+          }
+        }
       }
     }
   }
