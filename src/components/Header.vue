@@ -1,4 +1,4 @@
-<template>
+<template >
   <header id="header" class="flex">
     <div class="header-nav-left">
       <div class="menuButton" @click="menuButtonHtmlToggle">
@@ -139,6 +139,10 @@ export default {
   mounted() {
     let _this = this;
     $(function () {
+      /* TODO: 滑動叫出MENU */
+      /* $("html").on("swiperight", "body", function (e) {
+        console.log(e);
+      }); */
       $(window).on("scroll", () => headerScroll());
       function headerScroll() {
         /* set header top show */
