@@ -104,6 +104,7 @@ export default {
             Object.keys(i).map((val) => {
               if (++l > 25) return;
               if (val.includes(txt) || i[val].ModID.includes(txt)) {
+                /* 有點想用jsx ing */
                 $(".output").append(
                   `<div><div><h5>CurseForgeID: ${val}<br>模組ID: ${
                     i[val].ModID
@@ -295,20 +296,18 @@ export default {
     flex-direction: column;
     align-items: center;
     font-size: 20px;
+    > div {
+      padding: 2px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 5px;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      border-bottom-style: solid;
+      width: 350px;
+    }
   }
-
-  .output > div {
-    padding: 2px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 350px;
-    margin-left: 5px;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    border-bottom-style: solid;
-  }
-
   #search {
     height: 30px;
     text-align: center;
@@ -331,8 +330,7 @@ export default {
     }
     .output {
       > div {
-        justify-content: center;
-        width: 40vw;
+        width: 80%;
         .circle-bar {
           margin-left: 2vw;
         }

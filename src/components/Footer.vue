@@ -1,11 +1,11 @@
 <template>
   <div class="Footer" v-if="notFooter">
     <footer class="flex flex-down">
-      <div>
-        Copyright © RPMTW 2021-2021 Powered by The
+      <p>
+        Copyright &copy; RPMTW {{ newYear }} Powered by The
         <a href="https://github.com/RPMTW">RPMTW Team</a> and
         <a href="https://github.com/a3510377">猴子#3807</a>
-      </div>
+      </p>
     </footer>
   </div>
 </template>
@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       notFooter: true,
+      newYear: new Date().getFullYear(),
     };
   },
   watch: {
@@ -37,10 +38,9 @@ export default {
   min-height: 50px;
   color: white;
   display: flex;
-  align-items: center;
-  text-align: center;
-  font-family: "Comic Neue", cursive;
+  font-family: sans-serif;
   justify-content: center;
+  text-align: center;
   @media all and (max-width: 600px) {
     font-size: 2.7vw !important;
   }

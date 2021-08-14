@@ -118,7 +118,6 @@ export default {
     clearTimeout(this._setTimeout);
     clearInterval(this._setInterval);
   },
-  components: {},
   mounted() {
     let _this = this;
     $(function () {
