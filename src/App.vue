@@ -1,8 +1,7 @@
 <template>
   <Header />
   <router-view class="wrapper" />
-  <div class="FooterAir"></div>
-  <Footer />
+  <Footer class="footer" />
   <div
     class="goTop"
     @click="goTop"
@@ -25,6 +24,7 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import fonts from "@/assets/fonts/fonts.css";
+import mainScss from "@/assets/scss/main.scss";
 
 export default {
   name: "Main",
@@ -45,11 +45,9 @@ export default {
   mounted() {
     let _this = this;
     $(function () {
-      /* TODO: 動畫 */
-      // let goTopCanvas=document.getElementById("goTopCanvas"); let ctx=goTopCanvas.getContext("2d"); ctx; $(".goTopCanvas");
       $(window).on(
         "scroll",
-        () => (_this.showGoTop = $(window).scrollTop() > 600)
+        () => (_this.showGoTop = $(window).scrollTop() >= 600)
       );
     });
   },
@@ -62,6 +60,10 @@ html {
 #app {
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 55px);
+  .wrapper {
+    flex-grow: 1;
+  }
 }
 
 .goTop {
@@ -81,5 +83,4 @@ html {
     top: 88%;
   }
 }
-/* footer bottom */
 </style>

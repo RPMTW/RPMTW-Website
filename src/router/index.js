@@ -42,7 +42,6 @@ const routes = [
         component: () => import("@/views/ProgressQuery.vue"),
         meta: {
             breadcrumb: "ProgressQuery",
-            notFooter: true,
         },
     }, {
         path: "/Wiki",
@@ -109,6 +108,10 @@ const routes = [
         path: "/atr1",
         name: "ATR1",
         component: () => import("@/views/Surrounding/ATR1.vue")
+    }, {
+        path: "/test",
+        name: "TEST",
+        component: () => import("@/views/test/test-1.vue")
     }
 ]
 

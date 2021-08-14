@@ -26,6 +26,7 @@ body {
     user-select: none;
 }
 .btn {
+    $thisColor: attr(bon-color, red);
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
@@ -46,25 +47,27 @@ body {
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
         box-shadow 0.15s ease-in-out;
+    &:before {
+        transition: transform 0.5s;
+        transform: scaleX(0);
+        background-color: $thisColor;
+    }
+    &:hover {
+        &:before {
+            transform: scaleX(1) !important;
+            z-index: -1;
+        }
+    }
 }
 [href],
 [href]:visited {
     color: var(--styleMode-color);
     text-decoration: none;
-}
-[href]:hover {
-    opacity: 0.8;
+    &:hover:not(.btn) {
+        opacity: 0.8;
+    }
 }
 
-/* popover */
-[data-popover] {
-    position: relative;
-}
-[data-popover]::before {
-    color: rgb(232, 230, 227);
-    background-color: rgba(0, 0, 0, 0.9);
-    text-shadow: none;
-}
 .item-none {
     opacity: 0;
     transform: translateX(-100px);
@@ -78,45 +81,45 @@ body {
 /* aria-label */
 [aria-label] {
     position: relative;
-}
-[aria-label]:before {
-    display: none;
-    position: absolute;
-    top: auto;
-    right: 50%;
-    bottom: -7px;
-    margin-right: -5px;
-    width: 0;
-    height: 0;
-    content: "";
-    border: 5px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.9);
-    pointer-events: none;
-}
-[aria-label]:after {
-    display: none;
-    top: 100%;
-    right: 50%;
-    padding: 0 10px;
-    border-radius: 3px;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 500;
-    white-space: pre;
-    margin-top: 5px;
-    line-height: 26px;
-    content: attr(aria-label);
-    transform: translateX(50%);
-}
-[aria-label]:hover {
-    z-index: 99999 !important;
-}
-[aria-label]:hover:after,
-[aria-label]:hover:before {
-    display: block !important;
-    opacity: 1 !important;
+    &:before {
+        display: none;
+        position: absolute;
+        top: auto;
+        right: 50%;
+        bottom: -7px;
+        margin-right: -5px;
+        width: 0;
+        height: 0;
+        content: "";
+        border: 5px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.9);
+        pointer-events: none;
+    }
+    &:after {
+        display: none;
+        top: 100%;
+        right: 50%;
+        padding: 0 10px;
+        border-radius: 3px;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 500;
+        white-space: pre;
+        margin-top: 5px;
+        line-height: 26px;
+        content: attr(aria-label);
+        transform: translateX(50%);
+    }
+    &:hover {
+        z-index: 99999 !important;
+    }
+    &:hover:after,
+    &:hover:before {
+        display: block !important;
+        opacity: 1 !important;
+    }
 }
 
 /* flex */
@@ -151,6 +154,7 @@ body {
     --styleMode-color: rgb(224, 224, 224);
     --styleMode-webkit-scrollbar-thumb: #454a4d;
     --styleMode-webkit-scrollbar: #aba499;
+    --styleMode-hove-background-color: rgb(93, 93, 93);
     --strong-color: orange;
     --title-color: orange;
 }
@@ -159,6 +163,7 @@ body {
     --styleMode-color: #222;
     --styleMode-webkit-scrollbar-thumb: #aba499;
     --styleMode-webkit-scrollbar: #454a4d;
+    --styleMode-hove-background-color: rgb(116, 116, 116);
     --strong-color: rgb(0, 46, 253);
     --title-color: rgb(140, 0, 255);
 }
