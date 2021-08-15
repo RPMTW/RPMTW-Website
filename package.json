@@ -13,11 +13,9 @@
     "dotenv": "^10.0.0",
     "popper.js": "^1.16.1",
     "vue": "^3.0.0",
-    "vue-analytics": "^5.22.1",
     "vue-i18n": "^8.25.0",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0",
-    "yarn": "^1.22.11"
+    "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -56,9 +54,5 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ],
-  "main": "index.js",
-  "repository": "https://github.com/RPMTW/RPMTW-Website.git",
-  "author": "a3510377 <a102009102009@gmail.com>",
-  "license": "MIT"
+  ]
 }
