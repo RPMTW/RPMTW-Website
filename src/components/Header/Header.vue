@@ -8,7 +8,7 @@
         </p>
         <a
           class="btn"
-          href="https://discord"
+          href="https://discord.com/invite/5xApZtgV2u"
           style="--thisColor: rgb(173, 173, 173)"
           >加入 RPMTW 官方 Discord 伺服器</a
         >
