@@ -22,7 +22,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* components */
-import Header from "@/components/Header.vue";
+import Header from "@/components/Header/Header.vue";
 import Footer from "@/components/Footer.vue";
 import EnlargeImg from "@/components/EnlargeImg.vue";
 import fonts from "@/assets/fonts/fonts.css";
@@ -57,9 +57,6 @@ export default {
 };
 </script>
 <style lang="scss">
-html {
-  margin-top: 55px;
-}
 #app {
   display: flex;
   flex-direction: column;

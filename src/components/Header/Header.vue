@@ -1,84 +1,102 @@
 <template >
-  <header id="header" class="flex">
-    <div class="header-nav-left">
-      <div class="menuButton" @click="menuButtonHtmlToggle">
-        <a href="#">
-          <div class="menuStyle"></div>
-        </a>
-        <div class="menu" @mouseleave="menuButtonHtmlToggle">
-          <div
-            v-for="data in menuList"
-            :key="data"
-            :class="{
-              active: breadcrumb === data.breadcrumb,
-            }"
-            class="activeBreadcrumb"
-          >
-            <router-link :to="data.to" class="go-to">
-              {{ data.name }}
-            </router-link>
-          </div>
-          <div class="links flex">
-            <a href="https://discord.com/invite/5xApZtgV2u">
-              <img
-                src="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico"
-                alt=""
-              />
-            </a>
-            <a href="https://github.com/RPMTW">
-              <img src="https://github.com/fluidicon.png" alt="" />
-            </a>
-            <a href="https://modrinth.com/mod/rpmtw-update-mod">
-              <img src="https://modrinth.com/favicon.ico" alt="" />
-            </a>
-            <a href="https://www.curseforge.com/minecraft/modpacks/atr1">
-              <img
-                src="https://media.forgecdn.net/avatars/thumbnails/396/29/64/64/637595082272657724.png"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://crowdin.com/project/resourcepack-mod-zhtw?already_accepted=14797842"
-            >
-              <img
-                src="https://support.crowdin.com/assets/logos/crowdin-dark-symbol.png"
-                alt=""
-            /></a>
-          </div>
-          <div class="div-select flex flex-down">
-            <h1 class="nowLang notranslate langMenu" @click="showLangOptions">
-              {{ lang }}
-            </h1>
+  <header id="header" class="flex flex-down">
+    <div class="discord-top-link flex">
+      <div></div>
+      <div class="flex">
+        <p>
+          遇到問題了?有建議要提供?想一起聊天?讓我們一起壯大 Minecraft 社群吧!!
+        </p>
+        <a
+          @click="noDiscordLink"
+          class="btn"
+          href="https://discord"
+          style="--thisColor: rgb(173, 173, 173)"
+          >加入 RPMTW 官方 Discord 伺服器</a
+        >
+      </div>
+      <div class="icon x"></div>
+    </div>
+    <div class="flex else-discord">
+      <div class="header-nav-left">
+        <div class="menuButton" @click="menuButtonHtmlToggle">
+          <a href="#">
+            <div class="menuStyle"></div>
+          </a>
+          <div class="menu" @mouseleave="menuButtonHtmlToggle">
             <div
-              class="div-option none langMenu notranslate"
-              v-for="(value, key) in langs"
-              :value="key"
-              :key="(value, key)"
-              @click="setChoose"
+              v-for="data in menuList"
+              :key="data"
+              :class="{
+                active: breadcrumb === data.breadcrumb,
+              }"
+              class="activeBreadcrumb"
             >
-              {{ value }}
+              <router-link :to="data.to" class="go-to">
+                {{ data.name }}
+              </router-link>
+            </div>
+            <div class="links flex">
+              <a href="https://discord.com/invite/5xApZtgV2u">
+                <img
+                  src="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico"
+                  alt=""
+                />
+              </a>
+              <a href="https://github.com/RPMTW">
+                <img src="https://github.com/fluidicon.png" alt="" />
+              </a>
+              <a href="https://modrinth.com/mod/rpmtw-update-mod">
+                <img src="https://modrinth.com/favicon.ico" alt="" />
+              </a>
+              <a href="https://www.curseforge.com/minecraft/modpacks/atr1">
+                <img
+                  src="https://media.forgecdn.net/avatars/thumbnails/396/29/64/64/637595082272657724.png"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://crowdin.com/project/resourcepack-mod-zhtw?already_accepted=14797842"
+              >
+                <img
+                  src="https://support.crowdin.com/assets/logos/crowdin-dark-symbol.png"
+                  alt=""
+              /></a>
+            </div>
+            <div class="div-select flex flex-down">
+              <h1 class="nowLang notranslate langMenu" @click="showLangOptions">
+                {{ lang }}
+              </h1>
+              <div
+                class="div-option none langMenu notranslate"
+                v-for="(value, key) in langs"
+                :value="key"
+                :key="(value, key)"
+                @click="setChoose"
+              >
+                {{ value }}
+              </div>
             </div>
           </div>
         </div>
+        <div class="blurry" @click="menuButtonHtmlToggle"></div>
       </div>
-      <div class="blurry" @click="menuButtonHtmlToggle"></div>
-    </div>
-    <div class="txt-logo user-select">
-      <strong class="main-title"
-        ><span class="notranslate" style="color: #ff9900">RPM</span
-        ><span style="color: #00ffff" class="notranslate">TW</span></strong
-      >
-    </div>
-    <div class="header-nav-right">
-      <div class="header-nav-setMode" @click="headerSetMode_click" rod>
-        <span
-          :class="{
-            'mode-bright': bright,
-            'mode-dark': !bright,
-          }"
+      <div class="txt-logo user-select">
+        <strong class="main-title"
+          ><span class="notranslate" style="color: #ff9900">RPM</span
+          ><span style="color: #00ffff" class="notranslate">TW</span></strong
         >
-          <i class="fas fa-sun"></i>
-        </span>
+      </div>
+      <div class="header-nav-right">
+        <div class="header-nav-setMode" @click="headerSetMode_click" rod>
+          <span
+            :class="{
+              'mode-bright': bright,
+              'mode-dark': !bright,
+            }"
+          >
+            <i class="fas fa-sun"></i>
+          </span>
+        </div>
       </div>
     </div>
   </header>
@@ -108,6 +126,7 @@ export default {
       bright: false,
     };
   },
+  components: {},
   methods: {
     i18n: i18n,
     showLangOptions() {
@@ -191,7 +210,8 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 55px;
+  max-height: 95px;
+  min-height: 95px;
   background-color: rgb(85, 82, 82);
   justify-content: space-between;
   align-items: center;
@@ -201,6 +221,54 @@ export default {
   &.slider--down {
     transition: 0.8s;
     top: -10%;
+  }
+  .discord-top-link {
+    > .flex {
+      align-items: center;
+      justify-content: center;
+    }
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(83, 134, 251);
+    color: black;
+    width: 100%;
+    p {
+      font-weight: 600;
+      font-size: 12pt;
+    }
+    .btn {
+      font-weight: 600;
+      margin-left: 10px;
+      font-size: 10pt;
+    }
+    .icon.x {
+      margin-right: 10px;
+      text-align: right;
+      cursor: pointer;
+      padding: 5px;
+    }
+    @media all and (max-width: 820px) {
+      p {
+        font-size: 1.9vw;
+        max-width: 80%;
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .btn {
+        max-width: 20%;
+        font-size: 1.6vw;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .else-discord {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
   .header-nav-left {
     margin-left: 10px;
@@ -311,6 +379,9 @@ export default {
 }
 </style>
 <style lang="scss">
+html {
+  margin-top: 95px !important;
+}
 .is-menu {
   .menuStyle {
     background-color: transparent !important;

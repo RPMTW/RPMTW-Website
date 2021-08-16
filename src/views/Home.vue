@@ -253,7 +253,7 @@ export default {
         position: absolute;
         list-style-type: none;
         margin: 3px 0;
-        animation: marquee 20s linear infinite;
+        animation: marquee 25s linear infinite;
         > li {
           list-style-type: upper-roman;
           margin-right: 10em;

@@ -26,7 +26,6 @@ body {
     user-select: none;
 }
 .btn {
-    $thisColor: attr(bon-color, red);
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
@@ -46,12 +45,9 @@ body {
     font-size: 1rem;
     border-radius: 0.25rem;
     transition: all 0.5s ease-in-out;
-    &:before {
-        transition: transform 0.5s;
-        background-color: $thisColor;
-    }
     &:hover {
         background-color: rgb(171, 188, 233) !important;
+        background-color: var(--thisColor) !important;
         &:before {
             transform: scaleX(1) !important;
             z-index: -1;
