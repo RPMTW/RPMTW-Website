@@ -61,11 +61,15 @@ export default {
   display: flex;
   .scroll {
     .title {
+      height: var(--html-margin-top);
       text-align: center;
-      margin-bottom: 20px;
       font-family: "Architects Daughter", cursive;
       font-size: 30px;
       margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     position: fixed;
     top: 0;

@@ -1,20 +1,19 @@
 <template >
   <header id="header" class="flex flex-down">
-    <div class="discord-top-link flex">
+    <div class="discord-top-link flex" v-if="discordLinkShow">
       <div></div>
       <div class="flex">
         <p>
           遇到問題了?有建議要提供?想一起聊天?讓我們一起壯大 Minecraft 社群吧!!
         </p>
         <a
-          @click="noDiscordLink"
           class="btn"
           href="https://discord"
           style="--thisColor: rgb(173, 173, 173)"
           >加入 RPMTW 官方 Discord 伺服器</a
         >
       </div>
-      <div class="icon x"></div>
+      <div class="icon x" @click="noDiscordLink"></div>
     </div>
     <div class="flex else-discord">
       <div class="header-nav-left">
@@ -124,6 +123,7 @@ export default {
       menuList: menuList,
       breadcrumb: null,
       bright: false,
+      discordLinkShow: true,
     };
   },
   components: {},
@@ -154,10 +154,19 @@ export default {
     setBreadcrumb() {
       this.breadcrumb = this.$route.meta.breadcrumb;
     },
+    noDiscordLink() {
+      localStorage.setItem("discordLink", 0);
+      this.discordLinkShow = false;
+      (this.discordLinkShow && $("html").css("--html-margin-top", "95px")) ||
+        $("html").css("--html-margin-top", "45px");
+    },
   },
   mounted() {
-    let _this = this;
+    let _ = this;
+    this.discordLinkShow = parseInt(localStorage.getItem("discordLink")) !== 0;
     $(function () {
+      (_.discordLinkShow && $("html").css("--html-margin-top", "95px")) ||
+        $("html").css("--html-margin-top", "45px");
       $(window).on("scroll", () => headerScroll());
       function headerScroll() {
         /* set header top show */
@@ -210,8 +219,8 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 95px;
-  min-height: 95px;
+  max-height: var(--html-margin-top);
+  min-height: var(--html-margin-top);
   background-color: rgb(85, 82, 82);
   justify-content: space-between;
   align-items: center;
@@ -220,7 +229,7 @@ export default {
   }
   &.slider--down {
     transition: 0.8s;
-    top: -10%;
+    top: -20% !important;
   }
   .discord-top-link {
     > .flex {
@@ -380,7 +389,7 @@ export default {
 </style>
 <style lang="scss">
 html {
-  margin-top: 95px !important;
+  margin-top: var(--html-margin-top) !important;
 }
 .is-menu {
   .menuStyle {
