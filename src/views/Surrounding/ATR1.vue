@@ -49,7 +49,11 @@
     <hr />
     <section class="flex flex-item-center flex-down">
       <h1>遊戲首頁截圖</h1>
-      <img src="@/assets/images/Surrounding/ATR1/screenshot.png" alt="" />
+      <img
+        class="showEl"
+        src="@/assets/images/Surrounding/ATR1/screenshot.png"
+        alt=""
+      />
     </section>
     <hr />
     <section>

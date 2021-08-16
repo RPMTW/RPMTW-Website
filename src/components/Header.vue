@@ -60,8 +60,8 @@
             </div>
           </div>
         </div>
-        <div class="blurry" @click="menuButtonHtmlToggle"></div>
       </div>
+      <div class="blurry" @click="menuButtonHtmlToggle"></div>
     </div>
     <div class="txt-logo user-select">
       <strong class="main-title"
@@ -327,11 +327,15 @@ export default {
     display: flex !important;
   }
   .blurry {
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     display: block;
     opacity: 0.3;
-    transform: translateX(-100%);
     z-index: 9;
+    background: black;
+    top: 0;
+    left: 0;
   }
 }
 </style>

@@ -48,17 +48,33 @@
       <section class="flex flex-item-center flex-down">
         <h1 class="sectionTitle">功能介紹</h1>
         <h2>自動更新並載入翻譯包</h2>
-        <img src="@/assets/images/modInfo/modInfoAutoUpData.png" alt="" />
+        <img
+          class="showEl"
+          src="@/assets/images/modInfo/modInfoAutoUpData.png"
+          alt=""
+        />
         <h2>遊戲內翻譯</h2>
-        <img src="@/assets/images/modInfo/inGameIcon.png" alt="" />
+        <img
+          class="showEl"
+          src="@/assets/images/modInfo/inGameIcon.png"
+          alt=""
+        />
         <h2>光速載入翻譯包</h2>
-        <img src="@/assets/images/modInfo/SpeedLoading.png" alt="" />
+        <img
+          class="showEl"
+          src="@/assets/images/modInfo/SpeedLoading.png"
+          alt=""
+        />
         <h2>圖形化設定界面</h2>
-        <img src="@/assets/images/modInfo/gameUI.png" alt="" />
+        <img class="showEl" src="@/assets/images/modInfo/gameUI.png" alt="" />
         <h2>公告系統</h2>
-        <img src="@/assets/images/modInfo/Announcement.png" alt="" />
+        <img
+          class="showEl"
+          src="@/assets/images/modInfo/Announcement.png"
+          alt=""
+        />
         <h2>掛機偵測系統</h2>
-        <img src="@/assets/images/modInfo/getAFK.png" alt="" />
+        <img class="showEl" src="@/assets/images/modInfo/getAFK.png" alt="" />
         <h2>
           <strong style="color: var(--title-color)"
             >之後會陸續支援更多功能喔，敬啟期待!</strong

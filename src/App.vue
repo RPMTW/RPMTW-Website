@@ -16,6 +16,7 @@
       />
     </div>
   </div>
+  <EnlargeImg />
 </template>
 <script>
 /* eslint-disable no-undef */
@@ -23,6 +24,7 @@
 /* components */
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import EnlargeImg from "@/components/EnlargeImg.vue";
 import fonts from "@/assets/fonts/fonts.css";
 import mainScss from "@/assets/scss/main.scss";
 
@@ -31,6 +33,7 @@ export default {
   components: {
     Header,
     Footer,
+    EnlargeImg,
   },
   methods: {
     goTop() {

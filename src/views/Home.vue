@@ -12,6 +12,7 @@
       <div class="unit flex flex-item-center item-none">
         <div>
           <img
+            class="showEl"
             style="width: 400px; height: 200px"
             src="https://cdn.discordapp.com/banners/815819580840607807/bf8aec260c17d5483a18e27d8e99a52b.jpg?size=512"
             alt=""
@@ -39,6 +40,7 @@
       <div class="unit flex flex-item-center item-none">
         <div>
           <img
+            class="showEl"
             style="width: 400px; height: 200px"
             src="https://media.discordapp.net/attachments/793138981750571008/854976912228089906/unknown.png"
             alt=""
@@ -66,6 +68,7 @@
           </router-link>
         </div>
       </div>
+      <div class="unit flex flex-item-center item-none"></div>
     </section>
     <section class="translation-C-rank flex flex-down flex-item-center">
       <h1 class="HanyiSentyChalk">{{ i18n("Home.top12.title") }}</h1>
