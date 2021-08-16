@@ -1,12 +1,9 @@
 <template>
-  <div id="EnlargeImg" v-if="showImg">
-    <div class="x"></div>
-    <div class="<"></div>
-    <div class=">"></div>
-    <div class="showImg">
+  <div id="Enlarge" v-show="showImg">
+    <div class="showImg scaleDraw">
       <img :src="showImg" class="not-enlarge" alt="" />
+      <p class="img-description">{{ description }}</p>
     </div>
-    <div class="EnlargeImg-footer"></div>
     <div class="EnlargeImg-blurry" @click="showImg = !showImg"></div>
   </div>
 </template>
@@ -19,6 +16,7 @@ export default {
   data() {
     return {
       showImg: null,
+      description: null,
     };
   },
   methods: {},
@@ -27,6 +25,7 @@ export default {
     $(function () {
       $("html").on("click", "img.showEl", function (e) {
         _.showImg = $(this).attr("src") || null;
+        _.description = $(this).attr("alt");
         $("html").addClass("enlarge");
         $("#EnlargeImg.not-enlarge").css({
           width: $(this).css("width"),
@@ -39,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#EnlargeImg {
+#Enlarge {
   position: fixed;
   left: 0;
   top: 0;
@@ -57,10 +56,31 @@ export default {
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    .not-enlarge {
-      z-index: 9;
-      width: 80%;
-      max-height: 80%;
+    &.scaleDraw {
+      animation-name: scaleDraw;
+      animation-timing-function: ease-in-out;
+      animation-duration: 0.5s;
+      .not-enlarge {
+        z-index: 9;
+        width: 80%;
+        max-height: 80%;
+      }
+      .img-description {
+        z-index: 9;
+        font-size: 20pt;
+        color: white;
+        list-style: none;
+      }
+      @keyframes scaleDraw {
+        from {
+          z-index: 9;
+          transform: scale(0);
+        }
+        to {
+          z-index: 9;
+          transform: scale(1);
+        }
+      }
     }
   }
   .EnlargeImg-blurry {
@@ -68,10 +88,21 @@ export default {
     height: 100vh;
     position: fixed;
     display: block;
-    opacity: 0.3;
     background: black;
     top: 0;
     left: 0;
+    animation-name: blurry;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    opacity: 0.5;
+    @keyframes blurry {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0.5;
+      }
+    }
   }
 }
 </style>

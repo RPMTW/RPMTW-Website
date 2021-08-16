@@ -4,7 +4,6 @@
       <img
         class="user-select"
         src="https://cdn.discordapp.com/emojis/853163865696763926.png?v=1"
-        alt=""
       />
       <h1 class="v-rpm-text user-select"></h1>
     </section>
@@ -15,7 +14,7 @@
             class="showEl"
             style="width: 400px; height: 200px"
             src="https://cdn.discordapp.com/banners/815819580840607807/bf8aec260c17d5483a18e27d8e99a52b.jpg?size=512"
-            alt=""
+            alt="自動中文化更新模組"
           />
         </div>
         <div class="flex flex-item-center flex-down">
@@ -43,7 +42,6 @@
             class="showEl"
             style="width: 400px; height: 200px"
             src="https://media.discordapp.net/attachments/793138981750571008/854976912228089906/unknown.png"
-            alt=""
           />
         </div>
         <div class="flex flex-item-center flex-down">
