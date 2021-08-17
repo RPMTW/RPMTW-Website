@@ -128,5 +128,27 @@
                 }
             ]
         }
+    },
+    {
+        "name": "菘菘",
+        "img": "https://yt3.ggpht.com/ytc/AKedOLSZLvX3EjBRKBgfZpyVIuu2fyM3O5SZ-MWBXlai6l4=s88-c-k-c0x00ffffff-no-rj",
+        "data": {
+            "title": "簡介",
+            "text": "🎊歡迎來到菘菘的頻道，從現在起開始訂閱吧! https://bit.ly/3fGiTTK<br>等等為啥在這阿!!!",
+            "buttons": [
+                {
+                    "title": "我的discord伺服器",
+                    "url": "https://discord.gg/5xApZtgV2u"
+                },
+                {
+                    "title": "我的FB粉絲專頁",
+                    "url": "https://www.facebook.com/BarrySongsongYT/"
+                },
+                {
+                    "title": "我的網站",
+                    "url": "https://sites.google.com/view/sngsites/home"
+                }
+            ]
+        }
     }
 ]

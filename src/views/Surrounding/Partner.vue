@@ -157,7 +157,7 @@ export default {
           justify-content: center;
           .ctx {
             width: 80%;
-            :not(.btn) {
+            :not(.btn, .center) {
               text-align: left;
             }
             p {
