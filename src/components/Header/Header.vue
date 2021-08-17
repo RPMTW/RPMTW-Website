@@ -1,8 +1,12 @@
 <template >
   <header id="header" class="flex flex-down">
-    <div class="discord-top-link flex" v-if="discordLinkShow">
+    <div
+      class="discord-top-link flex"
+      v-if="discordLinkShow"
+      style="width: 100%"
+    >
       <div></div>
-      <div class="flex">
+      <div class="flex" style="width: 80%">
         <p>
           遇到問題了?有建議要提供?想一起聊天?讓我們一起壯大 Minecraft 社群吧!!
         </p>

@@ -1,9 +1,11 @@
 <template>
   <div class="ProgressEx">
     <div class="child">
-      <h1 :ref="'version-txt-' + version" class="version-txt"></h1>
+      <h1 :ref="`version-txt-${version}`" class="version-txt auto-overflow">
+        {{ version_txt_title }}
+      </h1>
       <div :ref="'process-' + version" class="process-animate">
-        <h1 :ref="'txt-' + version">正在載入資料中，請稍後...</h1>
+        <h1 :ref="`txt-${version}`">正在載入資料中，請稍後...</h1>
       </div>
     </div>
   </div>
@@ -21,13 +23,17 @@ export default {
       default: undefined,
     },
   },
+  data() {
+    return {
+      version_txt_title: null,
+    };
+  },
   mounted() {
     let version = this.version;
-    let Title = this.Title;
     let text = $(this.$refs[`txt-${version}`]);
     let process = $(this.$refs[`process-${version}`]);
+    this.version_txt_title = this.Title || version;
 
-    $(this.$refs[`version-txt-${version}`]).html(Title || version);
     $(function () {
       let loop = () => {
         $.getJSON(

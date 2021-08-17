@@ -5,7 +5,7 @@
         <iframe
           sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads"
           frameborder="0"
-          aria-label="YouTube Video, 居然有自動幫你翻譯中文的模組!?!?!?還可以修改你覺得不適合的翻譯!!!| Minecraft 模組介紹 27 中文翻譯模組"
+          aria-label="居然有自動幫你翻譯中文的模組!?!?!?還可以修改你覺得不適合的翻譯!!!| Minecraft 模組介紹 27 中文翻譯模組"
           src="https://www.youtube.com/embed/OIE26f1P8dU"
           allowfullscreen=""
         ></iframe>
@@ -27,7 +27,7 @@
         </h1>
         <Progress
           version="progress"
-          class="progress auto-overflow"
+          class="progress"
           :Title="i18n('RPMTWUpdateMod.schedule.Full.version')"
         />
         <div v-show="moreShow" class="more">
