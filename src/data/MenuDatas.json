@@ -25,13 +25,13 @@
         "breadcrumb": "Contributor"
     },
     {
+        "to": "/Partner",
+        "name": "合作夥伴",
+        "breadcrumb": "Partner"
+    },
+    {
         "to": "/About",
         "name": "關於我們",
         "breadcrumb": "About"
-    },
-    {
-        "to": "/install/version",
-        "name": "下載本模組",
-        "breadcrumb": "Version"
     }
 ]
