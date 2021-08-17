@@ -140,7 +140,7 @@ export default {
         border-radius: 20px;
         background-color: #aba499;
         width: 80%;
-        margin-top: 100px;
+        padding: 10px 0;
         .name {
           flex-direction: column;
           align-items: center;
