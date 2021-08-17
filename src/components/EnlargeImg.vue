@@ -4,7 +4,13 @@
       <img :src="showImg" class="not-enlarge" alt="" />
       <p class="img-description">{{ description }}</p>
     </div>
-    <div class="EnlargeImg-blurry" @click="showImg = !showImg"></div>
+    <div
+      class="EnlargeImg-blurry"
+      @click="
+        showImg = false;
+        showData = false;
+      "
+    ></div>
   </div>
 </template>
 
@@ -16,6 +22,7 @@ export default {
   data() {
     return {
       showImg: null,
+      showData: null,
       description: null,
     };
   },
@@ -32,6 +39,7 @@ export default {
           height: $(this).css("height"),
         });
       });
+      $("html").on("click", ".showData", function (e) {});
     });
   },
 };

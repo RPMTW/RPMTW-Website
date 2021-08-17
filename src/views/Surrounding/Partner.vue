@@ -2,7 +2,7 @@
   <div id="Partner" class="flex">
     <h1>合作夥伴</h1>
     <div class="flex partner">
-      <div class="unit flex">
+      <a class="unit flex">
         <div class="flex name">
           <img src="https://www.dreamcity.studio/images/logo_0218.png" alt="" />
           <h2 class="partner-Name">夢都 - 夢想之都工作室</h2>
@@ -15,18 +15,27 @@
             Minecraft。夢都集結了各方設計、美術、資訊人才，在創作的過程中，也藉此磨練專長與團隊共同成長。期望廣大玩家能在我們的地圖中獲得良好的遊戲體驗。<br />
           </p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 export default {
   name: "Partner",
   data() {
     return {};
   },
   methods: {},
+  mounted() {
+    $(function () {
+      $("#Partner").on("click", ".unit", function (e) {
+        alert("尚未完成");
+      });
+    });
+  },
 };
 </script>
 
@@ -69,6 +78,35 @@ export default {
         }
         h4 {
           margin-bottom: 0;
+        }
+      }
+      display: inline-block;
+      position: relative;
+      &:hover {
+        &:before {
+          content: "";
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: #000;
+          opacity: 0.5;
+          border-radius: 20px;
+        }
+        &:after {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          content: "閱讀更多";
+          color: white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          cursor: pointer;
         }
       }
     }
