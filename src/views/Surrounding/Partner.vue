@@ -3,12 +3,9 @@
     <h1>合作夥伴</h1>
     <div class="flex partner">
       <div class="unit flex">
-        <div>
-          <img
-            src="https://cdn.discordapp.com/attachments/877091919207997481/877092255926738964/2020_small.png"
-            alt=""
-          />
-          <h3>夢都 - 夢想之都工作室</h3>
+        <div class="flex name">
+          <img src="https://www.dreamcity.studio/images/logo_0218.png" alt="" />
+          <h2 class="partner-Name">夢都 - 夢想之都工作室</h2>
         </div>
         <div>
           <h4>簡介:</h4>
@@ -40,6 +37,7 @@ export default {
   align-content: center;
   img {
     max-width: 25%;
+    max-height: 25%;
   }
   .partner {
     width: 80%;
@@ -47,6 +45,9 @@ export default {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    img {
+      border-radius: 5px;
+    }
     .unit {
       background-color: #aba499;
       color: black;
@@ -55,6 +56,28 @@ export default {
       border-radius: 20px;
       flex-direction: column;
       width: 9cm;
+      .partner-Name {
+        margin-left: 10px;
+      }
+    }
+  }
+  @media all and (max-width: 500px) {
+    .unit {
+      h2 {
+        font-size: 4.4vw;
+      }
+      h4 {
+        font-size: 3.2vw;
+      }
+      p {
+        font-size: 3.4vw;
+      }
+      .name {
+        flex-direction: column;
+        .partner-Name {
+          margin-left: 0;
+        }
+      }
     }
   }
 }
