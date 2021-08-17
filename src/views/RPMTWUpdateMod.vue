@@ -20,14 +20,14 @@
         {{ i18n("public.goto.discord") }}
       </a>
     </div>
-    <div>
+    <div class="w80">
       <section class="process flex flex-down flex-item-center">
         <h1 class="sectionTitle text-title" style="margin-bottom: 80px">
           {{ i18n("RPMTWUpdateMod.main.title") }}
         </h1>
         <Progress
           version="progress"
-          class="progress"
+          class="progress auto-overflow"
           :Title="i18n('RPMTWUpdateMod.schedule.Full.version')"
         />
         <div v-show="moreShow" class="more">
@@ -81,7 +81,6 @@
           >
         </h2>
       </section>
-      <!-- TODO: RWD scss -->
       <section class="flex flex-item-center flex-down">
         <h1 class="sectionTitle text-center">模組更新進度:</h1>
         <ul class="commits flex flex-down flex-item-center">
@@ -92,7 +91,7 @@
             class="commit flex"
           >
             <div class="commit-message">
-              <h2>{{ data.commit.message }}</h2>
+              <h2 class="auto-overflow">{{ data.commit.message }}</h2>
             </div>
             <div class="flex" style="width: 30%">
               <div>
@@ -274,6 +273,7 @@ export default {
     }
     @media all and (max-width: 480px) {
       flex-direction: column;
+      align-items: center;
     }
   }
   .process {
@@ -309,6 +309,9 @@ export default {
     .btn {
       font-size: 2.5vw;
     }
+  }
+  .w80 {
+    width: 80%;
   }
   .commits {
     color: var(--styleMode-background-color) !important;

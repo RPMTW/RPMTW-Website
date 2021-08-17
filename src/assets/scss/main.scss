@@ -35,9 +35,6 @@ body {
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
@@ -46,8 +43,7 @@ body {
     border-radius: 0.25rem;
     transition: all 0.5s ease-in-out;
     &:hover {
-        background-color: rgb(171, 188, 233) !important;
-        background-color: var(--thisColor) !important;
+        background-color: var(--thisColor, rgb(171, 188, 233)) !important;
         &:before {
             transform: scaleX(1) !important;
             z-index: -1;
@@ -61,6 +57,12 @@ body {
     &:hover:not(.btn) {
         opacity: 0.8;
     }
+}
+
+.auto-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .item-none {
