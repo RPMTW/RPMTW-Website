@@ -7,7 +7,7 @@
           <img src="https://www.dreamcity.studio/images/logo_0218.png" alt="" />
           <h2 class="partner-Name">夢都 - 夢想之都工作室</h2>
         </div>
-        <div>
+        <div class="description">
           <h4>簡介:</h4>
           <p>
             2015年，來自臺灣、香港與澳門，擁有相同志向的學生們，組成了夢想之都工作室。我們深耕於<br />
@@ -56,8 +56,20 @@ export default {
       border-radius: 20px;
       flex-direction: column;
       width: 9cm;
-      .partner-Name {
-        margin-left: 10px;
+      .name {
+        .partner-Name {
+          margin-left: 10px;
+        }
+      }
+      .description {
+        margin-left: 5px;
+        p {
+          font-size: 13pt;
+          margin-left: 10px;
+        }
+        h4 {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -70,7 +82,7 @@ export default {
         font-size: 3.2vw;
       }
       p {
-        font-size: 3.4vw;
+        font-size: 3.4vw !important;
       }
       .name {
         flex-direction: column;
