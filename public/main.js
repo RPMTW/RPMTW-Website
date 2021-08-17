@@ -26,5 +26,5 @@ window.dc = () => localStorage.removeItem("discordLink");
 /*
     此專案使用 vue cli 前端框架建置 github: https://github.com/RPMTW/RPMTW-Website
     我不知道你是誰 但你竟然點進來了 就交個朋友吧~~ DC: 猴子#3807
-    恭喜你發現彩蛋嘞XDD
+    恭喜你發現彩蛋嘞 XDD
 */

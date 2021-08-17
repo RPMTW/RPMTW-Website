@@ -37,7 +37,7 @@
         </div>
         <div
           @click="moreShow = !moreShow"
-          class="moreButton arrow"
+          class="moreButton arrow icon"
           style="--color: var(--styleMode-color)"
           :class="{
             drop: moreShow,
