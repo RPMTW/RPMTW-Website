@@ -7,15 +7,19 @@
           <img src="https://www.dreamcity.studio/images/logo_0218.png" alt="" />
           <h2 class="partner-Name">夢都 - 夢想之都工作室</h2>
         </div>
-        <div class="description">
-          <h4>簡介:</h4>
-          <p>
-            2015年，來自臺灣、香港與澳門，擁有相同志向的學生們，組成了夢想之都工作室。我們深耕於<br />
-            Minecraft 地圖製作，致力於創作並推廣<br />
-            Minecraft。夢都集結了各方設計、美術、資訊人才，在創作的過程中，也藉此磨練專長與團隊共同成長。期望廣大玩家能在我們的地圖中獲得良好的遊戲體驗。<br />
-          </p>
-          <a href="https://www.dreamcity.studio/" class="btn">官方網站</a>
-          <a href="https://discord.gg/2Eq4zBg4En" class="btn">Discord 討論區</a>
+        <div class="description flex">
+          <div class="ctx">
+            <h4>簡介:</h4>
+            <p>
+              2015年，來自臺灣、香港與澳門，擁有相同志向的學生們，組成了夢想之都工作室。我們深耕於<br />
+              Minecraft 地圖製作，致力於創作並推廣<br />
+              Minecraft。夢都集結了各方設計、美術、資訊人才，在創作的過程中，也藉此磨練專長與團隊共同成長。期望廣大玩家能在我們的地圖中獲得良好的遊戲體驗。<br />
+            </p>
+            <a href="https://www.dreamcity.studio/" class="btn">官方網站</a>
+            <a href="https://discord.gg/2Eq4zBg4En" class="btn"
+              >Discord 討論區</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -145,13 +149,20 @@ export default {
           }
         }
         .description {
-          margin-left: 5px;
-          p {
-            font-size: 13pt;
-            margin-left: 10px;
-          }
-          h4 {
-            margin-bottom: 0;
+          width: 100%;
+          justify-content: center;
+          .ctx {
+            width: 80%;
+            :not(.btn) {
+              text-align: left;
+            }
+            p {
+              font-size: 13pt;
+              margin-left: 10px;
+            }
+            h4 {
+              margin: 0;
+            }
           }
         }
       }
@@ -172,6 +183,16 @@ export default {
   }
   @media all and (max-width: 500px) {
     .unit {
+      padding: 10px !important;
+      .name {
+        flex-direction: column;
+        .partner-Name {
+          margin-left: 0;
+        }
+      }
+    }
+    .showPartner,
+    .unit {
       h2 {
         font-size: 4.4vw;
       }
@@ -181,11 +202,8 @@ export default {
       p {
         font-size: 3.4vw !important;
       }
-      .name {
-        flex-direction: column;
-        .partner-Name {
-          margin-left: 0;
-        }
+      .btn {
+        font-size: 3vw;
       }
     }
   }
