@@ -10,13 +10,12 @@
         <div class="description flex">
           <div class="ctx flex flex-down flex-item-center">
             <h3>{{ i.data.title }}</h3>
-            <p>
-              {{ i.data.text }}
-            </p>
+            <p v-html="i.data.text"></p>
             <div class="flex">
               <a
-                :href="button.url"
+                class="btn"
                 v-for="button in i.data.buttons"
+                :href="button.url"
                 :key="button"
                 >{{ button.title }}</a
               >
@@ -38,6 +37,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import data from "@/data/Partner.json";
+
 export default {
   name: "Partner",
   data() {
