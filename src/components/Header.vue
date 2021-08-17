@@ -5,6 +5,7 @@
       v-if="discordLinkShow"
       style="width: 100%"
     >
+      <!-- 誤刪 -->
       <div></div>
       <div class="flex" style="width: 80%">
         <p>
@@ -161,8 +162,8 @@ export default {
     noDiscordLink() {
       localStorage.setItem("discordLink", 0);
       this.discordLinkShow = false;
-      (this.discordLinkShow && $("html").css("--html-margin-top", "95px")) ||
-        $("html").css("--html-margin-top", "45px");
+      (this.discordLinkShow && $(":root").css("--html-margin-top", "95px")) ||
+        $(":root").css("--html-margin-top", "45px");
     },
   },
   mounted() {
@@ -324,7 +325,7 @@ export default {
       margin: 0 10px 10px 0;
       z-index: 99;
       left: 0;
-      top: 55px;
+      top: var(--html-margin-top);
       width: 40%;
       flex-direction: column;
       display: none;

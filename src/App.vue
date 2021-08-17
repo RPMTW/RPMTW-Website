@@ -60,7 +60,7 @@ export default {
 #app {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 55px);
+  min-height: calc(100vh - var(--html-margin-top));
   .wrapper {
     flex-grow: 1;
   }

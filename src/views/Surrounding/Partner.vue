@@ -2,7 +2,7 @@
   <div id="Partner" class="flex">
     <h1>合作夥伴</h1>
     <div class="flex partner">
-      <a class="unit flex">
+      <div class="unit flex">
         <div class="flex name">
           <img src="https://www.dreamcity.studio/images/logo_0218.png" alt="" />
           <h2 class="partner-Name">夢都 - 夢想之都工作室</h2>
@@ -14,8 +14,16 @@
             Minecraft 地圖製作，致力於創作並推廣<br />
             Minecraft。夢都集結了各方設計、美術、資訊人才，在創作的過程中，也藉此磨練專長與團隊共同成長。期望廣大玩家能在我們的地圖中獲得良好的遊戲體驗。<br />
           </p>
+          <a href="https://discord.gg/2Eq4zBg4En" class="btn">官方網站</a>
+          <a href="https://www.dreamcity.studio/" class="btn">Discord 討論區</a>
         </div>
-      </a>
+      </div>
+    </div>
+    <div class="showPartner" v-if="htmlUnit">
+      <div class="data">
+        <div v-html="htmlUnit" class="unit-show"></div>
+      </div>
+      <div class="showPartner-blurry" @click="htmlUnit = false"></div>
     </div>
   </div>
 </template>
@@ -26,13 +34,16 @@
 export default {
   name: "Partner",
   data() {
-    return {};
+    return {
+      htmlUnit: false,
+    };
   },
   methods: {},
   mounted() {
+    let _ = this;
     $(function () {
       $("#Partner").on("click", ".unit", function (e) {
-        alert("尚未完成");
+        _.htmlUnit = $(this).html();
       });
     });
   },
@@ -65,20 +76,11 @@ export default {
       border-radius: 20px;
       flex-direction: column;
       width: 9cm;
-      .name {
-        .partner-Name {
-          margin-left: 10px;
-        }
+      .name .partner-Name {
+        margin-left: 10px;
       }
       .description {
-        margin-left: 5px;
-        p {
-          font-size: 13pt;
-          margin-left: 10px;
-        }
-        h4 {
-          margin-bottom: 0;
-        }
+        display: none;
       }
       display: inline-block;
       position: relative;
@@ -98,7 +100,6 @@ export default {
           display: flex;
           justify-content: center;
           align-items: center;
-
           content: "閱讀更多";
           color: white;
           position: absolute;
@@ -109,6 +110,64 @@ export default {
           cursor: pointer;
         }
       }
+    }
+  }
+  .showPartner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    .data {
+      color: black;
+      font-weight: 900;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      .unit-show {
+        z-index: 999;
+        border-radius: 20px;
+        background-color: #aba499;
+        width: 80%;
+        margin-top: 100px;
+        .name {
+          flex-direction: column;
+          align-items: center;
+          .partner-Name {
+            margin-left: 10px;
+          }
+        }
+        .description {
+          margin-left: 5px;
+          p {
+            font-size: 13pt;
+            margin-left: 10px;
+          }
+          h4 {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .showPartner-blurry {
+      z-index: 99;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      background: black;
+      top: 0;
+      left: 0;
+      opacity: 0.4;
+    }
+    .btn {
+      margin: 0 0 10px 10px;
     }
   }
   @media all and (max-width: 500px) {
