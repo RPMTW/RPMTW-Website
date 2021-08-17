@@ -260,9 +260,9 @@ export default {
       cursor: pointer;
       padding: 5px;
     }
-    @media all and (max-width: 820px) {
+    @media all and (max-width: 980px) {
       p {
-        font-size: 1.9vw;
+        font-size: 1.8w;
         max-width: 80%;
 
         overflow: hidden;
@@ -271,7 +271,7 @@ export default {
       }
       .btn {
         max-width: 20%;
-        font-size: 1.6vw;
+        font-size: 1.38vw;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;

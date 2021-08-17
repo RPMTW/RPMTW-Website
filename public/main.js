@@ -28,3 +28,9 @@ window.dc = () => localStorage.removeItem("discordLink");
     我不知道你是誰 但你竟然點進來了 就交個朋友吧~~ DC: 猴子#3807
     恭喜你發現彩蛋嘞 XDD
 */
+/*
+    This project uses the vue cli front-end framework to build github: https://github.com/RPMTW/RPMTW-Website
+    I don't know who you are, but you clicked in, just make friends~~ DC: 猴子#3807
+    Congratulations on finding the easter egg XDD
+    ( Is google translate )
+*/
