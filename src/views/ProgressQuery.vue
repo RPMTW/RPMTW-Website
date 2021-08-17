@@ -12,7 +12,7 @@
           type="text"
           :placeholder="i18n('ProgressQuery.please.enter.CurseForgeID')"
           :aria-label="i18n('ProgressQuery.please.enter.CurseForgeID')"
-          @keyup.enter="generateList"
+          @keyup="generateList"
           @change="generateList"
           v-model="search"
         />
