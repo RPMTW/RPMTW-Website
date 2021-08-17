@@ -22,7 +22,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* components */
-import Header from "@/components/Header/Header.vue";
+import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import EnlargeImg from "@/components/EnlargeImg.vue";
 import fonts from "@/assets/fonts/fonts.css";
