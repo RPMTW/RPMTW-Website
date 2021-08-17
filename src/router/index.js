@@ -94,7 +94,6 @@ const routes = [
         component: () => import("@/views/Wiki/mod-install/Version.vue"),
         meta: {
             breadcrumb: "Version",
-            notFooter: true,
         },
     }, {
         path: "/:pathMatch(.*)*",
@@ -102,7 +101,6 @@ const routes = [
         component: () => import("@/views/errors/404.vue"),
         meta: {
             breadcrumb: "ProgressQuery",
-            notFooter: true,
         },
     }, {
         path: "/atr1",
