@@ -34,8 +34,7 @@ window.dc = () => localStorage.removeItem("discordLink");
     恭喜你發現彩蛋嘞 XDD
 */
 /*
-    This project uses the vue cli front-end framework to build github: https://github.com/RPMTW/RPMTW-Website
-    I don't know who you are, but you clicked in, just make friends~~ DC: 猴子#3807
-    Congratulations on finding the easter egg XDD
-    ( Is google translate )
+    This project is built using the vue cli front-end framework github: https://github.com/RPMTW/RPMTW-Website
+    I don't know who you are, but you clicked here, so let's make friends~~ DC: 猴子#3807
+    Congratulations on finding the egg XDD
 */
