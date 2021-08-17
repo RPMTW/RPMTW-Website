@@ -43,7 +43,7 @@ body {
     border-radius: 0.25rem;
     transition: all 0.5s ease-in-out;
     &:hover {
-        background-color: var(--thisColor, rgb(171, 188, 233)) !important;
+        background-color: var(--thisColor, var(--hover-btn-color)) !important;
         &:before {
             transform: scaleX(1) !important;
             z-index: -1;
@@ -154,8 +154,10 @@ body {
     --styleMode-hove-background-color: rgb(93, 93, 93);
     --strong-color: orange;
     --title-color: orange;
+    --hover-btn-color: rgb(171, 188, 233);
 }
 :root.bright {
+    --hover-btn-color: rgb(73, 73, 73);
     --styleMode-background-color: rgb(224, 224, 224);
     --styleMode-color: #222;
     --styleMode-webkit-scrollbar-thumb: #aba499;
