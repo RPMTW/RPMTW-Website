@@ -14,8 +14,8 @@
             Minecraft 地圖製作，致力於創作並推廣<br />
             Minecraft。夢都集結了各方設計、美術、資訊人才，在創作的過程中，也藉此磨練專長與團隊共同成長。期望廣大玩家能在我們的地圖中獲得良好的遊戲體驗。<br />
           </p>
-          <a href="https://discord.gg/2Eq4zBg4En" class="btn">官方網站</a>
-          <a href="https://www.dreamcity.studio/" class="btn">Discord 討論區</a>
+          <a href="https://www.dreamcity.studio/" class="btn">官方網站</a>
+          <a href="https://discord.gg/2Eq4zBg4En" class="btn">Discord 討論區</a>
         </div>
       </div>
     </div>

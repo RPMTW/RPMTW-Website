@@ -115,7 +115,10 @@ const routes = [
     }, {
         path: "/Partner",
         name: "Partner",
-        component: () => import("@/views/Surrounding/Partner.vue")
+        component: () => import("@/views/Surrounding/Partner.vue"),
+        meta: {
+            breadcrumb: "Partner",
+        },
     }
 ]
 
