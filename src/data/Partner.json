@@ -27,6 +27,18 @@
                 {
                     "title": "Youtube",
                     "url": "https://www.youtube.com/user/MrChesterccj"
+                },
+                {
+                    "title": "舞秋風網站",
+                    "url": "https://live-chesterccj.blogspot.com/"
+                },
+                {
+                    "title": "舞秋風直播頻道",
+                    "url": "https://www.youtube.com/user/MrChesterccjLive"
+                },
+                {
+                    "title": "舞秋風粉絲團",
+                    "url": "https://www.facebook.com/mrchesterccj"
                 }
             ]
         }
@@ -41,6 +53,10 @@
                 {
                     "title": "Youtube",
                     "url": "https://www.youtube.com/c/%E7%B4%99%E7%89%87%E6%A8%A1%E5%9E%8B"
+                },
+                {
+                    "title": "紙片粉絲團",
+                    "url": "https://www.facebook.com/paperlz.studio"
                 }
             ]
         }
@@ -63,6 +79,18 @@
                 {
                     "title": "Twitch (白凱吉)",
                     "url": "https://www.twitch.tv/kaiji12120"
+                },
+                {
+                    "title": "Facebook",
+                    "url": "https://www.facebook.com/WhiteTRO"
+                },
+                {
+                    "title": "twitter",
+                    "url": "https://twitter.com/WhiteGX_Lazy"
+                },
+                {
+                    "title": "小白 Instagram",
+                    "url": "https://www.twitch.tv/kaiji12120"
                 }
             ]
         }
@@ -79,8 +107,24 @@
                     "url": "https://www.youtube.com/c/Onityan"
                 },
                 {
+                    "title": "鬼鬼の新頻道",
+                    "url": "https://www.youtube.com/channel/UCEpbEKafwBfKy2iD3CQcH3Q"
+                },
+                {
+                    "title": "鬼鬼のIG生活",
+                    "url": "https://www.instagram.com/onityan_/"
+                },
+                {
                     "title": "twitter",
                     "url": "https://twitter.com/phan1117"
+                },
+                {
+                    "title": "鬼鬼の御宅生活",
+                    "url": "https://www.facebook.com/RelaxOnityan"
+                },
+                {
+                    "title": "鬼鬼の御宅生活Blog",
+                    "url": "http://onityan.blogspot.com/"
                 }
             ]
         }
