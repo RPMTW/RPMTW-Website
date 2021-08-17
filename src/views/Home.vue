@@ -4,6 +4,7 @@
       <img
         class="user-select"
         src="https://cdn.discordapp.com/attachments/815819581440262146/877059900776267776/RPM------.gif"
+        style="width: 128px; height: 128px"
       />
       <h1 class="v-rpm-text user-select"></h1>
     </section>
