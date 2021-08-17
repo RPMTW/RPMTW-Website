@@ -3,7 +3,7 @@
     <section class="home-main flex flex-item-center flex-down">
       <img
         class="user-select"
-        src="https://cdn.discordapp.com/icons/815819580840607807/a_115e674e49736d931b8fc8c62abe0e63.webp?size=128"
+        src="https://cdn.discordapp.com/attachments/815819581440262146/877059900776267776/RPM------.gif"
       />
       <h1 class="v-rpm-text user-select"></h1>
     </section>
