@@ -8,18 +8,20 @@
           <h2 class="partner-Name">夢都 - 夢想之都工作室</h2>
         </div>
         <div class="description flex">
-          <div class="ctx">
-            <h4>簡介:</h4>
+          <div class="ctx flex flex-down flex-item-center">
+            <h3>簡介</h3>
             <p>
               2015年，來自臺灣、香港與澳門，擁有相同志向的學生們，組成了夢想之都工作室。<br />
               我們深耕於Minecraft地圖製作，致力於創作並推廣Minecraft。<br />
               夢都集結了各方設計、美術、資訊人才，在創作的過程中，也藉此磨練專長與團隊共同成長。<br />
               期望廣大玩家能在我們的地圖中獲得良好的遊戲體驗。<br />
             </p>
-            <a href="https://www.dreamcity.studio/" class="btn">官方網站</a>
-            <a href="https://discord.gg/2Eq4zBg4En" class="btn"
-              >Discord 討論區</a
-            >
+            <div class="flex">
+              <a href="https://www.dreamcity.studio/" class="btn">官方網站</a>
+              <a href="https://discord.gg/2Eq4zBg4En" class="btn"
+                >Discord 討論區</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -161,7 +163,8 @@ export default {
               font-size: 13pt;
               margin-left: 10px;
             }
-            h4 {
+            h3 {
+              font-size: 15pt;
               margin: 0;
             }
           }
@@ -187,6 +190,7 @@ export default {
       padding: 10px !important;
       .name {
         flex-direction: column;
+        align-items: center;
         .partner-Name {
           margin-left: 0;
         }
@@ -197,7 +201,7 @@ export default {
       h2 {
         font-size: 4.4vw;
       }
-      h4 {
+      h3 {
         font-size: 3.2vw;
       }
       p {
