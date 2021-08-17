@@ -1,4 +1,4 @@
-<template >
+<template>
   <header id="header" class="flex flex-down">
     <div
       class="discord-top-link flex"
