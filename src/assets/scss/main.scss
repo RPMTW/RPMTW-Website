@@ -147,6 +147,7 @@ body {
 
 /* var */
 :root {
+    /* 暗色模式 */
     --styleMode-background-color: #222;
     --styleMode-color: rgb(224, 224, 224);
     --styleMode-webkit-scrollbar-thumb: #454a4d;
@@ -155,16 +156,17 @@ body {
     --strong-color: orange;
     --title-color: orange;
     --hover-btn-color: rgb(171, 188, 233);
-}
-:root.bright {
-    --hover-btn-color: rgb(73, 73, 73);
-    --styleMode-background-color: rgb(224, 224, 224);
-    --styleMode-color: #222;
-    --styleMode-webkit-scrollbar-thumb: #aba499;
-    --styleMode-webkit-scrollbar: #454a4d;
-    --styleMode-hove-background-color: rgb(116, 116, 116);
-    --strong-color: rgb(0, 46, 253);
-    --title-color: rgb(140, 0, 255);
+    &.bright {
+        /* 亮色模式 */
+        --hover-btn-color: rgb(73, 73, 73);
+        --styleMode-background-color: rgb(224, 224, 224);
+        --styleMode-color: #222;
+        --styleMode-webkit-scrollbar-thumb: #aba499;
+        --styleMode-webkit-scrollbar: #454a4d;
+        --styleMode-hove-background-color: rgb(116, 116, 116);
+        --strong-color: rgb(0, 46, 253);
+        --title-color: rgb(140, 0, 255);
+    }
 }
 
 /* scrollbar */
