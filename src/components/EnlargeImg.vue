@@ -1,7 +1,7 @@
 <template>
   <div id="Enlarge" v-show="showImg">
-    <div class="showImg scaleDraw">
-      <img :src="showImg" v-if="showImg" class="not-enlarge" alt="" />
+    <div class="showImg scaleDraw" v-if="showImg">
+      <img :src="showImg" class="not-enlarge" alt="" />
       <p class="img-description">{{ description }}</p>
     </div>
     <div class="EnlargeImg-blurry" @click="showImg = !showImg"></div>
