@@ -22,11 +22,11 @@
     </div>
     <div class="flex else-discord">
       <div class="header-nav-left">
-        <div class="menuButton" @click="menuButtonHtmlToggle">
-          <a href="#">
+        <div class="menuButton">
+          <div class="menuStyleButton" href="#" @click="menuButtonHtmlToggle">
             <div class="menuStyle"></div>
-          </a>
-          <div class="menu" @mouseleave="menuButtonHtmlToggle">
+          </div>
+          <div class="menu" @mouseleave="menuButtonHtmlRemove">
             <div
               v-for="data in menuList"
               :key="data"
@@ -35,7 +35,11 @@
               }"
               class="activeBreadcrumb"
             >
-              <router-link :to="data.to" class="go-to">
+              <router-link
+                class="go-to"
+                :to="data.to"
+                @click="menuButtonHtmlRemove"
+              >
                 {{ data.name }}
               </router-link>
             </div>
@@ -82,7 +86,7 @@
             </div>
           </div>
         </div>
-        <div class="blurry" @click="menuButtonHtmlToggle"></div>
+        <div class="blurry" @click="menuButtonHtmlRemove"></div>
       </div>
       <div class="txt-logo user-select">
         <strong class="main-title"
@@ -155,6 +159,9 @@ export default {
     },
     menuButtonHtmlToggle() {
       $("html").toggleClass("is-menu");
+    },
+    menuButtonHtmlRemove() {
+      $("html").removeClass("is-menu");
     },
     setBreadcrumb() {
       this.breadcrumb = this.$route.meta.breadcrumb;
@@ -288,7 +295,9 @@ export default {
     margin-left: 10px;
     .menuButton {
       z-index: 1;
-      a {
+      a,
+      .menuStyleButton {
+        cursor: pointer;
         display: block;
         padding: 10px 0;
         .menuStyle {
