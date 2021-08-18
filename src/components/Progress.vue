@@ -4,8 +4,10 @@
       <h1 :ref="`version-txt-${version}`" class="version-txt auto-overflow">
         {{ version_txt_title }}
       </h1>
-      <div :ref="'process-' + version" class="process-animate">
-        <h1 :ref="`txt-${version}`">正在載入資料中，請稍後...</h1>
+      <div :ref="`process-${version}`" class="process-animate">
+        <h1 :ref="`txt-${version}`" :more="more" class="text-center">
+          {{ text || "正在載入資料中，請稍後..." }}
+        </h1>
       </div>
     </div>
   </div>
@@ -26,27 +28,33 @@ export default {
   data() {
     return {
       version_txt_title: null,
+      text: null,
+      more: null,
     };
   },
   mounted() {
     let version = this.version;
-    let text = $(this.$refs[`txt-${version}`]);
     let process = $(this.$refs[`process-${version}`]);
     this.version_txt_title = this.Title || version;
+    let _ = this;
 
     $(function () {
       let loop = () => {
         $.getJSON(
           "https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/progress.json",
           (data) => {
-            $(text).html(data[version]);
+            _.text = data[version];
+            _.more =
+              (data.data[version] &&
+                `${data.data[version].total} / ${data.data[version].translated}`) ||
+              "";
             $(process).animate(
               { right: `${100 - parseInt(data[version])}%` },
               { speed: 10e3, step: (now) => $(process).css("right", now) }
             );
           }
         ).fail((error) => {
-          $(text).html("<h1>錯誤，請稍後在試</h1>");
+          _.text = "錯誤，請稍後在試";
         });
       };
       loop();
@@ -81,6 +89,29 @@ export default {
       align-items: center;
       justify-content: center;
       right: 100%;
+      &:hover h1 {
+        &:after,
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        &:after {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          content: attr(more);
+          top: 70% !important;
+        }
+        &:before {
+          background-color: #000;
+          opacity: 0.2;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
