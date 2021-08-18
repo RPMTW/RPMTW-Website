@@ -13,6 +13,7 @@
             <p v-html="i.data.text"></p>
             <div class="flex">
               <a
+                target="_blank"
                 class="btn"
                 v-for="button in i.data.buttons"
                 :href="button.url"
@@ -66,6 +67,7 @@ export default {
   img {
     max-width: 25%;
     max-height: 25%;
+    border-radius: 10px;
   }
   .partner {
     width: 80%;
@@ -73,9 +75,6 @@ export default {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    img {
-      border-radius: 5px;
-    }
     .unit {
       background-color: #aba499;
       color: black;

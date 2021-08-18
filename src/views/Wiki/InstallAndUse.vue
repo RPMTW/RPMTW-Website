@@ -11,6 +11,7 @@
         <h1>遊戲因為裝了這個模組崩潰了怎麼辦?</h1>
         <p>
           請至RPMTW官方Discord群組的<a
+            target="_blank"
             href="https://discord.com/channels/815819580840607807/852389500733751337"
           >
             ┏❓┃安裝問題提問區 </a

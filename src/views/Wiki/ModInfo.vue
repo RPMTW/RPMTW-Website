@@ -30,6 +30,7 @@
         <a style="color: red">遊戲外方式:</a><br />
         <p>
           前往RPMTW官方Discord群組，找到<a
+            target="_blank"
             href="https://discord.com/channels/815819580840607807/831494456913428501"
           >
             💫┃宇宙通訊頻道 </a
@@ -39,7 +40,9 @@
       <section class="section" id="cosmic-system-agreement">
         <h1>《RPMTW 宇宙通訊系統終端使用者授權合約》</h1>
         <p>
-          - 由於此功能與Discord串聯，請遵守<a href="https://discord.com/terms"
+          - 由於此功能與Discord串聯，請遵守<a
+            target="_blank"
+            href="https://discord.com/terms"
             >《Discord使用者服務條款》</a
           ><br />
           - 訊息內容請不得以任何形式騷擾別人，否則我們有權封禁該帳號<br />
@@ -62,7 +65,9 @@
         <img src="@/assets/images/Wiki/ModInfo/CrowdinSettings.png" />
         <p>
           接下來找到列表中的
-          <a href="https://crowdin.com/settings#api-key">「API」</a>，點下去。
+          <a target="_blank" href="https://crowdin.com/settings#api-key">
+            「API」 </a
+          >，點下去。
         </p>
         <img src="@/assets/images/Wiki/ModInfo/CrowdinSettingsApi.png" />
         <p>接著點擊「New Token」(新增登入權杖) 這個按鈕。</p>

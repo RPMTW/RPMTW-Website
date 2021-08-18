@@ -52,6 +52,7 @@
           </h1>
           <strong>{{ i18n("Home.include.atr.description") }}</strong>
           <a
+            target="_blank"
             class="btn"
             :aria-label="i18n('Home.include.public.DL-STAT')"
             href="https://www.curseforge.com/minecraft/modpacks/atr1"

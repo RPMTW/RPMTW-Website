@@ -16,7 +16,11 @@
       <router-link to="/Translation-assistance" class="btn">{{
         i18n("RPMTWUpdateMod.buttons.Participate")
       }}</router-link>
-      <a href="https://discord.com/invite/5xApZtgV2u" class="btn">
+      <a
+        target="_blank"
+        href="https://discord.com/invite/5xApZtgV2u"
+        class="btn"
+      >
         {{ i18n("public.goto.discord") }}
       </a>
     </div>
@@ -95,7 +99,7 @@
             </div>
             <div class="flex" style="width: 30%">
               <div>
-                <a :href="data.html_url"
+                <a target="_blank" :href="data.html_url"
                   ><svg
                     aria-hidden="true"
                     height="16"
@@ -113,7 +117,7 @@
               <div class="flex commit-author">
                 <div class="flex">
                   <img :src="data.committer.avatar_url" alt="" />
-                  <a :href="data.committer.html_url" class="">
+                  <a target="_blank" :href="data.committer.html_url" class="">
                     {{ data.committer.login }}
                   </a>
                   <p

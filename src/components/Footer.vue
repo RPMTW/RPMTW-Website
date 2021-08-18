@@ -3,8 +3,8 @@
     <footer class="flex flex-down">
       <p>
         Copyright &copy; RPMTW {{ newYear }} Powered by The
-        <a href="https://github.com/RPMTW">RPMTW Team</a> and
-        <a href="https://github.com/a3510377">猴子#3807</a>
+        <a target="_blank" href="https://github.com/RPMTW">RPMTW Team</a> and
+        <a target="_blank" href="https://github.com/a3510377">猴子#3807</a>
       </p>
     </footer>
   </div>

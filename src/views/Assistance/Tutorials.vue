@@ -80,7 +80,10 @@
         最後感謝您閱讀那麼長篇的文字，非常感謝，您現在可以開始進行翻譯了!<br />
         <h2>如果遇到任何問題或者想討論翻譯歡迎到我們的Discord群組</h2>
       </h2>
-      <a href="https://discord.com/invite/5xApZtgV2u" class="go-discord btn"
+      <a
+        target="_blank"
+        href="https://discord.com/invite/5xApZtgV2u"
+        class="go-discord btn"
         >前往 Discord 群組</a
       >
     </div>

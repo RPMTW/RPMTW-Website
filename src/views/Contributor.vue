@@ -6,7 +6,10 @@
         <img class="user-icon" :src="data.user.avatarUrl" />
         <div class="card-body">
           <div class="hover">
-            <a :href="`https://crowdin.com/profile/${data.user.username}`">
+            <a
+              target="_blank"
+              :href="`https://crowdin.com/profile/${data.user.username}`"
+            >
               <h4 class="user-name">
                 <span class="txt-rank">{{ index + 1 }}</span>
                 {{ data.user.fullName }}

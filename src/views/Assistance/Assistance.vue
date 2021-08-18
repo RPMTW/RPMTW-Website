@@ -60,6 +60,7 @@
           某些模組會使用 <strong>&&amp</strong> 或者
           <strong>§</strong> 代表顏色或格式等，請不要翻譯(詳情請查看:&ensp;
           <a
+            target="_blank"
             href="https://minecraft.fandom.com/wiki/Formatting_codes"
             style="border-bottom: rgba(85, 109, 223, 1) 1.5px solid"
             >Minecraft顏色與格式化代碼</a
@@ -78,16 +79,18 @@
         </li>
         <li>
           若資料庫中沒有你要翻譯的 MOD
-          <a href="https://forms.gle/rjtc23udsC8UE6PTA">
+          <a target="_blank" href="https://forms.gle/rjtc23udsC8UE6PTA">
             <strong> 請點我填寫表單 </strong>
           </a>
           或是
           <a
+            target="_blank"
             href="https://discord.com/channels/815819580840607807/815861320153956363"
           >
             <strong> 點我前往 discord 提交 </strong> </a
           >，查看請求狀態:
           <a
+            target="_blank"
             href="https://docs.google.com/spreadsheets/d/1dsHN4W1GC2mMat39kJ7JgChJ6X5FpxPSTFW5pcmzCQY/edit?usp=sharing"
           >
             <strong> RPMTW 請求新翻譯紀錄 </strong> </a
@@ -97,7 +100,12 @@
     </div>
     <h3 class="title-center">
       如發現此翻譯準則有任何錯誤的地方或者不知道該如何翻譯<br />
-      歡迎到我們的 <a href=""></a>Discord 翻譯討論頻道討論。
+      歡迎到我們的
+      <a
+        target="_blank"
+        href="https://discord.com/channels/815819580840607807/815860830058840064"
+        >Discord 翻譯討論頻道討論。</a
+      >
     </h3>
     <div class="title-center">
       <router-link

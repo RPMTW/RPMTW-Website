@@ -12,6 +12,7 @@
     <div class="links flex flex-item-center">
       <div>
         <a
+          target="_blank"
           class="btn"
           href="https://www.curseforge.com/minecraft/modpacks/atr1"
         >
@@ -19,7 +20,11 @@
         </a>
       </div>
       <div>
-        <a href="https://discord.com/invite/5xApZtgV2u" class="btn">
+        <a
+          target="_blank"
+          href="https://discord.com/invite/5xApZtgV2u"
+          class="btn"
+        >
           加入官方社群 (Discord)
         </a>
       </div>
@@ -65,6 +70,7 @@
       <h1>實況區</h1>
       <p>
         如果有遊玩此模組包歡迎到我們的<a
+          target="_blank"
           href="https://discord.com/invite/5xApZtgV2u"
         >
           Discord </a

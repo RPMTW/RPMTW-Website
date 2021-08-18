@@ -12,6 +12,7 @@
           遇到問題了?有建議要提供?想一起聊天?讓我們一起壯大 Minecraft 社群吧!!
         </p>
         <a
+          target="_blank"
           class="btn"
           href="https://discord.com/invite/5xApZtgV2u"
           style="--thisColor: rgb(173, 173, 173)"
@@ -44,25 +45,32 @@
               </router-link>
             </div>
             <div class="links flex">
-              <a href="https://discord.com/invite/5xApZtgV2u">
+              <a target="_blank" href="https://discord.com/invite/5xApZtgV2u">
                 <img
                   src="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico"
                   alt=""
                 />
               </a>
-              <a href="https://github.com/RPMTW">
+              <a target="_blank" href="https://github.com/RPMTW">
                 <img src="https://github.com/fluidicon.png" alt="" />
               </a>
-              <a href="https://modrinth.com/mod/rpmtw-update-mod">
+              <a
+                target="_blank"
+                href="https://modrinth.com/mod/rpmtw-update-mod"
+              >
                 <img src="https://modrinth.com/favicon.ico" alt="" />
               </a>
-              <a href="https://www.curseforge.com/minecraft/modpacks/atr1">
+              <a
+                target="_blank"
+                href="https://www.curseforge.com/minecraft/modpacks/atr1"
+              >
                 <img
                   src="https://media.forgecdn.net/avatars/thumbnails/396/29/64/64/637595082272657724.png"
                   alt=""
                 />
               </a>
               <a
+                target="_blank"
                 href="https://crowdin.com/project/resourcepack-mod-zhtw?already_accepted=14797842"
               >
                 <img

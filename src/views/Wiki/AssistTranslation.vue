@@ -4,7 +4,8 @@
       <section class="section" id="register-crowdin-account">
         <h1>如何註冊Crowdin的帳號?</h1>
         <p>
-          首先請先連到 <a href="https://crowdin.com/">crowdin(點我)</a> 網站
+          首先請先連到
+          <a target="_blank" href="https://crowdin.com/">crowdin(點我)</a> 網站
           <br />
           前往網站之後找到右上角的按鈕(如下圖)，選擇 「SING UP」(註冊)
         </p>
@@ -30,9 +31,12 @@
         <h1>如何直接上傳翻譯過的檔案到RPMTW?</h1>
         <p>
           首先請先確保你有註冊Crowdin帳號以及加入
-          <a href="https://crowdin.com/project/resourcepack-mod-zhtw"
-            >RPMTW的翻譯專案</a
+          <a
+            target="_blank"
+            href="https://crowdin.com/project/resourcepack-mod-zhtw"
           >
+            RPMTW的翻譯專案
+          </a>
           ，詳情請見
           <router-link to="/Translation-assistance"
             >&lt;&lt;這裡&gt;&gt;</router-link
