@@ -5,7 +5,14 @@
         {{ version_txt_title }}
       </h1>
       <div :ref="`process-${version}`" class="process-animate">
-        <h1 :ref="`txt-${version}`" :more="more" class="text-center">
+        <h1
+          :ref="`txt-${version}`"
+          :more="more"
+          class="text-center"
+          :class="{
+            more: more,
+          }"
+        >
           {{ text || "正在載入資料中，請稍後..." }}
         </h1>
       </div>
@@ -46,7 +53,7 @@ export default {
             _.text = data[version];
             _.more =
               (data.data[version] &&
-                `${data.data[version].total} / ${data.data[version].translated}`) ||
+                `( ${data.data[version].total} / ${data.data[version].translated} )`) ||
               "";
             $(process).animate(
               { right: `${100 - parseInt(data[version])}%` },
@@ -89,7 +96,7 @@ export default {
       align-items: center;
       justify-content: center;
       right: 100%;
-      &:hover h1 {
+      &:hover h1.more {
         &:after,
         &:before {
           content: "";
