@@ -53,7 +53,7 @@ export default {
             _.text = data[version];
             _.more =
               (data.data[version] &&
-                `( ${data.data[version].total} / ${data.data[version].translated} )`) ||
+                `( ${data.data[version].translated} / ${data.data[version].total} )`) ||
               "";
             $(process).animate(
               { right: `${100 - parseInt(data[version])}%` },
