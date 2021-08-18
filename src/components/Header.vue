@@ -39,7 +39,7 @@
               <router-link
                 class="go-to"
                 :to="data.to"
-                @click="menuButtonHtmlRemove"
+                @click="[goTop, menuButtonHtmlRemove]"
               >
                 {{ data.name }}
               </router-link>
@@ -170,6 +170,8 @@ export default {
     },
     menuButtonHtmlRemove() {
       $("html").removeClass("is-menu");
+    },
+    goTop() {
       $("html").animate({ scrollTop: 0 }, 400);
     },
     setBreadcrumb() {
