@@ -170,6 +170,7 @@ export default {
     },
     menuButtonHtmlRemove() {
       $("html").removeClass("is-menu");
+      $("html").animate({ scrollTop: 0 }, 400);
     },
     setBreadcrumb() {
       this.breadcrumb = this.$route.meta.breadcrumb;
