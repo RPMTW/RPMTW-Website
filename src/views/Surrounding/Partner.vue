@@ -11,7 +11,7 @@
           <div class="ctx flex flex-down flex-item-center">
             <h3>{{ i.data.title }}</h3>
             <p v-html="i.data.text"></p>
-            <div class="flex">
+            <div class="flex buttons">
               <a
                 target="_blank"
                 class="btn"
@@ -27,7 +27,10 @@
     </div>
     <div class="showPartner" v-if="htmlUnit">
       <div class="data">
-        <div v-html="htmlUnit" class="unit-show"></div>
+        <div class="unit-show">
+          <div v-html="htmlUnit"></div>
+          <div class="icon x" @click="htmlUnit = false"></div>
+        </div>
       </div>
       <div class="showPartner-blurry" @click="htmlUnit = false"></div>
     </div>
@@ -139,6 +142,12 @@ export default {
       justify-content: center;
       flex-direction: column;
       .unit-show {
+        &::-webkit-scrollbar {
+          background-color: initial;
+        }
+        max-height: 80%;
+        overflow-y: auto;
+        position: relative;
         z-index: 999;
         border-radius: 20px;
         background-color: #aba499;
@@ -167,8 +176,20 @@ export default {
               font-size: 15pt;
               margin: 0;
             }
+            .buttons {
+              flex-direction: row;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+            }
           }
         }
+      }
+      .icon.x {
+        cursor: pointer;
+        position: absolute;
+        top: 7%;
+        right: 10%;
       }
     }
     .showPartner-blurry {
