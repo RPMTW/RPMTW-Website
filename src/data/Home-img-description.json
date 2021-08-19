@@ -73,7 +73,7 @@
                 {
                     "i18nTitle": "Home.include.public.read-more",
                     "i18n_aria_label": "Home.include.public.read-more",
-                    "router_link": "RPL"
+                    "router_link": "RWL"
                 }
             ]
         }

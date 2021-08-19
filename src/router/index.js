@@ -118,9 +118,9 @@ const routes = [
             breadcrumb: "Partner",
         },
     }, {
-        path: "/RPL",
+        path: "/RWL",
         name: "Partner",
-        component: () => import("@/views/Surrounding/RPL.vue"),
+        component: () => import("@/views/Surrounding/RWL.vue"),
     }
 ]
 
