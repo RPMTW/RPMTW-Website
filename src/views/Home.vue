@@ -73,7 +73,7 @@
       <div class="unit flex-center flex flex-item-center item-none">
         <div class="flex flex-down flex-item-center flex-center">
           <img
-            class="showEl px128"
+            class="px128"
             style="width: 128px; height: 128px"
             src="~@/assets/images/Surrounding/RPMLauncher/RWLLog.png"
             alt="特別感謝 嗡嗡#5428 製作圖片"
