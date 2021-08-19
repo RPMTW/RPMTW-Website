@@ -117,6 +117,10 @@ const routes = [
         meta: {
             breadcrumb: "Partner",
         },
+    }, {
+        path: "/RPL",
+        name: "Partner",
+        component: () => import("@/views/Surrounding/RPL.vue"),
     }
 ]
 

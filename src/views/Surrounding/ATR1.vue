@@ -1,5 +1,5 @@
 <template>
-  <div id="ATRModPackage" class="flex flex-down flex-item-center">
+  <div id="ATRModPackage " class="flex flex-down flex-item-center main">
     <img
       class="mainIcon"
       src="@/assets/images/Surrounding/ATR1/ATR1MainTitleIcon.png"
@@ -9,25 +9,21 @@
       1.17 全新模組包，<br />
       結合了冒險、怪物、魔法、科技...， 盡情在織物上探險吧！
     </h1>
-    <div class="links flex flex-item-center">
-      <div>
-        <a
-          target="_blank"
-          class="btn"
-          href="https://www.curseforge.com/minecraft/modpacks/atr1"
-        >
-          前往CurseForge下載
-        </a>
-      </div>
-      <div>
-        <a
-          target="_blank"
-          href="https://discord.com/invite/5xApZtgV2u"
-          class="btn"
-        >
-          加入官方社群 (Discord)
-        </a>
-      </div>
+    <div class="links flex flex-center">
+      <a
+        target="_blank"
+        class="btn"
+        href="https://www.curseforge.com/minecraft/modpacks/atr1"
+      >
+        前往CurseForge下載
+      </a>
+      <a
+        target="_blank"
+        href="https://discord.com/invite/5xApZtgV2u"
+        class="btn"
+      >
+        加入官方社群 (Discord)
+      </a>
     </div>
     <hr />
     <section>
@@ -91,69 +87,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$titleColor: orange;
-#ATRModPackage {
-  h2 {
-    font-size: 25pt;
-  }
-  hr {
-    background-color: rgba(85, 109, 223, 1);
-    border: none;
-    height: 3px;
-    width: 80%;
-  }
-  h1 {
-    font-size: 40pt;
-    color: $titleColor;
-  }
-  section {
-    p {
-      font-size: 20pt;
-    }
-    h1,
-    p {
-      &:not(.notCenter) {
-        text-align: center;
-      }
-      font-weight: 700;
-    }
-  }
-  img {
-    max-width: 80%;
-  }
-  a[href] {
-    color: var(--strong-color);
-  }
-  .links {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    > div {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-  }
-  .mainIcon {
-    min-width: 100%;
-  }
-  .main-title {
-    font-size: 25pt;
-  }
-  @media all and (max-width: 600px) {
-    p {
-      font-size: 5vw !important;
-    }
-    section {
-      > h1 {
-        font-size: 9vw !important;
-      }
-    }
-    h1.main-title {
-      font-size: 5.5vw !important;
-    }
-    .btn {
-      font-size: 2.6vw !important;
-    }
-  }
-}
+@import "~@/assets/scss/SurroundingMain.scss";
 </style>

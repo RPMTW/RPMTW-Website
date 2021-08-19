@@ -115,6 +115,9 @@ export default {
 }
 </style>
 <style lang="scss">
+.showEl {
+  cursor: pointer;
+}
 html.enlarge {
   background-color: red;
 }

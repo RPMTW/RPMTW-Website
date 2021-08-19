@@ -149,23 +149,26 @@ body {
 :root {
     /* 暗色模式 */
     --styleMode-background-color: #222;
-    --styleMode-color: rgb(224, 224, 224);
+    --styleMode-color: #fff;
     --styleMode-webkit-scrollbar-thumb: #454a4d;
     --styleMode-webkit-scrollbar: #aba499;
     --styleMode-hove-background-color: rgb(93, 93, 93);
     --strong-color: orange;
     --title-color: orange;
     --hover-btn-color: rgb(171, 188, 233);
+    --href-color: rgb(115, 255, 0);
     &.bright {
         /* 亮色模式 */
+        --header-background-color: #6b7040;
         --hover-btn-color: rgb(73, 73, 73);
-        --styleMode-background-color: rgb(224, 224, 224);
+        --styleMode-background-color: #fff;
         --styleMode-color: #222;
         --styleMode-webkit-scrollbar-thumb: #aba499;
         --styleMode-webkit-scrollbar: #454a4d;
         --styleMode-hove-background-color: rgb(116, 116, 116);
-        --strong-color: rgb(0, 46, 253);
+        --strong-color: #ff751a;
         --title-color: rgb(140, 0, 255);
+        --href-color: #0089ac;
     }
 }
 

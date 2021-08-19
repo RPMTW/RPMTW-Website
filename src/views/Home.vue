@@ -8,8 +8,10 @@
       />
       <h1 class="v-rpm-text user-select"></h1>
     </section>
-    <section class="img-description flex flex-item-center flex-down">
-      <div class="unit flex flex-item-center item-none">
+    <section
+      class="img-description flex flex-item-center flex-down flex-center"
+    >
+      <div class="unit flex-center flex flex-item-center item-none">
         <div>
           <img
             class="showEl"
@@ -37,7 +39,7 @@
           </router-link>
         </div>
       </div>
-      <div class="unit flex flex-item-center item-none">
+      <div class="unit flex-center flex flex-item-center item-none">
         <div>
           <img
             class="showEl"
@@ -63,6 +65,43 @@
             class="btn"
             :aria-label="i18n('Home.include.public.read-more')"
             to="/atr1"
+          >
+            {{ i18n("Home.include.public.read-more") }}
+          </router-link>
+        </div>
+      </div>
+      <div class="unit flex-center flex flex-item-center item-none">
+        <div class="flex flex-down flex-item-center flex-center">
+          <img
+            class="showEl px128"
+            style="width: 128px; height: 128px"
+            src="~@/assets/images/Surrounding/RPMLauncher/RWLLog.png"
+            alt="特別感謝 嗡嗡#5428 製作圖片"
+          />
+          <img
+            class="showEl RWL-icon"
+            src="~@/assets/images/Surrounding/RPMLauncher/RWL.png"
+            alt="特別感謝 嗡嗡#5428 製作圖片"
+          />
+        </div>
+        <div class="description flex flex-item-center flex-down">
+          <h1 class="HanyiSentyChalk">
+            RPMLauncher( WIP )<br />
+            輕鬆管理您的遊戲
+          </h1>
+          <strong> 由於此啟動器還在開發中，未來還會新增許多功能 </strong>
+          <a
+            target="_blank"
+            class="btn"
+            :aria-label="i18n('Home.include.public.DL-STAT')"
+            href="https://github.com/RPMTW/RPMLauncher/actions"
+          >
+            {{ i18n("Home.include.public.DL-STAT") }}
+          </a>
+          <router-link
+            class="btn"
+            :aria-label="i18n('Home.include.public.read-more')"
+            to="/RPL"
           >
             {{ i18n("Home.include.public.read-more") }}
           </router-link>
@@ -198,6 +237,7 @@ export default {
   }
   .img-description {
     .unit {
+      width: 80%;
       margin: 10px;
       > div {
         text-align: center;
@@ -216,6 +256,9 @@ export default {
           width: 80%;
         }
       }
+      .description {
+        max-width: 600px;
+      }
     }
     @media all and (max-width: 900px) {
       .unit {
@@ -223,6 +266,13 @@ export default {
         > div {
           margin-left: 0 !important;
           img {
+            &.px128 {
+              width: 30vw !important;
+              height: auto !important;
+            }
+            &.RWL-icon {
+              height: auto !important;
+            }
             width: 80vw !important;
             height: 40vw !important;
           }

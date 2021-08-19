@@ -244,7 +244,7 @@ export default {
   width: 100%;
   max-height: var(--html-margin-top);
   min-height: var(--html-margin-top);
-  background-color: rgb(85, 82, 82);
+  background-color: var(--header-background-color, rgb(85, 82, 82));
   justify-content: space-between;
   align-items: center;
   &.slider--up {
@@ -417,6 +417,9 @@ html {
   margin-top: var(--html-margin-top) !important;
 }
 .is-menu {
+  #header {
+    background-color: var(--header-background-color) !important;
+  }
   .menuStyle {
     background-color: transparent !important;
     &:after {
