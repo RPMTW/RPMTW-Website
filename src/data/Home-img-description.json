@@ -1,0 +1,81 @@
+[
+    {
+        "icons": [
+            {
+                "src": "https://cdn.discordapp.com/banners/815819580840607807/bf8aec260c17d5483a18e27d8e99a52b.jpg?size=512",
+                "alt": "自動中文化更新模組"
+            }
+        ],
+        "description": {
+            "i18nTitle": "Home.include.mod.name",
+            "i18nDescription": "Home.include.mod.description",
+            "buttons": [
+                {
+                    "i18nTitle": "Home.include.public.DL-STAT",
+                    "i18n_aria_label": "Home.include.public.DL-STAT",
+                    "router_link": "install/version"
+                },
+                {
+                    "i18nTitle": "Home.include.public.read-more",
+                    "i18n_aria_label": "Home.include.public.read-more",
+                    "router_link": "RPMTWUpdateMod"
+                }
+            ]
+        }
+    },
+    {
+        "icons": [
+            {
+                "src": "https://media.discordapp.net/attachments/793138981750571008/854976912228089906/unknown.png",
+                "alt": "自動中文化更新模組"
+            }
+        ],
+        "description": {
+            "i18nTitle": "Home.include.atr.name",
+            "i18nDescription": "Home.include.atr.description",
+            "buttons": [
+                {
+                    "i18nTitle": "Home.include.public.DL-STAT",
+                    "i18n_aria_label": "Home.include.public.DL-STAT",
+                    "url": "https://www.curseforge.com/minecraft/modpacks/atr1"
+                },
+                {
+                    "i18nTitle": "Home.include.public.read-more",
+                    "i18n_aria_label": "Home.include.public.read-more",
+                    "router_link": "atr1"
+                }
+            ]
+        }
+    },
+    {
+        "icons": [
+            {
+                "class": "px128",
+                "router_link": "assets/images/Surrounding/RPMLauncher/RWLLog.png",
+                "alt": "特別感謝 嗡嗡#5428 製作圖片",
+                "notShowEl": true
+            },
+            {
+                "class": "RWL-icon",
+                "router_link": "assets/images/Surrounding/RPMLauncher/RWL.png",
+                "alt": "特別感謝 嗡嗡#5428 製作圖片"
+            }
+        ],
+        "description": {
+            "Title": "RPMLauncher( WIP )<br />輕鬆管理您的遊戲",
+            "description": "由於此啟動器還在開發中，未來還會新增許多功能",
+            "buttons": [
+                {
+                    "i18nTitle": "Home.include.public.DL-STAT",
+                    "i18n_aria_label": "Home.include.public.DL-STAT",
+                    "url": "https://github.com/RPMTW/RPMLauncher/actions"
+                },
+                {
+                    "i18nTitle": "Home.include.public.read-more",
+                    "i18n_aria_label": "Home.include.public.read-more",
+                    "router_link": "RPL"
+                }
+            ]
+        }
+    }
+]

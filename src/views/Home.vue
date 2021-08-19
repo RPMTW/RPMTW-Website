@@ -11,100 +11,49 @@
     <section
       class="img-description flex flex-item-center flex-down flex-center"
     >
-      <div class="unit flex-center flex flex-item-center item-none">
-        <div>
+      <div
+        class="unit flex-center flex flex-item-center item-none"
+        v-for="i in img_descriptor"
+        :key="i"
+      >
+        <div class="flex flex-down flex-item-center flex-center img">
           <img
-            class="showEl"
-            style="width: 400px; height: 200px"
-            src="https://cdn.discordapp.com/banners/815819580840607807/bf8aec260c17d5483a18e27d8e99a52b.jpg?size=512"
-            alt="自動中文化更新模組"
-          />
-        </div>
-        <div class="flex flex-item-center flex-down">
-          <h1 class="HanyiSentyChalk">{{ i18n("Home.include.mod.name") }}</h1>
-          <strong>{{ i18n("Home.include.mod.description") }}</strong>
-          <router-link
-            class="btn"
-            :aria-label="i18n('Home.include.public.DL-STAT')"
-            to="/install/version"
-          >
-            {{ i18n("Home.include.public.DL-STAT") }}
-          </router-link>
-          <router-link
-            class="btn"
-            :aria-label="i18n('Home.include.public.read-more')"
-            to="/RPMTWUpdateMod"
-          >
-            {{ i18n("Home.include.public.read-more") }}
-          </router-link>
-        </div>
-      </div>
-      <div class="unit flex-center flex flex-item-center item-none">
-        <div>
-          <img
-            class="showEl"
-            style="width: 400px; height: 200px"
-            src="https://media.discordapp.net/attachments/793138981750571008/854976912228089906/unknown.png"
-          />
-        </div>
-        <div class="flex flex-item-center flex-down">
-          <h1 class="HanyiSentyChalk">
-            {{ i18n("Home.include.atr.name.0") }}<br />
-            {{ i18n("Home.include.atr.name.1") }}
-          </h1>
-          <strong>{{ i18n("Home.include.atr.description") }}</strong>
-          <a
-            target="_blank"
-            class="btn"
-            :aria-label="i18n('Home.include.public.DL-STAT')"
-            href="https://www.curseforge.com/minecraft/modpacks/atr1"
-          >
-            {{ i18n("Home.include.public.DL-STAT") }}
-          </a>
-          <router-link
-            class="btn"
-            :aria-label="i18n('Home.include.public.read-more')"
-            to="/atr1"
-          >
-            {{ i18n("Home.include.public.read-more") }}
-          </router-link>
-        </div>
-      </div>
-      <div class="unit flex-center flex flex-item-center item-none">
-        <div class="flex flex-down flex-item-center flex-center">
-          <img
-            class="px128"
-            style="width: 128px; height: 128px"
-            src="~@/assets/images/Surrounding/RPMLauncher/RWLLog.png"
-            alt="特別感謝 嗡嗡#5428 製作圖片"
-          />
-          <img
-            class="showEl RWL-icon"
-            src="~@/assets/images/Surrounding/RPMLauncher/RWL.png"
-            alt="特別感謝 嗡嗡#5428 製作圖片"
+            v-for="icon in i.icons"
+            :key="icon"
+            :class="[
+              icon.class || 'px400',
+              {
+                showEl: !icon.notShowEl || false,
+              },
+            ]"
+            :data="icon.src"
+            :src="icon.src || require(`@/${icon.router_link}`)"
+            :alt="icon.alt"
           />
         </div>
         <div class="description flex flex-item-center flex-down">
-          <h1 class="HanyiSentyChalk">
-            RPMLauncher( WIP )<br />
-            輕鬆管理您的遊戲
-          </h1>
-          <strong> 由於此啟動器還在開發中，未來還會新增許多功能 </strong>
+          <h1
+            class="HanyiSentyChalk"
+            v-html="i18n(i.description.i18nTitle, i.description.Title)"
+          ></h1>
+          <strong
+            v-html="
+              i18n(i.description.i18nDescription, i.description.description)
+            "
+          ></strong>
           <a
             target="_blank"
             class="btn"
-            :aria-label="i18n('Home.include.public.DL-STAT')"
-            href="https://github.com/RPMTW/RPMLauncher/actions"
+            v-for="button in i.description.buttons"
+            :key="button"
+            :aria-label="i18n(button.i18n_aria_label, aria_label) || ''"
+            :href="
+              (button.router_link && `${BASE_URL}${button.router_link}`) ||
+              button.url
+            "
           >
-            {{ i18n("Home.include.public.DL-STAT") }}
+            {{ i18n(button.i18nTitle, button.Title) }}
           </a>
-          <router-link
-            class="btn"
-            :aria-label="i18n('Home.include.public.read-more')"
-            to="/RPL"
-          >
-            {{ i18n("Home.include.public.read-more") }}
-          </router-link>
         </div>
       </div>
       <div class="unit flex flex-item-center item-none"></div>
@@ -138,6 +87,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
 import main from "../i18n.js";
+import img_descriptor from "@/data/Home-img-description.json";
 
 function i18n(val, value = "") {
   return (
@@ -154,6 +104,8 @@ export default {
   data() {
     return {
       announcementText: i18n("Home.announcement.datas"),
+      img_descriptor: img_descriptor,
+      BASE_URL: process.env.BASE_URL,
     };
   },
   beforeUnmount() {
@@ -258,6 +210,13 @@ export default {
       }
       .description {
         max-width: 600px;
+      }
+      .img {
+        max-width: 400px;
+        .px400 {
+          width: 400px;
+          height: 200px;
+        }
       }
     }
     @media all and (max-width: 900px) {
