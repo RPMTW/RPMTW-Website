@@ -84,15 +84,22 @@
     </section>
     <hr />
     <section>
-      <h1>thank</h1>
+      <h1>開發者名單</h1>
       <p class="notCenter list">
         - <strong>主要開發者:</strong> 菘菘#8663、sunny.ayyl#2932<br />
         - <strong>啟動器圖片製作:</strong> 嗡嗡#5428<br />
-        - <strong>Github貢獻者:</strong> <a href="">點我查看</a><br />
+        - <strong>Github貢獻者:</strong>
+        <a href="https://github.com/RPMTW/RPMLauncher/graphs/contributors"
+          >點我查看</a
+        ><br />
       </p>
     </section>
     <hr />
     <h1>期待此啟動器第一個正式版完成的那天！</h1>
+    <a href="https://github.com/RPMTW/RPMLauncher" class="btn">
+      <img src="https://github.com/fluidicon.png" alt="" />
+      Github儲存庫</a
+    >
   </div>
 </template>
 
