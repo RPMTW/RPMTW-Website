@@ -119,7 +119,7 @@ const routes = [
         },
     }, {
         path: "/RWL",
-        name: "Partner",
+        name: "RWL",
         component: () => import("@/views/Surrounding/RWL.vue"),
     }
 ]
