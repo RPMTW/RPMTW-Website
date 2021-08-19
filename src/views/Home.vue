@@ -56,7 +56,6 @@
           </a>
         </div>
       </div>
-      <div class="unit flex flex-item-center item-none"></div>
     </section>
     <section class="translation-C-rank flex flex-down flex-item-center">
       <h1 class="HanyiSentyChalk">{{ i18n("Home.top12.title") }}</h1>
