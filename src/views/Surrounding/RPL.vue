@@ -1,5 +1,8 @@
 <template>
-  <div id="ATRModPackage " class="flex flex-down flex-item-center main">
+  <div
+    id="ATRModPackage"
+    class="flex flex-down flex-item-center main Surrounding"
+  >
     <img
       src="@/assets/images/Surrounding/RPMLauncher/RWLLog.png"
       alt="特別感謝 嗡嗡#5428 製作圖片"

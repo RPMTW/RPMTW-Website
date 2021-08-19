@@ -1,5 +1,8 @@
 <template>
-  <div id="ATRModPackage " class="flex flex-down flex-item-center main">
+  <div
+    id="ATRModPackage"
+    class="flex flex-down flex-item-center main Surrounding"
+  >
     <img
       class="mainIcon"
       src="@/assets/images/Surrounding/ATR1/ATR1MainTitleIcon.png"
