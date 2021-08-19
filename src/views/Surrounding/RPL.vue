@@ -86,9 +86,9 @@
     <section>
       <h1>開發者名單</h1>
       <p class="notCenter list">
-        - <strong>主要開發者:</strong> 菘菘#8663、sunny.ayyl#2932<br />
-        - <strong>啟動器圖片製作:</strong> 嗡嗡#5428<br />
-        - <strong>Github貢獻者:</strong>
+        - <strong>主要開發者: </strong>菘菘#8663、sunny.ayyl#2932<br />
+        - <strong>啟動器圖片製作: </strong>嗡嗡#5428<br />
+        - <strong>Github貢獻者: </strong>
         <a href="https://github.com/RPMTW/RPMLauncher/graphs/contributors"
           >點我查看</a
         ><br />

@@ -26,8 +26,9 @@ body {
     user-select: none;
 }
 .btn {
-    display: flex;
+    justify-content: center;
     align-items: center;
+    align-content: center;
     font-weight: 400;
     line-height: 1.5;
     color: var(--styleMode-background-color) !important;
