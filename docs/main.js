@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-undef */
 $(function () {
-    let Version = "2.1.1";
+    let Version = "2.2.1";
     console.log(`%c Version: ${Version} %c\n%chttps://github.com/RPMTW/RPMTW-Website\nhttps://github.com/RPMTW`,
         `color: white; background: ${$("html").css("--strong-color")}; padding:5px 0;`,
         `padding: none;border: none;`, `padding: 4px;border:1px solid ${$("html").css("--strong-color")};`
