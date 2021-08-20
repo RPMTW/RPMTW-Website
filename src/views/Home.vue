@@ -42,7 +42,6 @@
             "
           ></strong>
           <a
-            target="_blank"
             class="btn"
             v-for="button in i.description.buttons"
             :key="button"

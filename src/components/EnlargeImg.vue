@@ -2,9 +2,11 @@
   <div id="Enlarge" v-show="showImg">
     <div class="showImg scaleDraw" v-if="showImg">
       <div class="ImgDescription flex flex-center flex-down flex-item-center">
-        <div class="icon x" @click="showImg = false"></div>
         <img :src="showImg" class="not-enlarge" alt="" />
-        <p class="img-description">{{ description }}</p>
+        <p class="img-description" v-if="description">{{ description }}</p>
+        <a :href="imgLink" v-if="imgLink" class="open-original"
+          >開啟原尺寸圖片</a
+        >
       </div>
     </div>
     <div class="EnlargeImg-blurry" @click="showImg = false"></div>
@@ -20,6 +22,7 @@ export default {
     return {
       showImg: null,
       description: null,
+      imgLink: null,
     };
   },
   methods: {},
@@ -28,7 +31,8 @@ export default {
     $(function () {
       $("html").on("click", "img.showEl", function (e) {
         _.showImg = $(this).attr("src") || null;
-        _.description = $(this).attr("alt");
+        _.description = $(this).attr("alt") || null;
+        _.imgLink = $(this).attr("src") || null;
         $("html").addClass("enlarge");
         $("#EnlargeImg.not-enlarge").css({
           width: $(this).css("width"),
@@ -63,42 +67,33 @@ export default {
       animation-name: scaleDraw;
       animation-timing-function: ease-in-out;
       animation-duration: 0.5s;
+      width: 95%;
       .ImgDescription {
         z-index: 9;
-        background: #aba499;
         border-radius: 10px;
-        width: 80%;
-        padding: 4% 2px 2% 2px;
         position: relative;
-        .icon.x {
-          font-size: 25pt;
-          cursor: pointer;
-          position: absolute;
-          top: 8%;
-          right: 4%;
-          padding: 5px;
-        }
         .not-enlarge {
           z-index: 9;
-          width: 80%;
-          max-height: 80%;
-          max-width: 80%;
+          width: 100%;
+          max-height: 90%;
+          max-width: 90%;
         }
         .img-description {
           margin: 0;
-          margin-top: 1% !important;
           z-index: 9;
+          margin-top: 5px;
           font-size: 20pt;
-          color: black;
+          color: white;
           list-style: none;
         }
+        .open-original {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
         @media all and (max-width: 1200px) {
-          padding-top: 5% !important;
           .img-description {
             font-size: 2.2vw;
-          }
-          .icon.x {
-            font-size: 2.5vw;
           }
         }
       }
@@ -124,14 +119,14 @@ export default {
     animation-name: blurry;
     animation-timing-function: ease-in-out;
     animation-duration: 0.5s;
-    opacity: 0.5;
     background-color: #000;
+    opacity: 0.85;
     @keyframes blurry {
       from {
         opacity: 0;
       }
       to {
-        opacity: 0.5;
+        opacity: 0.85;
       }
     }
   }
