@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about flex flex-down flex-item-center">
     <h1>關於 RPMTW 團隊</h1>
     <p><strong>點擊圖片即可導向到網站</strong></p>
     <div class="icons">
@@ -36,6 +36,28 @@
       src="https://discord.com/widget?id=815819580840607807&theme=dark"
       frameborder="0"
     ></iframe>
+    <div class="Copyright flex flex-center">
+      <ul>
+        <h4>網站版權使用註明:</h4>
+        <li>
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/pixel-perfect"
+            title="像素完美"
+            >像素完美</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </li>
+        <li></li>
+      </ul>
+      <ul>
+        <h4>網站版權使用註明:</h4>
+        <li></li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
@@ -45,7 +67,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .about {
   text-align: center;
   > h1 {
@@ -72,6 +94,15 @@ export default {
   .discord {
     width: 80%;
     height: 450px;
+  }
+  .Copyright {
+    width: 80%;
+    > ul {
+      min-width: 40%;
+      > li {
+        text-align: left;
+      }
+    }
   }
   @media all and (max-width: 800px) {
     h1 {

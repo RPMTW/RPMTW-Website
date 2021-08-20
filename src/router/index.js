@@ -118,9 +118,15 @@ const routes = [
             breadcrumb: "Partner",
         },
     }, {
+
         path: "/RWL",
         name: "RWL",
         component: () => import("@/views/Surrounding/RWL.vue"),
+    }, {
+
+        path: "/Translator",
+        name: "Translator",
+        component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
     }
 ]
 

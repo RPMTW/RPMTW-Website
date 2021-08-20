@@ -111,18 +111,19 @@ export default {
     clearInterval(this._setInterval);
   },
   mounted() {
-    let _this = this;
+    let _ = this;
+    document.cookie = `path=${this.BASE_URL}`;
     $(function () {
       let text = i18n("Home.scroll.texts");
       let nowList = 0;
       let nowStr = 0;
       let setText = (t) => {
-        _this._setTimeout = setTimeout(() => {
+        _._setTimeout = setTimeout(() => {
           $(".v-rpm-text").html(`${text[t].substring(0, ++nowStr)}`);
           nowStr <= text[t].length && setText(t);
         }, 199);
       };
-      _this._setInterval = setInterval(() => {
+      _._setInterval = setInterval(() => {
         nowStr = 1;
         nowList < text.length - 1 ? setText(++nowList) : (nowList = 0);
       }, 199 * text[nowList].length + 1e3);
