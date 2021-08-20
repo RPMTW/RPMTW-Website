@@ -46,7 +46,7 @@
             class="btn"
             v-for="button in i.description.buttons"
             :key="button"
-            :aria-label="i18n(button.i18n_aria_label, aria_label) || ''"
+            :aria-label="i18n(button.i18n_aria_label, aria_label) || false"
             :href="
               (button.router_link && `${BASE_URL}${button.router_link}`) ||
               button.url

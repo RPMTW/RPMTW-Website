@@ -8,7 +8,6 @@
 }
 .icon.x:before {
     content: "X";
-    color: #000;
     width: 16px;
     height: 16px;
 }
