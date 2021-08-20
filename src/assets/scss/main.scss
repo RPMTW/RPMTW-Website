@@ -60,6 +60,9 @@ body {
     color: var(--styleMode-color);
     text-decoration: none;
     &:hover:not(.btn) {
+        &.line {
+            text-decoration: underline;
+        }
         opacity: 0.8;
     }
 }

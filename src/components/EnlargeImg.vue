@@ -2,9 +2,13 @@
   <div id="Enlarge" v-show="showImg">
     <div class="showImg scaleDraw" v-if="showImg">
       <div class="ImgDescription flex flex-center flex-down flex-item-center">
-        <img :src="showImg" class="not-enlarge" alt="" />
-        <p class="img-description" v-if="description">{{ description }}</p>
-        <a :href="imgLink" v-if="imgLink" class="open-original"
+        <img
+          class="not-enlarge"
+          :src="showImg"
+          :alt="description"
+          :hover="description"
+        />
+        <a :href="imgLink" v-if="imgLink" class="open-original line"
           >開啟原尺寸圖片</a
         >
       </div>
@@ -67,29 +71,43 @@ export default {
       animation-name: scaleDraw;
       animation-timing-function: ease-in-out;
       animation-duration: 0.5s;
-      width: 95%;
       .ImgDescription {
+        width: 95%;
         z-index: 9;
         border-radius: 10px;
         position: relative;
-        .not-enlarge {
+        img.not-enlarge {
           z-index: 9;
           width: 100%;
           max-height: 90%;
           max-width: 90%;
-        }
-        .img-description {
-          margin: 0;
-          z-index: 9;
-          margin-top: 5px;
-          font-size: 20pt;
-          color: white;
-          list-style: none;
+          &:hover {
+            &:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              content: "";
+              background-color: black;
+              opacity: 0.8;
+            }
+            &:after {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              content: attr(hover);
+            }
+          }
         }
         .open-original {
           position: absolute;
-          left: 0;
-          bottom: 0;
+          left: 4%;
+          bottom: -15px;
+          color: rgb(179, 179, 179);
         }
         @media all and (max-width: 1200px) {
           .img-description {
