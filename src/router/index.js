@@ -127,6 +127,9 @@ const routes = [
         path: "/Translator",
         name: "Translator",
         component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
+        meta: {
+            breadcrumb: "Translator",
+        },
     }
 ]
 

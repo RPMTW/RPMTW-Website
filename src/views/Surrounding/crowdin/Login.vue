@@ -39,7 +39,7 @@
     >
       <div class="close icon x" @click="output = null"></div>
       <div
-        v-if="Object.keys(output || {}).length > 0"
+        v-if="Object.keys(output || {}).length > 0 && output.avatarUrl"
         class="userInfo flex flex-item-center"
       >
         <img :src="output.avatarUrl" alt="" />
@@ -69,6 +69,8 @@ export default {
   methods: {
     check(e) {
       if (this.value) {
+        this.isOK = true;
+        this.output = "登入中...";
         API.getData("/user", this.value)
           .done((data) => {
             this.output = data.data;

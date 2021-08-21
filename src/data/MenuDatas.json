@@ -30,6 +30,11 @@
         "breadcrumb": "Partner"
     },
     {
+        "to": "/Translator",
+        "name": "線上翻譯系統( 尚未完成",
+        "breadcrumb": "Translator"
+    },
+    {
         "to": "/About",
         "name": "關於我們",
         "breadcrumb": "About"
