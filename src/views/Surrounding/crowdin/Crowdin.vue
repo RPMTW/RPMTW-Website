@@ -1,23 +1,33 @@
 <template>
   <div id="Crowdin">
-    <Login v-if="go" />
-    <div class="CrowdinLogin-blurry"></div>
+    <Login v-if="go" @go="() => (go = false)" />
+    <div
+      :class="{
+        'CrowdinLogin-blurry': go,
+      }"
+    ></div>
   </div>
 </template>
 
 <script>
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable-next-line no-unused-vars */
 import Login from "./Login.vue";
 export default {
   name: "Crowdin",
   data() {
     return {
-      go: true,
+      go: null,
     };
   },
   components: {
     Login,
   },
   methods: {},
+  mounted() {
+    this.go = getCookie("/user");
+  },
 };
 </script>
 

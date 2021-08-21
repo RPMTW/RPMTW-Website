@@ -5,12 +5,13 @@
       <div>
         <div class="input-token-div">
           <input
-            :type="(showToken && 'text') || 'password'"
             id="inputToken"
+            v-model="value"
+            :type="(showToken && 'text') || 'password'"
             :class="{
               value: value,
             }"
-            v-model="value"
+            :value="value"
             @keyup.enter="check"
           />
           <label>請輸入登入權杖</label>
@@ -29,6 +30,23 @@
         @click="check"
       />
     </div>
+    <div
+      class="output"
+      v-show="output"
+      :class="{
+        isOk: isOK,
+      }"
+    >
+      <div class="close icon x" @click="output = null"></div>
+      <div
+        v-if="Object.keys(output || {}).length > 0"
+        class="userInfo flex flex-item-center"
+      >
+        <img :src="output.avatarUrl" alt="" />
+        <p v-text="`${output.fullName}(${output.username}) 登入成功!!`"></p>
+      </div>
+      <h2 v-text="output" v-else></h2>
+    </div>
   </div>
 </template>
 
@@ -36,23 +54,43 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
+import API from "./API.js";
 export default {
   name: "CrowdinLogin",
   data() {
     return {
       showToken: false,
-      value: false,
+      value: null,
+      output: null,
+      isOK: true,
     };
   },
   components: {},
   methods: {
     check(e) {
       if (this.value) {
-        window.token = this.value;
+        API.getData("/user", this.value)
+          .done((data) => {
+            this.output = data.data;
+            this.isOK = true;
+            setTimeout(() => {
+              document.cookie = `crowdinToken=${this.value}`;
+              this.$emit("go", this.value);
+            }, 3e3);
+          })
+          .catch((value) => {
+            if (value.status === 401) {
+              this.isOK = false;
+              this.output = "登入權杖錯誤!!";
+            }
+          });
       } else {
         $("#inputToken").addClass("value-isNull");
       }
     },
+  },
+  mounted() {
+    this.value = getCookie("crowdinToken");
   },
 };
 </script>
@@ -70,8 +108,8 @@ export default {
   z-index: 99;
   .data {
     background-color: var(--styleMode-background-color);
-    width: 30%;
-    height: 25%;
+    width: 25em;
+    height: 20em;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -93,14 +131,13 @@ export default {
         width: 100%;
         height: 50%;
         padding: 5px 10px;
-        // border-radius: 25px;
         transition: all 0.9s;
         outline: none;
         font-size: 17px;
         background-color: initial;
-        border-bottom: 2px solid white !important;
         border: none;
-        color: white;
+        border-bottom: 2px solid var(--styleMode-color) !important;
+        color: var(--styleMode-color);
         &:focus,
         &.value {
           border-bottom: 2px solid #5b76ff !important;
@@ -119,7 +156,7 @@ export default {
         font-size: 12pt;
         top: 15%;
         left: 10px;
-        color: white;
+        color: var(--styleMode-colors);
         pointer-events: none;
         transition: all 0.3s ease;
         transform: scaleY(-20px);
@@ -133,6 +170,30 @@ export default {
       border-radius: 10px;
       &:active {
         background-color: rgb(209, 209, 209);
+      }
+    }
+  }
+  .output {
+    padding: 0.5% 4%;
+    border-radius: 5px;
+    background-color: #ff5252;
+    position: fixed;
+    top: 2%;
+    &.isOk {
+      background-color: #49b66e !important;
+    }
+    .close {
+      cursor: pointer;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+    .userInfo {
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 5px;
       }
     }
   }

@@ -219,8 +219,7 @@ export default {
     /* init breadcrumb */
     this.setBreadcrumb();
     /* init check cookie mode */
-    let parts = `; ${document.cookie}`.split("; mode=");
-    2 === parts.length && "bright" === parts.pop().split(";").shift()
+    getCookie("mode") == "bright"
       ? $("html").addClass("bright")
       : (document.cookie = "mode=dark");
     if (document.cookie.length <= 0) alert("建議開啟 cookie 已獲得更好的體驗");

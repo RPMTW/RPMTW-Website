@@ -47,20 +47,17 @@ export default {
 
     $(function () {
       let loop = () => {
-        $.getJSON(
-          "https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/progress.json",
-          (data) => {
-            _.text = data[version];
-            _.more =
-              (data.data[version] &&
-                `( ${data.data[version].translated} / ${data.data[version].total} )`) ||
-              "";
-            $(process).animate(
-              { right: `${100 - parseInt(data[version])}%` },
-              { speed: 10e3, step: (now) => $(process).css("right", now) }
-            );
-          }
-        ).fail((error) => {
+        $.getJSON(Apis.RPMTWProgressAPI, (data) => {
+          _.text = data[version];
+          _.more =
+            (data.data[version] &&
+              `( ${data.data[version].translated} / ${data.data[version].total} )`) ||
+            "";
+          $(process).animate(
+            { right: `${100 - parseInt(data[version])}%` },
+            { speed: 10e3, step: (now) => $(process).css("right", now) }
+          );
+        }).fail((error) => {
           _.text = "錯誤，請稍後在試";
         });
       };
