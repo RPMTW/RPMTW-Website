@@ -47,7 +47,7 @@ export default {
 
     $(function () {
       let loop = () => {
-        $.getJSON(Apis.RPMTWProgressAPI, (data) => {
+        $.getJSON(Sets.RPMTWProgressAPI, (data) => {
           _.text = data[version];
           _.more =
             (data.data[version] &&

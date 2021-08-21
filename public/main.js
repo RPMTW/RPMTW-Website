@@ -51,9 +51,16 @@ window.getCookie = name => {
 /* test 用 */
 window.dc = () => localStorage.removeItem("discordLink");
 
-window.Apis = {
+window.Sets = {
     RPMTWProgressAPI: "https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/progress.json",
-    CrowdinBaseAPI: "https://api.crowdin.com/api/v2"
+    CrowdinBaseAPI: "https://api.crowdin.com/api/v2",
+    CurseForgeAPI: "https://addons-ecs.forgesvc.net/api/v2",
+    CrowdinID: 442446,
+    VersionDirID: {
+        "1.17": 33894,
+        "1.16": 14698,
+        "1.12": 37104,
+    }
 }
 /*
     此專案使用 vue cli 前端框架建置 github: https://github.com/RPMTW/RPMTW-Website

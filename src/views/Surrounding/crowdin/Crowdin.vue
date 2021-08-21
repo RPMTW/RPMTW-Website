@@ -22,6 +22,7 @@
       </div>
     </div>
     <Login v-if="go" @go="go = false" />
+    <Translation v-else />
   </div>
 </template>
 
@@ -31,6 +32,7 @@
 /* eslint-disable-next-line no-unused-vars */
 import API from "./API.js";
 import Login from "./Login.vue";
+import Translation from "./Translation.vue";
 export default {
   name: "Crowdin",
   data() {
@@ -41,6 +43,7 @@ export default {
   },
   components: {
     Login,
+    Translation,
   },
   methods: {},
   mounted() {
@@ -54,6 +57,9 @@ export default {
         this.go = true;
         if (error.status === 401) this.go = true;
       });
+    /* API.functions.getDirectories().done((data) => {
+      console.log(data);
+    }); */
   },
 };
 </script>
