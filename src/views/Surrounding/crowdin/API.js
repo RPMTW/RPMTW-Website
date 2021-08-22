@@ -18,5 +18,6 @@ module.exports = {
         /* 抓取目錄 */
         getDirectories: (Version = "1.17", filter = "", page = 1,) =>
             getData(`/projects/${Sets.CrowdinID}/directories?directoryId=${Sets.VersionDirID[Version]}&offset=${page * 30}&limit=${30}${(filter && ("&filter=" + "filter")) || ''}`),
+        getCurseForgeModInfo: (modId) => $.getJSON(`${Sets.actingURL}/addon/${modId}`)
     }
 }

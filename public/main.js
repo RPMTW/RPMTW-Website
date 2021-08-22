@@ -54,7 +54,6 @@ window.dc = () => localStorage.removeItem("discordLink");
 window.Sets = {
     RPMTWProgressAPI: "https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/progress.json",
     CrowdinBaseAPI: "https://api.crowdin.com/api/v2",
-    CurseForgeAPI: "https://addons-ecs.forgesvc.net/api/v2",
     CrowdinOauthAPI: "https://accounts.crowdin.com/oauth/authorize?client_id=8HpxK2jINouRXTrVq6gf&redirect_uri=https://rear-end.a102009102009.repl.co/crowdin/oauth/auth/web&response_type=code&scope=project",
     CrowdinID: 442446,
     VersionDirID: {
