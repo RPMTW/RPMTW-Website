@@ -20,9 +20,6 @@ module.exports = {
             getData(`/projects/${Sets.CrowdinID}/directories?directoryId=${Sets.VersionDirID[Version]}&offset=${page * 30}&limit=${30}${(filter && ("&filter=" + "filter")) || ''}`),
         /* 抓取模組資料 */
         getCurseForgeModInfo: (modId) =>
-            getData(`${Sets.CurseForgeAPI}/addon/${modId}`),
-        /* 抓取模組資源模組 */
-        getAllModIndex: (Version = "1.17") =>
-            $.getJSON(`https://raw.githubusercontent.com/RPMTW/ResourcePack-Mod-zh_tw/${{ "1.16": "Original" }[Version] || "Original-" + Version}/${Version}/CurseForgeIndex.json`)
+            $.getJSON(`/api/addon/${modId}`),
     }
 }

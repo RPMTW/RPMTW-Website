@@ -27,7 +27,7 @@
       </select>
     </div>
     <div class="output">
-      <div v-for="mod in mods" :key="mod">{{ mod }}</div>
+      <MakeModInfo v-for="data in mods" :key="data" :modData="data" />
     </div>
   </div>
 </template>
@@ -37,6 +37,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
 import API from "./API.js";
+import MakeModInfo from "./components/MakeMod.vue";
 export default {
   name: "ModTranslation",
   data() {
@@ -48,8 +49,11 @@ export default {
       },
       mods: null,
       page: 0,
-      resource: null,
+      resource: {},
     };
+  },
+  components: {
+    MakeModInfo,
   },
   methods: {
     setAll() {
@@ -57,20 +61,25 @@ export default {
       _.data.version = Array.from($("#version option:checked")).map(
         (el) => el.value
       )[0];
-      API.functions.getAllModIndex(this);
       API.functions
         .getDirectories(_.data.version, _.data.modId, _.page)
-        .done((data) => {
-          _.mods = data.data.map((value) => {
-            value = value.data;
-            return {
-              img: value,
-            };
-          });
-        });
+        .done(
+          (data) => (_.mods = data.data.map((value) => (value = value.data)))
+        );
     },
   },
-  mounted() {},
+  mounted() {
+    let _ = this;
+    /* GET: 所有支援模組 */
+    for (let version in Sets.VersionDirID) {
+      $.getJSON(
+        `https://raw.githubusercontent.com/RPMTW/ResourcePack-Mod-zh_tw/${
+          { 1.16: "Original" }[version] || "Original-" + version
+        }/${version}/CurseForgeIndex.json`,
+        (data) => (_.resource[version] = data)
+      );
+    }
+  },
 };
 </script>
 
