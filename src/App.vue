@@ -45,15 +45,6 @@ export default {
       showGoTop: false,
     };
   },
-  created() {
-    this.$http({
-      url: "/api/category/section/4471",
-      method: "get",
-      crossdomain: true,
-    }).then((response) => {
-      console.log(response.data);
-    });
-  },
   mounted() {
     let _this = this;
     $(function () {
