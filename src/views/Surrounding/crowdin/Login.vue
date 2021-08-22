@@ -29,6 +29,9 @@
         alt="登入"
         @click="check"
       />
+      <div>
+        <a class="user-select" :href="Sets.CrowdinAPI">使用其它方式</a>
+      </div>
     </div>
     <div
       class="output"
@@ -63,6 +66,7 @@ export default {
       value: null,
       output: null,
       isOK: true,
+      Sets: window.Sets,
     };
   },
   components: {},

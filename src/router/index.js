@@ -123,13 +123,17 @@ const routes = [
         name: "RWL",
         component: () => import("@/views/Surrounding/RWL.vue"),
     }, {
-
         path: "/Translator",
         name: "Translator",
         component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
         meta: {
             breadcrumb: "Translator",
         },
+        children: [
+            {
+                path: "/api/callback",
+            }
+        ]
     }
 ]
 
