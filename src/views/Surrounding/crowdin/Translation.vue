@@ -10,7 +10,7 @@
         @keyup.enter="setAll"
       />
       <div class="btn" @click="setAll">搜尋</div>
-      <select id="version" @click="setAll">
+      <select id="version">
         <option
           :key="(value = Object.keys(Sets.VersionDirID)[0])"
           :value="value"
@@ -26,8 +26,8 @@
         </option>
       </select>
     </div>
-    <div class="output">
-      <MakeModInfo v-for="data in mods" :key="data" :modData="data" />
+    <div class="output flex flex-down flex-item-center">
+      <MakeModInfo v-for="data in mods" :key="data" :modId="data" :a="data" />
     </div>
   </div>
 </template>
@@ -63,25 +63,30 @@ export default {
       )[0];
       API.functions
         .getDirectories(_.data.version, _.data.modId, _.page)
-        .done(
-          (data) => (_.mods = data.data.map((value) => (value = value.data)))
-        );
+        .done((data) => {
+          _.mods = data.data.map(
+            (value) => (value = _.resource[_.data.version][value.data.name])
+          );
+          console.log(_.mods);
+        });
     },
   },
   mounted() {
     let _ = this;
     /* GET: 所有支援模組 */
     for (let version in Sets.VersionDirID) {
-      $.getJSON(
-        `https://raw.githubusercontent.com/RPMTW/ResourcePack-Mod-zh_tw/${
-          { 1.16: "Original" }[version] || "Original-" + version
-        }/${version}/CurseForgeIndex.json`,
-        (data) => (_.resource[version] = data)
-      );
+      API.functions
+        .getCurseForgeIndex(version)
+        .done((data) => (_.resource[version] = data));
     }
   },
 };
 </script>
 
 <style lang="scss" scoped>
+#ModTranslation {
+  width: 80%;
+  .output {
+  }
+}
 </style>

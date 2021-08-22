@@ -1,7 +1,20 @@
 <template>
-  <div id="MakeMod">
-    <div class="flex">
-      <img src="" alt="" />
+  <div id="MakeMod" class="flex" v-if="info">
+    <div>
+      <img
+        :src="(info.error && fake_website) || info.attachments[0].thumbnailUrl"
+        class="modIcon"
+        alt=""
+      />
+    </div>
+    <div>
+      <a
+        :href="info.websiteUrl"
+        v-if="info.websiteUrl"
+        aria-label="在CurseForge中查看此模組"
+      >
+        <img class="goBtn" src="@/assets/images/icons/go-left.svg" alt="" />
+      </a>
     </div>
   </div>
 </template>
@@ -14,22 +27,49 @@ import API from "../API.js";
 export default {
   name: "MakeMod",
   data() {
-    return {};
+    return {
+      info: null,
+      fake_website: require("@/assets/images/icons/fake-website.svg"),
+    };
   },
   methods: {},
   mounted() {
     let _ = this;
     $(function () {
-      API.functions
-        .getCurseForgeModInfo(_.modData.id)
-        .done((data) => (_.modData = data));
+      API.functions.getCurseForgeModInfo(_.modId).then((data) => {
+        _.info = data;
+      });
     });
   },
   props: {
-    modData: Object,
+    modId: String,
   },
 };
 </script>
 
 <style lang="scss" scoped>
+#MakeMod {
+  cursor: pointer;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #aba499;
+  padding: 20px;
+  margin: 5px 0;
+  border-radius: 10px;
+  &:hover {
+    opacity: 0.8;
+  }
+  .modIcon {
+    width: 128px;
+    border-radius: 10px;
+  }
+  .goBtn {
+    width: 32px;
+    background-color: rgb(29, 29, 29);
+    padding: 10px;
+    border-radius: 50%;
+    transform: rotate(90deg);
+  }
+}
 </style>
