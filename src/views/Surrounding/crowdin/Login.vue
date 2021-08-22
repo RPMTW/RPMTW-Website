@@ -30,7 +30,7 @@
         @click="check"
       />
       <div>
-        <a class="user-select" :href="Sets.CrowdinAPI">使用其它方式</a>
+        <a class="user-select" :href="Sets.CrowdinOauthAPI">使用其它方式</a>
       </div>
     </div>
     <div
@@ -96,6 +96,15 @@ export default {
     },
   },
   mounted() {
+    API.getData("/user", this.$route.query.data)
+      .done((data) => {
+        if (data.data && data.data.id) {
+          this.value = this.$route.query.data;
+          document.cookie = `crowdinToken=${this.value}`;
+          this.$emit("go", this.value);
+        }
+      })
+      .catch((error) => console.warn("<API> /user -> error: ", error));
     this.value = getCookie("crowdinToken");
   },
 };

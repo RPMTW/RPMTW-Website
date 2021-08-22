@@ -129,11 +129,6 @@ const routes = [
         meta: {
             breadcrumb: "Translator",
         },
-        children: [
-            {
-                path: "/api/callback",
-            }
-        ]
     }
 ]
 
