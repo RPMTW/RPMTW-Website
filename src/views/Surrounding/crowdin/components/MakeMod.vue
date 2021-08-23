@@ -1,11 +1,14 @@
 <template>
   <div id="MakeMod" class="flex" v-if="info">
-    <div>
+    <div style="width: 15%">
       <img
         :src="(info.error && fake_website) || info.attachments[0].thumbnailUrl"
         class="modIcon"
         alt=""
       />
+    </div>
+    <div class="modeName text-center">
+      <h1 class="auto-overflow" v-if="info.name">{{ info.name }}</h1>
     </div>
     <div>
       <a
@@ -57,6 +60,13 @@ export default {
   padding: 20px;
   margin: 5px 0;
   border-radius: 10px;
+  .modeName {
+    width: 60%;
+    .auto-overflow {
+      width: 100%;
+    }
+  }
+
   &:hover {
     opacity: 0.8;
   }
