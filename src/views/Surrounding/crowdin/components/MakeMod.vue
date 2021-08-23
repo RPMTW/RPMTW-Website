@@ -3,7 +3,9 @@
     id="MakeMod"
     class="flex"
     v-if="info"
-    :href="`${BASE_URL || '/'}Translator/AssistTranslation/${modData.data.id}`"
+    :href="`${BASE_URL || '/'}Translator/AssistTranslation/${
+      modData.data.directoryId
+    }`"
   >
     <div class="flex flex-item-center modDescription">
       <img
