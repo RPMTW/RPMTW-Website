@@ -1,5 +1,10 @@
 <template>
-  <div id="MakeMod" class="flex" v-if="info" @click="openFileChoose = true">
+  <a
+    id="MakeMod"
+    class="flex"
+    v-if="info"
+    :href="`${BASE_URL || '/'}Translator/AssistTranslation/${modData.data.id}`"
+  >
     <div class="flex flex-item-center modDescription">
       <img
         :src="
@@ -26,7 +31,7 @@
         alt=""
       />
     </a>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -40,12 +45,14 @@ export default {
     return {
       info: null,
       fake_website: require("@/assets/images/icons/fake-website.svg"),
+      BASE_URL: process.env.BASE_URL,
     };
   },
   methods: {},
   mounted() {
     let _ = this;
     $(function () {
+      console.log(_.modData);
       API.functions
         .getCurseForgeModInfo(_.modData.modName)
         .then((data) => (_.info = data));

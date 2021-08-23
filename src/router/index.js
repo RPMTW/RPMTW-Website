@@ -89,7 +89,7 @@ const routes = [
         component: () => import("@/views/RPMTWUpdateMod"),
     }, {
         path: "/install/version",
-        name: "Version",
+        name: "version",
         component: () => import("@/views/Wiki/mod-install/Version.vue"),
         meta: {
             breadcrumb: "Version",
@@ -130,7 +130,7 @@ const routes = [
         component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
     },
     {
-        path: "/Translator/AssistTranslation",
+        path: "/Translator/AssistTranslation/:id",
         name: "Translator-AssistTranslation",
         component: () => import("@/views/Surrounding/crowdin/SetFiles.vue")
     }

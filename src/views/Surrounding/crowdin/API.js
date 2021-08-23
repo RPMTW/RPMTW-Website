@@ -19,8 +19,8 @@ module.exports = {
         getDirectories: (Version = "1.17", filter = "", page = 1,) =>
             getData(`/projects/${Sets.CrowdinID}/directories?directoryId=${Sets.VersionDirID[Version]}&offset=${page * limit}&limit=${limit}${(filter && ("&filter=" + "filter")) || ''}`),
         /* 抓取模組所有檔案 */
-        getCurseFile: (DirID, filter = "", page = 1,) =>
-            getData(`${Sets.CrowdinBaseAPI}/projects/${Sets.CrowdinID}/files?directoryId=${DirID}&recursion&offset=${page * limit}&limit=limit${filter}"${(filter && ("&filter=" + "filter")) || ''}}`),
+        getCurseFile: (DirID, page = 1,) =>
+            getData(`/projects/${Sets.CrowdinID}/files?directoryId=${DirID}&recursion&offset=${page * limit}&limit=${limit}`),
         /* 抓取模組資料 */
         getCurseForgeModInfo: (modId) =>
             $.getJSON(`${Sets.actingURL}/curseForge/api/?url=addon/${modId}`),

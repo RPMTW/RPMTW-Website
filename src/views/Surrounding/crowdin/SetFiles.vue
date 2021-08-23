@@ -23,13 +23,14 @@ export default {
   data() {
     return {};
   },
-  methods: {
-    getCurseFile() {
-      API.getCurseFile();
-    },
-  },
+  methods: {},
   mounted() {
-    $(function () {});
+    let _ = this;
+    $(function () {
+      API.functions
+        .getCurseFile(_.$route.params.id)
+        .done((d) => console.log(d));
+    });
   },
 };
 </script>
