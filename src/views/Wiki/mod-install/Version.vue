@@ -64,7 +64,7 @@
       </div>
       <div class="txt-description" v-if="finish.platform === 'fabric'">
         <p style="color: red">
-          如果您沒有安裝RPMTW的前置模組 Fabric API，請務必記得安裝歐!!<br />
+          如果您沒有安裝 RPMTW 的前置模組 Fabric API，請務必記得安裝歐!!<br />
           <a
             target="_blank"
             style="color: var(--strong-color)"
