@@ -65,7 +65,8 @@ export default {
         .getDirectories(_.data.version, _.data.modId, _.page)
         .done((data) => {
           _.mods = data.data.map(
-            (value) => (value = _.resource[_.data.version][value.data.name])
+            (value) =>
+              (value = _.resource[_.data.version][value.data.name] || value.data.name)
           );
           console.log(_.mods);
         });

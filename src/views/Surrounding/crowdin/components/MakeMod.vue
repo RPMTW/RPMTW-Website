@@ -7,8 +7,10 @@
         alt=""
       />
     </div>
-    <div class="modeName text-center">
-      <h1 class="auto-overflow" v-if="info.name">{{ info.name }}</h1>
+    <div class="modeName">
+      <h1 class="auto-overflow">
+        {{ (info.error && modId) || info.name }}
+      </h1>
     </div>
     <div>
       <a
@@ -39,9 +41,9 @@ export default {
   mounted() {
     let _ = this;
     $(function () {
-      API.functions.getCurseForgeModInfo(_.modId).then((data) => {
-        _.info = data;
-      });
+      API.functions
+        .getCurseForgeModInfo(_.modId)
+        .then((data) => (_.info = data));
     });
   },
   props: {
@@ -62,11 +64,11 @@ export default {
   border-radius: 10px;
   .modeName {
     width: 60%;
+    text-align: left;
     .auto-overflow {
       width: 100%;
     }
   }
-
   &:hover {
     opacity: 0.8;
   }
