@@ -1,24 +1,24 @@
 {
     "1.12.2": {
         "platform": [
-            "forge"
+            "Forge"
         ],
-        "forge": "https://modrinth.com/mod/rpmtw-update-mod/version/O0yjj2pa"
+        "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/O0yjj2pa"
     },
     "1.16.x": {
         "platform": [
-            "forge",
-            "fabric"
+            "Forge",
+            "Fabric"
         ],
-        "fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/iJltMonl",
-        "forge": "https://modrinth.com/mod/rpmtw-update-mod/version/EJu0VuJg"
+        "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/iJltMonl",
+        "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/EJu0VuJg"
     },
     "1.17.x": {
         "platform": [
-            "forge",
-            "fabric"
+            "Forge",
+            "Fabric"
         ],
-        "fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/L2lMyX5i",
-        "forge": "https://modrinth.com/mod/rpmtw-update-mod/version/frGQy5Js"
+        "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/L2lMyX5i",
+        "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/ViRfd7dX"
     }
 }
