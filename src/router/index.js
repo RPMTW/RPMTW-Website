@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 /* wiki */
 import QandA from '@/views/Wiki/QandA.vue' // 常見問題
-
 const routes = [
     {
         path: '/',
@@ -125,10 +124,15 @@ const routes = [
     }, {
         path: "/Translator",
         name: "Translator",
-        component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
         meta: {
             breadcrumb: "Translator",
         },
+        component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
+    },
+    {
+        path: "/Translator/AssistTranslation",
+        name: "Translator-AssistTranslation",
+        component: () => import("@/views/Surrounding/crowdin/SetFiles.vue")
     }
 ]
 

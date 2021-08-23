@@ -22,7 +22,7 @@
       </div>
     </div>
     <Login v-if="go" @go="go = false" />
-    <Translation v-else />
+    <SearchMod v-else />
   </div>
 </template>
 
@@ -31,8 +31,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
 import API from "./API.js";
-import Login from "./Login.vue";
-import Translation from "./Translation.vue";
+import Login from "./components/Login.vue";
+import SearchMod from "./components/SearchMod.vue";
 export default {
   name: "Crowdin",
   data() {
@@ -43,7 +43,7 @@ export default {
   },
   components: {
     Login,
-    Translation,
+    SearchMod,
   },
   methods: {},
   mounted() {

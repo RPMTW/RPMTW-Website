@@ -57,7 +57,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
-import API from "./API.js";
+import API from "../API.js";
 export default {
   name: "CrowdinLogin",
   data() {

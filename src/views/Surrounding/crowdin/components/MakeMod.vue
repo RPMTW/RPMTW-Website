@@ -1,26 +1,31 @@
 <template>
-  <div id="MakeMod" class="flex" v-if="info">
-    <div style="width: 15%">
+  <div id="MakeMod" class="flex" v-if="info" @click="openFileChoose = true">
+    <div class="flex flex-item-center modDescription">
       <img
-        :src="(info.error && fake_website) || info.attachments[0].thumbnailUrl"
+        :src="
+          ((info.error || !info.attachments[0]) && fake_website) ||
+          info.attachments[0].thumbnailUrl
+        "
         class="modIcon"
         alt=""
       />
+      <div class="modeName">
+        <h1 class="auto-overflow">
+          {{
+            ((info.error || !info.attachments[0]) && modData.modName) ||
+            info.name
+          }}
+        </h1>
+      </div>
     </div>
-    <div class="modeName">
-      <h1 class="auto-overflow">
-        {{ (info.error && modId) || info.name }}
-      </h1>
-    </div>
-    <div>
-      <a
-        :href="info.websiteUrl"
-        v-if="info.websiteUrl"
+    <a :href="info.websiteUrl" v-show="info.websiteUrl">
+      <img
+        class="goBtn"
+        src="@/assets/images/icons/go-left.svg"
         aria-label="在CurseForge中查看此模組"
-      >
-        <img class="goBtn" src="@/assets/images/icons/go-left.svg" alt="" />
-      </a>
-    </div>
+        alt=""
+      />
+    </a>
   </div>
 </template>
 
@@ -42,12 +47,12 @@ export default {
     let _ = this;
     $(function () {
       API.functions
-        .getCurseForgeModInfo(_.modId)
+        .getCurseForgeModInfo(_.modData.modName)
         .then((data) => (_.info = data));
     });
   },
   props: {
-    modId: String,
+    modData: String,
   },
 };
 </script>
@@ -62,11 +67,16 @@ export default {
   padding: 20px;
   margin: 5px 0;
   border-radius: 10px;
-  .modeName {
-    width: 60%;
-    text-align: left;
-    .auto-overflow {
+  position: relative;
+  .modDescription {
+    width: 100%;
+    .modeName {
+      text-align: left;
+      padding-left: 10px;
       width: 100%;
+      .auto-overflow {
+        max-width: 60%;
+      }
     }
   }
   &:hover {
@@ -74,12 +84,16 @@ export default {
   }
   .modIcon {
     width: 128px;
+    height: 128px;
     border-radius: 10px;
   }
   .goBtn {
+    position: absolute;
     width: 32px;
     background-color: rgb(29, 29, 29);
     padding: 10px;
+    top: 60px;
+    right: 32px;
     border-radius: 50%;
     transform: rotate(90deg);
   }

@@ -27,7 +27,7 @@
       </select>
     </div>
     <div class="output flex flex-down flex-item-center">
-      <MakeModInfo v-for="data in mods" :key="data" :modId="data" :a="data" />
+      <MakeModInfo v-for="data in mods" :key="data" :modData="data" :a="data" />
     </div>
   </div>
 </template>
@@ -36,8 +36,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
-import API from "./API.js";
-import MakeModInfo from "./components/MakeMod.vue";
+import API from "../API.js";
+import MakeModInfo from "./MakeMod.vue";
 export default {
   name: "ModTranslation",
   data() {
@@ -66,9 +66,13 @@ export default {
         .done((data) => {
           _.mods = data.data.map(
             (value) =>
-              (value = _.resource[_.data.version][value.data.name] || value.data.name)
+              (value = {
+                modName:
+                  _.resource[_.data.version][value.data.name] ||
+                  value.data.name,
+                data: value.data,
+              })
           );
-          console.log(_.mods);
         });
     },
   },
@@ -87,7 +91,5 @@ export default {
 <style lang="scss" scoped>
 #ModTranslation {
   width: 80%;
-  .output {
-  }
 }
 </style>

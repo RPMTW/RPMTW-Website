@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-undef */
+let version = "2.2.1";
 $(function () {
-    let Version = "2.2.1";
     console.log(
-        `%c Version: ${Version} %c\n%chttps://github.com/RPMTW/RPMTW-Website\nhttps://github.com/RPMTW`,
+        `%c Version: ${version} %c\n%chttps://github.com/RPMTW/RPMTW-Website\nhttps://github.com/RPMTW`,
         `color: white; background: ${$("html").css(
             "--strong-color"
         )}; padding:5px 0;`,
@@ -52,10 +52,10 @@ window.getCookie = name => {
 window.dc = () => localStorage.removeItem("discordLink");
 
 window.Sets = {
+    CrowdinOauthAPI: "https://accounts.crowdin.com/oauth/authorize?client_id=8HpxK2jINouRXTrVq6gf&redirect_uri=https://rear-end.a102009102009.repl.co/crowdin/oauth/auth/web&response_type=code&scope=project",
     RPMTWProgressAPI: "https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/progress.json",
     CrowdinBaseAPI: "https://api.crowdin.com/api/v2",
     actingURL: "https://rear-end.a102009102009.repl.co",
-    CrowdinOauthAPI: "https://accounts.crowdin.com/oauth/authorize?client_id=8HpxK2jINouRXTrVq6gf&redirect_uri=https://rear-end.a102009102009.repl.co/crowdin/oauth/auth/web&response_type=code&scope=project",
     CrowdinID: 442446,
     VersionDirID: {
         "1.17": 33894,
