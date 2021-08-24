@@ -128,11 +128,10 @@ const routes = [
             breadcrumb: "Translator",
         },
         component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
-    },
-    {
-        path: "/Translator/AssistTranslation/:id",
-        name: "Translator-AssistTranslation",
-        component: () => import("@/views/Surrounding/crowdin/SetFiles.vue")
+    }, {
+        path: "/CosmicChat",
+        name: "CosmicChat",
+        component: () => import("@/views/Surrounding/Cosmic-Chat.vue")
     }
 ]
 

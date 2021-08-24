@@ -21,8 +21,6 @@
         <p v-text="`${output.fullName}(${output.username}) 登入成功!!`"></p>
       </div>
     </div>
-    <Login v-if="go" @go="go = false" />
-    <SearchMod v-else />
   </div>
 </template>
 
@@ -30,9 +28,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
-import API from "./API.js";
-import Login from "./components/Login.vue";
-import SearchMod from "./components/SearchMod.vue";
 export default {
   name: "Crowdin",
   data() {
@@ -41,26 +36,8 @@ export default {
       output: null,
     };
   },
-  components: {
-    Login,
-    SearchMod,
-  },
+  components: {},
   methods: {},
-  mounted() {
-    API.getData("/user")
-      .done((data) => {
-        this.go = !Object.keys(data).length > 0;
-        this.output = data.data;
-        setTimeout(() => (this.output = null), 3e3);
-      })
-      .catch((error) => {
-        this.go = true;
-        if (error.status === 401) this.go = true;
-      });
-    /* API.functions.getDirectories().done((data) => {
-      console.log(data);
-    }); */
-  },
 };
 </script>
 

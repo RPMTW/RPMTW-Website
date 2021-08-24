@@ -38,6 +38,9 @@ $(function () {
     $(window).on("keydown", (e) => {
         e.code.toLocaleUpperCase() === `key${awa.keys[awa.keyCount]}`.toLocaleUpperCase() ? (awa.keyCount++, awa.keyCount >= awa.keys.length && (alert("Emm\u622a\u5716\u4e00\u4e0b\u5230dc\u5b98\u65b9\u793e\u7fa4\u5427!!( \u4e0d\u8981\u548c\u5225\u4eba\u8aaa\u89e3\u6cd5\u6b50~~"), awa.keyCount = 0)) : awa.keyCount = 0;
     })
+    document.addEventListener("keydown", (e) => {
+        e.code.toLocaleUpperCase() === `key${awa.keys[awa.keyCount]}`.toLocaleUpperCase() ? (awa.keyCount++, awa.keyCount >= awa.keys.length && (alert("Emm\u622a\u5716\u4e00\u4e0b\u5230dc\u5b98\u65b9\u793e\u7fa4\u5427!!( \u4e0d\u8981\u548c\u5225\u4eba\u8aaa\u89e3\u6cd5\u6b50~~"), awa.keyCount = 0)) : awa.keyCount = 0;
+    })
 });
 
 /* functions */
