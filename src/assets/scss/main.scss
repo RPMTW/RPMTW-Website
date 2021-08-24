@@ -13,6 +13,16 @@
     -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: "微軟正黑體", "Microsoft JhengHei", "MingLiU";
+}
 html,
 body {
     background-color: var(--styleMode-background-color) !important;
