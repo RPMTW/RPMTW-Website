@@ -1,22 +1,25 @@
 {
     "name": "RPMTW - 與我們一起壯大麥塊中文社群吧",
     "short_name": "RPMTW",
+    "scope": ".",
     "start_url": ".",
     "lang": "zh-TW",
     "display": "standalone",
     "background_color": "#fff",
+    "theme_color": "#0175C2",
     "description": "RPMTW 用最簡易的方式讓你的Minecraft模組全都變中文!! 【官方Discord伺服器】https://discord.gg/5xApZtgV2u RPMTW 自動中文化更新模組 開啟遊戲後將會自動更新與下載翻譯包，並且新增許多對於譯者、使用者方便的功能 支援模組平台 Forge與Fabric，截至今日(7/23)全版本一共支援1,972個模組，涵蓋大多數熱門模組 等你來體驗！",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
     "icons": [
         {
             "src": "https://cdn.discordapp.com/icons/815819580840607807/84ca9d51e97e88466249a1795950b901.webp?size=128",
-            "sizes": "192x192",
             "type": "image/png"
         }
     ],
     "related_applications": [
         {
             "platform": "web",
-            "url": "https://modrinth.com/mod/rpmtw-update-mod/"
+            "url": "https://www.rpmtw.ga"
         },
         {
             "platform": "modrinth",

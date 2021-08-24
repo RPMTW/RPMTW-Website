@@ -6,7 +6,7 @@
       <div class="icon">
         <a target="_blank" href="https://discord.com/invite/5xApZtgV2u">
           <img
-            src="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico"
+            src="@/assets/images/discord.png"
             alt=""
           />
         </a>
