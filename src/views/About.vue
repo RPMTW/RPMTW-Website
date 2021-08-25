@@ -5,24 +5,9 @@
     <div class="icons">
       <div class="icon">
         <a target="_blank" href="https://discord.com/invite/5xApZtgV2u">
-          <img
-            src="@/assets/images/discord.png"
-            alt=""
-          />
+          <img src="@/assets/images/discord.png" alt="" />
         </a>
         <strong>Discord<br />社群</strong>
-      </div>
-      <div class="icon">
-        <a
-          target="_blank"
-          href="https://crowdin.com/project/resourcepack-mod-zhtw"
-        >
-          <img
-            src="https://support.crowdin.com/assets/logos/crowdin-dark-symbol.png"
-            alt=""
-          />
-        </a>
-        <strong>Crowdin<br />專案</strong>
       </div>
       <div class="icon">
         <a target="_blank" href="https://github.com/RPMTW">
@@ -43,8 +28,8 @@
           Icons made by
           <a
             href="https://www.flaticon.com/authors/pixel-perfect"
-            title="像素完美"
-            >像素完美</a
+            title="Pixel perfect"
+            >Pixel perfect</a
           >
           from
           <a href="https://www.flaticon.com/" title="Flaticon"

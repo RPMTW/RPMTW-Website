@@ -4,7 +4,7 @@
       <section class="section" id="future-goals">
         <h1>未來的發展目標?</h1>
         <p>
-          RPMTW的旨在，「讓翻譯模組/遊玩模組變成人人都可以參與」，未來將會繼續優化使用者體驗，以及讓翻譯及使用越來越便利跟簡單，詳細內容可以查看
+          RPMTW的旨在，「讓 Minecraft 中文社群更將強壯」，未來將會推出越來越多的產品，詳細內容可以查看
           RPMTW官方Discord群組的<a
             target="_blank"
             href="https://discord.com/channels/815819580840607807/815861320153956363"

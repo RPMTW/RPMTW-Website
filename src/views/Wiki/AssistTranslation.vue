@@ -27,54 +27,6 @@
           alt="註冊畫面"
         />
       </section>
-      <section class="section" id="upload-translated">
-        <h1>如何直接上傳翻譯過的檔案到RPMTW?</h1>
-        <p>
-          首先請先確保你有註冊Crowdin帳號以及加入
-          <a
-            target="_blank"
-            href="https://crowdin.com/project/resourcepack-mod-zhtw"
-          >
-            RPMTW的翻譯專案
-          </a>
-          ，詳情請見
-          <router-link to="/Translation-assistance"
-            >&lt;&lt;這裡&gt;&gt;</router-link
-          >
-          ，到專案首頁後選擇要翻譯的語言
-        </p>
-        <img
-          src="@/assets/images/Wiki/AssistTranslation/translations.png"
-          alt="選擇要翻譯的語言"
-        />
-        <p>接下來你會看到左上角有一個搜尋框，在裡面搜尋你想上傳翻譯的模組ID</p>
-        <img
-          src="@/assets/images/Wiki/AssistTranslation/search-you-mod.png"
-          alt="搜尋你想上傳翻譯的模組ID"
-        />
-        <p>
-          假設我要上傳 「xaeroworldmap
-          」這個模組的翻譯檔案，那我就搜尋它，接著找到那個模組的原始語系檔案，並且點擊
-          「有三個點的按鈕」。
-        </p>
-        <img
-          src="@/assets/images/Wiki/AssistTranslation/xaeroworldmap-3button.png"
-          alt="原始語系檔案裡的有三個點的按鈕"
-        />
-        <p>接下來會出現一個選單，點擊 「Upload Translations」(上傳譯文)</p>
-        <img
-          src="@/assets/images/Wiki/AssistTranslation/menu-upload-translations.png"
-          alt="上傳譯文"
-        />
-        <p>
-          直接點擊 「Select
-          File」(選擇檔案)，就會彈出一個視窗，選擇你要上傳的翻譯檔案，就等待它上傳一下就完成囉!!
-        </p>
-        <img
-          src="@/assets/images/Wiki/AssistTranslation/Finish.png"
-          alt="完成~~"
-        />
-      </section>
     </div>
   </div>
 </template>

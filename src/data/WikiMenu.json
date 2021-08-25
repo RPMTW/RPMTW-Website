@@ -35,7 +35,7 @@
         ]
     },
     {
-        "title": "關於此MOD",
+        "title": "關於此模組",
         "url": "/ModInfo",
         "tag": "RPMTW-mod",
         "names": [
@@ -73,10 +73,6 @@
             {
                 "title": "如何註冊Crowdin的帳號?",
                 "url": "register-crowdin-account"
-            },
-            {
-                "title": "如何直接上傳翻譯過的檔案到RPMTW?",
-                "url": "upload-translated"
             }
         ]
     },

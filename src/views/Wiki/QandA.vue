@@ -16,7 +16,7 @@
       <section class="section" id="server-need-install">
         <h1>伺服器端需要安裝嗎?</h1>
         <p>
-          伺服器不用安裝，因為伺服器端不會顯示內容並不需要安裝此模組，只需客戶端安裝就能享受漢化體驗。
+          伺服器不用安裝，因為伺服器端不會顯示內容並不需要安裝此模組，只需客戶端安裝就能享受翻譯體驗。
         </p>
       </section>
       <section class="section" id="RPMTW-version">
@@ -36,13 +36,15 @@
         </p>
       </section>
       <section class="section" id="discord-or-line">
-        <h1>有Discord或Line嗎? 我想詢問相關問題/建議</h1>
-        <p>
-          如果需要聯繫我們
-          <router-link to="/About">
-            &lt;&lt;點我查看聯繫方式&gt;&gt; </router-link
-          >。
-        </p>
+        <h1>
+          有Discord或Line嗎? 我想詢問相關問題或者建議又或者想與大家一起聊天
+        </h1>
+        <a
+          target="_blank"
+          href="https://discord.com/invite/5xApZtgV2u"
+          class="go-discord btn"
+          >前往 Discord 群組</a
+        >
       </section>
       <section class="section" id="translation-process">
         <h1>這什麼原理，可以全自動化的翻譯流程?</h1>
