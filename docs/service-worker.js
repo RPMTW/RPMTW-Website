@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.987ea78833277fdba772c111726346ab.js"
+  "/precache-manifest.1f62fc2aa9b665eff835605d8787261c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "rpmtw"});

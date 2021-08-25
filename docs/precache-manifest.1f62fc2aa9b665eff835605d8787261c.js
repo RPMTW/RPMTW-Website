@@ -220,7 +220,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/xaeroworldmap-3button.cdc1f87a.png"
   },
   {
-    "revision": "0c7f6d734577f6c2fe600ecb9c569bd4",
+    "revision": "a1242d99817eb8f2394b3f14f3fe616a",
     "url": "/index.html"
   },
   {
@@ -316,7 +316,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/main.js"
   },
   {
-    "revision": "a3b8570956e5780d637fc4a13238a3d4",
+    "revision": "8e32b7518962e61e69260e4fcde0960b",
     "url": "/manifest.json"
   },
   {
