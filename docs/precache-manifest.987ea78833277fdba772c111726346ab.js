@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "827ac4eac2138a70f438",
+    "revision": "9b4838124c578732ddf8",
     "url": "/css/app.fc8b7adc.css"
   },
   {
@@ -36,10 +36,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/chunk-66d920be.197f0cb4.css"
   },
   {
-    "revision": "16abae7ee5129ae48b76",
-    "url": "/css/chunk-71effdcc.e3036e7c.css"
-  },
-  {
     "revision": "22cc6d819be89813aa45",
     "url": "/css/chunk-7a5b0ed9.50dfb35f.css"
   },
@@ -50,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f15c4fc3d16373625864",
     "url": "/css/chunk-92add35a.058f84f2.css"
+  },
+  {
+    "revision": "1f051d8dbb09895d4197",
+    "url": "/css/chunk-9b9e7d8c.e3036e7c.css"
   },
   {
     "revision": "4c68ec66272bb232d597",
@@ -220,12 +220,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/xaeroworldmap-3button.cdc1f87a.png"
   },
   {
-    "revision": "97415414bde7d579c9f72a57f2bd8a4d",
+    "revision": "0c7f6d734577f6c2fe600ecb9c569bd4",
     "url": "/index.html"
   },
   {
-    "revision": "827ac4eac2138a70f438",
-    "url": "/js/app.0b1adc66.js"
+    "revision": "9b4838124c578732ddf8",
+    "url": "/js/app.ba5b5333.js"
   },
   {
     "revision": "5bb1699c5ae8bd71f2f5",
@@ -276,10 +276,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/chunk-66d920be.d0637cb1.js"
   },
   {
-    "revision": "16abae7ee5129ae48b76",
-    "url": "/js/chunk-71effdcc.861db12d.js"
-  },
-  {
     "revision": "22cc6d819be89813aa45",
     "url": "/js/chunk-7a5b0ed9.a219e193.js"
   },
@@ -290,6 +286,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f15c4fc3d16373625864",
     "url": "/js/chunk-92add35a.904f7a23.js"
+  },
+  {
+    "revision": "1f051d8dbb09895d4197",
+    "url": "/js/chunk-9b9e7d8c.7e933456.js"
   },
   {
     "revision": "4c68ec66272bb232d597",
