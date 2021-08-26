@@ -124,10 +124,19 @@ const routes = [
     }, {
         path: "/Translator",
         name: "Translator",
+        component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
+        /*
         meta: {
             breadcrumb: "Translator",
         },
-        component: () => import("@/views/Surrounding/crowdin/Crowdin.vue"),
+        children: [
+             {
+                 path: "",
+                 components: {
+                     content: () => import("@/views/Surrounding/crowdin/GetMods.vue")
+                 }
+             }
+         ] */
     }, {
         path: "/CosmicChat",
         name: "CosmicChat",

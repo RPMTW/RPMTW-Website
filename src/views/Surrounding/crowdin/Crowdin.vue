@@ -3,9 +3,7 @@
     <div class="Crowdin-header flex flex-center flex-item-center">
       <h1 v-text="header.headerTitle"></h1>
     </div>
-    <div class="Crowdin-content">
-      <components :is="nowContent" />
-    </div>
+    <router-view class="content" name="content" />
   </div>
 </template>
 
@@ -13,20 +11,17 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
-import GetMods from "./GetMods";
+document.location.href = "https://rpmtw.github.io/index.html";
 export default {
   name: "Crowdin",
   data() {
     return {
       header: {
-        headerTitle: "RPMTWTranslator-RPMTW 模組專屬翻譯器-2號",
+        headerTitle: "",
       },
-      newContent: "getMods",
     };
   },
-  components: {
-    GetMods,
-  },
+  computed: {},
 };
 </script>
 
@@ -38,7 +33,7 @@ export default {
     position: relative;
     top: 0;
   }
-  .Crowdin-content {
+  .content {
     position: relative;
     top: 0;
     bottom: 0;
