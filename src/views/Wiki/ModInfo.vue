@@ -45,8 +45,8 @@
             href="https://discord.com/terms"
             >《Discord使用者服務條款》</a
           ><br />
-          - 訊息內容請不得以任何形式騷擾別人，否則我們有權封禁該帳號<br />
-          - 我們將會蒐集您的IP、Minecraft UUID/ID，IP僅用於封禁帳號<br />
+          - 訊息內容請不得以任何形式騷擾別人，也禁止使用任何攻擊手段攻擊宇宙通訊伺服器，否則我們有權封禁該帳號<br />
+          - 我們將會蒐集您的 Minecraft UUID/ID 與 登入憑證，憑證與UUID僅用於驗證與封禁帳號<br />
           - 我們將有權隨時更改本條款
         </p>
       </section>
