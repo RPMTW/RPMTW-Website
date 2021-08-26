@@ -26,7 +26,7 @@
         註冊完帳號並且確認加入 RPMTW 翻譯專案後，接下來就可以開始翻譯囉##
       </h3>
       <div class="flex flex-center">
-        <a href="https://rpmtw.github.io/#/" class="btn"> 前往翻譯網頁 </a>
+        <a href="https://rpmtw.github.io/index.html" class="btn"> 前往翻譯網頁 </a>
       </div>
       <h2 class="center">
         最後感謝您閱讀那麼長篇的文字，非常感謝，您現在可以開始進行翻譯了!<br />
