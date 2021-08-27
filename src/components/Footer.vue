@@ -11,6 +11,7 @@
 </template>
 
 <script>
+/* eslint-disable no-undef */
 export default {
   name: "Footer",
   data() {
@@ -21,7 +22,9 @@ export default {
   },
   watch: {
     $route() {
-      this.notFooter = !this.$route.meta.notFooter;
+      this.notFooter = !(
+        this.$route.meta.notFooter || this.$route.query.notFooter
+      );
     },
   },
 };

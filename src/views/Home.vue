@@ -59,7 +59,7 @@
     <section class="translation-C-rank flex flex-down flex-item-center">
       <h1 class="HanyiSentyChalk">{{ i18n("Home.top12.title") }}</h1>
       <iframe
-        src="https://rpmtw.github.io/Contributor-Website/Top/12"
+        :src="`${BASE_URL}Contributor?notHeader=1&notFooter=1&max=12`"
         ref="iframe"
         frameborder="0"
       ></iframe>

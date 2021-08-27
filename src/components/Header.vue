@@ -46,10 +46,7 @@
             </div>
             <div class="links flex">
               <a target="_blank" href="https://discord.com/invite/5xApZtgV2u">
-                <img
-                  src="@/assets/images/discord.png"
-                  alt=""
-                />
+                <img src="@/assets/images/discord.png" alt="" />
               </a>
               <a target="_blank" href="https://github.com/RPMTW">
                 <img src="https://github.com/fluidicon.png" alt="" />
@@ -141,6 +138,7 @@ export default {
       breadcrumb: null,
       bright: false,
       discordLinkShow: true,
+      notHeader: false,
     };
   },
   components: {},
@@ -182,6 +180,14 @@ export default {
       this.discordLinkShow = false;
       (this.discordLinkShow && $(":root").css("--html-margin-top", "95px")) ||
         $(":root").css("--html-margin-top", "45px");
+    },
+    checkHeader() {
+      this.notHeader = this.$route.query.notHeader;
+      if (this.notHeader) {
+        $("html").addClass("not-header");
+      } else {
+        $("html").removeClass("not-header");
+      }
     },
   },
   mounted() {
@@ -229,6 +235,7 @@ export default {
   watch: {
     $route() {
       this.setBreadcrumb();
+      this.checkHeader();
     },
   },
 };
@@ -414,6 +421,12 @@ export default {
 <style lang="scss">
 html {
   margin-top: var(--html-margin-top) !important;
+  &.not-header {
+    margin-top: 0 !important;
+    #header {
+      display: none;
+    }
+  }
 }
 .is-menu {
   #header {

@@ -43,7 +43,7 @@ export default {
       "https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/opt.json",
       (data) => {
         $(".loadIng").hide();
-        this.users = data.data;
+        this.users = data.data.slice(0, this.$route.query.max);
       }
     ).fail((error) => {
       console.warn(error);
