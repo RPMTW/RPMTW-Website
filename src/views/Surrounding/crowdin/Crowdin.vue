@@ -11,7 +11,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable-next-line no-unused-vars */
-document.location.href = "https://rpmtw.github.io/index.html";
+document.location.href = "https://translator.rpmtw.ga/index.html";
 export default {
   name: "Crowdin",
   data() {
