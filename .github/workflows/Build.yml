@@ -22,8 +22,8 @@ jobs:
     - run: npm install
     - run: npm run build
     - run: rm -rf ${{ github.workspace }}/docs*
-    - run: cp -r "docs\index.html" "docs\404.html"
-    - run: echo www.rpmtw.ga >> "docs\CNAME"
+    - run: cp -r "${{ github.workspace }}/docs/index.html" "${{ github.workspace }}/docs/404.html"
+    - run: echo www.rpmtw.ga >> "${{ github.workspace }}/docs/CNAME"
 
     - name: "Update File"
       run: |
