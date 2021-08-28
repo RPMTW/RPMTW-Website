@@ -51,6 +51,7 @@
           datas.versions[finish.version][finish.platform]
         "
         class="div-button"
+        style="--styleMode-background-color: rgb(45, 212, 191); color: black"
       >
         點我下載: {{ `${finish.version} (${finish.platform})` }}
       </a>
@@ -62,12 +63,16 @@
         </p>
         <img src="@/assets/images/download.png" alt="" />
       </div>
-      <div class="txt-description" v-if="finish.platform === 'fabric'">
+      <div
+        class="txt-description"
+        v-if="finish.platform.toLowerCase() === 'fabric'"
+      >
         <p style="color: red">
           如果您沒有安裝 RPMTW 的前置模組 Fabric API，請務必記得安裝歐!!<br />
           <a
             target="_blank"
             style="color: var(--strong-color)"
+            class="flex flex-down flex-item-center"
             :href="
               {
                 '1.16.x':
@@ -77,7 +82,11 @@
               }[finish.version]
             "
           >
-            點我安裝 Fabric API
+            <img
+              src="@/assets/images/fabric_api_requires.png"
+              style="width: 15em"
+              alt=""
+            />
           </a>
         </p>
       </div>
