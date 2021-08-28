@@ -63,10 +63,7 @@
         </p>
         <img src="@/assets/images/download.png" alt="" />
       </div>
-      <div
-        class="txt-description"
-        v-if="finish.platform.toLowerCase() === 'fabric'"
-      >
+      <div class="txt-description" v-if="finish.platform === 'Fabric'">
         <p style="color: red">
           如果您沒有安裝 RPMTW 的前置模組 Fabric API，請務必記得安裝歐!!<br />
           <a
