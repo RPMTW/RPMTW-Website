@@ -81,6 +81,9 @@ export default {
     justify-content: center;
   }
   .user {
+    &:hover {
+      opacity: 0.9;
+    }
     width: 9cm;
     margin: 10px;
     padding: 15px;

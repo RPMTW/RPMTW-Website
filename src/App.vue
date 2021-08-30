@@ -69,9 +69,9 @@ export default {
 .goTop {
   position: fixed;
   right: 4%;
-  bottom: 5vh;
-  top: -100%;
-  transition: all 1s ease;
+  bottom: 6vh;
+  transform: translateY(-100vh);
+  transition: transform 1s ease;
   img {
     cursor: pointer;
     border-radius: 50%;
@@ -80,7 +80,7 @@ export default {
   }
   &.showGoTop {
     display: block;
-    top: 88%;
+    transform: translateY(0);
   }
 }
 </style>

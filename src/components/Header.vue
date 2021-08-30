@@ -159,9 +159,7 @@ export default {
         .split(" ")
         .includes("bright");
       this.bright = nowMode;
-      nowMode
-        ? (document.cookie = "mode=bright")
-        : (document.cookie = "mode=dark");
+      document.cookie = "mode=" + (nowMode ? "bright" : "dark");
     },
     menuButtonHtmlToggle() {
       $("html").toggleClass("is-menu");
