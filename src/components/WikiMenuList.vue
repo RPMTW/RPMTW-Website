@@ -17,6 +17,7 @@
             <a
               class="menuList_"
               :href="`${BASE_URL || '/'}Wiki${data.url}#${_data.url}`"
+              @click="phoneOpen = false"
               >{{ _data.title }}</a
             >
           </li>
@@ -30,6 +31,11 @@
           <div class="icon"></div>
         </div>
       </div>
+      <div
+        class="wiki-blurry"
+        v-if="phoneOpen"
+        @click="phoneOpen = false"
+      ></div>
     </div>
     <router-view class="view wiki-view" name="data" />
   </div>
@@ -173,6 +179,16 @@ export default {
       list-style-type: none;
       margin: 15px 0 15px 8%;
     }
+  }
+  .wiki-blurry {
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 </style>
