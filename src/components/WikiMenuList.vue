@@ -33,7 +33,7 @@
       </div>
       <div
         class="wiki-blurry"
-        v-if="phoneOpen"
+        v-if="phoneOpen && phone"
         @click="phoneOpen = false"
       ></div>
     </div>
@@ -67,6 +67,7 @@ export default {
       if (this.phone) {
         $("html").addClass("wikiPhoneMenu");
       } else {
+        this.phoneOpen = false;
         $("html").removeClass("wikiPhoneMenu");
       }
     },
