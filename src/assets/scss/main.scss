@@ -12,8 +12,19 @@
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
+}
+*,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
     &:not(.fas) {
-        font-family: "微軟正黑體", "Microsoft JhengHei", "MingLiU";
+        font-family: "Patrick Hand", "微軟正黑體", "Microsoft JhengHei", serif;
     }
 }
 html,
@@ -50,12 +61,9 @@ body {
     font-size: 1rem;
     border-radius: 0.25rem;
     transition: all 0.5s ease-in-out;
+    position: relative;
     &:hover {
         background-color: var(--thisColor, var(--hover-btn-color)) !important;
-        &:before {
-            transform: scaleX(1) !important;
-            z-index: -1;
-        }
     }
     img {
         width: 20px;
