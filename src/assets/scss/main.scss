@@ -4,7 +4,7 @@
 /* >>> font */
 @import url(https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@600&display=swap);
 
 *,
 *::before,
@@ -24,7 +24,7 @@ h5,
 h6,
 strong {
     &:not(.fas) {
-        font-family: "Patrick Hand", "微軟正黑體", "Microsoft JhengHei", serif;
+        font-family: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", serif;
     }
 }
 html,
