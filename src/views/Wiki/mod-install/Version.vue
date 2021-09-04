@@ -55,14 +55,6 @@
       >
         點我下載: {{ `${finish.version} (${finish.platform})` }}
       </a>
-      <div class="txt-des" v-if="finish.platform">
-        <p>
-          按下上方下載按鈕後 將會進入一個網頁 找到
-          <span style="color: red"> Download </span>
-          按鈕即可下載
-        </p>
-        <img src="@/assets/images/download.png" alt="" />
-      </div>
       <div class="txt-description" v-if="finish.platform === 'Fabric'">
         <p style="color: red">
           如果您沒有安裝 RPMTW 的前置模組 Fabric API，請務必記得安裝歐!!<br />
