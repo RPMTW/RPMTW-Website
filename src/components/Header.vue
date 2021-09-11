@@ -256,7 +256,7 @@ export default {
 <style lang="scss" scoped>
 #header {
   position: fixed;
-  z-index: 1;
+  z-index: 999999;
   top: 0;
   left: 0;
   width: 100%;
@@ -441,9 +441,6 @@ html {
   }
 }
 .is-menu {
-  #header {
-    background-color: var(--header-background-color) !important;
-  }
   .menuStyle {
     background-color: transparent !important;
     &:after {
