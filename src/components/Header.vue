@@ -93,7 +93,7 @@
         </div>
         <div class="blurry" @click="menuButtonHtmlRemove"></div>
       </div>
-      <div class="txt-logo user-select">
+      <div class="txt-logo user-select" @click="play_rpmtw">
         <strong class="main-title"
           ><span class="notranslate" style="color: #ff9900">RPM</span
           ><span style="color: #00ffff" class="notranslate">TW</span></strong
@@ -139,6 +139,14 @@ export default {
       bright: false,
       discordLinkShow: true,
       notHeader: false,
+      play_click: {
+        title: {
+          len: 0,
+          audio: new Audio(
+            "https://cdn.discordapp.com/attachments/761772992706904094/886181590324092938/thx-rpmtw.mp3"
+          ),
+        },
+      },
     };
   },
   components: {},
@@ -185,6 +193,12 @@ export default {
         $("html").addClass("not-header");
       } else {
         $("html").removeClass("not-header");
+      }
+    },
+    play_rpmtw() {
+      if (++this.play_click.title.len > 10) {
+        this.play_click.title.len = 0;
+        this.play_click.title.audio.play();
       }
     },
   },
