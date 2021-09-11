@@ -23,7 +23,7 @@
           </li>
         </ul>
       </div>
-      <div class="slimeMenuWiki flex flex-item-center" v-if="phone">
+      <div class="slimeMenuWiki" v-if="phone">
         <div
           class="openSlimeMenuWiki flex flex-down flex-item-center flex-center"
           @click="phoneOpen = !phoneOpen"
@@ -97,16 +97,15 @@ export default {
     .slimeMenuWiki {
       transition: transform 1s ease;
       position: fixed;
-      top: 0;
+      top: 50%;
       left: 0;
-      bottom: 0;
-      width: 35px;
       .openSlimeMenuWiki {
         cursor: pointer;
         width: 100%;
         height: 100px;
         background-color: red;
         border-radius: 0 5px 5px 0;
+        width: 35px;
         &:hover {
           opacity: 0.8;
         }
