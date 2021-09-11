@@ -90,6 +90,7 @@ export default {
   height: 100%;
   display: flex;
   .scroll {
+    z-index: 1;
     transition: width 1s ease;
     .phonShow {
       transform: translateX(-100%);
