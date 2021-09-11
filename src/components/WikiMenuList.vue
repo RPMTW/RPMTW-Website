@@ -90,7 +90,6 @@ export default {
   height: 100%;
   display: flex;
   .scroll {
-    z-index: 1;
     transition: width 1s ease;
     .phonShow {
       transform: translateX(-100%);
@@ -197,6 +196,7 @@ export default {
 <style lang="scss">
 html.wikiPhoneMenu #wikiMenuList {
   .scroll {
+    z-index: 1;
     width: 0 !important;
     overflow-y: unset !important;
     .wikiMenu {
