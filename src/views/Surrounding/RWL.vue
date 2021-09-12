@@ -23,7 +23,7 @@
       <a
         target="_blank"
         class="btn"
-        href="https://github.com/RPMTW/RPMLauncher/actions"
+        href="https://github.com/RPMTW/RPMLauncher/releases"
       >
         立即下載
       </a>
