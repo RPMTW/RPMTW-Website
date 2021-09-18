@@ -125,21 +125,33 @@ export default {
 
       let DownloadUrl = "";
       switch (this.Platform) {
-        case 0:
+        case 0: // Windows 10/11
+          alert(
+            "下載檔案完成後請解壓縮，並且執行 Install.bat 即可開始安裝 RPMLauncher"
+          );
           DownloadUrl = VersionInfo.download_url.windows_10_11;
           break;
         case 1:
+          alert(
+            "下載檔案完成後請解壓縮，並且執行 rpmlauncher.exe 即可開啟 RPMLauncher"
+          );
           DownloadUrl = VersionInfo.download_url.windows_7;
           break;
         case 2:
+          alert(
+            "下載檔案完成後請解壓縮，並且執行 rpmlauncher (如無法開啟記得先給權限) 即可開啟 RPMLauncher"
+          );
           DownloadUrl = VersionInfo.download_url.linux;
           break;
         default:
+          alert(
+            "下載檔案完成後請解壓縮，並且執行 Install.bat 即可開始安裝 RPMLauncher"
+          );
           DownloadUrl = VersionInfo.download_url.windows_10_11;
           break;
       }
 
-      window.open(DownloadUrl, "下載檔案", "width=500,height=620");
+      window.open(DownloadUrl, "下載檔案");
     },
 
     PlatformFocus(key) {
