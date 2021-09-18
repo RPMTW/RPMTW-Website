@@ -51,13 +51,13 @@
         "icons": [
             {
                 "class": "px128",
-                "router_link": "assets/images/Surrounding/RPMLauncher/RWLLog.png",
+                "router_link": "assets/images/RPMLauncher/RWLLog.png",
                 "alt": "特別感謝 嗡嗡#5428 製作圖片",
                 "notShowEl": true
             },
             {
                 "class": "RWL-icon",
-                "router_link": "assets/images/Surrounding/RPMLauncher/RWL.png",
+                "router_link": "assets/images/RPMLauncher/RWL.png",
                 "alt": "特別感謝 嗡嗡#5428 製作圖片"
             }
         ],
@@ -68,7 +68,7 @@
                 {
                     "i18nTitle": "Home.include.public.DL-STAT",
                     "i18n_aria_label": "Home.include.public.DL-STAT",
-                    "url": "https://github.com/RPMTW/RPMLauncher/actions"
+                    "router_link": "RWL/Version"
                 },
                 {
                     "i18nTitle": "Home.include.public.read-more",

@@ -4,11 +4,11 @@
     class="flex flex-down flex-item-center main Surrounding"
   >
     <img
-      src="@/assets/images/Surrounding/RPMLauncher/RWLLog.png"
+      src="@/assets/images/RPMLauncher/RWLLog.png"
       alt="特別感謝 嗡嗡#5428 製作圖片"
     />
     <img
-      src="@/assets/images/Surrounding/RPMLauncher/RWL.png"
+      src="@/assets/images/RPMLauncher/RWL.png"
       alt="特別感謝 嗡嗡#5428 製作圖片"
       class="showEl"
     />
@@ -23,7 +23,7 @@
       <a
         target="_blank"
         class="btn"
-        href="https://github.com/RPMTW/RPMLauncher/releases"
+        href=RWL/Version
       >
         立即下載
       </a>
@@ -66,22 +66,22 @@
       <h1>程式主畫面</h1>
       <img
         class="showEl"
-        src="@/assets/images/Surrounding/RPMLauncher/appMainIcon.png"
+        src="@/assets/images/RPMLauncher/appMainIcon.png"
         alt="程式主畫面"
       />
       <h1>版本選擇頁面</h1>
       <img
-        src="@/assets/images/Surrounding/RPMLauncher/VersionSelection.png"
+        src="@/assets/images/RPMLauncher/VersionSelection.png"
         alt="版本選擇頁面"
       />
       <h1>版本選擇頁面</h1>
       <img
-        src="@/assets/images/Surrounding/RPMLauncher/ViewMod.png"
+        src="@/assets/images/RPMLauncher/ViewMod.png"
         alt="版本選擇頁面"
       />
       <h1>模組下載頁面</h1>
       <img
-        src="@/assets/images/Surrounding/RPMLauncher/ModDownload.png"
+        src="@/assets/images/RPMLauncher/ModDownload.png"
         alt="模組下載頁面"
       />
     </section>

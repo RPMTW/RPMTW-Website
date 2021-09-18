@@ -82,7 +82,7 @@ const routes = [{
         components: {
             data: () => import("@/views/Wiki/OtherInfo.vue")
         }
-    }, ]
+    },]
 }, {
     path: "/RPMTWUpdateMod",
     name: "RPMTWUpdateMod",
@@ -120,7 +120,12 @@ const routes = [{
 
     path: "/RWL",
     name: "RWL",
-    component: () => import("@/views/Surrounding/RWL.vue"),
+    component: () => import("@/views/Products/RPMLauncher/RWL.vue"),
+}, {
+
+    path: "/RWL/Version",
+    name: "RWL-Version",
+    component: () => import("@/views/Products/RPMLauncher/Version.vue"),
 }, {
     path: "/Translator",
     name: "Translator",
