@@ -6,7 +6,7 @@ jobs:
     name: Build
     steps:
     - uses: actions/checkout@v2
-    - uses: xRealNeon/VuePagesAction@3ad035f
+    - uses: xRealNeon/VuePagesAction@3ad035fee40e591b8766ac95b60370d5ea50867d
       with:
         username: 'RPMTW'
         reponame: 'RPMTW-Website'
