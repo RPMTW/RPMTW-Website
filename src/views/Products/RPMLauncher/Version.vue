@@ -5,12 +5,12 @@
       注意: RPMLauncher
       目前仍是測試版軟體，目前有許多bug，不建議作為主要軟體使用。
     </p>
-    <div class="loaded txt-title">
+    <div class="loaded txt">
       最新開發版本: {{ VersionData.dev.latest_version }}.{{
         VersionData.dev.latest_version_code
       }}
     </div>
-    <div class="loaded txt-title">
+    <div class="loaded txt">
       最新穩定版本:
       {{
         VersionData.stable.latest_version_code == null
@@ -18,7 +18,7 @@
           : `${VersionData.stable.latest_version}.${VersionData.stable.latest_version_code}`
       }}
     </div>
-    <p class="loaded txt-title">請選擇您的作業系統後將會開始下載:</p>
+    <p class="loaded txt">請選擇您的作業系統後將會開始下載:</p>
     <div class="loaded list">
       <div :key="0" class="loaded div-button" @click="PlatformSelect(0)">
         <img
@@ -51,6 +51,30 @@
       />
       <div class="text-hover">{{ OSList[3] }}</div>
     </div>
+    <div class="loaded txt-title">更新日誌</div>
+    <div class="changelogs">
+      <div v-for="(val, key) in VersionList" :key="key">
+        <div class="changelog">
+          <div
+            :class="{
+              'changelog-type-dev': val.type == 'dev',
+              'changelog-type-stable': val.type == 'stable',
+            }"
+          >
+            {{ val.version }}
+          </div>
+          <li class="changelog-message">{{ val.changelog }}</li>
+          <!-- <div
+            :class="{
+              'changelog-type-dev': val.type == 'dev',
+              'changelog-type-stable': val.type == 'stable',
+            }"
+          >
+            {{ val.type == "stable" ? "穩定版" : "開發版" }}
+          </div> -->
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -68,6 +92,7 @@ export default {
         dev: {},
         stable: {},
       },
+      VersionList: [],
       Platform: -1,
     };
   },
@@ -80,6 +105,19 @@ export default {
         $(".loadIng").hide();
         $(".loaded").show();
         this.VersionData = data;
+
+        Object.keys(data.version_list).forEach((_MainVersionID) => {
+          Object.keys(data.version_list[_MainVersionID]).forEach(
+            (_VersionCode) => {
+              data.version_list[_MainVersionID][_VersionCode]["version"] =
+                _MainVersionID + "." + _VersionCode;
+              this.VersionList.push(
+                data.version_list[_MainVersionID][_VersionCode]
+              );
+            }
+          );
+        });
+        this.VersionList.reverse();
       }
     ).fail((error) => {
       console.warn(error);
@@ -88,12 +126,6 @@ export default {
   },
   components: {},
   methods: {
-    addLen(_this) {
-      this.nowLen <= parseInt(_this.parent(".nowLenData").attr("okLen"))
-        ? (this.nowLen += 1)
-        : null;
-    },
-
     PlatformSelect(key) {
       this.Platform = key;
       let Dev = Object(this.VersionData.dev);
@@ -178,12 +210,52 @@ export default {
   padding: 40px;
   margin: 10px;
 }
+
+.changelogs {
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 4px solid var(--styleMode-webkit-scrollbar);
+  border-color: rgba(95, 178, 246, 0.616);
+  border-radius: 0.9em;
+
+  .changelog {
+    align-items: center;
+
+    &:hover {
+      background-color: rgb(38, 39, 39);
+    }
+    .changelog-message {
+      font-size: 1.25rem;
+      color: rgb(93, 181, 253);
+    }
+    .changelog-type-dev {
+      font-weight: 700;
+      margin: 10px;
+      font-size: 1.5rem;
+      color: rgb(246, 102, 102);
+    }
+    .changelog-type-stable {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin: 10px;
+      color: rgb(39, 243, 148);
+    }
+  }
+}
+
 .setList {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .txt-title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .txt {
     font-weight: 700;
     font-size: 1.25rem;
   }
