@@ -18,58 +18,38 @@
           : `${VersionData.stable.latest_version}.${VersionData.stable.latest_version_code}`
       }}
     </div>
-    <div class="loaded txt-title">請選擇您的作業系統後將會開始下載:</div>
+    <p class="loaded txt-title">請選擇您的作業系統後將會開始下載:</p>
     <div class="loaded list">
-      <div
-        :key="0"
-        :class="{
-          hover: upHere == 0,
-        }"
-        class="loaded div-button"
-        @click="PlatformSelect(0)"
-        @mouseover="upHere = 0"
-        @mouseleave="upHere = -1"
-      >
+      <div :key="0" class="loaded div-button" @click="PlatformSelect(0)">
         <img
           src="@/assets/images/RPMLauncher/Platform/Windows_10.svg"
           class="loaded svg"
         />
-        <div class="loaded text">
+        <div class="text-hover">
           {{ OSList[0] }}
         </div>
       </div>
-      <div
-        :key="1"
-        :class="{
-          hover: upHere == 1,
-        }"
-        class="loaded div-button"
-        @click="PlatformSelect(1)"
-        @mouseover="upHere = 1"
-        @mouseleave="upHere = -1"
-      >
+      <div :key="1" class="loaded div-button" @click="PlatformSelect(1)">
         <img
           src="@/assets/images/RPMLauncher/Platform/Windows_7.svg"
           class="loaded svg"
         />
-        <div class="loaded text">{{ OSList[1] }}</div>
+        <div class="text-hover">{{ OSList[1] }}</div>
       </div>
-      <div
-        :key="2"
-        :class="{
-          hover: upHere == 2,
-        }"
-        class="loaded div-button"
-        @click="PlatformSelect(2)"
-        @mouseover="upHere = 2"
-        @mouseleave="upHere = -1"
-      >
+      <div :key="2" class="loaded div-button" @click="PlatformSelect(2)">
         <img
           src="@/assets/images/RPMLauncher/Platform/Linux.svg"
           class="loaded svg"
         />
-        <div class="loaded text">{{ OSList[2] }}</div>
+        <div class="text-hover">{{ OSList[2] }}</div>
       </div>
+    </div>
+    <div :key="3" class="loaded div-button" @click="PlatformSelect(3)">
+      <img
+        src="@/assets/images/RPMLauncher/Platform/MacOS.svg"
+        class="loaded svg"
+      />
+      <div class="text-hover">{{ OSList[3] }}</div>
     </div>
   </div>
 </template>
@@ -83,13 +63,12 @@ export default {
   name: "RWL-Version",
   data() {
     return {
-      OSList: ["Windows 10/11", "Windows 7/8", "Linux"],
+      OSList: ["Windows 10/11", "Windows 7/8", "Linux", "MacOS"],
       VersionData: {
         dev: {},
         stable: {},
       },
       Platform: -1,
-      upHere: -1,
     };
   },
   mounted() {
@@ -143,6 +122,12 @@ export default {
           );
           DownloadUrl = VersionInfo.download_url.linux;
           break;
+        case 3:
+          alert(
+            "下載檔案完成後請解壓縮，並且執行 rpmlauncher.app (如無法開啟記得先給權限) 即可開啟 RPMLauncher"
+          );
+          DownloadUrl = VersionInfo.download_url.macos;
+          break;
         default:
           alert(
             "下載檔案完成後請解壓縮，並且執行 Install.bat 即可開始安裝 RPMLauncher"
@@ -153,19 +138,22 @@ export default {
 
       window.open(DownloadUrl, "下載檔案");
     },
-
-    PlatformFocus(key) {
-      console.log(key);
-      this.FocusPlatform = key;
-    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.hover {
-  background-color: rgb(77, 77, 77) !important;
+.div-button:hover {
+  background-color: rgb(77, 77, 77);
 }
+
+.div-button:hover .text-hover {
+  display: block;
+}
+.text-hover {
+  display: none;
+}
+
 .loadIng {
   display: flex;
   height: 300px;
@@ -185,25 +173,16 @@ export default {
   width: 9em;
   background-color: var(--styleMode-background-color);
   border: 4px solid var(--styleMode-webkit-scrollbar);
-  border-color: rgb(0, 0, 0);
+  border-color: rgba(95, 178, 246, 0.616);
   border-radius: 0.9em;
-  padding: 5px;
+  padding: 40px;
   margin: 10px;
 }
 .setList {
   display: flex;
   flex-direction: column;
   align-items: center;
-  > div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
 
-  .text {
-    display: flex;
-    align-items: center;
-  }
   .txt-title {
     font-weight: 700;
     font-size: 1.25rem;
@@ -216,6 +195,8 @@ export default {
   .svg {
     width: 80px;
     height: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
   p {
     font-size: 15pt;
