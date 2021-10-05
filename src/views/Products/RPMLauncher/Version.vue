@@ -1,77 +1,54 @@
 <template>
   <div id="RWL-Version" class="setList">
-    <div class="loadIng"><a>正在載入資料中，請稍後...</a></div>
-    <p class="loaded txt-dev">
-      注意: RPMLauncher
-      目前仍是測試版軟體，目前有許多bug，不建議作為主要軟體使用。
-    </p>
-    <div class="loaded txt">
-      最新開發版本: {{ VersionData.dev.latest_version }}.{{
-        VersionData.dev.latest_version_code
-      }}
-    </div>
-    <div class="loaded txt">
-      最新穩定版本:
-      {{
-        VersionData.stable.latest_version_code == null
-          ? "無"
-          : `${VersionData.stable.latest_version}.${VersionData.stable.latest_version_code}`
-      }}
-    </div>
-    <p class="loaded txt">請選擇您的作業系統後將會開始下載:</p>
-    <div class="loaded list">
-      <div :key="0" class="loaded div-button" @click="PlatformSelect(0)">
-        <img
-          src="@/assets/images/RPMLauncher/Platform/Windows_10.svg"
-          class="loaded svg"
-        />
-        <div class="text-hover">
-          {{ OSList[0] }}
+    <div class="loadIng" v-if="!load"><a>正在載入資料中，請稍後...</a></div>
+    <div v-if="load" class="flex flex-item-center flex-down">
+      <p class="txt-dev">
+        注意: RPMLauncher
+        目前仍是測試版軟體，目前有許多bug，不建議作為主要軟體使用。
+      </p>
+      <div
+        class="txt"
+        v-text="
+          `最新開發版本: ${VersionData.dev.latest_version}.${VersionData.dev.latest_version_code}`
+        "
+      ></div>
+      <div
+        class="txt"
+        v-text="
+          `最新穩定版本:${
+            VersionData.stable.latest_version_code
+              ? `無`
+              : `${VersionData.stable.latest_version}.${
+                  VersionData.stable.latest_version_code || 0
+                }`
+          }`
+        "
+      ></div>
+      <p class="txt">請選擇您的作業系統後將會開始下載:</p>
+      <div class="list flex">
+        <div
+          class="div-button flex flex-down flex-item-center"
+          v-for="(os, index) in OSList"
+          :key="(os, index)"
+          :name="os.name"
+          @click="PlatformSelect(index)"
+        >
+          <img :src="os.icon" class="svg" />
         </div>
       </div>
-      <div :key="1" class="loaded div-button" @click="PlatformSelect(1)">
-        <img
-          src="@/assets/images/RPMLauncher/Platform/Windows_7.svg"
-          class="loaded svg"
-        />
-        <div class="text-hover">{{ OSList[1] }}</div>
-      </div>
-      <div :key="2" class="loaded div-button" @click="PlatformSelect(2)">
-        <img
-          src="@/assets/images/RPMLauncher/Platform/Linux.svg"
-          class="loaded svg"
-        />
-        <div class="text-hover">{{ OSList[2] }}</div>
-      </div>
-    </div>
-    <div :key="3" class="loaded div-button" @click="PlatformSelect(3)">
-      <img
-        src="@/assets/images/RPMLauncher/Platform/MacOS.svg"
-        class="loaded svg"
-      />
-      <div class="text-hover">{{ OSList[3] }}</div>
-    </div>
-    <div class="loaded txt-title">更新日誌</div>
-    <div class="changelogs">
-      <div v-for="(val, key) in VersionList" :key="key">
-        <div class="changelog">
-          <div
-            :class="{
-              'changelog-type-dev': val.type == 'dev',
-              'changelog-type-stable': val.type == 'stable',
-            }"
-          >
-            {{ val.version }}
-          </div>
-          <li class="changelog-message">{{ val.changelog }}</li>
-          <!-- <div
-            :class="{
-              'changelog-type-dev': val.type == 'dev',
-              'changelog-type-stable': val.type == 'stable',
-            }"
-          >
-            {{ val.type == "stable" ? "穩定版" : "開發版" }}
-          </div> -->
+      <div class="txt-title">更新日誌</div>
+      <div class="changelogs">
+        <div
+          v-for="(val, key) in VersionList.slice(0, 20)"
+          :key="key"
+          class="changelog"
+          :class="{
+            'type-dev': val.type == 'dev',
+            'type-stable': val.type == 'stable',
+          }"
+        >
+          {{ val.version }}
+          <p class="message" v-text="val.changelog"></p>
         </div>
       </div>
     </div>
@@ -87,7 +64,25 @@ export default {
   name: "RWL-Version",
   data() {
     return {
-      OSList: ["Windows 10/11", "Windows 7/8", "Linux", "MacOS"],
+      load: false,
+      OSList: [
+        {
+          name: "Windows 10/11",
+          icon: require("@/assets/images/RPMLauncher/Platform/Windows_10.svg"),
+        },
+        {
+          name: "Windows 7/8",
+          icon: require("@/assets/images/RPMLauncher/Platform/Windows_7.svg"),
+        },
+        {
+          name: "Linux",
+          icon: require("@/assets/images/RPMLauncher/Platform/Linux.svg"),
+        },
+        {
+          name: "MacOS",
+          icon: require("@/assets/images/RPMLauncher/Platform/MacOS.svg"),
+        },
+      ],
       VersionData: {
         dev: {},
         stable: {},
@@ -97,13 +92,10 @@ export default {
     };
   },
   mounted() {
-    $(".loadIng").show();
-    $(".loaded").hide();
     $.getJSON(
       "https://raw.githubusercontent.com/RPMTW/RPMTW-website-data/main/data/RPMLauncher/update.json",
       (data) => {
-        $(".loadIng").hide();
-        $(".loaded").show();
+        this.load = true;
         this.VersionData = data;
 
         Object.keys(data.version_list).forEach((_MainVersionID) => {
@@ -129,115 +121,111 @@ export default {
     PlatformSelect(key) {
       this.Platform = key;
       let Dev = Object(this.VersionData.dev);
-      let LatestVversion = String(Dev.latest_version);
-      let LatestVversionCode = parseInt(Dev.latest_version_code);
-      let VersionList = Object(this.VersionData.version_list);
-      let VersionInfo = VersionList[LatestVversion][LatestVversionCode];
+      let VersionInfo = Object(this.VersionData.version_list)[
+        String(Dev.latest_version)
+      ][parseInt(Dev.latest_version_code)];
 
-      let DownloadUrl = "";
-      switch (this.Platform) {
-        case 0: // Windows 10/11
-          alert(
-            "下載檔案完成後請解壓縮，並且執行 Install.bat 即可開始安裝 RPMLauncher"
-          );
-          DownloadUrl = VersionInfo.download_url.windows_10_11;
-          break;
-        case 1:
-          alert(
-            "下載檔案完成後請解壓縮，並且執行 rpmlauncher.exe 即可開啟 RPMLauncher"
-          );
-          DownloadUrl = VersionInfo.download_url.windows_7;
-          break;
-        case 2:
-          alert(
-            "下載檔案完成後請解壓縮，並且執行 rpmlauncher (如無法開啟記得先給權限) 即可開啟 RPMLauncher"
-          );
-          DownloadUrl = VersionInfo.download_url.linux;
-          break;
-        case 3:
-          alert(
-            "下載檔案完成後請解壓縮，並且執行 rpmlauncher.app (如無法開啟記得先給權限) 即可開啟 RPMLauncher"
-          );
-          DownloadUrl = VersionInfo.download_url.macos;
-          break;
-        default:
-          alert(
-            "下載檔案完成後請解壓縮，並且執行 Install.bat 即可開始安裝 RPMLauncher"
-          );
-          DownloadUrl = VersionInfo.download_url.windows_10_11;
-          break;
-      }
-
-      window.open(DownloadUrl, "下載檔案");
+      let data = {
+        0: {
+          alert:
+            "下載檔案完成後請解壓縮，並且執行 Install.bat 即可開始安裝 RPMLauncher",
+          DownloadUrl: VersionInfo.download_url.windows_10_11,
+        },
+        1: {
+          alert:
+            "下載檔案完成後請解壓縮，並且執行 rpmlauncher.exe 即可開啟 RPMLauncher",
+          DownloadUrl: VersionInfo.download_url.windows_7,
+        },
+        2: {
+          alert:
+            "下載檔案完成後請解壓縮，並且執行 rpmlauncher (如無法開啟記得先給權限) 即可開啟 RPMLauncher",
+          DownloadUrl: VersionInfo.download_url.linux,
+        },
+        3: {
+          alert:
+            "下載檔案完成後請解壓縮，並且執行 rpmlauncher.app (如無法開啟記得先給權限) 即可開啟 RPMLauncher",
+          DownloadUrl: VersionInfo.download_url.macos,
+        },
+      };
+      data = data[this.Platform] || data[0];
+      alert(data.alert);
+      window.open(data.DownloadUrl, "下載檔案");
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.div-button:hover {
-  background-color: rgb(77, 77, 77);
-}
-
-.div-button:hover .text-hover {
-  display: block;
-}
 .text-hover {
   display: none;
 }
-
 .loadIng {
   display: flex;
   height: 300px;
   align-items: center;
   justify-content: center;
 }
-.loaded {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .div-button {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 9em;
   background-color: var(--styleMode-background-color);
   border: 4px solid var(--styleMode-webkit-scrollbar);
   border-color: rgba(95, 178, 246, 0.616);
-  border-radius: 0.9em;
-  padding: 40px;
-  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(77, 77, 77);
+    img {
+      opacity: 0.5;
+    }
+    &:before {
+      z-index: 10;
+      position: absolute;
+      content: attr(name);
+      text-align: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20pt;
+    }
+  }
 }
-
+.list {
+  width: 80%;
+  justify-content: space-evenly;
+  > div {
+    width: 20%;
+  }
+}
 .changelogs {
+  width: 80%;
   align-items: center;
-  text-align: center;
+  text-align: left;
   margin-top: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
   border: 4px solid var(--styleMode-webkit-scrollbar);
   border-color: rgba(95, 178, 246, 0.616);
   border-radius: 0.9em;
 
   .changelog {
     align-items: center;
+    padding: 5px;
 
     &:hover {
       background-color: rgb(38, 39, 39);
     }
-    .changelog-message {
+    .message {
       font-size: 1.25rem;
       color: rgb(93, 181, 253);
     }
-    .changelog-type-dev {
+    &.type-dev {
       font-weight: 700;
       margin: 10px;
       font-size: 1.5rem;
       color: rgb(246, 102, 102);
     }
-    .changelog-type-stable {
+    &.type-stable {
       font-weight: 700;
       font-size: 1.5rem;
       margin: 10px;
@@ -265,10 +253,9 @@ export default {
     color: rgb(243, 42, 42);
   }
   .svg {
-    width: 80px;
-    height: 80px;
-    margin-left: 30px;
-    margin-right: 30px;
+    width: 50px;
+    height: 50px;
+    margin: 30px 0;
   }
   p {
     font-size: 15pt;
