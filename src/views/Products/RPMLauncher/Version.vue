@@ -166,6 +166,7 @@ export default {
   justify-content: center;
 }
 .div-button {
+  border-radius: 10px;
   background-color: var(--styleMode-background-color);
   border: 4px solid var(--styleMode-webkit-scrollbar);
   border-color: rgba(95, 178, 246, 0.616);
@@ -193,6 +194,7 @@ export default {
   }
 }
 .list {
+  margin-bottom: 30px;
   width: 80%;
   justify-content: space-evenly;
   > div {
