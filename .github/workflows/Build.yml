@@ -1,16 +1,19 @@
 name: Build Vue
-on: [push]
+on:
+  push:
+  workflow_dispatch:
+  
 jobs:
   Build:
     runs-on: ubuntu-latest
     name: Build
     steps:
-    - uses: actions/checkout@v2
-    - uses: xRealNeon/VuePagesAction@3ad035fee40e591b8766ac95b60370d5ea50867d
-      with:
-        username: 'RPMTW'
-        reponame: 'RPMTW-Website'
-        token: ${{ secrets.GITHUB_TOKEN }}
-        gitmsg: Update Website
-        cname: www.rpmtw.ga
-        gitname: Website-BOT
+      - uses: actions/checkout@v2
+      - uses: xRealNeon/VuePagesAction@3ad035fee40e591b8766ac95b60370d5ea50867d
+        with:
+          username: "RPMTW"
+          reponame: "RPMTW-Website"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          gitmsg: Update Website
+          cname: www.rpmtw.ga
+          gitname: Website-BOT
