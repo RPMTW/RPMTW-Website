@@ -213,9 +213,10 @@ export default {
   .changelog {
     align-items: center;
     padding: 5px;
+    border-radius: 10px;
 
     &:hover {
-      background-color: rgb(38, 39, 39);
+      background-color: rgb(53, 52, 52);
     }
     .message {
       font-size: 1.25rem;
