@@ -12,18 +12,14 @@
           `最新開發版本: ${VersionData.dev.latest_version}.${VersionData.dev.latest_version_code}`
         "
       ></div>
-      <div
-        class="txt"
-        v-text="
-          `最新穩定版本:${
-            VersionData.stable.latest_version_code
-              ? `無`
-              : `${VersionData.stable.latest_version}.${
-                  VersionData.stable.latest_version_code || 0
-                }`
-          }`
-        "
-      ></div>
+     <div class="txt">
+      最新穩定版本:
+      {{
+        VersionData.stable.latest_version_code == null
+          ? "無"
+          : `${VersionData.stable.latest_version}.${VersionData.stable.latest_version_code}`
+      }}
+     </div>
       <p class="txt">請選擇您的作業系統後將會開始下載:</p>
       <div class="list flex">
         <div
