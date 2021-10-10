@@ -5,12 +5,17 @@ import {
 
 /* wiki */
 import QandA from '@/views/Wiki/QandA.vue' // 常見問題
+
+const defaultDescription = "RPMTW致力於推廣Minecraft中文社群與開發相關工具，期望能讓Minecraft玩家有更好的體驗。";
+const defaultKeywords = ["RPMTW", "minecraft", "菘菘", "中文化", "麥塊", "繁體中文", "模組"];
+
 const routes = [{
     path: '/',
     name: 'Home',
     component: () => import("@/views/Home.vue"),
     meta: {
         breadcrumb: "Home",
+        title: "RPMTW - 首頁"
     },
 }, {
     path: '/about',
@@ -49,7 +54,8 @@ const routes = [{
     name: "WikiMenuList",
     meta: {
         breadcrumb: "Wiki",
-        notFooter: true
+        notFooter: true,
+        title: "RPMTW - 維基百科"
     },
     component: () => import("@/components/WikiMenuList.vue"),
     children: [{
@@ -86,6 +92,7 @@ const routes = [{
 }, {
     path: "/RPMTWUpdateMod",
     name: "RPMTWUpdateMod",
+    meta: { title: "RPMTW 自動中文化更新模組" },
     component: () => import("@/views/RPMTWUpdateMod"),
 }, {
     path: "/install/version",
@@ -93,6 +100,9 @@ const routes = [{
     component: () => import("@/views/Wiki/mod-install/Version.vue"),
     meta: {
         breadcrumb: "Version",
+        title: "下載模組",
+        description: "下載 RPMTW 自動中文化更新模組",
+        keywords: ["自動中文化", "漢化", "下載", "Forge", "Fabric", "Download", "1.12", "1.16", "1.17"]
     },
 }, {
     path: "/:pathMatch(.*)*",
@@ -115,11 +125,15 @@ const routes = [{
     component: () => import("@/views/Surrounding/Partner.vue"),
     meta: {
         breadcrumb: "Partner",
+        title: "合作夥伴",
     },
 }, {
 
     path: "/RWL",
     name: "RWL",
+    meta: {
+        title: "RPMLauncher",
+    },
     component: () => import("@/views/Products/RPMLauncher/RWL.vue"),
 }, {
 
@@ -141,7 +155,12 @@ const router = createRouter({
     routes
 })
 router.beforeEach((data, from, next) => {
-    document.title = data.meta.title || document.title
+    document.title = data.meta.title || document.title;
+    document.head.children.description.content = data.meta.description || defaultDescription;
+
+    let keywords = Array(data.meta.keywords || []);
+    keywords.push(defaultKeywords);
+    document.head.children.keywords.content = keywords.join(",");
     next()
 })
 export default router
