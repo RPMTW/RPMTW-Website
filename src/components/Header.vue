@@ -260,8 +260,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  max-height: var(--html-margin-top);
-  min-height: var(--html-margin-top);
+  height: var(--html-margin-top);
   background-color: var(--header-background-color, rgb(85, 82, 82));
   justify-content: space-between;
   align-items: center;
@@ -317,6 +316,7 @@ export default {
   }
   .else-discord {
     width: 100%;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
   }
