@@ -57,7 +57,11 @@
       </a>
       <div class="txt-description" v-if="finish.platform === 'Fabric'">
         <p style="color: red">
-          如果您沒有安裝 RPMTW 的前置模組 Fabric API，請務必記得安裝歐!!<br />
+          RPMTW 需要 Fabric API 與 Fabric Kotlin
+          這兩個前置模組，請務必記得安裝!<br />
+          (點擊下方兩張圖片即可下載)
+          <br />
+          <br />
           <a
             target="_blank"
             style="color: var(--strong-color)"
@@ -77,14 +81,25 @@
               alt=""
             />
           </a>
+          <a
+            target="_blank"
+            style="color: var(--strong-color)"
+            class="flex flex-down flex-item-center"
+            href="https://cdn.modrinth.com/data/Ha28R6CL/versions/1.6.4+kotlin.1.5.30/fabric-language-kotlin-1.6.4+kotlin.1.5.30.jar"
+          >
+            <img
+              src="https://i.imgur.com/c1DH9VL.png"
+              style="width: 15em"
+              alt=""
+            />
+          </a>
         </p>
       </div>
       <div class="txt-des" v-if="finish.platform">
         <p style="foot-size: 18pt">
           模組下載完成後，請確定你已經安裝了
           {{ finish.platform }}
-          ，並且沒有修改預設模組儲存位置，<br />
-          那麼請將此檔案放入該資料夾下的 mods 資料夾裡面即可！
+          ，接著將這些檔案放入 mods 資料夾裡面即可！
         </p>
       </div>
     </Gate>
