@@ -71,7 +71,7 @@
                 '1.16.x':
                   'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.36.0+1.16/fabric-api-0.36.0+1.16.jar',
                 '1.17.x':
-                  'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.37.0+1.17/fabric-api-0.37.0+1.17.jar',
+                  'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.40.8+1.17/fabric-api-0.40.8+1.17.jar',
               }[finish.version]
             "
           >
