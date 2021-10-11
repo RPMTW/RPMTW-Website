@@ -1,5 +1,5 @@
 <template>
-  <header id="header" class="flex flex-down">
+  <header id="header" class="flex flex-down flex-item-center">
     <div
       class="discord-top-link flex"
       v-if="discordLinkShow"
