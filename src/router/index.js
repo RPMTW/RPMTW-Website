@@ -6,6 +6,9 @@ import {
 /* wiki */
 import QandA from '@/views/Wiki/QandA.vue' // 常見問題
 
+const defaultDescription = "RPMTW致力於推廣Minecraft中文社群與開發相關工具，期望能讓Minecraft玩家有更好的體驗。";
+const defaultKeywords = ["RPMTW", "minecraft", "菘菘", "中文化", "麥塊", "繁體中文", "模組"];
+
 const routes = [{
     path: '/',
     name: 'Home',
@@ -154,6 +157,11 @@ const router = createRouter({
 })
 router.beforeEach((data, from, next) => {
     document.title = data.meta.title || document.title;
+    document.head.children.description.content = data.meta.description || defaultDescription;
+
+    let keywords = Array(data.meta.keywords || []);
+    keywords.push(defaultKeywords);
+    document.head.children.keywords.content = keywords.join(",");
     next()
 })
 export default router
