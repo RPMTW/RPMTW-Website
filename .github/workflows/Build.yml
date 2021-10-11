@@ -19,4 +19,3 @@ jobs:
           gitmsg: Update Website
           cname: www.rpmtw.ga
           gitname: Website-BOT
-          useyarn: true
