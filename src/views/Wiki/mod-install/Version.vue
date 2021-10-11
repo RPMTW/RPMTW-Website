@@ -85,7 +85,7 @@
             target="_blank"
             style="color: var(--strong-color)"
             class="flex flex-down flex-item-center"
-            href="https://cdn.modrinth.com/data/Ha28R6CL/versions/1.6.4+kotlin.1.5.30/fabric-language-kotlin-1.6.4+kotlin.1.5.30.jar"
+            href="https://maven.fabricmc.net/net/fabricmc/fabric-language-kotlin/1.6.5%2Bkotlin.1.5.31/fabric-language-kotlin-1.6.5%2Bkotlin.1.5.31.jar"
           >
             <img
               src="https://i.imgur.com/c1DH9VL.png"
