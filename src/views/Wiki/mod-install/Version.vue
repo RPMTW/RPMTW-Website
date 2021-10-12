@@ -96,7 +96,7 @@
         </p>
       </div>
       <div class="txt-des" v-if="finish.platform">
-        <p style="foot-size: 18pt">
+        <p style="font-size: 18pt">
           模組下載完成後，請確定你已經安裝了
           {{ finish.platform }}
           ，接著將這些檔案放入 mods 資料夾裡面即可！
