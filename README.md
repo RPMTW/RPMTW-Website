@@ -10,11 +10,10 @@
 
 ##### 目前暫不支援手機板 Wiki
 
-### npm
+### yarn
 
 ```cmd
-npm i
-./.cmd or npm run serve
+yarn run serve
 ```
 
 主架構開發開發時間: 9days
