@@ -88,7 +88,7 @@ const routes = [{
         components: {
             data: () => import("@/views/Wiki/OtherInfo.vue")
         }
-    }, ]
+    },]
 }, {
     path: "/RPMTWUpdateMod",
     name: "RPMTWUpdateMod",
@@ -96,6 +96,10 @@ const routes = [{
         title: "RPMTW 自動中文化更新模組"
     },
     component: () => import("@/views/RPMTWUpdateMod"),
+}, {
+    path: "/callback",
+    name: "callback",
+    component: () => import("@/views/callback/index.vue")
 }, {
     path: "/install/version",
     name: "version",
