@@ -16,7 +16,9 @@ export default {
     let type = urlParams.get("type");
     if (token && ["discord", "crowdin"].includes(type)) {
       localStorage.setItem(`token_${type}`, token);
-      window.opener.window.dispatchEvent(new CustomEvent(`ok_${type}`));
+      window.opener.window.dispatchEvent(
+        Object.assign(new CustomEvent(`ok_${type}`), { data: token })
+      );
       window.close();
     } else {
       this.showTxt = "錯誤!!";
