@@ -17,10 +17,10 @@ export default {
     if (token && ["discord", "crowdin"].includes(type)) {
       window.opener.window[`token_${type}`] = token;
       window.opener.window.dispatchEvent(new CustomEvent(`ok_${type}`));
-      // window.close();
+      window.close();
     } else {
       this.showTxt = "錯誤!!";
-      setTimeout(() => window.close());
+      setTimeout(() => window.close(), 1e3 * 10);
     }
   },
 };
