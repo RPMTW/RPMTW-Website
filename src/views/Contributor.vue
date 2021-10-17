@@ -22,9 +22,9 @@
           <p class="card-text">加入專案時間: {{ data.user.joined }}</p>
           <p class="card-text">翻譯獲得稱讚數: {{ data.winning }}</p>
         </div>
-        <div class="btn check" @click="goCheck">點我認證</div>
       </div>
     </div>
+    <div class="btn check" @click="goCheck">點我認證 discord</div>
   </div>
 </template>
 
@@ -69,7 +69,12 @@ export default {
             crowdin_token: window["token_crowdin"],
           },
         }
-      ).catch((error) => console.error(error))
+      )
+        .then(() => alert("已發送確認訊息，請至您的 Discord 查看私訊"))
+        .catch((error) => {
+          alert("認證錯誤!!");
+          console.error(error);
+        })
     );
     $(".loadIng").show();
     $.getJSON(
@@ -142,7 +147,8 @@ export default {
     justify-content: center;
   }
   .check.btn {
-    width: 20%;
+    margin-top: 2em;
+    width: 50%;
   }
 }
 @media all and (max-width: 450px) {
