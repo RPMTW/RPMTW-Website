@@ -59,14 +59,14 @@ export default {
         "width=500,height=620"
       )
     );
-    this.setEvent(this.events, "ok_crowdin", (event) =>
+    this.setEvent(this.events, "ok_crowdin", () =>
       fetch(
         "https://rear-end.a102009102009.repl.co/discord/oauth/checkCrowin",
         {
           method: "POST",
           headers: {
-            discord_token: localStorage.getItem("token_discord"),
-            crowdin_token: event.data,
+            discord_token: window["token_discord"],
+            crowdin_token: window["token_crowdin"],
           },
         }
       ).catch((error) => console.error(error))
