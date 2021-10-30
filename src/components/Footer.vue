@@ -4,7 +4,7 @@
       <p>
         Copyright &copy; RPMTW {{ newYear }} Powered by The
         <a target="_blank" href="https://github.com/RPMTW">RPMTW Team</a> and
-        <a target="_blank" href="https://github.com/a3510377">猴子#3807</a>
+        <a target="_blank" href="https://github.com/a3510377">猴子#2027</a>
       </p>
     </footer>
   </div>
