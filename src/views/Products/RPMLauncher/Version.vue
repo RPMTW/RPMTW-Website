@@ -113,7 +113,7 @@ export default {
       }
     ).fail((error) => {
       console.warn(error);
-      $(".loadIng").html("<h1>錯誤，請稍後在試</h1>");
+      $(".loadIng").html("<h1>錯誤，請稍後再試</h1>");
     });
   },
   components: {},
@@ -128,22 +128,22 @@ export default {
       let data = {
         0: {
           alert:
-            "下載檔案完成後請解壓縮，並且執行 Install.bat 即可開始安裝 RPMLauncher",
+            "下載檔案完成後請解壓縮，並執行 Install.bat 即可開始安裝 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.windows_10_11,
         },
         1: {
           alert:
-            "下載檔案完成後請解壓縮，並且執行 rpmlauncher.exe 即可開啟 RPMLauncher",
+            "下載檔案完成後請解壓縮，並執行 rpmlauncher.exe 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.windows_7,
         },
         2: {
           alert:
-            "下載檔案完成後請解壓縮，並且執行 rpmlauncher (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
+            "下載檔案完成後請解壓縮，並執行 rpmlauncher (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.linux,
         },
         3: {
           alert:
-            "下載檔案完成後請執行 RPMLauncher-MacOS-Installer.dmg 開始安裝，安裝後請到啟動台執行 RPMLauncher，第一次執行時若顯示『Apple 無法檢查是否包含惡意軟體』等內容，請開啟「系統偏好設定」，進入「安全性與隱私權」類別，選擇強制開啟。",
+            "第一次執行 RPMLauncher 時若顯示『Apple 無法檢查是否包含惡意軟體』等內容，請開啟「系統偏好設定」，進入「安全性與隱私權」類別，選擇強制開啟。",
           DownloadUrl: VersionInfo.download_url.macos,
         },
       };
