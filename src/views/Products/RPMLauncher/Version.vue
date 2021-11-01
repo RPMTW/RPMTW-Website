@@ -46,7 +46,7 @@
           {{ val.version }}
           <p
             class="message"
-            style="white-space: pre-line;"
+            style="white-space: pre-line"
             v-text="val.changelog"
           ></p>
         </div>
@@ -138,12 +138,12 @@ export default {
         },
         2: {
           alert:
-            "下載檔案完成後請解壓縮，並且執行 rpmlauncher (如無法開啟記得先給權限) 即可開啟 RPMLauncher",
+            "下載檔案完成後請解壓縮，並且執行 rpmlauncher (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.linux,
         },
         3: {
           alert:
-            "下載檔案完成後請解壓縮，並且執行 rpmlauncher.app (如無法開啟記得先給權限) 即可開啟 RPMLauncher",
+            "下載檔案完成後請執行 RPMLauncher-MacOS-Installer.dmg 開始安裝，安裝後請到啟動台執行 RPMLauncher，第一次執行時若顯示『Apple 無法檢查是否包含惡意軟體』等內容，請開啟「系統偏好設定」，進入「安全性與隱私權」類別，選擇強制開啟。",
           DownloadUrl: VersionInfo.download_url.macos,
         },
       };
