@@ -79,7 +79,7 @@ export default {
           icon: require("@/assets/images/RPMLauncher/Platform/Linux.svg"),
         },
         {
-          name: "Linux-Appimage",
+          name: "Linux (AppImage)",
           icon: require("@/assets/images/RPMLauncher/Platform/Linux-Appimage.svg"),
         },
         {
@@ -200,7 +200,7 @@ export default {
 }
 .list {
   margin-bottom: 30px;
-  width: 80%;
+  width: 95%;
   justify-content: space-evenly;
   > div {
     width: 20%;
