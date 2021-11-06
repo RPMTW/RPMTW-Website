@@ -9,15 +9,15 @@
       <div
         class="txt"
         v-text="
-          `最新開發版本: ${VersionData.dev.latest_version}.${VersionData.dev.latest_version_code}`
+          `最新開發版本: ${VersionData.dev.latest_version}.${VersionData.dev.latest_build_id}`
         "
       ></div>
       <div class="txt">
         最新穩定版本:
         {{
-          VersionData.stable.latest_version_code == null
+          VersionData.stable.latest_build_id == null
             ? "無"
-            : `${VersionData.stable.latest_version}.${VersionData.stable.latest_version_code}`
+            : `${VersionData.stable.latest_version}.${VersionData.stable.latest_build_id}`
         }}
       </div>
       <p class="txt">請選擇您的作業系統後將會開始下載:</p>
@@ -79,6 +79,10 @@ export default {
           icon: require("@/assets/images/RPMLauncher/Platform/Linux.svg"),
         },
         {
+          name: "Linux-Appimage",
+          icon: require("@/assets/images/RPMLauncher/Platform/Linux-Appimage.svg"),
+        },
+        {
           name: "MacOS",
           icon: require("@/assets/images/RPMLauncher/Platform/MacOS.svg"),
         },
@@ -99,15 +103,11 @@ export default {
         this.VersionData = data;
 
         Object.keys(data.version_list).forEach((_MainVersionID) => {
-          Object.keys(data.version_list[_MainVersionID]).forEach(
-            (_VersionCode) => {
-              data.version_list[_MainVersionID][_VersionCode]["version"] =
-                _MainVersionID + "." + _VersionCode;
-              this.VersionList.push(
-                data.version_list[_MainVersionID][_VersionCode]
-              );
-            }
-          );
+          Object.keys(data.version_list[_MainVersionID]).forEach((_buildID) => {
+            data.version_list[_MainVersionID][_buildID]["version"] =
+              _MainVersionID + "+" + _buildID;
+            this.VersionList.push(data.version_list[_MainVersionID][_buildID]);
+          });
         });
         this.VersionList.reverse();
       }
@@ -123,25 +123,30 @@ export default {
       let Dev = Object(this.VersionData.dev);
       let VersionInfo = Object(this.VersionData.version_list)[
         String(Dev.latest_version)
-      ][parseInt(Dev.latest_version_code)];
+      ][parseInt(Dev.latest_build_id)];
 
       let data = {
         0: {
           alert:
-            "下載檔案完成後請解壓縮，並執行 Install.bat 即可開始安裝 RPMLauncher",
+            "下載檔案後請解壓縮，並執行 Install.bat 即可開始安裝 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.windows_10_11,
         },
         1: {
           alert:
-            "下載檔案完成後請解壓縮，並執行 rpmlauncher.exe 即可開啟 RPMLauncher",
+            "下載檔案後請解壓縮，並執行 rpmlauncher.exe 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.windows_7,
         },
         2: {
           alert:
-            "下載檔案完成後請解壓縮，並執行 rpmlauncher (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
+            "下載檔案後請解壓縮，並執行 rpmlauncher (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.linux,
         },
         3: {
+          alert:
+            "執行 RPMLauncher-Linux.AppImage (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
+          DownloadUrl: VersionInfo.download_url["linux-appimage"],
+        },
+        4: {
           alert:
             "第一次執行 RPMLauncher 時若顯示『Apple 無法檢查是否包含惡意軟體』等內容，請開啟「系統偏好設定」，進入「安全性與隱私權」類別，選擇強制開啟。",
           DownloadUrl: VersionInfo.download_url.macos,
