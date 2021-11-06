@@ -9,7 +9,7 @@
       <div
         class="txt"
         v-text="
-          `最新開發版本: ${VersionData.dev.latest_version}.${VersionData.dev.latest_build_id}`
+          `最新開發版本: ${VersionData.dev.latest_version}+${VersionData.dev.latest_build_id}`
         "
       ></div>
       <div class="txt">
@@ -17,7 +17,7 @@
         {{
           VersionData.stable.latest_build_id == null
             ? "無"
-            : `${VersionData.stable.latest_version}.${VersionData.stable.latest_build_id}`
+            : `${VersionData.stable.latest_version}+${VersionData.stable.latest_build_id}`
         }}
       </div>
       <p class="txt">請選擇您的作業系統後將會開始下載:</p>
