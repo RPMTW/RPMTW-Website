@@ -88,7 +88,7 @@
             href="https://maven.fabricmc.net/net/fabricmc/fabric-language-kotlin/1.6.5%2Bkotlin.1.5.31/fabric-language-kotlin-1.6.5%2Bkotlin.1.5.31.jar"
           >
             <img
-              src="https://i.imgur.com/c1DH9VL.png"
+              src="@/assets/images/fabric_kotlin_language_requires.png"
               style="width: 40em"
               alt=""
             />
