@@ -77,7 +77,7 @@
           >
             <img
               src="@/assets/images/fabric_api_requires.png"
-              style="width: 15em"
+              style="width: 40em"
               alt=""
             />
           </a>
@@ -89,7 +89,7 @@
           >
             <img
               src="https://i.imgur.com/c1DH9VL.png"
-              style="width: 15em"
+              style="width: 40em"
               alt=""
             />
           </a>
