@@ -40,21 +40,18 @@
       </strong>
     </Gate>
     <Gate :nowLen="nowLen" okLen="3" class="nowLenData output">
-      <a
+      <div
         target="_blank"
         v-show="
           datas.versions[finish.version] &&
           datas.versions[finish.version][finish.platform]
         "
-        :href="
-          datas.versions[finish.version] &&
-          datas.versions[finish.version][finish.platform]
-        "
+        @click="download(finish.version, finish.platform)"
         class="div-button"
         style="--styleMode-background-color: rgb(45, 212, 191); color: black"
       >
         點我下載: {{ `${finish.version} (${finish.platform})` }}
-      </a>
+      </div>
       <div class="txt-description" v-if="finish.platform === 'Fabric'">
         <p style="color: red">
           RPMTW 需要 Fabric API 與 Fabric Kotlin
@@ -77,7 +74,7 @@
           >
             <img
               src="@/assets/images/fabric_api_requires.png"
-              style="width: 40em"
+              style="width: 45em"
               alt=""
             />
           </a>
@@ -89,7 +86,7 @@
           >
             <img
               src="@/assets/images/fabric_kotlin_language_requires.png"
-              style="width: 40em"
+              style="width: 45em"
               alt=""
             />
           </a>
@@ -141,6 +138,23 @@ export default {
       this.nowLen <= parseInt(_this.parent(".nowLenData").attr("okLen"))
         ? (this.nowLen += 1)
         : null;
+    },
+
+    download(version, platform) {
+      console.log(version);
+      if (platform == "Fabric") {
+        alert(
+          "模組下載完成後，請確定你已經安裝了 Fabric ，並且你已經安裝 Fabric API 與 Fabric Kotlin 這兩個前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
+        );
+      } else if (platform == "Forge") {
+        alert(
+          "模組下載完成後，請確定你已經安裝了 Forge ，接著將 RPMTW 放入 mods 資料夾裡面即可！"
+        );
+      }
+
+      let url =
+        this.datas.versions[version] && this.datas.versions[version][platform];
+      window.open(url);
     },
 
     versionSetSelect(_this) {
