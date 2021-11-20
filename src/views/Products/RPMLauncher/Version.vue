@@ -67,12 +67,8 @@ export default {
       load: false,
       OSList: [
         {
-          name: "Windows 10/11",
+          name: "Windows",
           icon: require("@/assets/images/RPMLauncher/Platform/Windows_10.svg"),
-        },
-        {
-          name: "Windows 7/8",
-          icon: require("@/assets/images/RPMLauncher/Platform/Windows_7.svg"),
         },
         {
           name: "Linux",
@@ -128,13 +124,8 @@ export default {
       let data = {
         0: {
           alert:
-            "下載檔案後請解壓縮，並執行 Install.bat 即可開始安裝 RPMLauncher",
-          DownloadUrl: VersionInfo.download_url.windows_10_11,
-        },
-        1: {
-          alert:
-            "下載檔案後請解壓縮，並執行 rpmlauncher.exe 即可開啟 RPMLauncher",
-          DownloadUrl: VersionInfo.download_url.windows_7,
+            "下載檔案後請執行 RPMLauncher-Windows-Installer.exe 即可安裝 RPMLauncher",
+          DownloadUrl: VersionInfo.download_url.windows,
         },
         2: {
           alert:
