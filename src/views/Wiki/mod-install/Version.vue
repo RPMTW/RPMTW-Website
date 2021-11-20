@@ -33,9 +33,20 @@
       <strong style="text-align: center">
         <a v-if="!finish.platform && finish.version">
           Q:&ensp;<span style="color: red"
-            >什麼是模組平台(Mod Loader)<br
+            >什麼是模組平台 (Mod Loader)<br
           /></span>
           A:&ensp;模組平台就類似蘋果手機與安卓手機的概念，不同的架構製作而成，可以依據你需要的平台來下載。
+        </a>
+        <a
+          v-if="
+            !finish.platform && finish.version && finish.version == '1.18.x'
+          "
+        >
+          <br />
+          Q:&ensp;<span style="color: red"
+            >為什麼 1.18 版本暫時不支援 Forge<br
+          /></span>
+          A:&ensp;因為 Forge 尚未支援 1.18，因此無法開發。
         </a>
       </strong>
     </Gate>
@@ -69,12 +80,14 @@
                   'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.36.0+1.16/fabric-api-0.36.0+1.16.jar',
                 '1.17.x':
                   'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.40.8+1.17/fabric-api-0.40.8+1.17.jar',
+                '1.18.x':
+                  'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.42.8+1.18/fabric-api-0.42.8+1.18.jar',
               }[finish.version]
             "
           >
             <img
               src="@/assets/images/fabric_api_requires.png"
-              style="width: 45em"
+              style="width: 35em"
               alt=""
             />
           </a>
@@ -86,7 +99,7 @@
           >
             <img
               src="@/assets/images/fabric_kotlin_language_requires.png"
-              style="width: 45em"
+              style="width: 35em"
               alt=""
             />
           </a>

@@ -20,5 +20,11 @@
         ],
         "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3508288",
         "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3507506"
+    },
+    "1.18.x": {
+        "platform": [
+            "Fabric"
+        ],
+        "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3531045"
     }
 }
