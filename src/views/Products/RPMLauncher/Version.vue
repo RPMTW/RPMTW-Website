@@ -96,14 +96,13 @@ export default {
         this.load = true;
         this.VersionData = data;
 
-        Object.keys(data.version_list).forEach((_MainVersionID) => {
-          Object.keys(data.version_list[_MainVersionID]).forEach((_buildID) => {
-            data.version_list[_MainVersionID][_buildID]["version"] =
-              _MainVersionID + "+" + _buildID;
-            this.VersionList.push(data.version_list[_MainVersionID][_buildID]);
-          });
+        Object.keys(data.version_list).forEach((version) => {
+          data.version_list[version]["version"] = version;
+          this.VersionList.push(data.version_list[version]);
         });
         this.VersionList.reverse();
+
+        console.log(this.VersionList);
       }
     ).fail((error) => {
       console.warn(error);
