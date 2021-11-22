@@ -8,16 +8,14 @@
       </p>
       <div
         class="txt"
-        v-text="
-          `最新開發版本: ${VersionData.dev.latest_version}+${VersionData.dev.latest_build_id}`
-        "
+        v-text="`最新開發版本: ${VersionData.dev.latest_version_full}`"
       ></div>
       <div class="txt">
         最新穩定版本:
         {{
-          VersionData.stable.latest_build_id == null
+          VersionData.stable.latest_version_full == null
             ? "無"
-            : `${VersionData.stable.latest_version}+${VersionData.stable.latest_build_id}`
+            : `${VersionData.stable.latest_version_full}`
         }}
       </div>
       <p class="txt">請選擇您的作業系統後將會開始下載:</p>
@@ -118,8 +116,8 @@ export default {
       this.Platform = key;
       let Dev = Object(this.VersionData.dev);
       let VersionInfo = Object(this.VersionData.version_list)[
-        String(Dev.latest_version)
-      ][parseInt(Dev.latest_build_id)];
+        String(Dev.latest_version_full)
+      ];
 
       let data = {
         0: {
