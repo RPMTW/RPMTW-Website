@@ -37,7 +37,6 @@
       <h1>特色</h1>
          <div className="ImgFeature">
             <img
-              class="showEl"
               src="@/assets/images/RPMLauncher/AutoJava.png"
               alt="autoJava"
             />
@@ -53,7 +52,6 @@
          </div>
          <div className="ImgFeature ImgFeatureLeft">
             <img
-              class="showEl"
               src="@/assets/images/RPMLauncher/ModDownload.png"
               alt="modInstall"
             />
@@ -68,9 +66,9 @@
           </div>
          </div>
     </section>
-    <hr />
+    <!-- <hr />
     <section class="flex flex-item-center flex-down">
-      <!-- <h1>程式主畫面</h1>
+      <h1>程式主畫面</h1>
       <img
         class="showEl"
         src="@/assets/images/RPMLauncher/appMainIcon.png"
@@ -85,8 +83,8 @@
       <img
         src="@/assets/images/RPMLauncher/ViewMod.png"
         alt="版本選擇頁面"
-      />     -->
-    </section>
+      />    
+    </section> -->
     <hr />
     <section>
       <h1>銘謝</h1>
