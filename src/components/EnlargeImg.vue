@@ -8,9 +8,10 @@
           :alt="description"
           :hover="description"
         />
-        <a :href="imgLink" v-if="imgLink" class="open-original line"
+        <div @click="showImg = false" class="open-original line">關閉</div>
+        <!-- <a :href="imgLink" v-if="imgLink" class="open-original line"
           >開啟原尺寸圖片</a
-        >
+        > -->
       </div>
     </div>
     <div class="EnlargeImg-blurry" @click="showImg = false"></div>
