@@ -63,7 +63,6 @@
               >
                 <img
                   src="https://media.forgecdn.net/avatars/thumbnails/396/29/64/64/637595082272657724.png"
-                  alt=""
                 />
               </a>
               <a
@@ -72,7 +71,6 @@
               >
                 <img
                   src="https://support.crowdin.com/assets/logos/crowdin-dark-symbol.png"
-                  alt=""
               /></a>
             </div>
             <div class="div-select flex flex-down">
