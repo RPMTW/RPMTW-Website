@@ -7,10 +7,11 @@
       src="@/assets/images/RPMLauncher/RWLLog.png"
       alt="特別感謝 嗡嗡#5428 製作圖片"
     />
-    <h1>RPMLauncher</h1>
+    <div class="text-center launcher-name">
+    RPMLauncher</div>
     <h1 class="text-center main-title">
       輕鬆管理您的遊戲<br />
-      跨世代的 Minecraft 啟動器登場！
+      跨世代的 Minecraft 啟動器，既保留簡潔設計又支援多個平台和許多功能供您探索！
     </h1>
     <div class="links flex flex-center">
       <a
@@ -35,7 +36,22 @@
     <hr />
     <section>
       <h1>特色</h1>
-         <div className="ImgFeature">
+      <div className="ImgFeature">
+            <img
+              src="@/assets/images/RPMLauncher/HomePage.png"
+              alt="modernAndEasyToUse"
+            />
+            <div class="Features">
+                <div>
+              <h1>現代化的界面</h1>
+              <p>
+              界面設計簡潔，操作簡單<br />
+              但卻是個功能豐富強大的啟動器
+              </p>
+            </div>
+          </div>
+         </div>
+         <div className="ImgFeature ImgFeatureLeft">
             <img
               src="@/assets/images/RPMLauncher/AutoJava.png"
               alt="autoJava"
@@ -45,12 +61,12 @@
               <h1>自動安裝 Java</h1>
               <p>
                您還在煩惱要安裝哪個版本的 Java ?<br />
-               別擔心，我們會自動安裝對應版本的 Java，保證完全相容！
+               別擔心，RPMLauncher 會自動安裝相容版本的 Java！
               </p>
             </div>
           </div>
          </div>
-         <div className="ImgFeature ImgFeatureLeft">
+         <div className="ImgFeature">
             <img
               src="@/assets/images/RPMLauncher/ModDownload.png"
               alt="modInstall"
@@ -59,32 +75,28 @@
                 <div>
               <h1>自動安裝模組</h1>
               <p>
-               安裝 Forge 與 Fabric 很麻煩？<br />
-               在這裡可以直接自動下載模組與安裝 Forge/Fabric
+               輕鬆從 CurseForge 與 Modrinth 安裝模組<br />
+               RPMLauncher 也會自動幫您下載前置模組，不再被錯誤訊息困擾！
+              </p>
+            </div>
+          </div>
+         </div>
+           <div className="ImgFeature ImgFeatureLeft">
+            <img
+              src="@/assets/images/RPMLauncher/ModPack.png"
+              alt="modpack"
+            />
+            <div class="Features">
+                <div>
+              <h1>模組包自動安裝</h1>
+              <p>
+               支援 FTB 與 CurseForge 模組包自動安裝<br />
+               在 RPMLauncher 就搞定，不必再煩惱！
               </p>
             </div>
           </div>
          </div>
     </section>
-    <!-- <hr />
-    <section class="flex flex-item-center flex-down">
-      <h1>程式主畫面</h1>
-      <img
-        class="showEl"
-        src="@/assets/images/RPMLauncher/appMainIcon.png"
-        alt="程式主畫面"
-      />
-      <h1>版本選擇頁面</h1>
-      <img
-        src="@/assets/images/RPMLauncher/VersionSelection.png"
-        alt="版本選擇頁面"
-      />
-      <h1>版本選擇頁面</h1>
-      <img
-        src="@/assets/images/RPMLauncher/ViewMod.png"
-        alt="版本選擇頁面"
-      />    
-    </section> -->
     <hr />
     <section>
       <h1>銘謝</h1>
@@ -116,6 +128,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "~@/assets/scss/SurroundingMain.scss";
+
+.launcher-name {
+  color: rgb(229, 236, 240);
+  font-size: 60px;
+}
 
 .Features {
   display: flex;
