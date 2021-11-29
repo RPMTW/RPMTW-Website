@@ -423,7 +423,7 @@ export default {
     }
   }
   .txt-logo {
-    font-family: "Architects Daughter", cursive;
+    font-family: "HanyiSentyChalk", cursive;
     font-size: 30px;
   }
 }

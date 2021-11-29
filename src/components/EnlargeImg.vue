@@ -79,9 +79,7 @@ export default {
         position: relative;
         img.not-enlarge {
           z-index: 9;
-          width: 100%;
-          max-height: 90%;
-          max-width: 90%;
+          height: 80%;
           &:hover {
             &:before {
               position: absolute;
@@ -106,9 +104,10 @@ export default {
         }
         .open-original {
           position: absolute;
-          left: 4%;
-          bottom: -15px;
-          color: rgb(179, 179, 179);
+          right: 5%;
+          right: 0px;
+          font-size: 25px;
+          color: rgb(107, 188, 241);
         }
         @media all and (max-width: 1200px) {
           .img-description {

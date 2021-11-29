@@ -38,6 +38,7 @@
       <h1>特色</h1>
       <div className="ImgFeature">
             <img
+              class="showEl"
               src="@/assets/images/RPMLauncher/HomePage.png"
               alt="modernAndEasyToUse"
             />
@@ -53,6 +54,7 @@
          </div>
          <div className="ImgFeature ImgFeatureLeft">
             <img
+              class="showEl"
               src="@/assets/images/RPMLauncher/AutoJava.png"
               alt="autoJava"
             />
@@ -66,8 +68,25 @@
             </div>
           </div>
          </div>
-         <div className="ImgFeature">
+          <div className="ImgFeature">
             <img
+              class="showEl"
+              src="@/assets/images/RPMLauncher/VersionSelect.png"
+              alt="versionSelect"
+            />
+            <div class="Features">
+                <div>
+              <h1>支援眾多版本</h1>
+              <p>
+               支援 原版/Forge/Fabric 自動安裝<br />
+               RPMLauncher 將會為您準備一切，懶人的福音！
+              </p>
+            </div>
+          </div>
+         </div>
+         <div className="ImgFeature ImgFeatureLeft">
+            <img
+              class="showEl"
               src="@/assets/images/RPMLauncher/ModDownload.png"
               alt="modInstall"
             />
@@ -81,8 +100,9 @@
             </div>
           </div>
          </div>
-           <div className="ImgFeature ImgFeatureLeft">
+           <div className="ImgFeature">
             <img
+              class="showEl"
               src="@/assets/images/RPMLauncher/ModPack.png"
               alt="modpack"
             />
@@ -92,6 +112,53 @@
               <p>
                支援 FTB 與 CurseForge 模組包自動安裝<br />
                在 RPMLauncher 就搞定，不必再煩惱！
+              </p>
+            </div>
+          </div>
+          </div>
+           <div className="ImgFeature ImgFeatureLeft">
+            <img
+              class="showEl"
+              src="@/assets/images/RPMLauncher/ModListView.png"
+              alt="modListView"
+            />
+            <div class="Features">
+                <div>
+              <h1>模組管理器</h1>
+              <p>
+               瀏覽各式各樣的模組，且可以隨時增減模組
+              </p>
+            </div>
+          </div>
+             </div>
+           <div className="ImgFeature">
+            <img
+              class="showEl"
+              src="@/assets/images/RPMLauncher/GameLog.png"
+              alt="gameLog"
+            />
+            <div class="Features">
+                <div>
+              <h1>即時遊戲日誌監控</h1>
+              <p>
+               遊戲執行中時，將自動紀錄遊戲日誌<br>
+               並自動分類日誌類型也可手動搜尋
+              </p>
+            </div>
+          </div>
+                   </div>
+           <div className="ImgFeature ImgFeatureLeft">
+            <img
+              class="showEl"
+              src="@/assets/images/RPMLauncher/MinecraftNews.png"
+              alt="news"
+            />
+            <div class="Features">
+                <div>
+              <h1>Minecraft 新聞</h1>
+              <p>
+               閱覽來自 Minecraft 官方網站的新聞<br>
+               隨時跟上最新潮流！
               </p>
             </div>
           </div>

@@ -80,12 +80,14 @@
     </noscript>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>
-        kofiWidgetOverlay.draw('siongsng', {
-            'type': 'floating-chat',
-            'floating-chat.donateButton.text': '幫我們買咖啡',
-            'floating-chat.donateButton.background-color': '#fcbf47',
-            'floating-chat.donateButton.text-color': '#323842'
-        });
+        if (window.self === window.top) {
+            kofiWidgetOverlay.draw('siongsng', {
+                'type': 'floating-chat',
+                'floating-chat.donateButton.text': '幫我們買咖啡',
+                'floating-chat.donateButton.background-color': '#fcbf47',
+                'floating-chat.donateButton.text-color': '#323842'
+            });
+        }
     </script>
     <main id="app"></main>
 </body>
