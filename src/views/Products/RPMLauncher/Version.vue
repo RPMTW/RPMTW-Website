@@ -124,17 +124,17 @@ export default {
             "下載檔案後請執行 RPMLauncher-Windows-Installer.exe 即可安裝 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.windows,
         },
-        2: {
+        1: {
           alert:
             "下載檔案後請解壓縮，並執行 rpmlauncher (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.linux,
         },
-        3: {
+        2: {
           alert:
             "執行 RPMLauncher-Linux.AppImage (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url["linux-appimage"],
         },
-        4: {
+        3: {
           alert:
             "第一次執行 RPMLauncher 時若顯示『Apple 無法檢查是否包含惡意軟體』等內容，請開啟「系統偏好設定」，進入「安全性與隱私權」類別，選擇強制開啟。",
           DownloadUrl: VersionInfo.download_url.macos,
