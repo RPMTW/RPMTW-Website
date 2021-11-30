@@ -3,5 +3,8 @@ module.exports = {
         config
             .plugin('webpack-bundle-analyzer')
             .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
-    }
+    },
+    configureWebpack: {
+        devtool: 'source-map',
+    },
 };

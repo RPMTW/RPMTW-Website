@@ -1,39 +1,45 @@
 <template>
   <div id="RWL-Version" class="setList">
+    <h1 class="text-center">下載 RPMLauncher</h1>
     <div class="loadIng" v-if="!load"><a>正在載入資料中，請稍後...</a></div>
     <div v-if="load" class="flex flex-item-center flex-down">
-      <p class="txt-dev">
-        注意: RPMLauncher
-        目前仍是測試版軟體，目前有許多bug，不建議作為主要軟體使用。
+      <h1 class="channel">穩定版</h1>
+      <p class="txt">
+        目前穩定版版本:
+        {{ VersionData.stable.latest_version_full }}
       </p>
-      <div
-        class="txt"
-        v-text="`最新開發版本: ${VersionData.dev.latest_version_full}`"
-      ></div>
-      <div class="txt">
-        最新穩定版本:
-        {{
-          VersionData.stable.latest_version_full == null
-            ? "無"
-            : `${VersionData.stable.latest_version_full}`
-        }}
-      </div>
-      <p class="txt">請選擇您的作業系統後將會開始下載:</p>
       <div class="list flex">
         <div
           class="div-button flex flex-down flex-item-center"
           v-for="(os, index) in OSList"
           :key="(os, index)"
           :name="os.name"
-          @click="PlatformSelect(index)"
+          @click="PlatformSelect(index, 'stable')"
+        >
+          <img :src="os.icon" class="svg" />
+        </div>
+      </div>
+      <h1 class="channel">開發人員測試版</h1>
+      <p
+        class="txt"
+        v-text="`目前開發人員版本: ${VersionData.dev.latest_version_full}`"
+      ></p>
+      <div class="list flex">
+        <div
+          class="div-button flex flex-down flex-item-center"
+          v-for="(os, index) in OSList"
+          :key="(os, index)"
+          :name="os.name"
+          @click="PlatformSelect(index, 'dev')"
         >
           <img :src="os.icon" class="svg" />
         </div>
       </div>
       <div class="txt-title">更新日誌</div>
+      (前 25 個版本)
       <div class="changelogs">
         <div
-          v-for="(val, key) in VersionList.slice(0, 20)"
+          v-for="(val, key) in VersionList.slice(0, 25)"
           :key="key"
           class="changelog"
           :class="{
@@ -74,7 +80,11 @@ export default {
         },
         {
           name: "Linux (AppImage)",
-          icon: require("@/assets/images/RPMLauncher/Platform/Linux-Appimage.svg"),
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/App-image-logo.svg/1024px-App-image-logo.svg.png",
+        },
+        {
+          name: "Linux (Deb)",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Application-x-deb.svg/64px-Application-x-deb.svg.png",
         },
         {
           name: "MacOS",
@@ -111,11 +121,11 @@ export default {
   },
   components: {},
   methods: {
-    PlatformSelect(key) {
+    PlatformSelect(key, channel) {
       this.Platform = key;
-      let Dev = Object(this.VersionData.dev);
+      let ChannelMap = Object(this.VersionData[channel]);
       let VersionInfo = Object(this.VersionData.version_list)[
-        String(Dev.latest_version_full)
+        String(ChannelMap.latest_version_full)
       ];
 
       let data = {
@@ -125,23 +135,24 @@ export default {
           DownloadUrl: VersionInfo.download_url.windows,
         },
         1: {
-          alert:
-            "下載檔案後請解壓縮，並執行 rpmlauncher (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url.linux,
         },
         2: {
-          alert:
-            "執行 RPMLauncher-Linux.AppImage (如無法開啟記得改為可執行檔案) 即可開啟 RPMLauncher",
           DownloadUrl: VersionInfo.download_url["linux-appimage"],
         },
         3: {
+          DownloadUrl: VersionInfo.download_url["linux-deb"],
+        },
+        4: {
           alert:
             "第一次執行 RPMLauncher 時若顯示『Apple 無法檢查是否包含惡意軟體』等內容，請開啟「系統偏好設定」，進入「安全性與隱私權」類別，選擇強制開啟。",
           DownloadUrl: VersionInfo.download_url.macos,
         },
       };
       data = data[this.Platform] || data[0];
-      alert(data.alert);
+      if (data.alert != undefined) {
+        alert(data.alert);
+      }
       window.open(data.DownloadUrl, "下載檔案");
     },
   },
@@ -149,6 +160,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~@/assets/scss/SurroundingMain.scss";
+
 .text-hover {
   display: none;
 }
@@ -159,6 +172,7 @@ export default {
   justify-content: center;
 }
 .div-button {
+  margin: 10px;
   border-radius: 10px;
   background-color: var(--styleMode-background-color);
   border: 4px solid var(--styleMode-webkit-scrollbar);
@@ -188,12 +202,17 @@ export default {
 }
 .list {
   margin-bottom: 30px;
-  width: 95%;
+  width: 130%;
   justify-content: space-evenly;
   > div {
     width: 20%;
   }
 }
+
+.channel {
+  color: rgb(42, 169, 243);
+}
+
 .changelogs {
   width: 80%;
   align-items: center;
