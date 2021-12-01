@@ -38,8 +38,8 @@
             }
         ],
         "description": {
-            "Title": "RPMLauncher( 製作中 )<br />輕鬆管理您的遊戲",
-            "description": "由於此啟動器還在開發中，未來還會新增許多功能",
+            "Title": "RPMLauncher",
+            "description": "跨世代的 Minecraft 啟動器，既保留簡潔設計又支援多個平台和許多功能供您探索！",
             "buttons": [
                 {
                     "i18nTitle": "Home.include.public.DL-STAT",
