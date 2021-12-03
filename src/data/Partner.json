@@ -1,5 +1,27 @@
 [
     {
+        "name": "魔法金屬",
+        "img": "https://media.discordapp.net/attachments/793138981750571008/916327666272059422/-removebg-preview1.png",
+        "data": {
+            "title": "簡介",
+            "text": "魔法金屬為草莓龍主導開發的台灣自製模組，目標為製作出一個大型的MMORPG遊戲。\n其描繪了一個劍與魔法的世界，玩家可以在魔法金屬的世界中生存、開發各有特色的生產系統，也可以與其他玩家一起攻略各種BOSS與副本，透過職業、專精等各種系統強化自己，與其他玩家們配合、並前往各種不同的世界探險。",
+            "buttons": [
+                {
+                    "title": "官方網站",
+                    "url": "https://manametalmod.weebly.com/"
+                },
+                {
+                    "title": "Discord 社群",
+                    "url": "https://discord.com/invite/JGTVQzD"
+                },
+                {
+                    "title": "巴哈姆特",
+                    "url": "https://forum.gamer.com.tw/C.php?bsn=18673&snA=147405&tnum=107&subbsn=12"
+                }
+            ]
+        }
+    },
+    {
         "name": "夢都 - 夢想之都工作室",
         "img": "https://www.dreamcity.studio/images/logo_0218.png",
         "data": {
