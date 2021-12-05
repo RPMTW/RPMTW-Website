@@ -37,17 +37,6 @@
           /></span>
           A:&ensp;模組平台就類似蘋果手機與安卓手機的概念，不同的架構製作而成，可以依據你需要的平台來下載。
         </a>
-        <a
-          v-if="
-            !finish.platform && finish.version && finish.version == '1.18.x'
-          "
-        >
-          <br />
-          Q:&ensp;<span style="color: red"
-            >為什麼 1.18 版本暫時不支援 Forge<br
-          /></span>
-          A:&ensp;因為 Forge 尚未支援 1.18，因此無法開發。
-        </a>
       </strong>
     </Gate>
     <Gate :nowLen="nowLen" okLen="3" class="nowLenData output">
@@ -65,9 +54,8 @@
       </div>
       <div class="txt-description" v-if="finish.platform === 'Fabric'">
         <p style="color: red">
-          RPMTW 需要 Fabric API 與 Fabric Kotlin
-          這兩個前置模組，請務必記得安裝!<br />
-          (點擊下方兩張圖片即可下載)
+          RPMTW 需要以下前置模組，請務必記得安裝，否則無法啟動遊戲!<br />
+          (點擊下方圖片即可下載)
           <br />
           <br />
           <a
@@ -93,6 +81,7 @@
           </a>
           <a
             target="_blank"
+            v-if="finish.version !== '1.18.x'"
             style="color: var(--strong-color)"
             class="flex flex-down flex-item-center"
             href="https://maven.fabricmc.net/net/fabricmc/fabric-language-kotlin/1.6.5%2Bkotlin.1.5.31/fabric-language-kotlin-1.6.5%2Bkotlin.1.5.31.jar"
@@ -154,10 +143,13 @@ export default {
     },
 
     download(version, platform) {
-      console.log(version);
-      if (platform == "Fabric") {
+      if (platform == "Fabric" && version !== "1.18.x") {
         alert(
           "模組下載完成後，請確定你已經安裝了 Fabric ，並且你已經安裝 Fabric API 與 Fabric Kotlin 這兩個前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
+        );
+      } else if (platform == "Fabric") {
+        alert(
+          "模組下載完成後，請確定你已經安裝了 Fabric ，並且你已經安裝 Fabric API 前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
         );
       } else if (platform == "Forge") {
         alert(
