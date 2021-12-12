@@ -17,6 +17,6 @@ jobs:
           reponame: "RPMTW-Website"
           token: ${{ secrets.GITHUB_TOKEN }}
           gitmsg: Update Website
-          cname: www.rpmtw.ga
+          cname: www.rpmtw.com
           gitname: Website-BOT
           useyarn: true
