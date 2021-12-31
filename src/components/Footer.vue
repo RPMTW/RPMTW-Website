@@ -2,7 +2,7 @@
   <div class="Footer" v-if="notFooter">
     <footer class="flex flex-down">
       <p>
-        Copyright &copy; RPMTW {{ newYear }} Powered by The
+        Copyright &copy; RPMTW 2021-{{ newYear }} Powered by The
         <a target="_blank" href="https://github.com/RPMTW">RPMTW Team</a> and
         <a target="_blank" href="https://github.com/a3510377">猴子#2027</a>
       </p>
