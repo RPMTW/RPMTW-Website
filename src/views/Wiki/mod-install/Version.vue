@@ -52,7 +52,10 @@
       >
         點我下載: {{ `${finish.version} (${finish.platform})` }}
       </div>
-      <div class="txt-description" v-if="finish.platform === 'Fabric'">
+      <div
+        class="txt-description"
+        v-if="finish.platform === 'Fabric' && finish.version !== '1.19'"
+      >
         <p style="color: red">
           RPMTW 需要以下前置模組，請務必記得安裝，否則無法啟動遊戲!<br />
           (點擊下方圖片即可下載)
@@ -75,10 +78,11 @@
           >
             <img
               src="@/assets/images/fabric_api_requires.png"
-              style="width: 35em"
+              style="width: 20em"
               alt=""
             />
           </a>
+          <br />
           <a
             target="_blank"
             v-if="finish.version !== '1.18.x'"
@@ -88,7 +92,7 @@
           >
             <img
               src="@/assets/images/fabric_kotlin_language_requires.png"
-              style="width: 35em"
+              style="width: 20em"
               alt=""
             />
           </a>
@@ -98,7 +102,7 @@
         <p style="font-size: 18pt">
           模組下載完成後，請確定你已經安裝了
           {{ finish.platform }}
-          ，接著將這些檔案放入 mods 資料夾裡面即可！
+          以及前置模組，接著將這些檔案放入 mods 資料夾裡面即可！
         </p>
       </div>
     </Gate>
@@ -143,13 +147,21 @@ export default {
     },
 
     download(version, platform) {
-      if (platform == "Fabric" && version !== "1.18.x") {
+      if (platform == "Fabric" && version !== "1.18.x" && version !== "1.19") {
         alert(
           "模組下載完成後，請確定你已經安裝了 Fabric ，並且你已經安裝 Fabric API 與 Fabric Kotlin 這兩個前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
         );
-      } else if (platform == "Fabric") {
+      } else if (platform == "Fabric" && version !== "1.19") {
         alert(
           "模組下載完成後，請確定你已經安裝了 Fabric ，並且你已經安裝 Fabric API 前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
+        );
+      } else if (platform == "Fabric" && version == "1.19") {
+        alert(
+          "模組下載完成後，請確定你已經安裝了 Fabric ，並且你已經安裝 Fabric API、Cloth Config API、Fabric Language Kotlin、Architectury API 前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
+        );
+      } else if (platform == "Forge" && version == "1.19") {
+        alert(
+          "模組下載完成後，請確定你已經安裝了 Forge ，並且你已經安裝 Cloth Config API、Kotlin for Forge、Architectury API 前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
         );
       } else if (platform == "Forge") {
         alert(
