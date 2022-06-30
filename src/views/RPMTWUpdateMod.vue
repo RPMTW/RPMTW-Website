@@ -38,7 +38,8 @@
           <Progress class="progress" version="1.12" />
           <Progress class="progress" version="1.16" />
           <Progress class="progress" version="1.17" />
-          <Progress class="progress" version="1.18" />          
+          <Progress class="progress" version="1.18" />  
+          <Progress class="progress" version="1.19" />
         </div>
         <div
           @click="moreShow = !moreShow"
