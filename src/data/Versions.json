@@ -18,9 +18,9 @@
     "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3579763",
     "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3579766"
   },
-  "1.19": {
+  "1.19.x": {
     "platform": ["Forge", "Fabric"],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3853889",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3853891"
+    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3924529",
+    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3924531"
   }
 }
