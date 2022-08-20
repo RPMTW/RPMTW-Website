@@ -1,5 +1,27 @@
 [
     {
+        "name": "輝煌伺服器",
+        "img": "https://media.discordapp.net/attachments/824226729538879489/1010557004785389578/unknown.png",
+        "data": {
+            "title": "簡介",
+            "text": "輝煌伺服器是一個挺養老的生存+建築伺服器，近期開發開源插件、模組來為Minecraft社群提供資源。\n至今，伺服器已累積超過5千位玩家，社群人數也達 4 千位用戶，每日人均 70 位線上玩家數。\n\n我們提供給玩家完善、豐富的遊玩體驗；便捷、易於理解的遊戲功能；簡單、有用的遊戲資源，\n給予 Minecraft 中文社群更加多元、更加不同的發展方向與營運模式。",
+            "buttons": [
+                {
+                    "title": "官方網站",
+                    "url": "https://www.brilliantw.net"
+                },
+                {
+                    "title": "Discord",
+                    "url": "https://discord.gg/5MHGpAFGEN"
+                },
+                {
+                    "title": "Github",
+                    "url": "https://github.com/BrilliantServer"
+                }
+            ]
+        }
+    },
+    {
         "name": "魔法金屬",
         "img": "https://media.discordapp.net/attachments/793138981750571008/916327666272059422/-removebg-preview1.png",
         "data": {
