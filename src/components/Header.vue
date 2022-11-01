@@ -51,10 +51,7 @@
               <a target="_blank" href="https://github.com/RPMTW">
                 <img src="https://github.com/fluidicon.png" alt="" />
               </a>
-              <a
-                target="_blank"
-                href="https://modrinth.com/mod/rpmtw-update-mod"
-              >
+              <a target="_blank" href="https://modrinth.com/mod/rpmtw-update-mod">
                 <img src="https://modrinth.com/favicon.ico" alt="" />
               </a>
               <a

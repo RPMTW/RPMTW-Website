@@ -38,7 +38,7 @@
           <Progress class="progress" version="1.12" />
           <Progress class="progress" version="1.16" />
           <Progress class="progress" version="1.17" />
-          <Progress class="progress" version="1.18" />  
+          <Progress class="progress" version="1.18" />
           <Progress class="progress" version="1.19" />
         </div>
         <div
@@ -235,7 +235,7 @@ export default {
     let _this = this;
     $(function () {
       $.getJSON(
-        "https://api.github.com/repos/RPMTW/RPMTW-Update-Mod/commits",
+        "https://api.github.com/repos/RPMTW/RPMTW-Platform-Mod/commits",
         (datas) => {
           let out = [];
           for (let [index, data] of datas.entries()) {

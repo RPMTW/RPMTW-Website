@@ -1,26 +1,40 @@
 {
   "1.12.2": {
-    "platform": ["Forge"],
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3579924"
+    "platform": [
+      "Forge"
+    ],
+    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3579924"
   },
   "1.16.x": {
-    "platform": ["Forge", "Fabric"],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3580248",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3580249"
+    "platform": [
+      "Forge",
+      "Fabric"
+    ],
+    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3580248",
+    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3580249"
   },
   "1.17.x": {
-    "platform": ["Forge", "Fabric"],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3508288",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3507506"
+    "platform": [
+      "Forge",
+      "Fabric"
+    ],
+    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3508288",
+    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3507506"
   },
   "1.18.x": {
-    "platform": ["Forge", "Fabric"],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3579763",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/3579766"
+    "platform": [
+      "Forge",
+      "Fabric"
+    ],
+    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3579763",
+    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3579766"
   },
   "1.19.x": {
-    "platform": ["Forge", "Fabric"],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/4039372",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-update-mod/download/4039373"
+    "platform": [
+      "Forge",
+      "Fabric"
+    ],
+    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/4039372",
+    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/4039373"
   }
 }
