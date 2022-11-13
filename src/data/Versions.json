@@ -3,38 +3,38 @@
     "platform": [
       "Forge"
     ],
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3579924"
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.3.0+112"
   },
   "1.16.x": {
     "platform": [
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3580248",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3580249"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.3.2+116-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.3.2+116-forge"
   },
   "1.17.x": {
     "platform": [
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3508288",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/3507506"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/FC-1.2.5-1.17.1",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/FG-1.2.5-1.17"
   },
   "1.18.x": {
     "platform": [
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/4075496",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/4075497"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.2+118-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.2+118-forge"
   },
   "1.19.x": {
     "platform": [
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/4075316",
-    "Forge": "https://www.curseforge.com/minecraft/mc-mods/rpmtw-platform/download/4075317"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.2+119-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.2+119-forge"
   }
 }
