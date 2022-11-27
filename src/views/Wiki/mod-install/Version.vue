@@ -52,49 +52,6 @@
       >
         點我下載: {{ `${finish.version} (${finish.platform})` }}
       </div>
-      <div
-        class="txt-description"
-        v-if="finish.platform === 'Fabric' && (finish.version === '1.17.x' || finish.version === '1.16.x')"
-      >
-        <p style="color: red">
-          RPMTW 需要以下前置模組，請務必記得安裝，否則無法啟動遊戲!<br />
-          (點擊下方圖片即可下載)
-          <br />
-          <br />
-          <a
-            target="_blank"
-            style="color: var(--strong-color)"
-            class="flex flex-down flex-item-center"
-            :href="
-              {
-                '1.16.x':
-                  'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.36.0+1.16/fabric-api-0.36.0+1.16.jar',
-                '1.17.x':
-                  'https://cdn.modrinth.com/data/P7dR8mSH/versions/0.40.8+1.17/fabric-api-0.40.8+1.17.jar',
-              }[finish.version]
-            "
-          >
-            <img
-              src="@/assets/images/fabric_api_requires.png"
-              style="width: 20em"
-              alt=""
-            />
-          </a>
-          <br />
-          <a
-            target="_blank"
-            style="color: var(--strong-color)"
-            class="flex flex-down flex-item-center"
-            href="https://maven.fabricmc.net/net/fabricmc/fabric-language-kotlin/1.6.5%2Bkotlin.1.5.31/fabric-language-kotlin-1.6.5%2Bkotlin.1.5.31.jar"
-          >
-            <img
-              src="@/assets/images/fabric_kotlin_language_requires.png"
-              style="width: 20em"
-              alt=""
-            />
-          </a>
-        </p>
-      </div>
       <div class="txt-des" v-if="finish.platform">
         <p style="font-size: 18pt">
           模組下載完成後，請確定你已經安裝了
@@ -144,10 +101,19 @@ export default {
     },
 
     download(version, platform) {
-      if (version === "1.19.x" || version === "1.18.x") {
+      if (version == "1.12.2") {
+        alert(
+          "模組下載完成後，請確定你已經安裝了 Forge ，接著將 RPMTW 放入 mods 資料夾裡面即可！"
+        );
+      } else {
         if (platform == "Fabric") {
           alert(
             "模組下載完成後，請確定你已經安裝了 Fabric ，並且你已經安裝 Fabric API、Cloth Config API、Fabric Language Kotlin、Architectury API 前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
+          );
+        }
+        if (platform == "Quilt") {
+          alert(
+            "模組下載完成後，請確定你已經安裝了 Quilt ，並且你已經安裝 Quilted Fabric API、Cloth Config API、Fabric Language Kotlin、Architectury API 前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
           );
         }
         if (platform == "Forge") {
@@ -155,17 +121,6 @@ export default {
             "模組下載完成後，請確定你已經安裝了 Forge ，並且你已經安裝 Cloth Config API、Kotlin for Forge、Architectury API 前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
           );
         }
-      } else if (
-        platform == "Fabric" &&
-        (version === "1.17.x" || version === "1.16.x")
-      ) {
-        alert(
-          "模組下載完成後，請確定你已經安裝了 Fabric ，並且你已經安裝 Fabric API 與 Fabric Kotlin 這兩個前置模組 ，接著將這些檔案放入 mods 資料夾裡面即可！\n\n請務必安裝前置模組！\n請務必安裝前置模組！\n請務必安裝前置模組！\n\n很重要所以說三次！"
-        );
-      } else if (platform == "Forge") {
-        alert(
-          "模組下載完成後，請確定你已經安裝了 Forge ，接著將 RPMTW 放入 mods 資料夾裡面即可！"
-        );
       }
 
       let url =

@@ -10,31 +10,53 @@
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.3.2+116-fabric",
-    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.3.2+116-forge"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.16.5-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.16.5-forge"
   },
   "1.17.x": {
     "platform": [
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/FC-1.2.5-1.17.1",
-    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/FG-1.2.5-1.17"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+2+1.17.1-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+2+1.17.1-forge"
   },
-  "1.18.x": {
+  "1.18.1": {
     "platform": [
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.2+118-fabric",
-    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.2+118-forge"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.18.1-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.18.1-forge"
   },
-  "1.19.x": {
+  "1.18.2": {
     "platform": [
       "Forge",
-      "Fabric"
+      "Fabric",
+      "Quilt"
     ],
-    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.2+119-fabric",
-    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.2+119-forge"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.18.2-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.18.2-forge",
+    "Quilt": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.18.2-quilt"
+  },
+  "1.19": {
+    "platform": [
+      "Forge",
+      "Fabric",
+      "Quilt"
+    ],
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.19-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.19-forge",
+    "Quilt": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.19-quilt"
+  },
+  "1.19.1 或 1.19.2": {
+    "platform": [
+      "Forge",
+      "Fabric",
+      "Quilt"
+    ],
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.19.2-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.19.2-forge",
+    "Quilt": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.19.2-quilt"
   }
 }
