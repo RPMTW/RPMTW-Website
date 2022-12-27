@@ -10,22 +10,22 @@
       <section class="section" id="how-can-set-mod">
         <h1>有些功能我用不到，可以關閉嗎?</h1>
         <p>
-          可以，要修改設定只要按下預設快捷鍵 O
+          可以，要修改設定只要按下預設快捷鍵 Ctrl + R
           (可自行修改)，就會打開一個設定選單。
         </p>
       </section>
       <section class="section" id="what-is-cosmic-system">
         <h1>什麼是宇宙通訊系統?</h1>
         <p>
-          宇宙通訊系統是本模組提供的一個文字聊天系統，將會與RPMTW官方Discord群組進行串連，可以使用本系統在遊戲內外進行交流。
+          宇宙通訊系統是本模組提供的一個文字聊天系統，可以使用本系統在任何版本的 Minecraft 中或遊戲外聊天交流，每個玩家就像在同個世界中遊玩！
+          並且有與 RPMTW 官方 Discord 進行連動。
         </p>
       </section>
       <section class="section" id="how-use-cosmic-system">
         <h1>如何使用宇宙通訊系統?</h1>
         <a style="color: red">遊戲內方式:</a><br />
         <p>
-          按下預設快捷鍵 G
-          (可自行修改)，將會打開一個介面在格子內輸入要發送的文字即可。
+          開啟聊天選單 (預設快捷鍵 T)，輸入要發送的文字，然後按下右下角的「發送訊息」即可。
         </p>
         <a style="color: red">遊戲外方式:</a><br />
         <p>
