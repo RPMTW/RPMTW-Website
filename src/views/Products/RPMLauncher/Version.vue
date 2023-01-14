@@ -3,6 +3,10 @@
     <h1 class="text-center">下載 RPMLauncher</h1>
     <div class="loadIng" v-if="!load"><a>正在載入資料中，請稍後...</a></div>
     <div v-if="load" class="flex flex-item-center flex-down">
+      <h1 class="notice">
+        注意：目前不建議您使用 RPMLauncher，因其仍存在許多嚴重性
+        bug，我們正在重新設計 RPMLauncher 2.0 中，期望在未來帶給您最好的體驗！
+      </h1>
       <h1 class="channel">穩定版</h1>
       <p class="txt">
         目前穩定版版本:
@@ -161,6 +165,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "~@/assets/scss/SurroundingMain.scss";
+
+.notice{
+  color: red;
+  text-align: center;
+}
 
 .text-hover {
   display: none;
