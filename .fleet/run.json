@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "Dev",
+            "program": "yarn",
+            "args": [
+                "serve"
+            ]
+        }
+    ]
+}
