@@ -16,7 +16,8 @@
       <section class="section" id="server-need-install">
         <h1>伺服器端需要安裝嗎?</h1>
         <p>
-          伺服器不用安裝，因為伺服器端不會顯示內容並不需要安裝此模組，只需客戶端安裝就能享受翻譯體驗。
+          伺服器不用安裝，因為伺服器端不會顯示內容並不需要安裝此模組，只需客戶端安裝就能享受翻譯體驗。<br />
+		<b>注意！如果安裝在伺服器，伺服器將無法正常啟動！</b>
         </p>
       </section>
       <section class="section" id="RPMTW-version">
