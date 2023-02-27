@@ -10,16 +10,16 @@
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.16.5-fabric",
-    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+1.16.5-forge"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.4+1.16.5-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.4+1.16.5-forge"
   },
   "1.17.x": {
     "platform": [
       "Forge",
       "Fabric"
     ],
-    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+2+1.17.1-fabric",
-    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.3+2+1.17.1-forge"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.4+1.17.1-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.4+1.17.1-forge"
   },
   "1.18.1": {
     "platform": [
