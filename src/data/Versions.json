@@ -65,8 +65,18 @@
       "Fabric",
       "Quilt"
     ],
-    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.4+1.19.3-fabric",
-    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.4+1.19.3-forge",
-    "Quilt": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.4+1.19.3-quilt"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.5+1.19.3-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.5+1.19.3-forge",
+    "Quilt": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.5+1.19.3-quilt"
+  },
+  "1.19.4": {
+    "platform": [
+      "Forge",
+      "Fabric",
+      "Quilt"
+    ],
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.6+1.19.4-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.6+1.19.4-forge",
+    "Quilt": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.6+1.19.4-quilt"
   }
 }
