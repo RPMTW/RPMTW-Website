@@ -75,9 +75,9 @@
       "Fabric",
       "Quilt"
     ],
-    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.7+1.19.4-fabric",
-    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.7+1.19.4-forge",
-    "Quilt": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.7+1.19.4-quilt"
+    "Fabric": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.8+1.19.4-fabric",
+    "Forge": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.8+1.19.4-forge",
+    "Quilt": "https://modrinth.com/mod/rpmtw-update-mod/version/1.5.8+1.19.4-quilt"
   },
   "1.20 或 1.20.1": {
     "platform": [
