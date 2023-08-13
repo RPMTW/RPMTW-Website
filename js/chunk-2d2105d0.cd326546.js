@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2105d0"],{b826:function(n,t,e){"use strict";e.r(t);var c=e("7a23");const a={id:"Cosmic-Chat"};function d(n,t,e,d,o,s){return Object(c["s"])(),Object(c["e"])("div",a)}var o={name:"Cosmic-Chat",data(){return{}},methods:{}},s=e("6b0d"),r=e.n(s);const i=r()(o,[["render",d]]);t["default"]=i}}]);
+//# sourceMappingURL=chunk-2d2105d0.cd326546.js.map
